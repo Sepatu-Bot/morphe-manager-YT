@@ -1,3 +1,10 @@
+# [1.18.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.2...v1.18.0-dev.3) (2026-05-17)
+
+
+### Bug Fixes
+
+* Launch system installer dialog for manager self-updates ([#558](https://github.com/MorpheApp/morphe-manager/issues/558)) ([654e15b](https://github.com/MorpheApp/morphe-manager/commit/654e15b6dd58edd5a63154fb659f8ce72dc74396))
+
 # [1.18.0-dev.2](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.1...v1.18.0-dev.2) (2026-05-17)
 
 
