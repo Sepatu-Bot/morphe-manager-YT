@@ -169,6 +169,14 @@ fun InstalledAppInfoDialog(
             is InstallViewModel.InstallState.Installed -> {
                 // Installation succeeded - update install type in database and refresh UI
                 val finalPackageName = installState.packageName
+                // InstallViewModel is a Koin singleton shared across dialogs; guard against
+                // stale installation results from a previously installed app firing in this dialog
+                val app = viewModel.installedApp
+                if (app != null &&
+                    finalPackageName != app.currentPackageName &&
+                    finalPackageName != app.originalPackageName) {
+                    return@LaunchedEffect
+                }
                 val newInstallType = when (installViewModel.currentInstallType) {
                     InstallType.MOUNT -> InstallType.MOUNT
                     InstallType.SHIZUKU -> InstallType.SHIZUKU
