@@ -1,3 +1,16 @@
+# [1.18.0-dev.1](https://github.com/MorpheApp/morphe-manager/compare/v1.17.1...v1.18.0-dev.1) (2026-05-17)
+
+
+### Bug Fixes
+
+* Disable fade overlay in two-column layout ([ea51995](https://github.com/MorpheApp/morphe-manager/commit/ea5199543af70e3aea1460702918d67d97376917))
+* Resolve changelog dialog rendering jank after `markdown-renderer` update ([b969be9](https://github.com/MorpheApp/morphe-manager/commit/b969be9d17f3bd7b311bf18053510ba5682065ea))
+
+
+### Features
+
+* Add "Use installed APK" button to APK availability dialog ([#552](https://github.com/MorpheApp/morphe-manager/issues/552)) ([550eed1](https://github.com/MorpheApp/morphe-manager/commit/550eed1516fb76e1b72c3bb99e83e6ee30686163))
+
 ## [1.17.1](https://github.com/MorpheApp/morphe-manager/compare/v1.17.0...v1.17.1) (2026-05-12)
 
 
