@@ -627,12 +627,12 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_original_apks_delete_title">Supprimer l’APK d\'origine ?</string>
     <string name="settings_system_original_apks_delete_confirm">Supprimer l\'APK d\'origine pour %s ? Vous ne pourrez pas repatcher sans fournir un nouvel APK</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
-    <string name="settings_system_patch_selections_title">Sélections de patch</string>
-    <string name="settings_system_patch_selections_description">Gérer les sélections et options de patch enregistrées. Celles-ci persistent après la désinstallation de l’application</string>
+    <string name="settings_system_patch_selections_title">Sélections de patchs</string>
+    <string name="settings_system_patch_selections_description">Gérer les sélections et les options de patch enregistrées. Celles-ci persistent après la désinstallation de l’application</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Réinitialiser toutes les sélections ?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Réinitialiser les sélections de package ?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Réinitialiser la sélection de source ?</string>
-    <string name="settings_system_patch_selection_no_saved">Aucune sélection de patch enregistrées</string>
+    <string name="settings_system_patch_selection_no_saved">Aucune sélection de patch enregistrée</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s dans %2$s</string>
     <string name="settings_system_patch_selection_patches_in_sources_format">%1$s dans %2$s</string>
     <string name="settings_system_patch_selection_source_format">Source #%s</string>

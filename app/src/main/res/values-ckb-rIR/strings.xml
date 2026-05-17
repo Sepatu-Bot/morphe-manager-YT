@@ -88,17 +88,17 @@
     <!-- Home Screen - Dialog 4: Expert Mode Dialog -->
     <!-- Home Screen - Home Sub-Dialogs -->
     <string name="home_split_apk_warning_title">APKێك دەبەشبووه‌</string>
-    <string name="home_split_apk_warning_message">"فایڵێكە پشكه‌ی APKە
-(&lt;b&gt;APKM / APKS / XAPK&lt;/b&gt;).
+    <string name="home_split_apk_warning_message">"ئەم پەڕگەیە باندڵێکی APK یە
+ (&lt;b&gt;APKM / APKS / XAPK&lt;/b&gt;).
 
-بۆ باشترین ئەنجام، ئەم بەرنامەیە ڕێنمایی ده‌كات كه‌ پچۆخێك بۆ &lt;b&gt;APK‌ی پڕ&lt;/b&gt; سازدانیشێت"</string>
+ بۆ باشترین ئەنجام، ئەم ئەپە پێشنیاری پینەکردنی &lt;b&gt;full APK&lt;/b&gt;"</string>
     <!-- Patch Options -->
     <!-- Adaptive Icon Creator -->
-    <string name="adaptive_icon_instructions">وێنەیەکی پیشەسازیی هەڵبژێرە، ڕەنگی پسەیەکی هەڵبژێرە، دواتر لە سڵایدەر یان ڕەقەکاندا بۆ ڕێکخستنی پێشوازێک بەکاردە</string>
-    <string name="adaptive_icon_preview">پێشوازیی دیمەنێک بۆ ئاوازی پێکدێت</string>
-    <string name="adaptive_icon_preview_hint">لەگەڵ باشترین ئەنجام، دەوێت ستەیەکەی پێشکەوتوو تێیەکەوتووی ناو خوارەوەی قوڕم</string>
-    <string name="notification_icon_preview">پێشوازیی دیمەنێک بۆ نیشاندانی پێگەی پێکهاتبوو</string>
-    <string name="notification_icon_preview_hint">لەگەڵ سڵایدەر ڕەوزە پێکهین. ڕاوە کە پێوەببێت</string>
+    <string name="adaptive_icon_instructions">وێنەیەکی پێشەوە هەڵبژێرە، ڕەنگی پاشبنەما هەڵبژێرە، پاشان ئاماژەکانی خلیسکەر یان چەقۆ بەکاربهێنە بۆ ڕێکخستنی پێشبینییەکە</string>
+    <string name="adaptive_icon_preview">پێشبینی ئایکۆنی گونجاو</string>
+    <string name="adaptive_icon_preview_hint">بۆ باشترین ئەنجام ئایکۆنەکەت لەناو بازنەی ناوەوەی تۆکمەدا بهێڵەرەوە</string>
+    <string name="notification_icon_preview">پێشبینی ئایکۆنی ئاگادارکردنەوە</string>
+    <string name="notification_icon_preview_hint">بۆ گۆڕینی قەبارەی خلیسکەرەکە بەکاربهێنە.  ڕاکێشان بۆ دووبارە دانانی شوێن</string>
     <!-- Header Creator -->
     <!-- Home Screen - App Info Screen -->
     <!-- Home Screen - Root Mode -->
@@ -127,30 +127,30 @@
     <!-- Settings - Advanced Tab - Patch Options Section -->
     <!-- Settings - Advanced Tab - Patch Options Section: Theme Colors -->
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
-    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"فۆڵدەرێک لەگەڵ وێنەکانی کە دەبێت بە وێنەیەکی خۆشکردن. 
+    <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"Folder with images to use as a custom iconفۆڵدەرێک کە وێنەکانی تێدایە بۆ بەکارهێنان وەک ئایکۆنی تایبەت.
 
-ئەو فۆڵدەرە دەبێت لە یەکێکێک یاخود زیاتر لە خوارەوەیەکانی بێت، به‌گوێره‌ی DPIی دەستە: 
+ فۆڵدەرەکە دەبێت یەکێک یان زیاتر لەم فۆڵدەرانەی خوارەوەی تێدابێت، بەپێی DPI ی ئامێرەکە:
 - mipmap-mdpi
 - mipmap-hdpi
 - mipmap-xhdpi
 - mipmap-xxhdpi
 - mipmap-xxxhdpi
 
-هرگەلێک دەبێت هەمووشيءەکى خوارەوەكانى تێدابێت: 
+هەریەک لە فۆڵدەرەکان دەبێت هەموو ئەم فایلانەی خوارەوەی تێدابێت:
 morphe_adaptive_background_custom.png
 morphe_adaptive_foreground_custom.png
 
-ئەو ابعادی وێنەی دەبێت بە میلان دەبت: 
+ڕەهەندەکانی وێنەکە دەبێت بەم شێوەیە بێت:
 - mipmap-mdpi: 108x108 px
 - mipmap-hdpi: 162x162 px
 - mipmap-xhdpi: 216x216 px
 - mipmap-xxhdpi: 324x324 px
 - mipmap-xxxhdpi: 432x432 px
 
-زیاتر، ڕێیەکە دەتوانێت فۆڵدەرێکى 'drawable' یی هەبێت لەگەڵ فایشێک ڕێهە: 
+بە ئیختیاری، ڕێڕەوەکە فۆڵدەرێکی 'drawable' لەخۆدەگرێت کە فایلێکی ئایکۆنی تاکڕەنگی تێدایە:
 morphe_adaptive_monochrome_custom.xml
 
-زیاتر، ڕێیەکە دەتوانێت نیشانەیەکی پێگەی پێکهاتوە لە ڕێکخستەی خوارەوەیەکانی هەبێت: 
+بە ئیختیاری ڕێڕەوەکە ئایکۆنی ئاگادارکردنەوە لەخۆدەگرێت بە یەکێک لەم فۆرماتانەی خوارەوە:
 - XML vector drawable in 'drawable':
   morphe_notification_icon_custom.xml
 - PNG raster images in 'drawable-dpi' folders:

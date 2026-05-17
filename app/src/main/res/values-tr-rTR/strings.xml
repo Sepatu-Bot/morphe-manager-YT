@@ -105,7 +105,7 @@
     <string name="home_apk_availability_yes">Evet, APK bulmama yardım et</string>
     <string name="home_apk_availability_no">Hayır, bende APK var</string>
     <string name="home_apk_use_saved_with_version">Kaydedilmiş APK (v%s) kullan</string>
-    <string name="home_apk_use_installed_with_version">Yüklenmiş APK\'yı (v%s) kullan</string>
+    <string name="home_apk_use_installed_with_version">Yüklenmiş APK (v%s) kullan</string>
     <string name="home_app_info_no_saved_apk">Kayıtlı APK yok. Yamayı uygulayabilmek için tekrar APK dosyasını seçmeniz gerekiyor</string>
     <string name="home_version_requires_android">Android %s+ gerektiriyor</string>
     <string name="home_apk_no_compatible_versions_title">Bu cihazda desteklenmiyor</string>
@@ -264,11 +264,11 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="patcher_unknown_error">Bilinmeyen bir hata oluştu</string>
     <string name="patcher_conflict_title">Paket çakışması</string>
     <string name="patcher_conflict_subtitle">Mevcut sürümü kaldırmanız gerekiyor</string>
-    <string name="patcher_conflict_hint">Yama uygulanmış uygulama, yüklenmiş sürümden farklı bir sertifika kullanıyor. Kaldırma işlemi tüm uygulama verilerini silecek</string>
-    <string name="patcher_installed_conflict_title">Yükleme gerekli</string>
-    <string name="patcher_installed_conflict_body">"Morphe, kendi sertifikasıyla yalanmış uygulamaları imzalar ve bu da orijinalinden farklıdır. Android, yalanmış uygulamanın kurulabilmesi için mevcut sürümün kaldırılmasını gerektirir.
+    <string name="patcher_conflict_hint">Yamalanmış uygulama, yüklü sürümden farklı bir sertifika kullanıyor. Kaldırma işlemi, tüm uygulama verilerini silecektir</string>
+    <string name="patcher_installed_conflict_title">Kaldırma gerekli</string>
+    <string name="patcher_installed_conflict_body">"Morphe, yamalanmış uygulamaları orijinalinden farklı olan kendi sertifikasıyla imzalar. Android, yamalanmış uygulamanın yüklenebilmesi için mevcut sürümün kaldırılmasını gerektirir.
 
-Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir."</string>
+Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="patcher_install_error_title">Yükleme hatası</string>
     <string name="patcher_install_error_subtitle">Kaldırıp tekrar yüklemeyi deneyin</string>
     <string name="patcher_ready_to_install_subtitle">Yüklemek için aşağıdaki düğmeye basın</string>
