@@ -416,8 +416,6 @@ fun SystemTabContent(
 
 /** Maps a [BytecodeMode] to its short display label string resource. */
 private fun BytecodeMode.labelRes(): Int = when (this) {
-    BytecodeMode.NONE -> R.string.settings_advanced_bytecode_mode_strip_fast
-    BytecodeMode.STRIP_SAFE -> R.string.settings_advanced_bytecode_mode_strip_fast
-    BytecodeMode.STRIP_FAST -> R.string.settings_advanced_bytecode_mode_strip_fast
     BytecodeMode.FULL -> R.string.settings_advanced_bytecode_mode_full
+    else -> R.string.settings_advanced_bytecode_mode_strip_fast
 }
