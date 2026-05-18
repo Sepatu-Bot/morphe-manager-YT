@@ -151,17 +151,23 @@ class RootInstaller(
         unmount(packageName)
 
         stockAPK?.let { stockApp ->
-            pm.getPackageInfo(packageName)?.let { packageInfo ->
-                // TODO: get user id programmatically
-                if (pm.getVersionCode(packageInfo) <= pm.getVersionCode(
-                        pm.getPackageInfo(patchedAPK)
-                            ?: error("Failed to get package info for patched app")
-                    )
-                )
-                    execute("pm uninstall -k --user 0 $packageName").assertSuccess("Failed to uninstall stock app")
-            }
+            val installedInfo = pm.getPackageInfo(packageName)
+            val patchedInfo = pm.getPackageInfo(patchedAPK)
+                ?: error("Failed to get package info for patched app")
 
-            execute("pm install \"${stockApp.absolutePath}\"").assertSuccess("Failed to install stock app")
+            // Only (re)install the stock app when it is absent or strictly older than the
+            // patched build.  If the same version is already installed (the normal mount-update
+            // case) there is nothing to do: uninstalling and immediately reinstalling would be a
+            // no-op at best and leaves the device without the base app if pm installation fails
+            val needsInstall = installedInfo == null ||
+                    pm.getVersionCode(installedInfo) < pm.getVersionCode(patchedInfo)
+
+            if (needsInstall) {
+                // TODO: get user id programmatically
+                if (installedInfo != null)
+                    execute("pm uninstall -k --user 0 $packageName").assertSuccess("Failed to uninstall stock app")
+                execute("pm install \"${stockApp.absolutePath}\"").assertSuccess("Failed to install stock app")
+            }
 
             stockApp.delete()
         }
