@@ -648,6 +648,7 @@ private fun PatchCard(
     val enabledState = stringResource(R.string.enabled)
     val disabledState = stringResource(R.string.disabled)
     val patchState = if (isEnabled) enabledState else disabledState
+    val contentDesc = remember(patch.name, patchState) { "${patch.name}, $patchState" }
 
     Surface(
         modifier = Modifier
@@ -665,7 +666,7 @@ private fun PatchCard(
             .clickable(onClick = onToggle)
             .semantics {
                 stateDescription = patchState
-                contentDescription = "${patch.name}, $patchState"
+                contentDescription = contentDesc
             },
         shape = RoundedCornerShape(14.dp),
         color = when {
@@ -928,10 +929,7 @@ private fun PatchOptionsDialog(
             )
         }
     ) {
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(0.dp)
-        ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
             // Patch description
             if (!patch.description.isNullOrBlank()) {
                 Text(
@@ -1168,6 +1166,7 @@ private fun ColorOptionWithPresets(
     }
 }
 
+/** Color preset item for the color picker option. */
 @Composable
 fun ColorPresetItem(
     label: String,
@@ -1961,6 +1960,7 @@ private fun DropdownOptionItem(
     }
 }
 
+/** Expandable surface with a header icon, title, and collapsible content. */
 @Composable
 fun ExpandableSurface(
     title: String,
