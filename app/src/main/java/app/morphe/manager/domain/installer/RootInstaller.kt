@@ -160,16 +160,23 @@ class RootInstaller(
                 ?: error("Failed to get package info for patched app")
 
             // Only (re)install the stock app when it is absent or strictly older than the
-            // patched build.  If the same version is already installed (the normal mount-update
+            // patched build. If the same version is already installed (the normal mount-update
             // case) there is nothing to do: uninstalling and immediately reinstalling would be a
-            // no-op at best and leaves the device without the base app if pm installation fails
+            // no-op at best and leaves the device without the base app if 'pm install' fails
             val needsInstall = installedInfo == null ||
                     pm.getVersionCode(installedInfo) < pm.getVersionCode(patchedInfo)
 
             if (needsInstall) {
                 if (installedInfo != null)
                     execute("pm uninstall -k --user $userId $packageName").assertSuccess("Failed to uninstall stock app")
-                execute("pm install \"${stockApp.absolutePath}\"").assertSuccess("Failed to install stock app")
+                // 'pm install' fails on files inside the app's private data directory on
+                // Android 14+ due to SELinux restrictions. Copy to /data/local/tmp/ first,
+                // which is always accessible to the package installer
+                val tempApk = "/data/local/tmp/${packageName}_morphe_stock.apk"
+                execute("cp \"${stockApp.absolutePath}\" \"$tempApk\"").assertSuccess("Failed to copy stock APK to temp location")
+                val installResult = execute("pm install \"$tempApk\"")
+                execute("rm -f \"$tempApk\"")
+                installResult.assertSuccess("Failed to install stock app")
             }
 
             stockApp.delete()
