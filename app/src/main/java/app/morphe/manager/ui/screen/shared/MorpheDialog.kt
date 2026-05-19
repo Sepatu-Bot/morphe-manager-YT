@@ -171,7 +171,7 @@ private fun DialogContent(
             .systemBarsPadding()
             .padding(
                 if (compactPadding) {
-                    PaddingValues(16.dp)
+                    PaddingValues(MorpheDefaults.ContentPadding)
                 } else {
                     PaddingValues(32.dp)
                 }

@@ -223,7 +223,7 @@ fun MorpheDialogButtonRow(
         // Horizontal layout
         Row(
             modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            horizontalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
         ) {
             if (secondaryText != null && onSecondaryClick != null) {
                 if (isSecondaryPrimary) {

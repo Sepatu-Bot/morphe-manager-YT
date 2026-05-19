@@ -58,7 +58,7 @@ fun KeystoreCredentialsDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             Text(
                 text = stringResource(R.string.settings_system_import_keystore_dialog_description),

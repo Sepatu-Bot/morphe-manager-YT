@@ -318,7 +318,7 @@ fun InstalledAppInfoDialog(
                             .fillMaxHeight()
                             .padding(start = 20.dp),
                         contentPadding = PaddingValues(bottom = 24.dp),
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
                     ) {
                         item(contentType = "hero") {
                             AppHeroHeader(
@@ -351,7 +351,7 @@ fun InstalledAppInfoDialog(
                             .fillMaxHeight()
                             .padding(horizontal = 20.dp)
                             .navigationBarsPadding(),
-                        verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
+                        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing, Alignment.CenterVertically),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         AnimatedVisibility(
@@ -1454,7 +1454,7 @@ private fun DeleteConfirmDialog(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             // App Icon
             AppIcon(
@@ -1563,7 +1563,7 @@ private fun AppliedPatchesDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             bundles.forEach { bundle ->
                 Column(

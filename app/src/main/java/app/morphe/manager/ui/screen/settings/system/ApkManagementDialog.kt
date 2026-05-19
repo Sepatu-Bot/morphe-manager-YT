@@ -419,7 +419,7 @@ private fun ApkManagementDialogContent(
     ) {
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
         ) {
             // Summary box
             item(key = "summary") {
@@ -474,8 +474,8 @@ private fun ApkItemCard(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 12.dp, vertical = 12.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    .padding(horizontal = MorpheDefaults.ItemSpacing, vertical = MorpheDefaults.ItemSpacing),
+                horizontalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // App icon

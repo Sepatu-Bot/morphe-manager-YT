@@ -44,8 +44,8 @@ fun BytecodeModeDialog(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(vertical = MorpheDefaults.ContentPadding),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
         ) {
             Text(
                 text = stringResource(R.string.settings_advanced_bytecode_mode_dialog_description),

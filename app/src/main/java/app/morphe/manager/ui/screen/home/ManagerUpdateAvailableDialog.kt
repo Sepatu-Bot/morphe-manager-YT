@@ -217,8 +217,8 @@ fun ManagerUpdateDetailsDialog(
                             color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f)
                         ) {
                             Column(
-                                modifier = Modifier.padding(16.dp),
-                                verticalArrangement = Arrangement.spacedBy(12.dp)
+                                modifier = Modifier.padding(MorpheDefaults.ContentPadding),
+                                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
                             ) {
                                 Row(
                                     horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -348,7 +348,7 @@ private fun DownloadProgressSection(
         color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier.padding(MorpheDefaults.ContentPadding),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Row(

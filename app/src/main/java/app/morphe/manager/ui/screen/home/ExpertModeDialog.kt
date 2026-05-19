@@ -781,7 +781,7 @@ private fun EmptyStateContent(
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             modifier = Modifier.padding(32.dp)
         ) {
             Icon(
@@ -1788,7 +1788,7 @@ private fun ListStringEditorDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
         ) {
             // Description
             if (description.isNotBlank()) {

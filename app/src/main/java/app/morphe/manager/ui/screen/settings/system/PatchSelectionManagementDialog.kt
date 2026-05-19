@@ -255,7 +255,7 @@ private fun SelectionList(
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
     ) {
         // Summary box
         item(key = "summary") {
@@ -343,7 +343,7 @@ private fun PackageSelectionItem(
                     .fillMaxWidth()
                     .clickable { expanded = !expanded }
                     .padding(16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // App icon
@@ -414,7 +414,7 @@ private fun PackageSelectionItem(
             ) {
                 Column(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                    verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
                 ) {
                     bundleMap.forEach { (bundleUid, patchCount) ->
                         BundleSelectionItem(
@@ -478,7 +478,7 @@ private fun BundleSelectionItem(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 4.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
     ) {
         MorpheSettingsDivider(fullWidth = true)
 
@@ -497,7 +497,7 @@ private fun BundleSelectionItem(
             Row(
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
             ) {
                 Icon(
                     imageVector = Icons.Outlined.Extension,
@@ -593,7 +593,7 @@ private fun ConfirmResetAllDialog(
             )
         }
     ) {
-        Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)) {
             Text(
                 text = stringResource(R.string.settings_system_patch_selection_reset_all_warning),
                 style = MaterialTheme.typography.bodyMedium,
@@ -674,7 +674,7 @@ private fun ConfirmResetPackageDialog(
             )
         }
     ) {
-        Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)) {
             Text(
                 text = stringResource(
                     R.string.settings_system_patch_selection_reset_package_warning,
@@ -757,7 +757,7 @@ private fun ConfirmResetPackageBundleDialog(
             )
         }
     ) {
-        Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)) {
             Text(
                 text = stringResource(
                     R.string.settings_system_patch_selection_reset_source_warning,
@@ -831,7 +831,7 @@ private fun PatchDetailsDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             // Header info
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {

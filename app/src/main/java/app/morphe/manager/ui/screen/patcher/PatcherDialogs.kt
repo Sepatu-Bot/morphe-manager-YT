@@ -88,7 +88,7 @@ fun IncompatiblePatcherVersionDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
         ) {
             Text(
                 text = htmlAnnotatedString(stringResource(
@@ -258,7 +258,7 @@ fun StoragePermissionDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding)
         ) {
             Text(
                 text = stringResource(
@@ -484,7 +484,7 @@ fun PatcherErrorDialog(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                        .padding(horizontal = MorpheDefaults.ContentPadding, vertical = 4.dp),
                 ) {
                     Text(
                         text = errorMessage,

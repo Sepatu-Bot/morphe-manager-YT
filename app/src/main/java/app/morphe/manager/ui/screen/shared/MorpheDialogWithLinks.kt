@@ -81,7 +81,7 @@ fun MorpheDialogWithLinks(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             @Suppress("DEPRECATION")

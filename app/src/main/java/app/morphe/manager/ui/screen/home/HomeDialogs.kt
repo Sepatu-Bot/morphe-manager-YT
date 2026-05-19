@@ -630,7 +630,7 @@ private fun ApkAvailabilityDialog(
 
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (isExpertMode && compatibleVersions.isNotEmpty()) {
@@ -966,7 +966,7 @@ private fun UnsupportedVersionWarningDialog(
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
+                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
             ) {
                 // Selected version card
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -1090,7 +1090,7 @@ fun InvalidSignatureDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
@@ -1145,7 +1145,7 @@ fun SplitApkWarningDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
@@ -1191,7 +1191,7 @@ fun ExperimentalVersionWarningDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -1244,7 +1244,7 @@ fun WrongPackageDialog(
 
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
+                verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ItemSpacing)
             ) {
                 // Expected package (green card)
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -1324,7 +1324,7 @@ private fun NoCompatibleVersionsDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
@@ -1695,7 +1695,7 @@ fun LowDiskSpaceDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
@@ -1759,7 +1759,7 @@ fun MeteredPatchingDialog(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Icon(
@@ -1813,7 +1813,7 @@ fun DeepLinkAddSourceDialog(
         }
     ) {
         Column(
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -1920,7 +1920,7 @@ fun MppImportDialog(
         }
     ) {
         Column(
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(MorpheDefaults.ContentPadding),
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
         ) {
