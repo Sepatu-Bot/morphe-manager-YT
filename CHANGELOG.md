@@ -1,3 +1,20 @@
+# [1.18.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.6...v1.18.0-dev.7) (2026-05-19)
+
+
+### Bug Fixes
+
+* Fix empty APK file picker on Android 16 with work profile ([#561](https://github.com/MorpheApp/morphe-manager/issues/561)) ([54e8290](https://github.com/MorpheApp/morphe-manager/commit/54e82903fe339487fa035e35c6d0370f95977d7f))
+* Fix Patch button text contrast in WarningBanner ([8c4caab](https://github.com/MorpheApp/morphe-manager/commit/8c4caabd0d76b64fa512d1a9c217a21188488d29))
+* Restyle `MultiSelectBar` to match bundle action bar with select/deselect all ([cc27b07](https://github.com/MorpheApp/morphe-manager/commit/cc27b0722532d02d642e3eed5afe31dfff51df78))
+* Show descriptive confirmation toasts for expert mode patch actions ([5e1931d](https://github.com/MorpheApp/morphe-manager/commit/5e1931d6453e9050509c9c29d02f7bbb5e3f0dae))
+
+
+### Features
+
+* Close search with back gesture in expert mode dialog ([6c01ac1](https://github.com/MorpheApp/morphe-manager/commit/6c01ac1d44b95976c7edc594149eba3372484ed6))
+* Close search with back gesture on home screen ([09e0dee](https://github.com/MorpheApp/morphe-manager/commit/09e0deeef76e3831b6345377ed091811e2712ea9))
+* Update patcher notification with stage and patch name progress ([0c1afb5](https://github.com/MorpheApp/morphe-manager/commit/0c1afb50b2072e8808c30f5dcbdc29bbe19aba05))
+
 # [1.18.0-dev.6](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.5...v1.18.0-dev.6) (2026-05-18)
 
 
