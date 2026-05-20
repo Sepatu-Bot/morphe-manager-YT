@@ -59,9 +59,7 @@
     <string name="sources_management_open_in_browser">کردنەوە لە وێبگەڕ</string>
     <string name="sources_management_failed_to_open_url">شکستی هێنا لەکردنەوەی بەستەر</string>
     <string name="sources_management_prerelease_toggle">بەکارهێنانی پینەی پێش بڵاوکرندەوە</string>
-    <string name="sources_management_prerelease_toggle_description">وەرگرتنی دەستگەیشتنی پێشوەخت بۆ وەشانی نوێی پینەی ئەزموونی</string>
     <string name="sources_management_experimental_versions_toggle">بەکارهێنانی وەشانەکانی ئەپی تاقیکاری</string>
-    <string name="sources_management_experimental_versions_toggle_description">ئامانجەکانی کاربەرنامەی ئەزموونی پینە بکە ئەگەر بەردەست بێت</string>
     <string name="sources_management_already_exists">ئەم سەرچاوەیە پێشتر زیاد کراوە</string>
     <string name="sources_management_invalid_url">بەستەری سەرچاوەی نادروستە. تکایە ناونیشانەکە بپشکنە و دووبارە هەوڵدەوە</string>
     <string name="sources_management_metadata_unavailable">مێتاداتا N/A</string>
@@ -249,9 +247,7 @@
     <string name="root_pre_patch_installer_title">شێوازی دامەزراندن هەڵبژێرە</string>
     <string name="root_pre_patch_installer_description">ئامێرەکەت دەستگەیشتنی ڕەگی هەیە. هەڵبژێرە چۆن دەتەوێت کاربەرنامە پینەکراوەکە دابمەزرێنیت</string>
     <string name="root_pre_patch_installer_mount_title">ڕۆت بەستن</string>
-    <string name="root_pre_patch_installer_mount_description">جێگیرکردنی APK لەسەر ئەپی پاشەکەوت کردن. پێویست بە GmsCore ناکات</string>
     <string name="root_pre_patch_installer_standard_title">دامەزراندنی پێوانەیی</string>
-    <string name="root_pre_patch_installer_standard_description">دامەزراندن وەک ئەپێکی جیا لەگەڵ پشتیوانی GmsCore. دامەزرێنەر هەڵبژێرە (دامەزرێنەری سیستەم، شیزوکو، هتد) پاش پینەکردن</string>
     <string name="root_pre_patch_installer_hint">شێوازی دامەزراندن دیاری دەکات کام پینەی لەخۆگرتووە و ناتوانرێت بگۆڕدرێت پاش پینەکردن</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_copied">هەڵە کۆپی کرا بۆ ڕوونووسگە</string>
@@ -382,7 +378,6 @@
     <string name="settings_appearance_dynamic">ماتریال یو</string>
     <string name="settings_appearance_accent_color">ڕەنگی جیاواز</string>
     <string name="settings_appearance_pure_black">ڕەشی بێگەرد</string>
-    <string name="settings_appearance_pure_black_description">پاشخانی ڕەشی ڕاستەقینە بەکاربێنە</string>
     <!-- Settings - Appearance Tab - Language Selector -->
     <string name="settings_appearance_app_language">زمانی ئەپ</string>
     <string name="settings_appearance_app_language_current">زمانی ئێستا</string>
@@ -405,13 +400,8 @@
     <string name="settings_appearance_app_icon_change_dialog_confirm">گۆڕینی وێنۆچکە</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">نوێکردنەوەکان</string>
-    <string name="settings_advanced_updates_use_prereleases">بەکارهێنانی Morpheی پێش بڵاوکردنەوە</string>
-    <string name="settings_advanced_updates_use_prereleases_description">دەستگەیشتنی پێشوەخت بۆ تایبەتمەندیە نوێکانی Morphe وەربگرە. بۆ بەدەستهێنانی پینەکانی پێش بڵاوکردنەوە، گۆڕینەوەی پێش بڵاوکردنەوە لە هەر سەرچاوەیەکی پینە بە جیا چالاک بکە</string>
-    <string name="settings_advanced_updates_allow_metered">نوێکردنەوە لەسەر داتای مۆبایل</string>
-    <string name="settings_advanced_updates_allow_metered_description">ڕێگەدان بە نوێکردنەوەکانی Morphe و پینەکردن بۆ داگرتن لەڕێگەی داتای مۆبایلەوە</string>
     <string name="settings_advanced_updates_background_notifications">ئاگانامەکانی نوێکردنەوەی پاشخان</string>
     <string name="settings_advanced_updates_background_notifications_description">بە خوولی پشکنین بۆ نوێکردنەوەکان لە باکگراوند و ئاگادارکردنەوە بکە کاتێک بەردەست بوو</string>
-    <string name="settings_advanced_updates_background_notifications_description_fcm">وەرگرتنی ئاگانامەی دەستبەجێ بۆ وەشانە نوێکان، تەنانەت کاتێک ئەپەکە داخرابوو</string>
     <string name="settings_advanced_update_interval">پشکنینی فریکوێنس</string>
     <string name="settings_advanced_update_interval_dialog_title">بپشکنە بۆ نوێکردنەوەکان</string>
     <string name="settings_advanced_update_interval_hourly">کاتژمێرێک جارێک</string>
@@ -467,9 +457,7 @@ morphe_adaptive_monochrome_custom.xml
     <!-- Settings - System Tab - Installer Section -->
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">باشکردنی پاتری</string>
-    <!-- Settings - System Tab - Import and export keystore -->
-    <!-- Settings - System Tab - Import and Export Manager Settings -->
-    <!-- Settings - System Tab - Debug Section -->
+    <!-- Settings - System Tab - Import and Export Section -->
     <!-- Settings - System Tab - Storage Management Section -->
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
