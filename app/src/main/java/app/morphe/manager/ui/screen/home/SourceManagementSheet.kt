@@ -403,8 +403,7 @@ private fun BundleManagementCard(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .graphicsLayer { scaleX = scale; scaleY = scale }
-            .then(longPressModifier),
+            .graphicsLayer { scaleX = scale; scaleY = scale },
         shape = RoundedCornerShape(16.dp),
         tonalElevation = if (isDragging) 8.dp else 3.dp,
         color = animatedColor,
@@ -457,7 +456,8 @@ private fun BundleManagementCard(
                 expanded = expanded,
                 showChevron = !forceExpanded,
                 enabled = isEnabled,
-                metadataFetchError = metadataFetchError
+                metadataFetchError = metadataFetchError,
+                modifier = longPressModifier
             )
 
             // Expanded content
@@ -702,6 +702,7 @@ private fun BundleCardHeader(
     updateInfo: PatchBundleRepository.ManualBundleUpdateInfo?,
     expanded: Boolean,
     showChevron: Boolean,
+    modifier: Modifier = Modifier,
     enabled: Boolean = true,
     metadataFetchError: Throwable? = null
 ) {
@@ -711,7 +712,7 @@ private fun BundleCardHeader(
     )
 
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
