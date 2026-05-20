@@ -1,3 +1,17 @@
+# [1.18.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.7...v1.18.0-dev.8) (2026-05-20)
+
+
+### Bug Fixes
+
+* Eliminate `AnimatedVisibility` layout jumps by moving spacing inside animated content ([e5f5115](https://github.com/MorpheApp/morphe-manager/commit/e5f51156fa4a079e5a2c6e28e8c40b08ea5514a2))
+
+
+### Features
+
+* Add share, export, and install action buttons to APK management dialog ([0f51573](https://github.com/MorpheApp/morphe-manager/commit/0f5157382886cf27595240484d3579a7a0ff61f0))
+* Consolidate import/export settings into grouped rows ([7bea066](https://github.com/MorpheApp/morphe-manager/commit/7bea0665191a6c6b5f24934e073143d2dd741ff4))
+* Polish settings screens UI ([3d5b4ca](https://github.com/MorpheApp/morphe-manager/commit/3d5b4ca3ed94afca7bafa9111a3314b61cb9fe34))
+
 # [1.18.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.6...v1.18.0-dev.7) (2026-05-19)
 
 
