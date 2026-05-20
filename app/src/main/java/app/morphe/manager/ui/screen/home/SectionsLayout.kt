@@ -43,6 +43,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.LocalView
@@ -63,6 +64,7 @@ import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.ui.viewmodel.BundleUpdateStatus
 import app.morphe.manager.util.AppDataSource
 import app.morphe.manager.util.KnownApps
+import app.morphe.manager.util.toast
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -1456,6 +1458,18 @@ private fun MultiSelectBar(
         contentColor = MaterialTheme.colorScheme.onErrorContainer
     )
 ) {
+    val context = LocalContext.current
+    fun withToast(doneMessage: String, action: () -> Unit): () -> Unit = {
+        context.toast(doneMessage)
+        action()
+    }
+
+    val selectAllLabel = stringResource(R.string.select_all)
+    val selectAllDone = stringResource(R.string.select_all_done)
+    val deselectAllLabel = stringResource(R.string.deselect_all)
+    val deselectAllDone = stringResource(R.string.deselect_all_done)
+    val cancelLabel = stringResource(android.R.string.cancel)
+
     AnimatedVisibility(
         visible = visible,
         enter = MorpheAnimations.springSlideUpEnter,
@@ -1496,26 +1510,30 @@ private fun MultiSelectBar(
                 ) {
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         ActionPillButton(
-                            onClick = onSelectAll,
+                            onClick = withToast(selectAllDone, onSelectAll),
                             icon = Icons.Outlined.DoneAll,
-                            contentDescription = stringResource(R.string.select_all),
+                            contentDescription = selectAllLabel,
+                            tooltip = selectAllLabel,
                             enabled = selectedCount < totalCount
                         )
                         ActionPillButton(
-                            onClick = onDeselectAll,
+                            onClick = withToast(deselectAllDone, onDeselectAll),
                             icon = Icons.Outlined.RemoveDone,
-                            contentDescription = stringResource(R.string.deselect_all),
+                            contentDescription = deselectAllLabel,
+                            tooltip = deselectAllLabel,
                             enabled = selectedCount > 0
                         )
                         ActionPillButton(
                             onClick = onCancel,
                             icon = Icons.Outlined.Close,
-                            contentDescription = stringResource(android.R.string.cancel)
+                            contentDescription = cancelLabel,
+                            tooltip = cancelLabel
                         )
                         ActionPillButton(
-                            onClick = onAction,
+                            onClick = withToast(actionContentDescription, onAction),
                             icon = actionIcon,
                             contentDescription = actionContentDescription,
+                            tooltip = actionContentDescription,
                             enabled = selectedCount > 0,
                             colors = actionColors
                         )
