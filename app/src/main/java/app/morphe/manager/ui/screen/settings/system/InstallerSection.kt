@@ -51,22 +51,22 @@ fun InstallerSection(
     val installTarget = InstallerManager.InstallTarget.PATCHER
 
     // Installer entries with periodic updates
-    var primaryEntries by remember(primaryToken) {
+    val primaryEntries = remember(primaryToken) {
         mutableStateOf(settingsViewModel.getInstallerEntries(installTarget, primaryToken))
     }
 
     // Periodically update installer list
     LaunchedEffect(installTarget, primaryToken) {
         while (isActive) {
-            primaryEntries = settingsViewModel.getInstallerEntries(installTarget, primaryToken)
+            primaryEntries.value = settingsViewModel.getInstallerEntries(installTarget, primaryToken)
             delay(1_500)
         }
     }
 
     // Get current entry
-    val primaryEntry = primaryEntries.find { it.token == primaryToken }
+    val primaryEntry = primaryEntries.value.find { it.token == primaryToken }
         ?: settingsViewModel.describeInstallerEntry(primaryToken, installTarget)
-        ?: primaryEntries.firstOrNull()
+        ?: primaryEntries.value.firstOrNull()
 
     // Prompt installer on installation preference
     val promptInstallerOnInstall by settingsViewModel.prefs.promptInstallerOnInstall.getAsState()
@@ -202,19 +202,19 @@ fun InstallerSelectionDialog(
         )
     }
 
-    var currentSelection by remember(selected) { mutableStateOf(selected) }
+    val currentSelection = remember(selected) { mutableStateOf(selected) }
 
     // Ensure valid selection when options change
     LaunchedEffect(options, selected) {
         val tokens = options.map { it.token }
-        if (currentSelection !in tokens) {
-            currentSelection = options.firstOrNull { it.availability.available }?.token
+        if (currentSelection.value !in tokens) {
+            currentSelection.value = options.firstOrNull { it.availability.available }?.token
                 ?: tokens.firstOrNull()
                         ?: selected
         }
     }
 
-    val confirmEnabled = options.find { it.token == currentSelection }?.availability?.available != false
+    val confirmEnabled = options.find { it.token == currentSelection.value }?.availability?.available != false
 
     // Localized strings for accessibility
     val selectedState = stringResource(R.string.selected)
@@ -227,7 +227,7 @@ fun InstallerSelectionDialog(
         footer = {
             MorpheDialogButtonRow(
                 primaryText = stringResource(R.string.confirm),
-                onPrimaryClick = { onConfirm(currentSelection) },
+                onPrimaryClick = { onConfirm(currentSelection.value) },
                 primaryEnabled = confirmEnabled,
                 secondaryText = stringResource(android.R.string.cancel),
                 onSecondaryClick = onDismiss
@@ -240,7 +240,7 @@ fun InstallerSelectionDialog(
         ) {
             options.forEach { option ->
                 val enabled = option.availability.available
-                val isSelected = currentSelection == option.token
+                val isSelected = currentSelection.value == option.token
                 val showShizukuAction = option.token == InstallerManager.Token.Shizuku &&
                         option.availability.reason in shizukuPromptReasons &&
                         onOpenShizuku != null
@@ -258,7 +258,7 @@ fun InstallerSelectionDialog(
                     option = option,
                     selected = isSelected,
                     enabled = enabled,
-                    onSelect = { if (enabled) currentSelection = option.token },
+                    onSelect = { if (enabled) currentSelection.value = option.token },
                     stateDescription = stateDesc
                 )
 
@@ -404,9 +404,8 @@ fun InstallerIconPreview(
                 alpha = if (enabled) 1f else 0.4f
             )
         } else {
-            Icon(
-                imageVector = Icons.Outlined.ChevronRight,
-                contentDescription = null,
+            MorpheIcon(
+                icon = Icons.Outlined.ChevronRight,
                 tint = colors.primary.copy(alpha = if (enabled) 1f else 0.4f)
             )
         }
@@ -593,11 +592,9 @@ private fun InstallerOptionCard(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(24.dp)
+            MorpheIcon(
+                icon = icon,
+                tint = MaterialTheme.colorScheme.primary
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
