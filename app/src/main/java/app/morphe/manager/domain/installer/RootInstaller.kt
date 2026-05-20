@@ -165,12 +165,10 @@ class RootInstaller(
                     pm.getVersionCode(installedInfo) < pm.getVersionCode(patchedInfo)
 
             if (needsInstall) {
-                if (installedInfo != null)
-                    execute("pm uninstall -k $packageName").assertSuccess("Failed to uninstall stock app")
                 // 'pm install' fails on files inside the app's private data directory on
                 // Android 14+ due to SELinux restrictions. Copy to /data/local/tmp/ first,
                 // which is always accessible to the package installer.
-                // -r allows replacement of an existing package; -d allows version downgrade.
+                // -r allows replacement of an existing package; -d allows version downgrade
                 val tempApk = "/data/local/tmp/${packageName}_morphe_stock.apk"
                 execute("cp \"${stockApp.absolutePath}\" \"$tempApk\"").assertSuccess("Failed to copy stock APK to temp location")
                 val installResult = execute("pm install -r -d \"$tempApk\"")
