@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-21T06:30:16",
-  "description": "# [1.18.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.10...v1.18.0-dev.11) (2026-05-21)\n\n\n### Bug Fixes\n\n* Remove redundant notification icon XML generation ([97c7009](https://github.com/MorpheApp/morphe-manager/commit/97c7009c3bdab1e4cdd40fb78f2a6a534723bf91))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.11/morphe-manager-1.18.0-dev.11.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.11/morphe-manager-1.18.0-dev.11.apk.asc",
-  "version": "1.18.0-dev.11"
+  "created_at": "2026-05-21T11:30:34",
+  "description": "# [1.18.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.11...v1.18.0-dev.12) (2026-05-21)\n\n\n### Features\n\n* Add notification sound feedback on patching completion ([1167339](https://github.com/MorpheApp/morphe-manager/commit/116733918ce09c4e290ff66af29ab3fde1e107dc))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.12/morphe-manager-1.18.0-dev.12.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.12/morphe-manager-1.18.0-dev.12.apk.asc",
+  "version": "1.18.0-dev.12"
 }

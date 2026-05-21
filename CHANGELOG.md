@@ -1,3 +1,10 @@
+# [1.18.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.11...v1.18.0-dev.12) (2026-05-21)
+
+
+### Features
+
+* Add notification sound feedback on patching completion ([1167339](https://github.com/MorpheApp/morphe-manager/commit/116733918ce09c4e290ff66af29ab3fde1e107dc))
+
 # [1.18.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.10...v1.18.0-dev.11) (2026-05-21)
 
 
