@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-21T05:27:03",
-  "description": "# [1.18.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.9...v1.18.0-dev.10) (2026-05-21)\n\n\n### Bug Fixes\n\n* Check both `stable` and `dev` channels when pre-releases are enabled for JSON sources ([b4e02bd](https://github.com/MorpheApp/morphe-manager/commit/b4e02bdbbfbb468a3a447305a42e60a2d1092328))\n* Pass explicit tint to `MorpheIcon` inside `Button` to restore `LocalContentColor` inheritance ([4337291](https://github.com/MorpheApp/morphe-manager/commit/433729159a0c4809601b550e1e4c87e0fbedd6cb))\n* Set `Switch` checked icon color to primary to match track color ([b4e4ed4](https://github.com/MorpheApp/morphe-manager/commit/b4e4ed426625d2d554fae8f588a843aae00d0a05))\n\n\n### Features\n\n* Add monochrome adaptive icon generation ([#571](https://github.com/MorpheApp/morphe-manager/issues/571)) ([bd0fcab](https://github.com/MorpheApp/morphe-manager/commit/bd0fcab96a2ee049c00150ba26a9991e5ad86539))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.10/morphe-manager-1.18.0-dev.10.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.10/morphe-manager-1.18.0-dev.10.apk.asc",
-  "version": "1.18.0-dev.10"
+  "created_at": "2026-05-21T06:30:16",
+  "description": "# [1.18.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.10...v1.18.0-dev.11) (2026-05-21)\n\n\n### Bug Fixes\n\n* Remove redundant notification icon XML generation ([97c7009](https://github.com/MorpheApp/morphe-manager/commit/97c7009c3bdab1e4cdd40fb78f2a6a534723bf91))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.11/morphe-manager-1.18.0-dev.11.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.11/morphe-manager-1.18.0-dev.11.apk.asc",
+  "version": "1.18.0-dev.11"
 }

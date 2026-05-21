@@ -1,3 +1,10 @@
+# [1.18.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.10...v1.18.0-dev.11) (2026-05-21)
+
+
+### Bug Fixes
+
+* Remove redundant notification icon XML generation ([97c7009](https://github.com/MorpheApp/morphe-manager/commit/97c7009c3bdab1e4cdd40fb78f2a6a534723bf91))
+
 # [1.18.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.9...v1.18.0-dev.10) (2026-05-21)
 
 
