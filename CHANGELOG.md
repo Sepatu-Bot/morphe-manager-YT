@@ -1,3 +1,17 @@
+# [1.18.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.9...v1.18.0-dev.10) (2026-05-21)
+
+
+### Bug Fixes
+
+* Check both `stable` and `dev` channels when pre-releases are enabled for JSON sources ([b4e02bd](https://github.com/MorpheApp/morphe-manager/commit/b4e02bdbbfbb468a3a447305a42e60a2d1092328))
+* Pass explicit tint to `MorpheIcon` inside `Button` to restore `LocalContentColor` inheritance ([4337291](https://github.com/MorpheApp/morphe-manager/commit/433729159a0c4809601b550e1e4c87e0fbedd6cb))
+* Set `Switch` checked icon color to primary to match track color ([b4e4ed4](https://github.com/MorpheApp/morphe-manager/commit/b4e4ed426625d2d554fae8f588a843aae00d0a05))
+
+
+### Features
+
+* Add monochrome adaptive icon generation ([#571](https://github.com/MorpheApp/morphe-manager/issues/571)) ([bd0fcab](https://github.com/MorpheApp/morphe-manager/commit/bd0fcab96a2ee049c00150ba26a9991e5ad86539))
+
 # [1.18.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.8...v1.18.0-dev.9) (2026-05-20)
 
 

@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-20T08:20:29",
-  "description": "# [1.18.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.8...v1.18.0-dev.9) (2026-05-20)\n\n\n### Features\n\n* Add toast feedback and tooltips to `MultiSelectBar` pill buttons ([fee8095](https://github.com/MorpheApp/morphe-manager/commit/fee8095098006baf327d31f0e995baf303eded3b))\n* Add toast feedback and tooltips to `SourceManagementSheet` pill buttons ([db2dd71](https://github.com/MorpheApp/morphe-manager/commit/db2dd71ffb433fda66c3cdaffb749c01ef618754))\n* Add tooltips to `ActionPillButton`s in APK and patch selection dialogs ([8dd77b4](https://github.com/MorpheApp/morphe-manager/commit/8dd77b4ddf4afd11bd9d755a3478841e7cb18508))\n* Scope drag handle to `BundleCardHeader` to prevent tooltip conflict ([2b34281](https://github.com/MorpheApp/morphe-manager/commit/2b34281c8f3faf655bbc1562be411cd60a087ac3))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.9/morphe-manager-1.18.0-dev.9.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.9/morphe-manager-1.18.0-dev.9.apk.asc",
-  "version": "1.18.0-dev.9"
+  "created_at": "2026-05-21T05:27:03",
+  "description": "# [1.18.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0-dev.9...v1.18.0-dev.10) (2026-05-21)\n\n\n### Bug Fixes\n\n* Check both `stable` and `dev` channels when pre-releases are enabled for JSON sources ([b4e02bd](https://github.com/MorpheApp/morphe-manager/commit/b4e02bdbbfbb468a3a447305a42e60a2d1092328))\n* Pass explicit tint to `MorpheIcon` inside `Button` to restore `LocalContentColor` inheritance ([4337291](https://github.com/MorpheApp/morphe-manager/commit/433729159a0c4809601b550e1e4c87e0fbedd6cb))\n* Set `Switch` checked icon color to primary to match track color ([b4e4ed4](https://github.com/MorpheApp/morphe-manager/commit/b4e4ed426625d2d554fae8f588a843aae00d0a05))\n\n\n### Features\n\n* Add monochrome adaptive icon generation ([#571](https://github.com/MorpheApp/morphe-manager/issues/571)) ([bd0fcab](https://github.com/MorpheApp/morphe-manager/commit/bd0fcab96a2ee049c00150ba26a9991e5ad86539))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.10/morphe-manager-1.18.0-dev.10.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.18.0-dev.10/morphe-manager-1.18.0-dev.10.apk.asc",
+  "version": "1.18.0-dev.10"
 }
