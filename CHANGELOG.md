@@ -1,3 +1,10 @@
+# [1.19.0-dev.2](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.1...v1.19.0-dev.2) (2026-05-23)
+
+
+### Bug Fixes
+
+* Crash on `.mpp` icon load ([6ca5114](https://github.com/MorpheApp/morphe-manager/commit/6ca51147200d50b5a54ce4ccd4b0ed858ddef0c8))
+
 # [1.19.0-dev.1](https://github.com/MorpheApp/morphe-manager/compare/v1.18.0...v1.19.0-dev.1) (2026-05-23)
 
 
