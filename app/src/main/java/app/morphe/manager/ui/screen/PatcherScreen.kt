@@ -7,7 +7,6 @@ package app.morphe.manager.ui.screen
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.media.RingtoneManager
 import android.util.Log
 import android.view.HapticFeedbackConstants
 import android.view.WindowManager
@@ -121,10 +120,8 @@ fun PatcherScreen(
             if (patcherSucceeded == true) {
                 delay(300) // small pause so speed resets before effect fires
                 onPatchingCompleted()
-                // Haptic + audio feedback
+                // Haptic feedback
                 view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-                RingtoneManager.getRingtone(context, ringtoneUri)?.play()
             }
         }
     }
