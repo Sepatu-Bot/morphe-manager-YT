@@ -1,3 +1,11 @@
+# [1.19.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.3...v1.19.0-dev.4) (2026-05-23)
+
+
+### Bug Fixes
+
+* Back gesture closes search before navigating in file picker ([2e7b9c1](https://github.com/MorpheApp/morphe-manager/commit/2e7b9c168d003a1347f6a48c2a2f7c9d2ba88408))
+* Delay focus request so keyboard animates smoothly in release builds ([c1f7145](https://github.com/MorpheApp/morphe-manager/commit/c1f7145c8cbc49cb464841b3bb6c3079be84ce31))
+
 # [1.19.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.2...v1.19.0-dev.3) (2026-05-23)
 
 

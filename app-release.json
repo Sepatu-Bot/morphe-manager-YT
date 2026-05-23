@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-23T16:33:21",
-  "description": "# [1.19.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.2...v1.19.0-dev.3) (2026-05-23)\n\n\n### Bug Fixes\n\n* Add spacing between file name and detail in file picker ([5f94287](https://github.com/MorpheApp/morphe-manager/commit/5f942876329019ffbb4f249b76fe1d1547fd9330))\n* Remove redundant checkmark from file picker selection ([5222e14](https://github.com/MorpheApp/morphe-manager/commit/5222e1477b80e4843ed875bf6f426daa7c3c20b0))\n\n\n### Features\n\n* Add search to file picker ([e9388ed](https://github.com/MorpheApp/morphe-manager/commit/e9388edfebe6124baaad5fc4d71ef19d130c206e))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.3/morphe-manager-1.19.0-dev.3.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.3/morphe-manager-1.19.0-dev.3.apk.asc",
-  "version": "1.19.0-dev.3"
+  "created_at": "2026-05-23T16:59:48",
+  "description": "# [1.19.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.3...v1.19.0-dev.4) (2026-05-23)\n\n\n### Bug Fixes\n\n* Back gesture closes search before navigating in file picker ([2e7b9c1](https://github.com/MorpheApp/morphe-manager/commit/2e7b9c168d003a1347f6a48c2a2f7c9d2ba88408))\n* Delay focus request so keyboard animates smoothly in release builds ([c1f7145](https://github.com/MorpheApp/morphe-manager/commit/c1f7145c8cbc49cb464841b3bb6c3079be84ce31))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.4/morphe-manager-1.19.0-dev.4.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.4/morphe-manager-1.19.0-dev.4.apk.asc",
+  "version": "1.19.0-dev.4"
 }
