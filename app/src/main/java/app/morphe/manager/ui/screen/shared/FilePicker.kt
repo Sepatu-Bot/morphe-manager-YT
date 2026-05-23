@@ -13,7 +13,6 @@ import android.os.Environment
 import android.util.LruCache
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -32,7 +31,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.asImageBitmap
@@ -217,7 +215,6 @@ fun FilePicker(
 
     var currentDir by remember { mutableStateOf(downloadsDir) }
     var dirContents by remember { mutableStateOf<List<File>>(emptyList()) }
-    var selectedFile by remember { mutableStateOf<File?>(null) }
     var refreshKey by remember { mutableIntStateOf(0) }
     var showStorageMenu by remember { mutableStateOf(false) }
     var sortMode by remember {
@@ -258,7 +255,6 @@ fun FilePicker(
     // Reload contents and persist the current directory on every navigation
     LaunchedEffect(currentDir, refreshKey) {
         dirContents = currentDir?.let { listDir(it, allowedExtensions) } ?: emptyList()
-        if (selectedFile?.parentFile != currentDir) selectedFile = null
         currentDir?.absolutePath?.let { prefs.lastFilePickerPath.update(it) }
     }
 
@@ -456,7 +452,6 @@ fun FilePicker(
                         }
                     } else {
                         items(displayedContents, key = { it.absolutePath }) { file ->
-                            val isSelected = selectedFile == file
                             val isDir = file.isDirectory
                             val isApk = !isDir && file.extension.lowercase() in APK_EXTENSIONS
                             // Only standard .apk supports getPackageArchiveInfo; bundles (.apkm/.apks/.xapk) are ZIPs
@@ -527,10 +522,9 @@ fun FilePicker(
                                 packageInfo = packageInfo,
                                 name = file.name,
                                 detail = detail,
-                                isSelected = isSelected,
                                 onClick = {
                                     if (isDir) currentDir = file
-                                    else selectedFile = if (isSelected) null else file
+                                    else if (!allowFolderSelection) onFilePicked(file)
                                 }
                             )
                             HorizontalDivider(color = LocalDialogTextColor.current.copy(alpha = 0.06f))
@@ -553,12 +547,14 @@ fun FilePicker(
                     onClick = onDismiss,
                     modifier = Modifier.weight(1f)
                 )
-                MorpheDialogButton(
-                    text = stringResource(R.string.file_picker_select),
-                    onClick = { (selectedFile ?: currentDir?.takeIf { allowFolderSelection })?.let { onFilePicked(it) } },
-                    enabled = selectedFile != null || (allowFolderSelection && currentDir != null),
-                    modifier = Modifier.weight(1f)
-                )
+                if (allowFolderSelection) {
+                    MorpheDialogButton(
+                        text = stringResource(R.string.file_picker_select_folder),
+                        onClick = { currentDir?.let { onFilePicked(it) } },
+                        enabled = currentDir != null,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
             }
         }
     }
@@ -572,19 +568,13 @@ private fun FilePickerRow(
     packageInfo: PackageInfo? = null,
     iconBitmap: ImageBitmap? = null,
     thumbnail: ImageBitmap? = null,
-    isSelected: Boolean = false,
     onClick: () -> Unit
 ) {
-    val iconTint = if (isSelected) MaterialTheme.colorScheme.primary
-                   else LocalDialogTextColor.current.copy(alpha = 0.75f)
+    val iconTint = LocalDialogTextColor.current.copy(alpha = 0.75f)
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .background(
-                if (isSelected) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.18f)
-                else Color.Transparent
-            )
             .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -628,9 +618,8 @@ private fun FilePickerRow(
             Text(
                 text = name,
                 style = MaterialTheme.typography.bodyLarge,
-                color = if (isSelected) MaterialTheme.colorScheme.primary
-                        else LocalDialogTextColor.current,
-                fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal
+                color = LocalDialogTextColor.current,
+                fontWeight = FontWeight.Normal
             )
             if (detail != null) {
                 Text(
