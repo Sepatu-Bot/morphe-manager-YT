@@ -592,13 +592,5 @@ private fun FilePickerRow(
                 )
             }
         }
-        if (isSelected) {
-            Icon(
-                imageVector = Icons.Outlined.CheckCircle,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(20.dp)
-            )
-        }
     }
 }
