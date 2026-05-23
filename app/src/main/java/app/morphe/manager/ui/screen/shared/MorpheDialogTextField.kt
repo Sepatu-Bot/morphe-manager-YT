@@ -131,7 +131,7 @@ fun MorpheDialogTextField(
                         ) {
                             Icon(
                                 imageVector = Icons.Outlined.FolderOpen,
-                                contentDescription = stringResource(R.string.patch_option_pick_folder),
+                                contentDescription = stringResource(R.string.select_folder),
                                 tint = textColor.copy(alpha = 0.7f)
                             )
                         }
@@ -145,7 +145,7 @@ fun MorpheDialogTextField(
                         ) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Outlined.InsertDriveFile,
-                                contentDescription = stringResource(R.string.patch_option_pick_file),
+                                contentDescription = stringResource(R.string.select_file),
                                 tint = textColor.copy(alpha = 0.7f)
                             )
                         }
@@ -242,7 +242,7 @@ fun MorpheDialogDropdownTextField(
                         ) {
                             Icon(
                                 imageVector = Icons.Outlined.FolderOpen,
-                                contentDescription = stringResource(R.string.patch_option_pick_folder),
+                                contentDescription = stringResource(R.string.select_folder),
                                 tint = textColor.copy(alpha = 0.7f)
                             )
                         }

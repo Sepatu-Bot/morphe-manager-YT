@@ -322,8 +322,8 @@ fun FilePicker(
                 } else {
                     Text(
                         text = stringResource(
-                            if (allowFolderSelection) R.string.file_picker_title_folder
-                            else R.string.file_picker_title
+                            if (allowFolderSelection) R.string.select_folder
+                            else R.string.select_file
                         ),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
@@ -554,7 +554,7 @@ fun FilePicker(
                 )
                 if (allowFolderSelection) {
                     MorpheDialogButton(
-                        text = stringResource(R.string.file_picker_select_folder),
+                        text = stringResource(R.string.select_folder),
                         onClick = { currentDir?.let { onFilePicked(it) } },
                         enabled = currentDir != null,
                         modifier = Modifier.weight(1f)
