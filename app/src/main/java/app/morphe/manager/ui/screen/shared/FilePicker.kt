@@ -112,6 +112,7 @@ private fun storageRoots(context: Context): List<Pair<String, File>> {
 
 private val IMAGE_EXTENSIONS = setOf("png", "jpg", "jpeg", "gif", "webp", "bmp")
 private val SPLIT_ICON_EXTENSIONS = setOf("apkm", "xapk")
+private val KEYSTORE_EXTENSIONS = setOf("jks", "keystore", "bks", "p12", "pfx")
 
 private val iconLoadDispatcher = Dispatchers.IO.limitedParallelism(2)
 private val apkPackageInfoCache = LruCache<String, PackageInfo>(100)
@@ -499,6 +500,8 @@ fun FilePicker(
                             }
 
                             val isMpp = !isDir && file.extension.lowercase() == "mpp"
+                            val isKeystore = !isDir && file.extension.lowercase() in KEYSTORE_EXTENSIONS
+                            val isJson = !isDir && file.extension.lowercase() == "json"
                             val icon = when {
                                 isDir -> Icons.Outlined.Folder
                                 canLoadIcon && packageInfo == null -> Icons.Outlined.Android
@@ -507,6 +510,8 @@ fun FilePicker(
                                 isSplitBundle && splitIcon == null -> Icons.Outlined.Android
                                 isSplitBundle -> null
                                 isMpp -> null
+                                isKeystore -> Icons.Outlined.Key
+                                isJson -> Icons.Outlined.DataObject
                                 isImage && thumbnail == null -> Icons.Outlined.Image
                                 isImage -> null
                                 else -> Icons.AutoMirrored.Outlined.InsertDriveFile
