@@ -122,8 +122,16 @@ private val splitIconCache = LruCache<String, ImageBitmap>(50)
 
 private fun decodeSplitIcon(file: File): ImageBitmap? = runCatching {
     java.util.zip.ZipFile(file).use { zip ->
-        zip.getEntry("icon.png")?.let { entry ->
-            zip.getInputStream(entry).use { BitmapFactory.decodeStream(it)?.asImageBitmap() }
+        val entry = zip.getEntry("icon.png") ?: return@runCatching null
+        val opts = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+        zip.getInputStream(entry).use { BitmapFactory.decodeStream(it, null, opts) }
+        var sampleSize = 1
+        while (opts.outWidth / (sampleSize * 2) >= 128 && opts.outHeight / (sampleSize * 2) >= 128) {
+            sampleSize *= 2
+        }
+        zip.getInputStream(entry).use {
+            BitmapFactory.decodeStream(it, null, BitmapFactory.Options().apply { inSampleSize = sampleSize })
+                ?.asImageBitmap()
         }
     }
 }.getOrNull()
@@ -581,35 +589,37 @@ private fun FilePickerRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        if (packageInfo != null) {
-            AppIcon(
-                packageInfo = packageInfo,
-                contentDescription = null,
-                modifier = Modifier.size(22.dp)
-            )
-        } else if (thumbnail != null) {
-            Image(
-                bitmap = thumbnail,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(22.dp)
-                    .clip(RoundedCornerShape(4.dp))
-            )
-        } else if (iconBitmap != null) {
-            Icon(
-                bitmap = iconBitmap,
-                contentDescription = null,
-                tint = iconTint,
-                modifier = Modifier.size(22.dp)
-            )
-        } else if (icon != null) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = iconTint,
-                modifier = Modifier.size(22.dp)
-            )
+        Box(modifier = Modifier.size(28.dp), contentAlignment = Alignment.Center) {
+            if (packageInfo != null) {
+                AppIcon(
+                    packageInfo = packageInfo,
+                    contentDescription = null,
+                    modifier = Modifier.size(28.dp)
+                )
+            } else if (thumbnail != null) {
+                Image(
+                    bitmap = thumbnail,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(22.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                )
+            } else if (iconBitmap != null) {
+                Icon(
+                    bitmap = iconBitmap,
+                    contentDescription = null,
+                    tint = iconTint,
+                    modifier = Modifier.size(22.dp)
+                )
+            } else if (icon != null) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = iconTint,
+                    modifier = Modifier.size(22.dp)
+                )
+            }
         }
         Column(
             modifier = Modifier.weight(1f),
