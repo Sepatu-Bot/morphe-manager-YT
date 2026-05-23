@@ -113,10 +113,20 @@ private fun storageRoots(context: Context): List<Pair<String, File>> {
 }
 
 private val IMAGE_EXTENSIONS = setOf("png", "jpg", "jpeg", "gif", "webp", "bmp")
+private val SPLIT_ICON_EXTENSIONS = setOf("apkm", "xapk")
 
 private val iconLoadDispatcher = Dispatchers.IO.limitedParallelism(2)
 private val apkPackageInfoCache = LruCache<String, PackageInfo>(100)
 private val imageThumbnailCache = LruCache<String, ImageBitmap>(30)
+private val splitIconCache = LruCache<String, ImageBitmap>(50)
+
+private fun decodeSplitIcon(file: File): ImageBitmap? = runCatching {
+    java.util.zip.ZipFile(file).use { zip ->
+        zip.getEntry("icon.png")?.let { entry ->
+            zip.getInputStream(entry).use { BitmapFactory.decodeStream(it)?.asImageBitmap() }
+        }
+    }
+}.getOrNull()
 
 private fun decodeThumbnail(file: File): ImageBitmap? = runCatching {
     val opts = BitmapFactory.Options().apply { inJustDecodeBounds = true }
@@ -444,6 +454,7 @@ fun FilePicker(
                             // Only standard .apk supports getPackageArchiveInfo; bundles (.apkm/.apks/.xapk) are ZIPs
                             val canLoadIcon = !isDir && file.extension.lowercase() == "apk"
                             val isImage = !isDir && file.extension.lowercase() in IMAGE_EXTENSIONS
+                            val isSplitBundle = !isDir && file.extension.lowercase() in SPLIT_ICON_EXTENSIONS
 
                             val packageInfo by produceState<PackageInfo?>(null, file) {
                                 if (canLoadIcon) {
@@ -471,12 +482,27 @@ fun FilePicker(
                                 }
                             }
 
+                            val splitIcon by produceState<ImageBitmap?>(null, file) {
+                                if (isSplitBundle) {
+                                    val cached = splitIconCache.get(file.absolutePath)
+                                    if (cached != null) {
+                                        value = cached
+                                    } else {
+                                        val bmp = withContext(iconLoadDispatcher) { decodeSplitIcon(file) }
+                                        if (bmp != null) splitIconCache.put(file.absolutePath, bmp)
+                                        value = bmp
+                                    }
+                                }
+                            }
+
                             val isMpp = !isDir && file.extension.lowercase() == "mpp"
                             val icon = when {
                                 isDir -> Icons.Outlined.Folder
                                 canLoadIcon && packageInfo == null -> Icons.Outlined.Android
                                 canLoadIcon -> null
                                 isApk -> Icons.Outlined.Android
+                                isSplitBundle && splitIcon == null -> Icons.Outlined.Android
+                                isSplitBundle -> null
                                 isMpp -> null
                                 isImage && thumbnail == null -> Icons.Outlined.Image
                                 isImage -> null
@@ -489,7 +515,7 @@ fun FilePicker(
                             FilePickerRow(
                                 icon = icon,
                                 iconBitmap = if (isMpp) mppIcon else null,
-                                thumbnail = thumbnail,
+                                thumbnail = if (isSplitBundle) splitIcon else thumbnail,
                                 packageInfo = packageInfo,
                                 name = file.name,
                                 detail = detail,
