@@ -1,3 +1,17 @@
+# [1.19.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.8...v1.19.0-dev.9) (2026-05-24)
+
+
+### Bug Fixes
+
+* Redraw dino character as Chrome T-Rex pixel art ([e8b2851](https://github.com/MorpheApp/morphe-manager/commit/e8b285172242a7f430543242111fd30f9dddba12))
+* Remove mini-games and logs button from simple mode ([4117875](https://github.com/MorpheApp/morphe-manager/commit/4117875d45cda60412b14acd96e4326eccd944ec))
+
+
+### Features
+
+* Add animated clouds and seagulls to Dino game ([b6da268](https://github.com/MorpheApp/morphe-manager/commit/b6da268fc659b7781c7bd17d3cc5940e3e0bdc8c))
+* Update Snake palette to brand colors ([4399783](https://github.com/MorpheApp/morphe-manager/commit/4399783d8cc46260c5a2fbbbab179831613663a4))
+
 # [1.19.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.7...v1.19.0-dev.8) (2026-05-24)
 
 
