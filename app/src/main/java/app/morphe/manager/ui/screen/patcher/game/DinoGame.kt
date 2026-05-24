@@ -200,22 +200,58 @@ private fun DinoCanvas(state: DinoGameState, modifier: Modifier) {
             val dh = DINO_H * h
             val dinoBottom = dy + dh
 
-            // Body
-            drawRect(DinoBody, Offset(dx, dy + dh * 0.36f), Size(dw * 0.85f, dh * 0.64f))
+            // Tail
+            drawRect(DinoBody, Offset(dx, dy + dh * 0.37f), Size(dw * 0.22f, dh * 0.19f))
+            // Torso
+            drawRect(DinoBody, Offset(dx + dw * 0.12f, dy + dh * 0.44f), Size(dw * 0.63f, dh * 0.56f))
+            // Neck
+            drawRect(DinoBody, Offset(dx + dw * 0.52f, dy + dh * 0.22f), Size(dw * 0.23f, dh * 0.27f))
             // Head
-            drawRect(DinoBody, Offset(dx + dw * 0.18f, dy), Size(dw * 0.82f, dh * 0.44f))
-            // Eye (light circle with dark pupil)
-            drawCircle(DinoBg, dw * 0.11f, Offset(dx + dw * 0.80f, dy + dh * 0.15f))
-            drawCircle(DinoEye, dw * 0.06f, Offset(dx + dw * 0.84f, dy + dh * 0.17f))
-            // Legs (alternating run animation when on ground, tucked when jumping)
+            drawRect(DinoBody, Offset(dx + dw * 0.42f, dy), Size(dw * 0.58f, dh * 0.26f))
+            // Upper jaw
+            drawRect(DinoBody, Offset(dx + dw * 0.60f, dy + dh * 0.21f), Size(dw * 0.44f, dh * 0.12f))
+            // Lower jaw
+            drawRect(DinoBody, Offset(dx + dw * 0.63f, dy + dh * 0.30f), Size(dw * 0.36f, dh * 0.10f))
+            // Eye sclera
+            drawCircle(DinoBg, dw * 0.11f, Offset(dx + dw * 0.82f, dy + dh * 0.10f))
+            // Eye pupil
+            drawCircle(DinoEye, dw * 0.065f, Offset(dx + dw * 0.85f, dy + dh * 0.11f))
+            // Tiny forearm
+            drawRect(DinoBody, Offset(dx + dw * 0.67f, dy + dh * 0.57f), Size(dw * 0.15f, dh * 0.12f))
+            drawRect(DinoBody, Offset(dx + dw * 0.77f, dy + dh * 0.67f), Size(dw * 0.13f, dh * 0.08f))
+            // Legs with feet; the whole leg+foot unit lifts when the leg is raised
+            val legW  = dw * 0.21f
+            val legH  = dh * 0.34f
+            val footW = dw * 0.31f
+            val footH = dh * 0.09f
+            val toeW  = footW * 0.27f
+            val toeH  = dh * 0.08f
+            val backLegX  = dx + dw * 0.16f
+            val frontLegX = dx + dw * 0.41f
             if (state.dinoJump > 0f) {
-                drawRect(DinoBody, Offset(dx + dw * 0.52f, dinoBottom - dh * 0.22f), Size(dw * 0.17f, dh * 0.20f))
-                drawRect(DinoBody, Offset(dx + dw * 0.22f, dinoBottom - dh * 0.20f), Size(dw * 0.17f, dh * 0.18f))
+                drawRect(DinoBody, Offset(backLegX,  dinoBottom - legH * 0.62f), Size(legW, legH * 0.62f))
+                drawRect(DinoBody, Offset(frontLegX, dinoBottom - legH * 0.54f), Size(legW, legH * 0.54f))
+                drawRect(DinoBody, Offset(backLegX,                dinoBottom), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(backLegX + legW * 0.42f, dinoBottom), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(backLegX + legW * 0.80f, dinoBottom), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX,                dinoBottom), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX + legW * 0.42f, dinoBottom), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX + legW * 0.80f, dinoBottom), Size(toeW, toeH))
             } else {
-                val leg1Y = dinoBottom - dh * 0.20f - if (state.legPhase == 0) 0f else dh * 0.12f
-                val leg2Y = dinoBottom - dh * 0.20f - if (state.legPhase == 1) 0f else dh * 0.12f
-                drawRect(DinoBody, Offset(dx + dw * 0.52f, leg1Y), Size(dw * 0.17f, dh * 0.20f))
-                drawRect(DinoBody, Offset(dx + dw * 0.22f, leg2Y), Size(dw * 0.17f, dh * 0.20f))
+                val backRaise  = if (state.legPhase == 1) dh * 0.11f else 0f
+                val frontRaise = if (state.legPhase == 0) dh * 0.11f else 0f
+                drawRect(DinoBody, Offset(backLegX,  dinoBottom - legH - backRaise),  Size(legW, legH - footH))
+                drawRect(DinoBody, Offset(backLegX,  dinoBottom - footH - backRaise), Size(footW, footH))
+                drawRect(DinoBody, Offset(frontLegX, dinoBottom - legH - frontRaise),  Size(legW, legH - footH))
+                drawRect(DinoBody, Offset(frontLegX, dinoBottom - footH - frontRaise), Size(footW, footH))
+                val bFtBtm = dinoBottom - backRaise
+                val fFtBtm = dinoBottom - frontRaise
+                drawRect(DinoBody, Offset(backLegX,                 bFtBtm), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(backLegX + footW * 0.36f, bFtBtm), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(backLegX + footW * 0.70f, bFtBtm), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX,                 fFtBtm), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX + footW * 0.36f, fFtBtm), Size(toeW, toeH))
+                drawRect(DinoBody, Offset(frontLegX + footW * 0.70f, fFtBtm), Size(toeW, toeH))
             }
         }
 
