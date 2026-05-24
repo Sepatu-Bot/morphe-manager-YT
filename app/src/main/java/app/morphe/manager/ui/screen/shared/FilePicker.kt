@@ -225,7 +225,6 @@ fun FilePicker(
     }
 
     var currentDir by remember { mutableStateOf(downloadsDir) }
-    var dirContents by remember { mutableStateOf<List<File>>(emptyList()) }
     var refreshKey by remember { mutableIntStateOf(0) }
     var showBreadcrumbs by remember { mutableStateOf(false) }
     var sortMode by remember {
@@ -256,7 +255,13 @@ fun FilePicker(
         }
     }
 
-    val sortedContents = remember(dirContents, sortMode) { applySort(dirContents, sortMode) }
+    // null = still loading; resets to null automatically when currentDir/refreshKey change
+    val dirContents by produceState<List<File>?>(initialValue = null, currentDir, refreshKey) {
+        value = currentDir?.let { listDir(it, allowedExtensions) } ?: emptyList()
+        currentDir?.absolutePath?.let { prefs.lastFilePickerPath.update(it) }
+    }
+
+    val sortedContents = remember(dirContents, sortMode) { dirContents?.let { applySort(it, sortMode) } ?: emptyList() }
     val displayedContents = remember(sortedContents, searchQuery) {
         if (searchQuery.isBlank()) sortedContents
         else sortedContents.filter { it.name.contains(searchQuery, ignoreCase = true) }
@@ -281,12 +286,6 @@ fun FilePicker(
             val savedDir = File(savedPath)
             if (savedDir.isDirectory) currentDir = savedDir
         }
-    }
-
-    // Reload contents and persist the current directory on every navigation
-    LaunchedEffect(currentDir, refreshKey) {
-        dirContents = currentDir?.let { listDir(it, allowedExtensions) } ?: emptyList()
-        currentDir?.absolutePath?.let { prefs.lastFilePickerPath.update(it) }
     }
 
     val navigateBack = {
@@ -502,14 +501,15 @@ fun FilePicker(
                         HorizontalDivider(color = LocalDialogTextColor.current.copy(alpha = 0.06f))
                     }
 
-                    if (dirContents.isEmpty()) {
+                    val contentsLoaded = dirContents
+                    if (contentsLoaded != null && contentsLoaded.isEmpty()) {
                         item(key = "__empty__") {
                             EmptyState(
                                 message = stringResource(R.string.file_picker_no_files),
                                 icon = Icons.Outlined.FolderOff
                             )
                         }
-                    } else if (displayedContents.isEmpty()) {
+                    } else if (contentsLoaded != null && displayedContents.isEmpty()) {
                         item(key = "__no_results__") {
                             EmptyState(
                                 message = stringResource(R.string.search_no_results),
