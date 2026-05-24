@@ -64,6 +64,8 @@ class DinoGameState {
         private set
     var legPhase by mutableIntStateOf(0)
         private set
+    var isPaused by mutableStateOf(false)
+        private set
 
     private var lastTickMs = 0L
     private var lastObstacleMs = 0L
@@ -77,7 +79,7 @@ class DinoGameState {
     }
 
     fun tick(nowMs: Long) {
-        if (!isStarted || isGameOver) return
+        if (!isStarted || isGameOver || isPaused) return
         val dt = if (lastTickMs == 0L) 0.016f else (nowMs - lastTickMs).coerceIn(1, 50) / 1000f
         lastTickMs = nowMs
         elapsedSec += dt
@@ -130,12 +132,16 @@ class DinoGameState {
         score = 0
         isGameOver = false
         isStarted = false
+        isPaused = false
         lastTickMs = 0L
         lastObstacleMs = 0L
         distanceTraveled = 0f
         elapsedSec = 0f
         legPhase = 0
     }
+
+    fun pause() { if (isStarted && !isGameOver) isPaused = true }
+    fun resume() { isPaused = false; lastTickMs = 0L }
 }
 
 @Composable
@@ -270,6 +276,9 @@ private fun DinoCanvas(state: DinoGameState, modifier: Modifier) {
 
         if (state.isGameOver) {
             GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.fillMaxSize())
+        }
+        if (state.isPaused) {
+            GamePauseOverlay(onResume = state::resume, modifier = Modifier.fillMaxSize())
         }
     }
 }

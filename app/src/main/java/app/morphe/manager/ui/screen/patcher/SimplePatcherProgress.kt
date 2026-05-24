@@ -253,6 +253,9 @@ private fun ProgressSlot(
     miniGameState: MiniGameState,
     modifier: Modifier = Modifier
 ) {
+    LaunchedEffect(showGame) {
+        if (!showGame) miniGameState.pauseActiveGame()
+    }
     Box(modifier = modifier) {
         if (showGame) {
             MiniGameContent(

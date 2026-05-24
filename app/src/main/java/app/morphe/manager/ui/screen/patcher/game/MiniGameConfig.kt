@@ -58,6 +58,16 @@ class MiniGameState {
         }
         selectedGame = game
     }
+
+    fun pauseActiveGame() {
+        when (selectedGame) {
+            MiniGame.GAME_2048 -> game2048.pause()
+            MiniGame.FLAPPY -> flappy.pause()
+            MiniGame.SNAKE -> snake.pause()
+            MiniGame.DINO -> dino.pause()
+            null -> {}
+        }
+    }
 }
 
 /**
@@ -296,6 +306,31 @@ internal fun GameOverOverlay(score: Int, onRestart: () -> Unit, modifier: Modifi
             )
             Button(onClick = onRestart) {
                 Text(stringResource(R.string.mini_game_try_again))
+            }
+        }
+    }
+}
+
+@Composable
+internal fun GamePauseOverlay(onResume: () -> Unit, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.92f)),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.mini_game_paused),
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            Button(onClick = onResume) {
+                Text(stringResource(R.string.mini_game_resume))
             }
         }
     }

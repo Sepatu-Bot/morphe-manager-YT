@@ -95,6 +95,10 @@ fun PatcherScreen(
     val showLongStepWarning by patcherViewModel.showLongStepWarning.collectAsStateWithLifecycle()
     var showSuccessScreen by rememberSaveable { mutableStateOf(false) }
 
+    LaunchedEffect(showSuccessScreen) {
+        if (showSuccessScreen) miniGameState.pauseActiveGame()
+    }
+
     val displayProgressAnimate by animateFloatAsState(
         targetValue = displayProgress,
         animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),

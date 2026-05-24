@@ -65,6 +65,8 @@ class FlappyGameState {
         private set
     var isStarted by mutableStateOf(false)
         private set
+    var isPaused by mutableStateOf(false)
+        private set
 
     private var lastTickMs = 0L
     private var lastSpawnMs = 0L
@@ -76,7 +78,7 @@ class FlappyGameState {
     }
 
     fun tick(nowMs: Long) {
-        if (!isStarted || isGameOver) return
+        if (!isStarted || isGameOver || isPaused) return
         val dt = if (lastTickMs == 0L) 0.016f else (nowMs - lastTickMs).coerceIn(1, 50) / 1000f
         lastTickMs = nowMs
 
@@ -118,9 +120,13 @@ class FlappyGameState {
         score = 0
         isGameOver = false
         isStarted = false
+        isPaused = false
         lastTickMs = 0L
         lastSpawnMs = 0L
     }
+
+    fun pause() { if (isStarted && !isGameOver) isPaused = true }
+    fun resume() { isPaused = false; lastTickMs = 0L }
 }
 
 @Composable
@@ -279,6 +285,9 @@ private fun FlappyCanvas(state: FlappyGameState, modifier: Modifier) {
         // Game over overlay
         if (state.isGameOver) {
             GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.fillMaxSize())
+        }
+        if (state.isPaused) {
+            GamePauseOverlay(onResume = state::resume, modifier = Modifier.fillMaxSize())
         }
     }
 }

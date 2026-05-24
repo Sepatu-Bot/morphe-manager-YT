@@ -400,6 +400,8 @@ Uninstalling will permanently erase all app data"</string>
     <string name="mini_game_score">Score %d</string>
     <string name="mini_game_game_over">Game Over</string>
     <string name="mini_game_try_again">Try Again</string>
+    <string name="mini_game_paused">Paused</string>
+    <string name="mini_game_resume">Continue</string>
 
     <string name="mini_game_2048" translatable="false">2048</string>
     <string name="mini_game_2048_picker_subtitle">Slide tiles to merge</string>

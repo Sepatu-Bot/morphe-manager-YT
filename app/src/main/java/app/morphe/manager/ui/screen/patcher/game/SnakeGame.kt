@@ -50,6 +50,8 @@ class SnakeGameState {
         private set
     var isStarted by mutableStateOf(false)
         private set
+    var isPaused by mutableStateOf(false)
+        private set
 
     val tickMs: Long get() = max(80L, 180L - score * 5L)
 
@@ -59,7 +61,7 @@ class SnakeGameState {
     }
 
     fun tick() {
-        if (!isStarted || isGameOver) return
+        if (!isStarted || isGameOver || isPaused) return
         direction = pendingDir
         val (hx, hy) = snake.first()
         val newHead = when (direction) {
@@ -84,7 +86,11 @@ class SnakeGameState {
         score = 0
         isGameOver = false
         isStarted = false
+        isPaused = false
     }
+
+    fun pause() { if (isStarted && !isGameOver) isPaused = true }
+    fun resume() { isPaused = false }
 
     private fun spawnFood() {
         val occupied = snake.toHashSet()
@@ -225,6 +231,9 @@ private fun SnakeCanvas(state: SnakeGameState, modifier: Modifier) {
 
         if (state.isGameOver) {
             GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.fillMaxSize())
+        }
+        if (state.isPaused) {
+            GamePauseOverlay(onResume = state::resume, modifier = Modifier.fillMaxSize())
         }
     }
 }

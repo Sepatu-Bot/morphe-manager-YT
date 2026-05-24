@@ -40,6 +40,7 @@ class Game2048State {
     private var _score by mutableIntStateOf(0)
     private var _isGameOver by mutableStateOf(false)
     private var _hasWon by mutableStateOf(false)
+    private var _isPaused by mutableStateOf(false)
 
     // board is read-only from outside; only accessed within this file via BoardGrid
     val board: Array<IntArray> get() = _board
@@ -47,6 +48,7 @@ class Game2048State {
     val isGameOver: Boolean get() = _isGameOver
     // hasWon stays true even after game over so the win message persists until restart
     val hasWon: Boolean get() = _hasWon
+    val isPaused: Boolean get() = _isPaused
 
     init {
         spawnTile()
@@ -54,6 +56,7 @@ class Game2048State {
     }
 
     fun move(direction: Direction) {
+        if (_isPaused || _isGameOver) return
         val snapshot = _board.map { it.copyOf() }.toTypedArray()
         val next = snapshot.map { it.copyOf() }.toTypedArray()
         var gained = 0
@@ -94,9 +97,13 @@ class Game2048State {
         _score = 0
         _isGameOver = false
         _hasWon = false
+        _isPaused = false
         spawnTile()
         spawnTile()
     }
+
+    fun pause() { if (!_isGameOver) _isPaused = true }
+    fun resume() { _isPaused = false }
 
     // Slides a single row/column left: collapses zeros, merges adjacent equal pairs
     // once per pair (left-to-right), then pads with zeros on the right.
@@ -261,6 +268,9 @@ private fun BoardGrid(state: Game2048State, size: Dp) {
 
         if (state.isGameOver) {
             GameOverOverlay(score = state.score, onRestart = state::restart, modifier = Modifier.matchParentSize())
+        }
+        if (state.isPaused) {
+            GamePauseOverlay(onResume = state::resume, modifier = Modifier.matchParentSize())
         }
     }
 }
