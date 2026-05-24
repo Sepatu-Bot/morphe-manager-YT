@@ -196,7 +196,7 @@ fun PatchingSuccess(
         // Bottom action bar
         PatcherBottomActionBar(
             showCancelButton = false,
-            showLogsButton = isExpertMode,
+            showLogsButton = true,
             showHomeButton = true,
             showSaveButton = true,
             showErrorButton = false,
