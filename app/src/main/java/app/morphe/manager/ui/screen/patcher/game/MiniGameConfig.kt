@@ -7,6 +7,7 @@ package app.morphe.manager.ui.screen.patcher.game
 
 import android.os.VibrationEffect
 import android.os.Vibrator
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -27,6 +28,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
 import app.morphe.manager.ui.screen.shared.GradientCircleIcon
+import app.morphe.manager.ui.screen.shared.MorpheAnimations
 import app.morphe.manager.ui.screen.shared.MorpheCard
 import app.morphe.manager.ui.screen.shared.MorpheDefaults
 
@@ -36,6 +38,12 @@ enum class MiniGame {
     FLAPPY,
     SNAKE,
     DINO
+}
+
+/** Common state contract for all mini-games — exposes only what the shared UI layer needs. */
+interface MiniGameStateBase {
+    val score: Int
+    fun restart()
 }
 
 /**
@@ -83,11 +91,18 @@ internal fun GameChip(
     content: @Composable () -> Unit
 ) {
     if (onClick != null) {
-        Surface(onClick = onClick, shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.surfaceVariant) {
+        Surface(
+            onClick = onClick,
+            shape = RoundedCornerShape(10.dp),
+            color = MaterialTheme.colorScheme.surfaceVariant
+        ) {
             Box(modifier = Modifier.padding(horizontal = 12.dp, vertical = verticalPadding)) { content() }
         }
     } else {
-        Surface(shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.surfaceVariant) {
+        Surface(
+            shape = RoundedCornerShape(10.dp),
+            color = MaterialTheme.colorScheme.surfaceVariant
+        ) {
             Box(modifier = Modifier.padding(horizontal = 12.dp, vertical = verticalPadding)) { content() }
         }
     }
@@ -103,71 +118,45 @@ internal fun GamePickerContent(
 ) {
     Column(
         modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically
+            modifier = Modifier.fillMaxWidth().weight(1f),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            GameChip(verticalPadding = 8.dp) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(Icons.Outlined.SportsEsports, contentDescription = null, modifier = Modifier.size(20.dp))
-                    Text(
-                        text = stringResource(R.string.mini_game_picker_title),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                }
-            }
+            GamePickerGridCard(
+                icon = Icons.Outlined.Grid4x4,
+                title = stringResource(R.string.mini_game_2048),
+                subtitle = stringResource(R.string.mini_game_2048_picker_subtitle),
+                onClick = { onSelect(MiniGame.GAME_2048) },
+                modifier = Modifier.weight(1f).fillMaxHeight()
+            )
+            GamePickerGridCard(
+                icon = Icons.Outlined.Air,
+                title = stringResource(R.string.mini_game_flappy),
+                subtitle = stringResource(R.string.mini_game_flappy_picker_subtitle),
+                onClick = { onSelect(MiniGame.FLAPPY) },
+                modifier = Modifier.weight(1f).fillMaxHeight()
+            )
         }
-
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+        Row(
+            modifier = Modifier.fillMaxWidth().weight(1f),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                GamePickerGridCard(
-                    icon = Icons.Outlined.Grid4x4,
-                    title = stringResource(R.string.mini_game_2048),
-                    subtitle = stringResource(R.string.mini_game_2048_picker_subtitle),
-                    onClick = { onSelect(MiniGame.GAME_2048) },
-                    modifier = Modifier.weight(1f)
-                )
-                GamePickerGridCard(
-                    icon = Icons.Outlined.Air,
-                    title = stringResource(R.string.mini_game_flappy),
-                    subtitle = stringResource(R.string.mini_game_flappy_picker_subtitle),
-                    onClick = { onSelect(MiniGame.FLAPPY) },
-                    modifier = Modifier.weight(1f)
-                )
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                GamePickerGridCard(
-                    icon = Icons.Outlined.Gesture,
-                    title = stringResource(R.string.mini_game_snake),
-                    subtitle = stringResource(R.string.mini_game_snake_picker_subtitle),
-                    onClick = { onSelect(MiniGame.SNAKE) },
-                    modifier = Modifier.weight(1f)
-                )
-                GamePickerGridCard(
-                    icon = Icons.AutoMirrored.Outlined.DirectionsRun,
-                    title = stringResource(R.string.mini_game_dino),
-                    subtitle = stringResource(R.string.mini_game_dino_picker_subtitle),
-                    onClick = { onSelect(MiniGame.DINO) },
-                    modifier = Modifier.weight(1f)
-                )
-            }
+            GamePickerGridCard(
+                icon = Icons.Outlined.Gesture,
+                title = stringResource(R.string.mini_game_snake),
+                subtitle = stringResource(R.string.mini_game_snake_picker_subtitle),
+                onClick = { onSelect(MiniGame.SNAKE) },
+                modifier = Modifier.weight(1f).fillMaxHeight()
+            )
+            GamePickerGridCard(
+                icon = Icons.AutoMirrored.Outlined.DirectionsRun,
+                title = stringResource(R.string.mini_game_dino),
+                subtitle = stringResource(R.string.mini_game_dino_picker_subtitle),
+                onClick = { onSelect(MiniGame.DINO) },
+                modifier = Modifier.weight(1f).fillMaxHeight()
+            )
         }
     }
 }
@@ -183,12 +172,12 @@ private fun GamePickerGridCard(
     MorpheCard(
         onClick = onClick,
         cornerRadius = MorpheDefaults.SectionCornerRadius,
-        modifier = modifier.aspectRatio(1f)
+        modifier = modifier
     ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
+                .padding(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -221,59 +210,138 @@ internal fun MiniGameContent(
     state: MiniGameState,
     progress: Float? = null
 ) {
-    val contentModifier = Modifier.fillMaxSize().padding(16.dp)
-    when (val selected = state.selectedGame) {
-        null -> GamePickerContent(
-            onSelect = { state.selectGame(it) },
-            modifier = contentModifier
-        )
-        else -> {
-            val extraActions: @Composable () -> Unit = {
-                GameChip(onClick = { state.selectedGame = null }) {
-                    Icon(Icons.Outlined.SportsEsports, contentDescription = null, modifier = Modifier.size(20.dp))
+    AnimatedContent(
+        targetState = state.selectedGame,
+        transitionSpec = MorpheAnimations.fadeCrossfade(200),
+        modifier = Modifier.fillMaxSize(),
+        label = "game_picker_game"
+    ) { selected ->
+        when (selected) {
+            null -> GamePickerContent(
+                onSelect = { state.selectGame(it) },
+                modifier = Modifier.fillMaxSize().padding(16.dp)
+            )
+            else -> {
+                val activeState: MiniGameStateBase = when (selected) {
+                    MiniGame.GAME_2048 -> state.game2048
+                    MiniGame.FLAPPY -> state.flappy
+                    MiniGame.SNAKE -> state.snake
+                    MiniGame.DINO -> state.dino
                 }
-            }
-            when (selected) {
-                MiniGame.GAME_2048 -> Game2048Board(
-                    state = state.game2048,
-                    modifier = contentModifier,
-                    progress = progress,
-                    extraActions = extraActions
-                )
-                MiniGame.FLAPPY -> FlappyBirdGame(
-                    state = state.flappy,
-                    modifier = contentModifier,
-                    progress = progress,
-                    extraActions = extraActions
-                )
-                MiniGame.SNAKE -> SnakeGame(
-                    state = state.snake,
-                    modifier = contentModifier,
-                    progress = progress,
-                    extraActions = extraActions
-                )
-                MiniGame.DINO -> DinoGame(
-                    state = state.dino,
-                    modifier = contentModifier,
-                    progress = progress,
-                    extraActions = extraActions
-                )
+                BoxWithConstraints(
+                    modifier = Modifier.fillMaxSize().padding(8.dp)
+                ) {
+                    val h = maxHeight
+                    if (maxWidth > h) {
+                        Row(
+                            modifier = Modifier.fillMaxSize(),
+                            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            GameSideControls(
+                                score = activeState.score,
+                                progress = progress,
+                                onRestart = activeState::restart,
+                                onChangeGame = { state.selectedGame = null },
+                                modifier = Modifier.weight(1f).fillMaxHeight()
+                            )
+                            Box(Modifier.size(h)) {
+                                GameCanvasSlot(selected = selected, state = state)
+                            }
+                        }
+                    } else {
+                        Column(
+                            modifier = Modifier.fillMaxSize(),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            GameScoreRow(
+                                score = activeState.score,
+                                progress = progress,
+                                onRestart = activeState::restart,
+                                onChangeGame = { state.selectedGame = null }
+                            )
+                            Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                                BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+                                    val size = minOf(maxWidth, maxHeight)
+                                    Box(
+                                        modifier = Modifier
+                                            .size(size)
+                                            .align(Alignment.Center)
+                                    ) {
+                                        GameCanvasSlot(selected = selected, state = state)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
+@Composable
+private fun GameCanvasSlot(selected: MiniGame, state: MiniGameState) {
+    when (selected) {
+        MiniGame.GAME_2048 -> Game2048Board(state = state.game2048)
+        MiniGame.FLAPPY -> FlappyBirdGame(state = state.flappy)
+        MiniGame.SNAKE -> SnakeGame(state = state.snake)
+        MiniGame.DINO -> DinoGame(state = state.dino)
+    }
+}
+
+@Composable
+private fun GameSideControls(
+    score: Int,
+    progress: Float?,
+    onRestart: () -> Unit,
+    onChangeGame: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        GameChip(verticalPadding = 8.dp) {
+            Text(
+                stringResource(R.string.mini_game_score, score),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold
+            )
+        }
+        if (progress != null) {
+            Spacer(Modifier.height(8.dp))
+            GameChip(verticalPadding = 8.dp) {
+                Text(
+                    "${(progress * 100).toInt()}%",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+        }
+        Spacer(Modifier.height(8.dp))
+        GameChip(onClick = onRestart) {
+            Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(20.dp))
+        }
+        Spacer(Modifier.height(8.dp))
+        GameChip(onClick = onChangeGame) {
+            Icon(Icons.Outlined.SportsEsports, contentDescription = null, modifier = Modifier.size(20.dp))
+        }
+    }
+}
+
 /**
- * Shared score row shown at the top of every mini-game.
- * Displays the [score], an optional patching [progress] percentage chip, a restart button,
- * and any [extraActions] (e.g. game-picker and back-to-host chips).
+ * Shared score row shown at the top of every mini-game (portrait layout).
+ * Displays the [score], an optional patching [progress] percentage chip, and a restart button.
  */
 @Composable
 internal fun GameScoreRow(
     score: Int,
     progress: Float?,
     onRestart: () -> Unit,
-    extraActions: (@Composable () -> Unit)? = null
+    onChangeGame: () -> Unit
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -300,7 +368,9 @@ internal fun GameScoreRow(
         GameChip(onClick = onRestart) {
             Icon(Icons.Outlined.Refresh, contentDescription = null, modifier = Modifier.size(20.dp))
         }
-        extraActions?.invoke()
+        GameChip(onClick = onChangeGame) {
+            Icon(Icons.Outlined.SportsEsports, contentDescription = null, modifier = Modifier.size(20.dp))
+        }
     }
 }
 

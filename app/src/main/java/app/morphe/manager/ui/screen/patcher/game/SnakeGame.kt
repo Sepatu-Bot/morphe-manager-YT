@@ -8,7 +8,9 @@ package app.morphe.manager.ui.screen.patcher.game
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -34,14 +36,14 @@ import kotlin.random.Random
 private const val SNAKE_GRID = 20
 
 @Stable
-class SnakeGameState {
+class SnakeGameState : MiniGameStateBase {
     var snake by mutableStateOf(listOf(10 to 10, 9 to 10, 8 to 10))
         private set
     var food by mutableStateOf(15 to 10)
         private set
     private var direction = SnakeDir.RIGHT
     private var pendingDir = SnakeDir.RIGHT
-    var score by mutableIntStateOf(0)
+    override var score by mutableIntStateOf(0)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -75,7 +77,7 @@ class SnakeGameState {
         if (ateFood) { score++; spawnFood() }
     }
 
-    fun restart() {
+    override fun restart() {
         snake = listOf(10 to 10, 9 to 10, 8 to 10)
         food = 15 to 10
         direction = SnakeDir.RIGHT
@@ -105,26 +107,15 @@ enum class SnakeDir {
 }
 
 @Composable
-fun SnakeGame(
-    state: SnakeGameState,
-    modifier: Modifier = Modifier,
-    progress: Float? = null,
-    extraActions: @Composable (() -> Unit)? = null
-) {
+fun SnakeGame(state: SnakeGameState) {
     GameOverHaptic(state.isGameOver)
-
     LaunchedEffect(Unit) {
         while (isActive) {
             delay(state.tickMs)
             state.tick()
         }
     }
-
-    Column(modifier = modifier) {
-        GameScoreRow(score = state.score, progress = progress, onRestart = state::restart, extraActions = extraActions)
-        Spacer(Modifier.height(8.dp))
-        SnakeCanvas(state = state, modifier = Modifier.weight(1f).fillMaxWidth())
-    }
+    SnakeCanvas(state = state, modifier = Modifier.fillMaxSize())
 }
 
 private const val SNAKE_SWIPE_THRESHOLD = 30f

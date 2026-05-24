@@ -7,7 +7,6 @@ package app.morphe.manager.ui.screen.patcher
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -484,9 +483,6 @@ private fun ExpertProgressHeader(
                 modifier = Modifier.fillMaxWidth()
             )
         }
-
-        // Step pipeline
-        ExpertStepPipeline(patcherViewModel = patcherViewModel)
     }
 }
 
@@ -645,95 +641,6 @@ private fun HeapUsageGraph(
 }
 
 /**
- * Row of dots connected by lines representing each patching step.
- */
-@Composable
-private fun ExpertStepPipeline(patcherViewModel: PatcherViewModel) {
-    val steps = patcherViewModel.steps
-
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-        tonalElevation = 1.dp
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 14.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            steps.forEachIndexed { index, step ->
-                val isRunning = step.state == State.RUNNING
-                val isCompleted = step.state == State.COMPLETED
-                val isFailed = step.state == State.FAILED
-
-                // Animate dot color on state transitions
-                val targetDotColor = when {
-                    isFailed    -> MaterialTheme.colorScheme.error
-                    isRunning   -> PatcherProgressTealColor
-                    isCompleted -> PatcherProgressTealColor.copy(alpha = 0.55f)
-                    else        -> MaterialTheme.colorScheme.outline.copy(alpha = 0.35f)
-                }
-                val dotColor by animateColorAsState(
-                    targetValue = targetDotColor,
-                    animationSpec = tween(400),
-                    label = "step_dot_color_$index"
-                )
-
-                // Animate connector line fill when previous step completes
-                if (index > 0) {
-                    val prevCompleted = steps.getOrNull(index - 1)?.state == State.COMPLETED
-                    val lineProgress by animateFloatAsState(
-                        targetValue = if (prevCompleted) 1f else 0f,
-                        animationSpec = tween(500, easing = FastOutSlowInEasing),
-                        label = "step_line_$index"
-                    )
-                    val trackColor = MaterialTheme.colorScheme.outline.copy(alpha = 0.18f)
-                    val fillColor = PatcherProgressTealColor.copy(alpha = 0.5f)
-
-                    Box(modifier = Modifier
-                        .weight(1f)
-                        .height(2.dp)) {
-                        Box(modifier = Modifier
-                            .fillMaxSize()
-                            .background(trackColor))
-                        Box(modifier = Modifier
-                            .fillMaxHeight()
-                            .fillMaxWidth(lineProgress)
-                            .background(fillColor))
-                    }
-                }
-
-                val dotSize by animateDpAsState(
-                    targetValue = if (isRunning) 16.dp else 11.dp,
-                    animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy),
-                    label = "step_dot_size_$index"
-                )
-
-                Box(
-                    modifier = Modifier
-                        .size(dotSize)
-                        .clip(RoundedCornerShape(50))
-                        .background(dotColor),
-                    contentAlignment = Alignment.Center
-                ) {
-                    // Inner dot for running state → "ring" effect
-                    if (isRunning) {
-                        Box(
-                            modifier = Modifier
-                                .size(6.dp)
-                                .clip(RoundedCornerShape(50))
-                                .background(MaterialTheme.colorScheme.surface)
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-/**
  * Scrollable log panel backed directly by [PatcherViewModel.logs].
  * The header tab row lets the user switch between logs and the mini-game.
  */
@@ -750,6 +657,9 @@ private fun ExpertLogPanel(
     val logItems = remember(rawLogs.size) { rawLogs.toLogItems() }
     // 0 = logs, 1 = game
     var activeTab by rememberSaveable { mutableIntStateOf(0) }
+    LaunchedEffect(activeTab) {
+        if (activeTab != 1) miniGameState.pauseActiveGame()
+    }
 
     Surface(
         modifier = modifier,
@@ -768,49 +678,56 @@ private fun ExpertLogPanel(
                 color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)
             )
 
-            when (activeTab) {
-                1 -> MiniGameContent(state = miniGameState)
-                else -> {
-                    LazyColumn(
-                        state = listState,
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(vertical = 6.dp),
-                    ) {
-                        if (rawLogs.isEmpty()) {
-                            item {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(vertical = 48.dp),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        verticalArrangement = Arrangement.spacedBy(10.dp)
+            AnimatedContent(
+                targetState = activeTab,
+                transitionSpec = MorpheAnimations.fadeCrossfade(200),
+                modifier = Modifier.weight(1f).fillMaxWidth(),
+                label = "log_game_tab"
+            ) { tab ->
+                when (tab) {
+                    1 -> MiniGameContent(state = miniGameState)
+                    else -> {
+                        LazyColumn(
+                            state = listState,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(vertical = 6.dp),
+                        ) {
+                            if (rawLogs.isEmpty()) {
+                                item {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(vertical = 48.dp),
+                                        contentAlignment = Alignment.Center
                                     ) {
-                                        LiveIndicatorDot(size = 10.dp)
-                                        Text(
-                                            text = "Waiting for log output…",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.45f),
-                                            fontFamily = FontFamily.Monospace,
-                                            textAlign = TextAlign.Center
-                                        )
+                                        Column(
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            verticalArrangement = Arrangement.spacedBy(10.dp)
+                                        ) {
+                                            LiveIndicatorDot(size = 10.dp)
+                                            Text(
+                                                text = "Waiting for log output…",
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.45f),
+                                                fontFamily = FontFamily.Monospace,
+                                                textAlign = TextAlign.Center
+                                            )
+                                        }
                                     }
                                 }
                             }
-                        }
 
-                        items(
-                            count = logItems.size,
-                            key = { index -> index }
-                        ) { index ->
-                            LogItemContent(logItems[index])
-                        }
+                            items(
+                                count = logItems.size,
+                                key = { index -> index }
+                            ) { index ->
+                                LogItemContent(logItems[index])
+                            }
 
-                        // Bottom padding so last item isn't clipped by rounded corners
-                        item { Spacer(Modifier.height(8.dp)) }
+                            // Bottom padding so last item isn't clipped by rounded corners
+                            item { Spacer(Modifier.height(8.dp)) }
+                        }
                     }
                 }
             }
@@ -830,7 +747,7 @@ private fun LogPanelTabHeader(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = 12.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(6.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {

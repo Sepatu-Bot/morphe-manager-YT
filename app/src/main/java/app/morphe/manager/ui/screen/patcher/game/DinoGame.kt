@@ -8,7 +8,9 @@ package app.morphe.manager.ui.screen.patcher.game
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -46,14 +48,14 @@ data class DinoObstacle(
 )
 
 @Stable
-class DinoGameState {
+class DinoGameState : MiniGameStateBase {
     var dinoJump by mutableFloatStateOf(0f)  // upward offset from ground, fraction of canvas height
         private set
     var velocity by mutableFloatStateOf(0f)
         private set
     var obstacles by mutableStateOf<List<DinoObstacle>>(emptyList())
         private set
-    var score by mutableIntStateOf(0)
+    override var score by mutableIntStateOf(0)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -122,7 +124,7 @@ class DinoGameState {
         if (hit) isGameOver = true
     }
 
-    fun restart() {
+    override fun restart() {
         dinoJump = 0f
         velocity = 0f
         obstacles = emptyList()
@@ -142,25 +144,14 @@ class DinoGameState {
 }
 
 @Composable
-fun DinoGame(
-    state: DinoGameState,
-    modifier: Modifier = Modifier,
-    progress: Float? = null,
-    extraActions: @Composable (() -> Unit)? = null
-) {
+fun DinoGame(state: DinoGameState) {
     GameOverHaptic(state.isGameOver)
-
     LaunchedEffect(Unit) {
         while (isActive) {
             withFrameMillis { state.tick(it) }
         }
     }
-
-    Column(modifier = modifier) {
-        GameScoreRow(score = state.score, progress = progress, onRestart = state::restart, extraActions = extraActions)
-        Spacer(Modifier.height(8.dp))
-        DinoCanvas(state = state, modifier = Modifier.weight(1f).fillMaxWidth())
-    }
+    DinoCanvas(state = state, modifier = Modifier.fillMaxSize())
 }
 
 @Composable
@@ -169,7 +160,7 @@ private fun DinoCanvas(state: DinoGameState, modifier: Modifier) {
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
             .background(DinoBg)
-            .pointerInput(Unit) { detectTapGestures { state.tap() } }
+            .pointerInput(Unit) { detectTapGestures(onPress = { state.tap() }) }
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             val w = size.width

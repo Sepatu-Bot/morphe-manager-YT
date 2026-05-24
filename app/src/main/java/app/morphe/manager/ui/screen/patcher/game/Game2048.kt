@@ -32,7 +32,7 @@ import kotlin.random.Random
 private const val BOARD_SIZE = 4
 
 @Stable
-class Game2048State {
+class Game2048State : MiniGameStateBase {
     private var _board by mutableStateOf(emptyBoard())
     private var _score by mutableIntStateOf(0)
     private var _isGameOver by mutableStateOf(false)
@@ -41,7 +41,7 @@ class Game2048State {
 
     // board is read-only from outside; only accessed within this file via BoardGrid
     val board: Array<IntArray> get() = _board
-    val score: Int get() = _score
+    override val score: Int get() = _score
     val isGameOver: Boolean get() = _isGameOver
     // hasWon stays true even after game over so the win message persists until restart
     val hasWon: Boolean get() = _hasWon
@@ -89,7 +89,7 @@ class Game2048State {
         }
     }
 
-    fun restart() {
+    override fun restart() {
         _board = emptyBoard()
         _score = 0
         _isGameOver = false
@@ -155,33 +155,18 @@ private const val SwipeThresholdPx = 40f
 private val TileGap = 8.dp
 
 @Composable
-fun Game2048Board(
-    state: Game2048State,
-    modifier: Modifier = Modifier,
-    progress: Float? = null,
-    extraActions: @Composable (() -> Unit)? = null
-) {
+fun Game2048Board(state: Game2048State) {
     GameOverHaptic(state.isGameOver)
-
-    BoxWithConstraints(modifier = modifier) {
-        // 56.dp = ScoreRow height (44dp) + spacing between row and board (12dp)
-        val boardSize = minOf(maxWidth, (maxHeight - 56.dp).coerceAtLeast(120.dp))
-
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            GameScoreRow(score = state.score, progress = progress, onRestart = state::restart, extraActions = extraActions)
-
-            BoardGrid(state = state, size = boardSize)
-
-            if (state.hasWon && !state.isGameOver) {
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        BoardGrid(state = state, size = maxWidth)
+        if (state.hasWon && !state.isGameOver) {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
                 Text(
                     text = stringResource(R.string.mini_game_2048_win),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFFEDC22E)
+                    color = Color(0xFFEDC22E),
+                    modifier = Modifier.padding(bottom = 16.dp)
                 )
             }
         }

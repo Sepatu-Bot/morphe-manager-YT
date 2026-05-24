@@ -8,7 +8,9 @@ package app.morphe.manager.ui.screen.patcher.game
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -49,14 +51,14 @@ data class FlappyPipe(
 )
 
 @Stable
-class FlappyGameState {
+class FlappyGameState : MiniGameStateBase {
     var birdY by mutableFloatStateOf(0.45f)
         private set
     var velocity by mutableFloatStateOf(0f)
         private set
     var pipes by mutableStateOf<List<FlappyPipe>>(emptyList())
         private set
-    var score by mutableIntStateOf(0)
+    override var score by mutableIntStateOf(0)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -110,7 +112,7 @@ class FlappyGameState {
         if (hit) isGameOver = true
     }
 
-    fun restart() {
+    override fun restart() {
         birdY = 0.45f
         velocity = 0f
         pipes = emptyList()
@@ -127,31 +129,15 @@ class FlappyGameState {
 }
 
 @Composable
-fun FlappyBirdGame(
-    state: FlappyGameState,
-    modifier: Modifier = Modifier,
-    progress: Float? = null,
-    extraActions: @Composable (() -> Unit)? = null
-) {
+fun FlappyBirdGame(state: FlappyGameState) {
     GameOverHaptic(state.isGameOver)
-
     // Runs every vsync; tick() is a no-op when the game is paused or over
     LaunchedEffect(Unit) {
         while (isActive) {
             withFrameMillis { state.tick(it) }
         }
     }
-
-    Column(modifier = modifier) {
-        GameScoreRow(
-            score = state.score,
-            progress = progress,
-            onRestart = state::restart,
-            extraActions = extraActions
-        )
-        Spacer(Modifier.height(8.dp))
-        FlappyCanvas(state = state, modifier = Modifier.weight(1f).fillMaxWidth())
-    }
+    FlappyCanvas(state = state, modifier = Modifier.fillMaxSize())
 }
 
 @Composable
@@ -160,7 +146,7 @@ private fun FlappyCanvas(state: FlappyGameState, modifier: Modifier) {
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
             .background(FlappySkyColor)
-            .pointerInput(Unit) { detectTapGestures { state.tap() } }
+            .pointerInput(Unit) { detectTapGestures(onPress = { state.tap() }) }
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             val w = size.width
