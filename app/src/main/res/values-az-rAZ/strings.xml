@@ -667,6 +667,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="file_picker_no_files">Burada fayl yoxdur</string>
     <string name="file_picker_internal_storage">Daxili yaddaş</string>
     <string name="file_picker_sd_card">SD kart</string>
+    <string name="file_picker_root">Root (/)</string>
     <string name="file_picker_sort_name_asc">Ad (A–Z)</string>
     <string name="file_picker_sort_name_desc">Ad (Z–A)</string>
     <string name="file_picker_sort_size_desc">Həcm (əvvəlcə ən çox)</string>

@@ -668,6 +668,7 @@ Størrelsesformatet skal være som følger:
     <string name="file_picker_no_files">Ingen filer her</string>
     <string name="file_picker_internal_storage">Intern lagring</string>
     <string name="file_picker_sd_card">SD-kort</string>
+    <string name="file_picker_root">Rod (/)</string>
     <string name="file_picker_sort_name_asc">Navn (A–Z)</string>
     <string name="file_picker_sort_name_desc">Navn (Z–A)</string>
     <string name="file_picker_sort_size_desc">Størrelse (størst først)</string>

@@ -229,7 +229,7 @@
     <string name="header_creator_failed">ヘッダーの作成に失敗しました</string>
     <string name="header_creator_guide">ヘッダー作成ガイド</string>
     <string name="header_creator_guide_image_title">画像の要件</string>
-    <string name="header_creator_guide_image_body">PNG または JPEG の画像ファイルを使用できます。よりきれいに表示するには、アスペクト比が約 2.7:1 の横長画像を使用してください。背景が透明な PNG ファイルは、アプリのテーマに自然に馴染みます。</string>
+    <string name="header_creator_guide_image_body">PNG または JPEG の画像ファイルを使用できます。より良い結果を得るためには、アスペクト比が約 2.7:1 の横長画像を使用してください。背景が透明な PNG ファイルは、アプリのテーマに自然に溶け込みます。</string>
     <string name="header_creator_guide_themes_title">ライトテーマとダークテーマ</string>
     <string name="header_creator_guide_themes_body">多くのアプリでは、ライトテーマ用とダークテーマ用にそれぞれ画像が必要です。一部のアプリ（YouTube Music など）はダークテーマのみを使用するため、該当するセクションのみ表示されます。</string>
     <string name="header_creator_guide_positioning_title">位置とサイズ調整</string>
@@ -367,7 +367,7 @@
     <string name="failed_to_unmount">アンマウントに失敗しました: %s</string>
     <!-- Settings -->
     <string name="appearance">外観</string>
-    <string name="advanced">高度な設定</string>
+    <string name="advanced">詳細設定</string>
     <string name="system">システム</string>
     <!-- Settings - Appearance Tab - Background animation -->
     <string name="settings_appearance_background">背景アニメーション</string>
@@ -419,7 +419,7 @@
     <string name="settings_advanced_updates">更新</string>
     <string name="settings_advanced_updates_use_prereleases">プレリリース版のパッチを使用</string>
     <string name="settings_advanced_updates_use_prereleases_description">新しい Morphe アプリの早期アクセス。パッチソースでソースごとにプレリリースを有効にします</string>
-    <string name="settings_advanced_updates_allow_metered">モバイルデータ通信を使用する</string>
+    <string name="settings_advanced_updates_allow_metered">モバイルデータ通信で更新</string>
     <string name="settings_advanced_updates_allow_metered_description">モバイルデータ通信での Morphe およびパッチの更新のダウンロードを許可します</string>
     <string name="settings_advanced_updates_background_notifications">バックグラウンドでの更新通知</string>
     <string name="settings_advanced_updates_background_notifications_description">バックグラウンドで定期的に更新を確認し、利用可能な場合に通知します</string>
@@ -445,12 +445,12 @@
     <string name="notification_channel_patcher">パッチ処理</string>
     <string name="notification_channel_patcher_description">バックグラウンドで Morphe がアプリにパッチを適用しているときに表示されます</string>
     <!-- Settings - Advanced Tab - Expert settings Section -->
-    <string name="settings_advanced_expert">上級者向け設定</string>
+    <string name="settings_advanced_expert">高度な設定</string>
     <string name="settings_advanced_expert_mode">エキスパートモード</string>
     <string name="settings_advanced_expert_mode_description">Morphe の高度なパッチ設定とカスタマイズオプションを有効にします</string>
     <string name="settings_advanced_expert_mode_dialog_title">エキスパート モードを有効にしますか？</string>
     <string name="settings_advanced_expert_mode_dialog_message">エキスパートモードではパッチ適用の詳細設定が可能ですが、設定を誤るとアプリが正常に動作しなくなる可能性があります</string>
-    <string name="settings_advanced_strip_unused_libs">デバイスのアーキテクチャに最適化する</string>
+    <string name="settings_advanced_strip_unused_libs">デバイスのアーキテクチャに最適化</string>
     <string name="settings_advanced_strip_unused_libs_description">使用されていない CPU アーキテクチャのライブラリと分割 APK モジュールを削除します</string>
     <!-- Bytecode mode -->
     <string name="settings_advanced_bytecode_mode">バイトコードの処理モード</string>
@@ -581,7 +581,7 @@ morphe_header_custom_dark.png
     <string name="settings_prompt_installer_on_install_description">パッチ適用済みアプリをインストールする際に、毎回インストーラー選択ダイアログを表示します</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">電池の最適化</string>
-    <string name="settings_system_battery_optimization_description">アプリを最小化してもパッチャーを実行し続けます</string>
+    <string name="settings_system_battery_optimization_description">アプリを最小化した状態でもパッチャーを実行し続けます</string>
     <string name="settings_system_performance">パフォーマンス</string>
     <string name="settings_system_process_runtime">別プロセスで実行</string>
     <string name="settings_system_process_runtime_description">安定性を向上させるために、パッチ処理を別プロセスで実行します</string>
@@ -610,7 +610,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_export_keystore_failed">キーストアのエクスポートに失敗しました</string>
     <string name="settings_system_show_password_field">パスワードを表示</string>
     <string name="settings_system_hide_password_field">パスワードを非表示</string>
-    <string name="settings_system_morphe_settings">Morphe 設定</string>
+    <string name="settings_system_morphe_settings">Morphe の設定</string>
     <string name="settings_system_import_manager_settings_description">Morphe の設定をバックアップおよび復元します</string>
     <string name="settings_system_import_manager_settings_fail">Morphe の設定のインポートに失敗しました: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe の設定をインポートしました</string>
@@ -662,12 +662,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_no_patches_or_options">保存されたパッチやオプションなし</string>
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">カスタムファイルピッカー</string>
-    <string name="settings_system_custom_file_picker_description">システムのデフォルトではなく、Morpheの組み込みファイルピッカーでストレージを参照する</string>
+    <string name="settings_system_custom_file_picker_description">システム標準の代わりに、Morphe の内蔵ファイルピッカーを使用してストレージを閲覧します</string>
     <!-- File Picker -->
     <string name="file_picker_previous_directory">前のディレクトリ</string>
     <string name="file_picker_no_files">ファイルが見つかりません</string>
     <string name="file_picker_internal_storage">内部ストレージ</string>
     <string name="file_picker_sd_card">SDカード</string>
+    <string name="file_picker_root">ルート (/)</string>
     <string name="file_picker_sort_name_asc">名前（A–Z）</string>
     <string name="file_picker_sort_name_desc">名前（Z–A）</string>
     <string name="file_picker_sort_size_desc">サイズ（大きい順）</string>

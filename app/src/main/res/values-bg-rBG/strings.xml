@@ -668,6 +668,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">Няма файлове тук</string>
     <string name="file_picker_internal_storage">Вътрешна памет</string>
     <string name="file_picker_sd_card">SD карта</string>
+    <string name="file_picker_root">Корен (/)</string>
     <string name="file_picker_sort_name_asc">Име (А–Я)</string>
     <string name="file_picker_sort_name_desc">Име (Я–А)</string>
     <string name="file_picker_sort_size_desc">Размер (от най-голям към най-малък)</string>

@@ -664,6 +664,7 @@ Qasîyên wêneyan divê wiha bin:
     <string name="file_picker_no_files">Li vir pel nehatine dîtin</string>
     <string name="file_picker_internal_storage">Hêlîna navî</string>
     <string name="file_picker_sd_card">Kartê SD</string>
+    <string name="file_picker_root">Koka (/)</string>
     <string name="file_picker_sort_name_asc">Nav (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nav (Z–A)</string>
     <string name="file_picker_sort_size_desc">Mezinahî (ji mezintir heta biçiktir)</string>

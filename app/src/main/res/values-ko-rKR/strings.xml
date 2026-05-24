@@ -669,6 +669,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">파일이 없습니다</string>
     <string name="file_picker_internal_storage">내부 저장소</string>
     <string name="file_picker_sd_card">SD 카드</string>
+    <string name="file_picker_root">루트 (/)</string>
     <string name="file_picker_sort_name_asc">이름 (A–Z)</string>
     <string name="file_picker_sort_name_desc">이름 (Z–A)</string>
     <string name="file_picker_sort_size_desc">크기 (큰 순)</string>

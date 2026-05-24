@@ -669,6 +669,7 @@ Dimenzije slike morajo biti naslednje:
     <string name="file_picker_no_files">Ni datotek tukaj</string>
     <string name="file_picker_internal_storage">Notranji pomnilnik</string>
     <string name="file_picker_sd_card">SD kartica</string>
+    <string name="file_picker_root">Koren (/)</string>
     <string name="file_picker_sort_name_asc">Ime (A–Ž)</string>
     <string name="file_picker_sort_name_desc">Ime (Ž–A)</string>
     <string name="file_picker_sort_size_desc">Velikost (največja naprej)</string>

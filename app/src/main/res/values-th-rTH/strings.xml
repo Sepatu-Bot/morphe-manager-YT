@@ -668,6 +668,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">ไม่มีไฟล์อยู่ที่นี่</string>
     <string name="file_picker_internal_storage">หน่วยความจำภายใน</string>
     <string name="file_picker_sd_card">การ์ด SD</string>
+    <string name="file_picker_root">ราก (/)</string>
     <string name="file_picker_sort_name_asc">ชื่อ (A–Z)</string>
     <string name="file_picker_sort_name_desc">ชื่อ (Z–A)</string>
     <string name="file_picker_sort_size_desc">ขนาด (ใหญ่ที่สุดก่อน)</string>

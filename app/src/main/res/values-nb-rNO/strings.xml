@@ -668,6 +668,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">Ingen filer her</string>
     <string name="file_picker_internal_storage">Intern lagringsplass</string>
     <string name="file_picker_sd_card">SD-kort</string>
+    <string name="file_picker_root">Rot (/)</string>
     <string name="file_picker_sort_name_asc">Navn (A–Å)</string>
     <string name="file_picker_sort_name_desc">Navn (Å–A)</string>
     <string name="file_picker_sort_size_desc">Størrelse (størst først)</string>

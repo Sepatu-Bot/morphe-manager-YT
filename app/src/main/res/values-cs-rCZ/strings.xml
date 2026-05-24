@@ -668,6 +668,7 @@ Rozměry obrázků musí být následující:
     <string name="file_picker_no_files">Zde nejsou žádné soubory</string>
     <string name="file_picker_internal_storage">Interní úložiště</string>
     <string name="file_picker_sd_card">SD karta</string>
+    <string name="file_picker_root">Kořeď (/)</string>
     <string name="file_picker_sort_name_asc">Název (A–Z)</string>
     <string name="file_picker_sort_name_desc">Název (Z–A)</string>
     <string name="file_picker_sort_size_desc">Velikost (od největší)</string>

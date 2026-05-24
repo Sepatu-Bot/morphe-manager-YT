@@ -652,6 +652,7 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="file_picker_no_files">Ovde nema datoteka</string>
     <string name="file_picker_internal_storage">Interna memorija</string>
     <string name="file_picker_sd_card">SD kartica</string>
+    <string name="file_picker_root">Koren (/)</string>
     <string name="file_picker_sort_name_asc">Naziv (A–Š)</string>
     <string name="file_picker_sort_name_desc">Naziv (Š–A)</string>
     <string name="file_picker_sort_size_desc">Veličina (od najveće)</string>

@@ -669,6 +669,7 @@ Forrás: #%2$s</string>
     <string name="file_picker_no_files">Nincs itt fájl</string>
     <string name="file_picker_internal_storage">Belső tárhely</string>
     <string name="file_picker_sd_card">SD-kártya</string>
+    <string name="file_picker_root">Gyökér (/)</string>
     <string name="file_picker_sort_name_asc">Név (A–Z)</string>
     <string name="file_picker_sort_name_desc">Név (Z–A)</string>
     <string name="file_picker_sort_size_desc">Méret (a legnagyobbtól kezdve)</string>

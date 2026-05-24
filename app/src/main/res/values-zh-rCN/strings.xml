@@ -668,6 +668,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">这里没有文件</string>
     <string name="file_picker_internal_storage">内部存储空间</string>
     <string name="file_picker_sd_card">SD卡</string>
+    <string name="file_picker_root">根目录 (/)</string>
     <string name="file_picker_sort_name_asc">名称 (A–Z)</string>
     <string name="file_picker_sort_name_desc">名称 (Z–A)</string>
     <string name="file_picker_sort_size_desc">大小 (从大到小)</string>

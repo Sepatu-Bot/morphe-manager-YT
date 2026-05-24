@@ -212,14 +212,14 @@ Harap bersiap untuk perilaku aplikasi yang tidak biasa atau bug yang belum terid
     <string name="adaptive_icon_monochrome_label">Monokrom</string>
     <string name="adaptive_icon_guide">Panduan pembuatan ikon</string>
     <string name="adaptive_icon_guide_png_title">Gunakan PNG dengan latar belakang transparan</string>
-    <string name="adaptive_icon_guide_png_body">Foreground harus berupa file PNG dengan latar belakang transparan. Latar belakang berwarna solid akan terlihat salah – warna latar belakang harus diambil dari pemilih latar belakang di bawah.</string>
+    <string name="adaptive_icon_guide_png_body">Latar depan harus berupa berkas PNG dengan latar belakang transparan. Latar belakang berwarna solid akan terlihat tidak tepat - warna latar belakang harus dipilih dari alat pemilih warna di bawah ini.</string>
     <string name="adaptive_icon_guide_safe_zones_title">Zona aman</string>
-    <string name="adaptive_icon_guide_safe_zones_body">"Zona dalam (solid): konten selalu terlihat sepenuhnya pada semua bentuk launcher.
-Zona luar (putus-putus): mungkin terpotong oleh masker launcher – jaga detail penting di dalam zona dalam."</string>
+    <string name="adaptive_icon_guide_safe_zones_body">"Zona dalam (solid): konten selalu terlihat sepenuhnya pada semua bentuk peluncur.
+Zona luar (putus-putus): mungkin terpotong oleh masker launcher - jaga detail penting di dalam zona dalam."</string>
     <string name="adaptive_icon_guide_notification_title">Ikon pemberitahuan</string>
-    <string name="adaptive_icon_guide_notification_body">Dibuat secara otomatis dari gambar foreground. Sesuaikan ukurannya menggunakan slider Notifikasi. Semua konten yang terlihat muncul berwarna putih di bilah status.</string>
+    <string name="adaptive_icon_guide_notification_body">Dibuat secara otomatis dari gambar latar depan. Sesuaikan ukurannya menggunakan penggeser Pemberitahuan. Semua konten yang terlihat akan ditampilkan berwarna putih di bilah status.</string>
     <string name="adaptive_icon_guide_monochrome_title">Ikon monokrom</string>
-    <string name="adaptive_icon_guide_monochrome_body">Dibuat secara otomatis dari gambar foreground menggunakan transformasi ikon adaptif yang sama. Ikon ini akan muncul berwarna sesuai dengan warna aksen wallpaper di Android 13 ke atas.</string>
+    <string name="adaptive_icon_guide_monochrome_body">Dibuat secara otomatis dari gambar latar depan menggunakan transformasi ikon adaptif yang sama. Ikon ini tampak diberi warna aksen sesuai dengan warna wallpaper pada Android 13 dan yang lebih baru.</string>
     <string name="notification_icon_preview">Pemberitahuan</string>
     <!-- Header Creator -->
     <string name="header_creator_create">Buat header khusus</string>
@@ -230,11 +230,11 @@ Zona luar (putus-putus): mungkin terpotong oleh masker launcher – jaga detail 
     <string name="header_creator_failed">Gagal membuat header</string>
     <string name="header_creator_guide">Panduan pembuatan header</string>
     <string name="header_creator_guide_image_title">Persyaratan gambar</string>
-    <string name="header_creator_guide_image_body">Gunakan file gambar apa pun (PNG atau JPEG). Untuk hasil terbaik, gunakan gambar berformat lebar dengan rasio aspek sekitar 2,7:1. File PNG dengan latar belakang transparan akan menyatu secara alami dengan tema aplikasi.</string>
+    <string name="header_creator_guide_image_body">Gunakan berkas gambar apa pun (PNG atau JPEG). Untuk hasil terbaik, gunakan gambar berformat lebar dengan rasio aspek sekitar 2,7:1. Berkas PNG dengan latar belakang transparan akan menyatu secara alami dengan tema aplikasi.</string>
     <string name="header_creator_guide_themes_title">Tema terang dan gelap</string>
     <string name="header_creator_guide_themes_body">Sebagian besar aplikasi memerlukan gambar terpisah untuk tema terang dan gelap. Beberapa aplikasi (seperti YouTube Music) hanya menggunakan tema gelap, jadi hanya bagian itu yang ditampilkan.</string>
     <string name="header_creator_guide_positioning_title">Pemosisian dan penskalaan</string>
-    <string name="header_creator_guide_positioning_body">Gunakan gerakan pinch-to-zoom dan seret langsung di pratinjau untuk memposisikan dan menskalakan gambar Anda. Panduan jepret muncul ketika gambar berada dekat dengan tengah. Anda juga dapat menggunakan slider di bawah pratinjau.</string>
+    <string name="header_creator_guide_positioning_body">Gunakan gerakan mencubit dan menyeret langsung di jendela pratinjau untuk mengatur posisi dan memperbesar atau memperkecil gambar Anda. Garis panduan akan muncul saat gambar berada mendekati bagian tengah. Anda juga dapat menggunakan bilah geser di bawah jendela pratinjau.</string>
     <!-- Home Screen - App Info Screen -->
     <string name="home_app_info_uninstall_app_confirmation">Apakah Anda yakin ingin mencopot pemasangan aplikasi ini?</string>
     <string name="home_app_info_remove_app_warning">Ini akan menghapus secara permanen:</string>
@@ -623,7 +623,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_export_debug_logs_export_failed">Gagal mengekspor catatan</string>
     <string name="settings_system_export_debug_logs_export_success">Catatan diekspor</string>
     <!-- Settings - System Tab - Files & Storage Section -->
-    <string name="settings_system_files">File &amp; penyimpanan</string>
+    <string name="settings_system_files">Berkas &amp; penyimpanan</string>
     <string name="settings_system_apks_size">Ukuran total: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK yang ditambal</string>
@@ -662,13 +662,14 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_patch_options_title">Pilihan tambalan (%s)</string>
     <string name="settings_system_no_patches_or_options">Tidak ada tambalan atau pilihan yang disimpan</string>
     <!-- Settings - System Tab - Custom file picker -->
-    <string name="settings_system_custom_file_picker">Pemilih file khusus</string>
-    <string name="settings_system_custom_file_picker_description">Telusuri penyimpanan dengan pemilih file bawaan Morphe, bukan pemilih file bawaan sistem</string>
+    <string name="settings_system_custom_file_picker">Pemilih berkas khusus</string>
+    <string name="settings_system_custom_file_picker_description">Telusuri penyimpanan dengan pemilih berkas bawaan Morphe daripada pemilih berkas bawaan sistem</string>
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Direktori sebelumnya</string>
     <string name="file_picker_no_files">Tidak ada berkas di sini</string>
     <string name="file_picker_internal_storage">Memori internal</string>
     <string name="file_picker_sd_card">Kartu SD</string>
+    <string name="file_picker_root">Akar (/)</string>
     <string name="file_picker_sort_name_asc">Nama (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nama (Z–A)</string>
     <string name="file_picker_sort_size_desc">Ukuran (terbesar dahulu)</string>

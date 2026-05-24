@@ -668,6 +668,7 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="file_picker_no_files">Nu există fișiere aici</string>
     <string name="file_picker_internal_storage">Stocare internă</string>
     <string name="file_picker_sd_card">Card SD</string>
+    <string name="file_picker_root">Rădăcină (/)</string>
     <string name="file_picker_sort_name_asc">Nume (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nume (Z–A)</string>
     <string name="file_picker_sort_size_desc">Dimensiune (cea mai mare prima)</string>

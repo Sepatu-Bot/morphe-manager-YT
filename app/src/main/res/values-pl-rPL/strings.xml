@@ -668,6 +668,7 @@ Wymagane są następujące wymiary obrazów:
     <string name="file_picker_no_files">Brak plików</string>
     <string name="file_picker_internal_storage">Pamięć wewnętrzna</string>
     <string name="file_picker_sd_card">Karta SD</string>
+    <string name="file_picker_root">Katalog główny (/)</string>
     <string name="file_picker_sort_name_asc">Nazwa (A - Z)</string>
     <string name="file_picker_sort_name_desc">Nazwa (Z - A)</string>
     <string name="file_picker_sort_size_desc">Rozmiar (od największego)</string>

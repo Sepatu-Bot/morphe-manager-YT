@@ -657,6 +657,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_no_files">এখানে কোন ফাইল নেই</string>
     <string name="file_picker_internal_storage">অভ্যন্তরীণ স্টোরেজ</string>
     <string name="file_picker_sd_card">এসডি কার্ড</string>
+    <string name="file_picker_root">রুট (/)</string>
     <string name="file_picker_sort_name_asc">নাম (A–Z)</string>
     <string name="file_picker_sort_name_desc">নাম (Z–A)</string>
     <string name="file_picker_sort_size_desc">সাইজ (বৃহত্তম প্রথমে)</string>

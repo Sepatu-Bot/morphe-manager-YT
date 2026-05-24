@@ -668,6 +668,7 @@ morphe_header_custom_dark.png
     <string name="file_picker_no_files">यहां कोई फ़ाइलें नहीं हैं</string>
     <string name="file_picker_internal_storage">आंतरिक संग्रहण</string>
     <string name="file_picker_sd_card">एसडी कार्ड</string>
+    <string name="file_picker_root">रूट (/)</string>
     <string name="file_picker_sort_name_asc">नाम (अ–ज़)</string>
     <string name="file_picker_sort_name_desc">नाम (ज़–अ)</string>
     <string name="file_picker_sort_size_desc">आकार (सबसे बड़ा पहले)</string>

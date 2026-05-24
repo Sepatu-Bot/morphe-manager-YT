@@ -652,6 +652,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_no_files">אין קבצים כאן</string>
     <string name="file_picker_internal_storage">אחסון פנימי</string>
     <string name="file_picker_sd_card">כרטיס SD</string>
+    <string name="file_picker_root">שורש (/)</string>
     <string name="file_picker_sort_name_asc">שם (A–Z)</string>
     <string name="file_picker_sort_name_desc">שם (Z–A)</string>
     <string name="file_picker_sort_size_desc">גודל (מהגדול לקטן)</string>

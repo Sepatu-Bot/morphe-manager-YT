@@ -668,6 +668,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="file_picker_no_files">Nenhum arquivo aqui</string>
     <string name="file_picker_internal_storage">Armazenamento interno</string>
     <string name="file_picker_sd_card">Cartão SD</string>
+    <string name="file_picker_root">Raiz (/)</string>
     <string name="file_picker_sort_name_asc">Nome (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nome (Z–A)</string>
     <string name="file_picker_sort_size_desc">Tamanho (maior primeiro)</string>

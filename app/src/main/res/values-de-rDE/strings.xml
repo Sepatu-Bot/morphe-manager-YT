@@ -668,6 +668,7 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="file_picker_no_files">Keine Dateien hier</string>
     <string name="file_picker_internal_storage">Interner Speicher</string>
     <string name="file_picker_sd_card">SD-Karte</string>
+    <string name="file_picker_root">Stammverzeichnis (/)</string>
     <string name="file_picker_sort_name_asc">Name (A–Z)</string>
     <string name="file_picker_sort_name_desc">Name (Z–A)</string>
     <string name="file_picker_sort_size_desc">Größe (größte zuerst)</string>

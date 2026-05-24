@@ -669,6 +669,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_no_files">لا توجد ملفات هنا</string>
     <string name="file_picker_internal_storage">التخزين الداخلي</string>
     <string name="file_picker_sd_card">الذاكرة الخارجية SD</string>
+    <string name="file_picker_root">الجذر (/)</string>
     <string name="file_picker_sort_name_asc">الاسم (أ–ي)</string>
     <string name="file_picker_sort_name_desc">الاسم (ي–أ)</string>
     <string name="file_picker_sort_size_desc">الحجم (الأكبر أولًا)</string>

@@ -668,6 +668,7 @@ Die beeld afmetings moet soos volg wees:
     <string name="file_picker_no_files">Geen lêers hier</string>
     <string name="file_picker_internal_storage">Interne stoorplek</string>
     <string name="file_picker_sd_card">SD-kaart</string>
+    <string name="file_picker_root">Root (/)</string>
     <string name="file_picker_sort_name_asc">Naam (A–Z)</string>
     <string name="file_picker_sort_name_desc">Naam (Z–A)</string>
     <string name="file_picker_sort_size_desc">Grootte (grootste eerst)</string>

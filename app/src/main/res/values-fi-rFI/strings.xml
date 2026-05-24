@@ -667,6 +667,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="file_picker_no_files">Täällä ei ole tiedostoja</string>
     <string name="file_picker_internal_storage">Sisäinen tallennustila</string>
     <string name="file_picker_sd_card">SD-kortti</string>
+    <string name="file_picker_root">Juurihakemisto (/)</string>
     <string name="file_picker_sort_name_asc">Nimi (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nimi (Z–A)</string>
     <string name="file_picker_sort_size_desc">Koko (suurin ensin)</string>

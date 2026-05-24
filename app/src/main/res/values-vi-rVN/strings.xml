@@ -669,6 +669,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="file_picker_no_files">Không có tệp nào ở đây</string>
     <string name="file_picker_internal_storage">Bộ nhớ trong</string>
     <string name="file_picker_sd_card">Thẻ SD</string>
+    <string name="file_picker_root">Gốc (/)</string>
     <string name="file_picker_sort_name_asc">Tên (A–Z)</string>
     <string name="file_picker_sort_name_desc">Tên (Z–A)</string>
     <string name="file_picker_sort_size_desc">Kích thước (lớn nhất trước)</string>

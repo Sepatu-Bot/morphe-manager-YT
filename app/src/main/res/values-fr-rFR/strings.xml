@@ -669,6 +669,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="file_picker_no_files">Aucun fichier ici</string>
     <string name="file_picker_internal_storage">Stockage interne</string>
     <string name="file_picker_sd_card">Carte SD</string>
+    <string name="file_picker_root">Root (/)</string>
     <string name="file_picker_sort_name_asc">Nom (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nom (Z–A)</string>
     <string name="file_picker_sort_size_desc">Taille (du plus grand au plus petit)</string>
