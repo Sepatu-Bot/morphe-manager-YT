@@ -190,8 +190,8 @@ private fun SnakeCanvas(state: SnakeGameState, modifier: Modifier) {
     }
 }
 
-private val SnakeBg   = Color(0xFF1A1A2E)
-private val SnakeGrid = Color(0x22FFFFFF)
-private val SnakeHead = Color(0xFF4CAF50)
-private val SnakeBody = Color(0xFF81C784)
-private val SnakeFood = Color(0xFFFF5252)
+private val SnakeBg   = Color(0xFF0B1A2E)
+private val SnakeGrid = Color(0x0EFFFFFF)
+private val SnakeHead = Color(0xFF00AFAE)
+private val SnakeBody = Color(0xFF1E5AA8)
+private val SnakeFood = Color(0xFF5CE8E7)
