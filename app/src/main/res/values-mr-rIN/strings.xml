@@ -174,6 +174,8 @@
     <string name="root_pre_patch_installer_standard_description">ॲप GmsCore सपोर्टसह स्वतंत्र ॲप म्हणून इंस्टॉल करते. पॅचिंग केल्यानंतर इंस्टॉलर निवडता येतो.</string>
     <!-- Patcher Screen -->
     <string name="patcher_error_dialog_app_info">ॲप माहिती</string>
+    <string name="patcher_tab_logs">पॅचर लॉग</string>
+    <string name="patcher_tab_game">गेम</string>
     <string name="patcher_conflict_hint">पॅच केलेले ॲप इंस्टॉल केलेल्या आवृत्तीपेक्षा वेगळे प्रमाणपत्र वापरते. अनइंस्टॉल केल्याने ॲपचा सर्व डेटा पुसला जाईल.</string>
     <string name="patcher_installed_conflict_title">अस्थापित करणे आवश्यक आहे</string>
     <string name="patcher_installed_conflict_body">"Morphe तुमच्या स्थापित ॲप्सना स्वतःच्या प्रमाणपत्राने प्रमाणित करते, जे मूळ प्रमाणपत्रापेक्षा वेगळे आहे. प्रमाणित ॲप स्थापित करण्यापूर्वी, Android ला विद्यमान आवृत्ती काढणे आवश्यक आहे.
@@ -197,6 +199,20 @@
     <!-- Expert patcher Screen -->
     <!-- Patcher Screen - Other hidden strings -->
     <string name="patcher_process_exit_message">पॅचर प्रक्रिया कोड %s सह बाहेर पडली</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">खेळ निवडा</string>
+    <string name="mini_game_score">गुण %d</string>
+    <string name="mini_game_game_over">गेम ओव्हर</string>
+    <string name="mini_game_try_again">पुन्हा प्रयत्न करा</string>
+    <string name="mini_game_paused">थांबवले</string>
+    <string name="mini_game_resume">सुरू ठेवा</string>
+    <string name="mini_game_2048_picker_subtitle">जुळवण्यासाठी टाइल्स सरकवा</string>
+    <string name="mini_game_flappy_picker_subtitle">पाईपमधून उडण्यासाठी टॅप करा</string>
+    <string name="mini_game_flappy_tap_to_start">उडण्यासाठी टॅप करा</string>
+    <string name="mini_game_snake_picker_subtitle">अन्न खा, स्वतःला मारू नका</string>
+    <string name="mini_game_snake_swipe_to_start">सुरू करण्यासाठी स्वाइप करा</string>
+    <string name="mini_game_dino_picker_subtitle">कॅक्टसवरून उडी मारण्यासाठी टॅप करा</string>
+    <string name="mini_game_dino_tap_to_start">धावण्यासाठी टॅप करा</string>
     <!-- Settings -->
     <!-- Settings - Appearance Tab - Background animation -->
     <string name="settings_appearance_background_random"> randomly </string>

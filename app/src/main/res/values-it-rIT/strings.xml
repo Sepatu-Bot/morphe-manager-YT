@@ -270,6 +270,8 @@ Zona esterna (tratteggiata): potrebbe essere ritagliata dalla maschera di avvio:
     <string name="patcher_error_log">Log dell\'errore</string>
     <string name="patcher_error_technical">Dettagli tecnici</string>
     <string name="patcher_error_dialog_app_info">Informazioni sull\'app</string>
+    <string name="patcher_tab_logs">Log del Patcher</string>
+    <string name="patcher_tab_game">Gioco</string>
     <string name="patcher_long_step_warning">Questo passaggio potrebbe richiedere un po\'  di tempo. Si prega di attendere…</string>
     <string name="patcher_installing_subtitle">Quasi pronti a partire! 🎸</string>
     <string name="patcher_success_title">Fatto! 🎉</string>
@@ -365,6 +367,20 @@ La disinstallazione cancellerà definitivamente tutti i dati dell'app."</string>
     <string name="package_name">Nome pacchetto</string>
     <string name="failed_to_mount">Impossibile montare: %s</string>
     <string name="failed_to_unmount">Impossibile smontare: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Scegli un gioco</string>
+    <string name="mini_game_score">Punteggio %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Riprova</string>
+    <string name="mini_game_paused">In pausa</string>
+    <string name="mini_game_resume">Continua</string>
+    <string name="mini_game_2048_picker_subtitle">Fai scorrere le tessere per unirle</string>
+    <string name="mini_game_flappy_picker_subtitle">Tocca per volare tra i tubi</string>
+    <string name="mini_game_flappy_tap_to_start">Tocca per volare</string>
+    <string name="mini_game_snake_picker_subtitle">Mangia il cibo, non colpire te stesso</string>
+    <string name="mini_game_snake_swipe_to_start">Scorri per iniziare</string>
+    <string name="mini_game_dino_picker_subtitle">Tocca per saltare sopra i cactus</string>
+    <string name="mini_game_dino_tap_to_start">Tocca per correre</string>
     <!-- Settings -->
     <string name="appearance">Aspetto</string>
     <string name="advanced">Avanzate</string>

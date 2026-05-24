@@ -270,6 +270,8 @@ Strefa zewnętrzna (linia przerywana): może zostać przycięta - najważniejsze
     <string name="patcher_error_log">Dziennik błędów</string>
     <string name="patcher_error_technical">Szczegóły techniczne</string>
     <string name="patcher_error_dialog_app_info">Informacje o aplikacji</string>
+    <string name="patcher_tab_logs">Logi modyfikatora</string>
+    <string name="patcher_tab_game">Gra</string>
     <string name="patcher_long_step_warning">Ten krok może trochę potrwać. Proszę czekać…</string>
     <string name="patcher_installing_subtitle">Prawie gotowe do akcji! 🎸</string>
     <string name="patcher_success_title">Wszystko gotowe! 🎉</string>
@@ -365,6 +367,20 @@ Odinstalowanie bezpowrotnie usunie wszystkie dane aplikacji"</string>
     <string name="package_name">Nazwa pakietu</string>
     <string name="failed_to_mount">Nie udało się zamontować: %s</string>
     <string name="failed_to_unmount">Nie udało się odmontować: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Wybierz grę</string>
+    <string name="mini_game_score">Wynik %d</string>
+    <string name="mini_game_game_over">Koniec gry</string>
+    <string name="mini_game_try_again">Spróbuj ponownie</string>
+    <string name="mini_game_paused">Pauza</string>
+    <string name="mini_game_resume">Wznów</string>
+    <string name="mini_game_2048_picker_subtitle">Przesuwaj i łącz kafelki</string>
+    <string name="mini_game_flappy_picker_subtitle">Dotykaj, by lecieć między rurami</string>
+    <string name="mini_game_flappy_tap_to_start">Dotknij, aby lecieć</string>
+    <string name="mini_game_snake_picker_subtitle">Zjadaj pokarm, nie wpadnij na siebie</string>
+    <string name="mini_game_snake_swipe_to_start">Przesuń, aby zacząć</string>
+    <string name="mini_game_dino_picker_subtitle">Dotykaj, by skakać przez kaktusy</string>
+    <string name="mini_game_dino_tap_to_start">Dotknij, aby biec</string>
     <!-- Settings -->
     <string name="appearance">Wygląd</string>
     <string name="advanced">Zaawansowane</string>

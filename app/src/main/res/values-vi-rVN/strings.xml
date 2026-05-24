@@ -270,6 +270,8 @@ Vùng ngoài (nét đứt): có thể bị cắt theo hình dạng biểu tượ
     <string name="patcher_error_log">Nhật ký lỗi</string>
     <string name="patcher_error_technical">Chi tiết kỹ thuật</string>
     <string name="patcher_error_dialog_app_info">Thông tin ứng dụng</string>
+    <string name="patcher_tab_logs">Nhật ký Vá lỗi</string>
+    <string name="patcher_tab_game">Trò chơi</string>
     <string name="patcher_long_step_warning">Bước này có thể hơi lâu một chút. Vui lòng chờ…</string>
     <string name="patcher_installing_subtitle">Gần xong rồi, chuẩn bị quẩy thôi! 🎸</string>
     <string name="patcher_success_title">Hoàn tất! 🎉</string>
@@ -365,6 +367,20 @@ Gỡ cài đặt sẽ xóa vĩnh viễn toàn bộ dữ liệu ứng dụng"</st
     <string name="package_name">Tên gói</string>
     <string name="failed_to_mount">Không thể gắn: %s</string>
     <string name="failed_to_unmount">Không thể gỡ gắn: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Chọn trò chơi</string>
+    <string name="mini_game_score">Điểm: %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Thử lại</string>
+    <string name="mini_game_paused">Tạm dừng</string>
+    <string name="mini_game_resume">Tiếp</string>
+    <string name="mini_game_2048_picker_subtitle">Kéo các ô để hợp nhất</string>
+    <string name="mini_game_flappy_picker_subtitle">Chạm để bay qua các ống</string>
+    <string name="mini_game_flappy_tap_to_start">Chạm để bay</string>
+    <string name="mini_game_snake_picker_subtitle">Ăn thức ăn, đừng tự đánh mình</string>
+    <string name="mini_game_snake_swipe_to_start">Vuốt để bắt đầu</string>
+    <string name="mini_game_dino_picker_subtitle">Chạm để nhảy qua xương rồng</string>
+    <string name="mini_game_dino_tap_to_start">Chạm để chạy</string>
     <!-- Settings -->
     <string name="appearance">Giao diện</string>
     <string name="advanced">Nâng cao</string>

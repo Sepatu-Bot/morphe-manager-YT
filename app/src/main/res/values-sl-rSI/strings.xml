@@ -270,6 +270,8 @@ Zunanji območji (črtkano): ga lahko maska zaganjalnika obreže – pomembne po
     <string name="patcher_error_log">Dnevnik napak</string>
     <string name="patcher_error_technical">Tehnične podrobnosti</string>
     <string name="patcher_error_dialog_app_info">Podatki o aplikaciji</string>
+    <string name="patcher_tab_logs">Dnevnik popravkov</string>
+    <string name="patcher_tab_game">Igra</string>
     <string name="patcher_long_step_warning">Ta korak lahko traja nekaj časa. Prosim, počakaj…</string>
     <string name="patcher_installing_subtitle">Kmalu bo vse v redu! 🎸</string>
     <string name="patcher_success_title">Končano! 🎉</string>
@@ -365,6 +367,20 @@ Odstranitev bo trajno izbrisala vse podatke aplikacije."</string>
     <string name="package_name">Ime paketa</string>
     <string name="failed_to_mount">Montiranje je potovalo: %s</string>
     <string name="failed_to_unmount">Razmontiranje je potovalo: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Izberi igro</string>
+    <string name="mini_game_score">Rezultat %d</string>
+    <string name="mini_game_game_over">Konec igre</string>
+    <string name="mini_game_try_again">Poskusite znova</string>
+    <string name="mini_game_paused">Pavza</string>
+    <string name="mini_game_resume">Nadaljuj</string>
+    <string name="mini_game_2048_picker_subtitle">Drsi ploščice za združitev</string>
+    <string name="mini_game_flappy_picker_subtitle">Tapnite, da poletite skozi cevi</string>
+    <string name="mini_game_flappy_tap_to_start">Tapnite za polet</string>
+    <string name="mini_game_snake_picker_subtitle">Jejte hrano, se ne udarite</string>
+    <string name="mini_game_snake_swipe_to_start">Podrsajte za začetek</string>
+    <string name="mini_game_dino_picker_subtitle">Tapnite, da preskočite kaktuse</string>
+    <string name="mini_game_dino_tap_to_start">Tapnite za tek</string>
     <!-- Settings -->
     <string name="appearance">Izgled
 Nastavitve</string>

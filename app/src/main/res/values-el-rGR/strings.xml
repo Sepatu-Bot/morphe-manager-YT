@@ -270,6 +270,8 @@
     <string name="patcher_error_log">Αρχείο καταγραφής σφαλμάτων</string>
     <string name="patcher_error_technical">Τεχνικές λεπτομέρειες</string>
     <string name="patcher_error_dialog_app_info">Πληροφορίες εφαρμογής</string>
+    <string name="patcher_tab_logs">Καταγραφές Εφαρμογής</string>
+    <string name="patcher_tab_game">Παιχνίδι</string>
     <string name="patcher_long_step_warning">Αυτό το βήμα μπορεί να διαρκέσει λίγο. Παρακαλώ περιμένετε…</string>
     <string name="patcher_installing_subtitle">Σχεδόν έτοιμο για δράση! 🎸</string>
     <string name="patcher_success_title">Ολοκληρώθηκε! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">Όνομα πακέτου</string>
     <string name="failed_to_mount">Αδυναμία προσάρτησης: %s</string>
     <string name="failed_to_unmount">Αποτυχία αποπροσάρτησης: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Επιλέξτε ένα παιχνίδι</string>
+    <string name="mini_game_score">Βαθμολογία %d</string>
+    <string name="mini_game_game_over">Τέλος παιχνιδιού</string>
+    <string name="mini_game_try_again">Δοκιμάστε ξανά</string>
+    <string name="mini_game_paused">Παύση</string>
+    <string name="mini_game_resume">Συνέχεια</string>
+    <string name="mini_game_2048_picker_subtitle">Σύρετε τα πλακίδια για να τα συγχωνεύσετε</string>
+    <string name="mini_game_flappy_picker_subtitle">Πατήστε για να πετάξετε ανάμεσα από τους σωλήνες</string>
+    <string name="mini_game_flappy_tap_to_start">Πατήστε για να πετάξετε</string>
+    <string name="mini_game_snake_picker_subtitle">Φάτε φαγητό, μην χτυπήσετε τον εαυτό σας</string>
+    <string name="mini_game_snake_swipe_to_start">Σύρετε για να ξεκινήσετε</string>
+    <string name="mini_game_dino_picker_subtitle">Πατήστε για να πηδήξετε πάνω από τους κάκτους</string>
+    <string name="mini_game_dino_tap_to_start">Πατήστε για να τρέξετε</string>
     <!-- Settings -->
     <string name="appearance">Εμφάνιση</string>
     <string name="advanced">Για προχωρημένους</string>

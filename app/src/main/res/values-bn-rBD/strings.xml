@@ -267,6 +267,8 @@
     <string name="patcher_error_log">ত্রুটি রিপোর্ট</string>
     <string name="patcher_error_technical">প্রযুক্তি বিবরণ</string>
     <string name="patcher_error_dialog_app_info">অ্যাপ তথ্য</string>
+    <string name="patcher_tab_logs">প্যাচার লগ</string>
+    <string name="patcher_tab_game">গেম</string>
     <string name="patcher_long_step_warning">এই ধাপটি সম্পন্ন হতে কিছু সময় লাগতে পারে। অনুগ্রহ করে অপেক্ষা করুন…</string>
     <string name="patcher_installing_subtitle">প্রায় রক-এর জন্য প্রস্তুত! 🎸</string>
     <string name="patcher_success_title">সব হয়ে গেছে! 🎉</string>
@@ -362,6 +364,20 @@
     <string name="package_name">প্যাকেজের নাম</string>
     <string name="failed_to_mount">মাউন্ট করতে ব্যর্থ: %s</string>
     <string name="failed_to_unmount">আনমাউন্ট করতে ব্যর্থ: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">গেমটি নির্বাচন করুন</string>
+    <string name="mini_game_score">স্কোর: %d</string>
+    <string name="mini_game_game_over">গেম ওভার</string>
+    <string name="mini_game_try_again">আবার চেষ্টা করুন</string>
+    <string name="mini_game_paused">বিরতি</string>
+    <string name="mini_game_resume">এগিয়ে যান</string>
+    <string name="mini_game_2048_picker_subtitle">একসাথে মার্জ করার জন্য টাইলস স্লাইড করুন</string>
+    <string name="mini_game_flappy_picker_subtitle">পাইপের মধ্যে দিয়ে উড়তে ট্যাপ করুন</string>
+    <string name="mini_game_flappy_tap_to_start">উড়তে ট্যাপ করুন</string>
+    <string name="mini_game_snake_picker_subtitle">খাবার খান, নিজের সাথে আঘাত করবেন না</string>
+    <string name="mini_game_snake_swipe_to_start">শুরু করতে সোয়াইপ করুন</string>
+    <string name="mini_game_dino_picker_subtitle">ক্যাকটাসের উপর দিয়ে লাফ দিতে ট্যাপ করুন</string>
+    <string name="mini_game_dino_tap_to_start">দৌড়াতে ট্যাপ করুন</string>
     <!-- Settings -->
     <string name="appearance">রূপ</string>
     <string name="advanced">উন্নত</string>

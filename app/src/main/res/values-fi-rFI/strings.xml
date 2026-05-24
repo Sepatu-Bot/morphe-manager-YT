@@ -269,6 +269,8 @@ Ulkopuolinen alue (katkoviiva): käynnistimen maski saattaa leikata osia siitä 
     <string name="patcher_error_log">Virheloki</string>
     <string name="patcher_error_technical">Tekniset tiedot</string>
     <string name="patcher_error_dialog_app_info">Sovelluksen tiedot</string>
+    <string name="patcher_tab_logs">Patcher-lokit</string>
+    <string name="patcher_tab_game">Peli</string>
     <string name="patcher_long_step_warning">Tämä vaihe voi kestää hetken. Odota...</string>
     <string name="patcher_installing_subtitle">Melkein valmis rokkaamaan! 🎸</string>
     <string name="patcher_success_title">Valmis! 🎉</string>
@@ -364,6 +366,20 @@ Poistaminen poistaa pysyvästi kaikki sovelluksen tiedot."</string>
     <string name="package_name">Paketin nimi</string>
     <string name="failed_to_mount">Liittäminen epäonnistui: %s</string>
     <string name="failed_to_unmount">Irrottaminen epäonnistui: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Valitse peli</string>
+    <string name="mini_game_score">Pisteet %d</string>
+    <string name="mini_game_game_over">Peli ohi</string>
+    <string name="mini_game_try_again">Yritä uudelleen</string>
+    <string name="mini_game_paused">Tauolla</string>
+    <string name="mini_game_resume">Jatka</string>
+    <string name="mini_game_2048_picker_subtitle">Liu\'uta laattoja yhdistääksesi ne</string>
+    <string name="mini_game_flappy_picker_subtitle">Napauta lentääksesi putkien läpi</string>
+    <string name="mini_game_flappy_tap_to_start">Napauta lentääksesi</string>
+    <string name="mini_game_snake_picker_subtitle">Syö ruokaa, älä osu itseesi</string>
+    <string name="mini_game_snake_swipe_to_start">Pyyhkäise aloittaaksesi</string>
+    <string name="mini_game_dino_picker_subtitle">Napauta hypätäksesi kaktusten yli</string>
+    <string name="mini_game_dino_tap_to_start">Napauta juostaaksesi</string>
     <!-- Settings -->
     <string name="appearance">Ulkoasu</string>
     <string name="advanced">Lisäasetukset</string>
@@ -628,37 +644,37 @@ Kuvien mittojen on oltava seuraavat:
     <string name="settings_system_patched_apks_description">Hallitse tallennettuja muokattuja sovellustiedostoja</string>
     <string name="settings_system_patched_apks_empty">Muokattuja APK:ita ei ole vielä tallennettu</string>
     <string name="settings_system_patched_apks_delete_title">Poista muokattu APK?</string>
-    <string name="settings_system_patched_apks_delete_confirm">Oletko varmaasi poistaa tallennettu patchettuja %s? Tätä ei voi peruuttaa.</string>
-    <string name="settings_system_patched_apks_deleted">Tallennettu patchetti poistettu onnistuneesti</string>
+    <string name="settings_system_patched_apks_delete_confirm">Haluatko varmasti poistaa sovelluksen %s tallennettun muokatun APK:n?</string>
+    <string name="settings_system_patched_apks_deleted">Muokattu APK on poistettu</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Alkuperäiset APK:t</string>
-    <string name="settings_system_original_apks_description">Tallennettu uudelleenpaikkausta varten. Yksi versio per sovellus</string>
-    <string name="settings_system_original_apks_empty">Ei tallennettu alkuperäisiä APK(t)</string>
-    <string name="settings_system_original_apks_deleted">Alkuperäisen APK(t) poistettu onnistuneesti</string>
-    <string name="settings_system_original_apks_delete_title">Poistetaanko alkuperäisen APK(t)? Tätä ei voi peruuttaa.</string>
-    <string name="settings_system_original_apks_delete_confirm">Poistaa alkuperäisen APK:n %s? Korjaus ei ole enää mahdollista ilman uuden APK:n antamista</string>
+    <string name="settings_system_original_apks_description">Tallennettu muokattavaksi uudelleen. Kustakin sovelluksesta säilytetään yksi versio</string>
+    <string name="settings_system_original_apks_empty">Ei alkuperäisiä APK:ita tallennettu</string>
+    <string name="settings_system_original_apks_deleted">Alkuperäinen APK on poistettu</string>
+    <string name="settings_system_original_apks_delete_title">Poista alkuperäinen APK?</string>
+    <string name="settings_system_original_apks_delete_confirm">Poistaa sovelluksen %s alkuperäisen APK:n? Et voi muokata tätä uudelleen ilman uuden APK:n lisäämistä</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
-    <string name="settings_system_patch_selections_title">Korjausvalinnat</string>
-    <string name="settings_system_patch_selections_description">Tallennetut paikkausvalinnat, säilytetty poistamisen jälkeen</string>
-    <string name="settings_system_patch_selection_reset_all_confirm_title">Nollaa kaikki valinnat?</string>
-    <string name="settings_system_patch_selection_reset_package_confirm_title">Nollaa paketin valinnat?</string>
-    <string name="settings_system_patch_selection_reset_source_confirm_title">Nollaa lähteen valinnan?</string>
-    <string name="settings_system_patch_selection_no_saved">Ei tallennettuja patsas-valintoja</string>
-    <string name="settings_system_patch_selection_total_summary_format">%1$s kerrallaan %2$s:stä</string>
-    <string name="settings_system_patch_selection_patches_in_sources_format">%1$s %2$s:sta</string>
+    <string name="settings_system_patch_selections_title">Lisäosavalinnat</string>
+    <string name="settings_system_patch_selections_description">Tallennetut lisäosavalinnat. Säilytetään, vaikka sovelluksen asennus poistetaan</string>
+    <string name="settings_system_patch_selection_reset_all_confirm_title">Nollataanko kaikki valinnat?</string>
+    <string name="settings_system_patch_selection_reset_package_confirm_title">Nollataanko paketin valinnat?</string>
+    <string name="settings_system_patch_selection_reset_source_confirm_title">Nollataanko lähteen valinnat?</string>
+    <string name="settings_system_patch_selection_no_saved">Ei tallennettuja lisäosavalintoja</string>
+    <string name="settings_system_patch_selection_total_summary_format">%1$s: %2$s</string>
+    <string name="settings_system_patch_selection_patches_in_sources_format">%1$s: %2$s</string>
     <string name="settings_system_patch_selection_source_format">Lähde #%s</string>
     <string name="settings_system_patch_selection_will_delete">Tämä poistaa:</string>
-    <string name="settings_system_patch_selection_reset_all_warning">Tämä pysyvästi poistaa kaikki tallennetut patsas-valinnat kaikille paketteille ja lähteille</string>
-    <string name="settings_system_patch_selection_reset_package_warning">Tämä pysyvästi poistaa kaikki tallennetut patsas-valinnat %s:sta kaikista lähteistä</string>
-    <string name="settings_system_patch_selection_reset_source_warning">Tämä poistaa tallennetut patch-valinnat %1$s lähteestä #%2$s pysyvästi</string>
-    <string name="settings_system_export_source_data_fail">Lähteen tiedot vienti epäonnistui</string>
-    <string name="settings_system_export_source_data_success">Lähteen tiedot tuotu onnistuneesti</string>
-    <string name="settings_system_import_source_data_fail">Lähteen tiedot tuonti epäonnistui</string>
-    <string name="settings_system_import_source_data_success">Lähteen tiedot tuotu onnistuneesti</string>
-    <string name="settings_system_patch_details_title">Patsas tiedot</string>
-    <string name="settings_system_selected_patches_title">Valitut patchit (%s)</string>
-    <string name="settings_system_patch_options_title">Patch-vaihtoehdot (%s)</string>
-    <string name="settings_system_no_patches_or_options">Ei tallennettuja patsas- tai vaihtoehtoja</string>
+    <string name="settings_system_patch_selection_reset_all_warning">Tämä poistaa pysyvästi kaikki tallennetut lisäosavalinnat kaikista paketeista ja lähteistä</string>
+    <string name="settings_system_patch_selection_reset_package_warning">Tämä poistaa pysyvästi kaikki tallennetut lisäosavalinnat sovelluksesta %s kaikista lähteistä</string>
+    <string name="settings_system_patch_selection_reset_source_warning">Tämä poistaa pysyvästi tallennetut lisäosavalinnat sovelluksesta %1$s lähteestä #%2$s</string>
+    <string name="settings_system_export_source_data_fail">Lähdetietojen vienti epäonnistui</string>
+    <string name="settings_system_export_source_data_success">Lähdetiedot on viety</string>
+    <string name="settings_system_import_source_data_fail">Lähdetietojen tuonti epäonnistui</string>
+    <string name="settings_system_import_source_data_success">Lähdetiedot on tuotu</string>
+    <string name="settings_system_patch_details_title">Lisäosien tiedot</string>
+    <string name="settings_system_selected_patches_title">Valitut lisäosat (%s)</string>
+    <string name="settings_system_patch_options_title">Lisäosa-asetukset (%s)</string>
+    <string name="settings_system_no_patches_or_options">Ei lisäosia tai asetuksia tallennettu</string>
     <!-- Settings - System Tab - Custom file picker -->
     <string name="settings_system_custom_file_picker">Mukautettu tiedostonvalitsin</string>
     <string name="settings_system_custom_file_picker_description">Käytä Morphen sisäänrakennettua tiedostonvalitsinta järjestelmän oletusarvon sijaan</string>
@@ -668,8 +684,8 @@ Kuvien mittojen on oltava seuraavat:
     <string name="file_picker_internal_storage">Sisäinen tallennustila</string>
     <string name="file_picker_sd_card">SD-kortti</string>
     <string name="file_picker_root">Juurihakemisto (/)</string>
-    <string name="file_picker_sort_name_asc">Nimi (A–Z)</string>
-    <string name="file_picker_sort_name_desc">Nimi (Z–A)</string>
+    <string name="file_picker_sort_name_asc">Nimi (A–Ö)</string>
+    <string name="file_picker_sort_name_desc">Nimi (Ö–A)</string>
     <string name="file_picker_sort_size_desc">Koko (suurin ensin)</string>
     <string name="file_picker_sort_size_asc">Koko (pienin ensin)</string>
     <string name="file_picker_sort_date_desc">Päivämäärä (uusin ensin)</string>
@@ -678,7 +694,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="settings_system_about">Tietoja</string>
     <string name="settings_system_share_website">Jaa verkkosivusto</string>
     <string name="settings_system_share_website_description">Jaa Morphen virallinen verkkosivusto</string>
-    <string name="settings_system_manager_description">Avoin lähdekoodin projekti, jonka tavoitteena on moderni ja tehokas Android-sovellusten korjaus, yhteisön palautteen ja panosten ohjaamana</string>
+    <string name="settings_system_manager_description">Avoimen lähdekoodin projekti suosittujen Android-sovellusten moderniin ja suoraviivaiseen muokkaukseen, jota ohjaavat yhteisön palaute ja panokset</string>
     <string name="credits">Tekijät</string>
     <string name="credits_current_development">Nykyinen kehitys</string>
     <string name="credits_prior_development">Aikaisempi kehitys</string>
@@ -686,7 +702,7 @@ Kuvien mittojen on oltava seuraavat:
     <!-- Shared strings -->
     <string name="select_file">Valitse tiedosto</string>
     <string name="select_folder">Valitse kansio</string>
-    <string name="patches">Korjaustiedostot</string>
+    <string name="patches">Lisäosat</string>
     <string name="home">Koti</string>
     <string name="settings">Asetukset</string>
     <string name="yes">Kyllä</string>
@@ -705,7 +721,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="delete">Poista</string>
     <string name="remove">Poista</string>
     <string name="disable">Poista käytöstä</string>
-    <string name="enable">Päällin</string>
+    <string name="enable">Ota käyttöön</string>
     <string name="loading">Ladataan…</string>
     <string name="not_installed">Ei asennettu</string>
     <string name="view">Näytä</string>

@@ -365,6 +365,8 @@ Deinstaliranje će trajno izbrisati sve podatke aplikacije"</string>
     <string name="package_name">Naziv paketa</string>
     <string name="failed_to_mount">Nije moguće učitati: %s</string>
     <string name="failed_to_unmount">Nije moguće odčitati: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_resume">Nastavi</string>
     <!-- Settings -->
     <string name="appearance">Izgled</string>
     <string name="advanced">Napredno</string>

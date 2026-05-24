@@ -271,6 +271,8 @@ Zona luar (putus-putus): mungkin terpotong oleh masker launcher - jaga detail pe
     <string name="patcher_error_log">Catatan kesalahan</string>
     <string name="patcher_error_technical">Rincian teknis</string>
     <string name="patcher_error_dialog_app_info">Info aplikasi</string>
+    <string name="patcher_tab_logs">Log Penambal</string>
+    <string name="patcher_tab_game">Permainan</string>
     <string name="patcher_long_step_warning">Langkah ini mungkin memerlukan waktu. Harap tunggu…</string>
     <string name="patcher_installing_subtitle">Hampir siap! 🎸</string>
     <string name="patcher_success_title">Semua Selesai! 🎉</string>
@@ -366,6 +368,20 @@ Mencopot pemasangannya akan menghapus semua data aplikasi secara permanen"</stri
     <string name="package_name">Nama paket</string>
     <string name="failed_to_mount">Gagal mount: %s</string>
     <string name="failed_to_unmount">Gagal unmount: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Pilih permainan</string>
+    <string name="mini_game_score">Skor %d</string>
+    <string name="mini_game_game_over">Permainan Selesai</string>
+    <string name="mini_game_try_again">Coba Lagi</string>
+    <string name="mini_game_paused">Dijeda</string>
+    <string name="mini_game_resume">Lanjutkan</string>
+    <string name="mini_game_2048_picker_subtitle">Geser ubin untuk digabungkan</string>
+    <string name="mini_game_flappy_picker_subtitle">Ketuk untuk terbang melewati pipa</string>
+    <string name="mini_game_flappy_tap_to_start">Ketuk untuk terbang</string>
+    <string name="mini_game_snake_picker_subtitle">Makan makanan, jangan menabrak diri sendiri</string>
+    <string name="mini_game_snake_swipe_to_start">Gesek untuk memulai</string>
+    <string name="mini_game_dino_picker_subtitle">Ketuk untuk melompati kaktus</string>
+    <string name="mini_game_dino_tap_to_start">Ketuk untuk berlari</string>
     <!-- Settings -->
     <string name="appearance">Tampilan</string>
     <string name="advanced">Lanjutan</string>
@@ -669,7 +685,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="file_picker_no_files">Tidak ada berkas di sini</string>
     <string name="file_picker_internal_storage">Memori internal</string>
     <string name="file_picker_sd_card">Kartu SD</string>
-    <string name="file_picker_root">Akar (/)</string>
+    <string name="file_picker_root">Root (/)</string>
     <string name="file_picker_sort_name_asc">Nama (A–Z)</string>
     <string name="file_picker_sort_name_desc">Nama (Z–A)</string>
     <string name="file_picker_sort_size_desc">Ukuran (terbesar dahulu)</string>

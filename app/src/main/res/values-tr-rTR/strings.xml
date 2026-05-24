@@ -270,6 +270,8 @@ Dış bölge (kesikli): launcher maskesi tarafından kırpılabilir - önemli ay
     <string name="patcher_error_log">Hata günlüğü</string>
     <string name="patcher_error_technical">Teknik ayrıntılar</string>
     <string name="patcher_error_dialog_app_info">Uygulama bilgisi</string>
+    <string name="patcher_tab_logs">Yama Günlükleri</string>
+    <string name="patcher_tab_game">Oyun</string>
     <string name="patcher_long_step_warning">Bu adım biraz zaman alabilir. Lütfen bekleyin…</string>
     <string name="patcher_installing_subtitle">Neredeyse hazırız! 🎸</string>
     <string name="patcher_success_title">Hepsi Bitti! 🎉</string>
@@ -365,6 +367,20 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="package_name">Paket adı</string>
     <string name="failed_to_mount">Bağlanamadı: %s</string>
     <string name="failed_to_unmount">Bağlama kaldırılamadı: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Bir oyun seç</string>
+    <string name="mini_game_score">%d puan</string>
+    <string name="mini_game_game_over">Oyun Bitti</string>
+    <string name="mini_game_try_again">Tekrar Dene</string>
+    <string name="mini_game_paused">Duraklatıldı</string>
+    <string name="mini_game_resume">Devam et</string>
+    <string name="mini_game_2048_picker_subtitle">Karoları birleştirmek için kaydırın</string>
+    <string name="mini_game_flappy_picker_subtitle">Borulardan uçmak için dokunun</string>
+    <string name="mini_game_flappy_tap_to_start">Uçmak için dokunun</string>
+    <string name="mini_game_snake_picker_subtitle">Yemek ye, kendine çarpma</string>
+    <string name="mini_game_snake_swipe_to_start">Başlamak için kaydırın</string>
+    <string name="mini_game_dino_picker_subtitle">Kaktüslerin üzerinden atlamak için dokunun</string>
+    <string name="mini_game_dino_tap_to_start">Koşmak için dokunun</string>
     <!-- Settings -->
     <string name="appearance">Görünüm</string>
     <string name="advanced">Gelişmiş</string>

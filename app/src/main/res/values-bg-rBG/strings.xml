@@ -270,6 +270,8 @@
     <string name="patcher_error_log">Дневник на грешки</string>
     <string name="patcher_error_technical">Технически детайли</string>
     <string name="patcher_error_dialog_app_info">Информация за приложението</string>
+    <string name="patcher_tab_logs">Дневници на пачера</string>
+    <string name="patcher_tab_game">Игра</string>
     <string name="patcher_long_step_warning">Този стъпка може да отнеме време. Моля, изчакайте…</string>
     <string name="patcher_installing_subtitle">Готворе се да рокне! 🎸</string>
     <string name="patcher_success_title">Всичко е готово! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">Име на пакета</string>
     <string name="failed_to_mount">Неуспешно монтиране: %s</string>
     <string name="failed_to_unmount">Неуспешно откачване: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Избери игра</string>
+    <string name="mini_game_score">Резултат %d</string>
+    <string name="mini_game_game_over">Край на играта</string>
+    <string name="mini_game_try_again">Опитай отново</string>
+    <string name="mini_game_paused">Пауза</string>
+    <string name="mini_game_resume">Продължи</string>
+    <string name="mini_game_2048_picker_subtitle">Плъзнете плочките, за да ги обедините</string>
+    <string name="mini_game_flappy_picker_subtitle">Докоснете, за да прелетите през тръбите</string>
+    <string name="mini_game_flappy_tap_to_start">Докоснете, за да летите</string>
+    <string name="mini_game_snake_picker_subtitle">Яжте храна, не се удряйте</string>
+    <string name="mini_game_snake_swipe_to_start">Плъзнете, за да започнете</string>
+    <string name="mini_game_dino_picker_subtitle">Докоснете, за да прескочите кактусите</string>
+    <string name="mini_game_dino_tap_to_start">Докоснете, за да бягате</string>
     <!-- Settings -->
     <string name="appearance">Външен вид</string>
     <string name="advanced">Разширено</string>

@@ -270,6 +270,8 @@ Ytre sone (stiplet): kan bli beskåret av launcher-masken – hold viktig inform
     <string name="patcher_error_log">Feillogg</string>
     <string name="patcher_error_technical">Tekniske detaljer</string>
     <string name="patcher_error_dialog_app_info">App info</string>
+    <string name="patcher_tab_logs">Patcherlogger</string>
+    <string name="patcher_tab_game">Spill</string>
     <string name="patcher_long_step_warning">Dette trinnet kan ta en stund. Vennligst vent…</string>
     <string name="patcher_installing_subtitle">Snart klar! 🎸</string>
     <string name="patcher_success_title">Ferdig! 🎉</string>
@@ -365,6 +367,20 @@ Avinstallering vil permanent slette alle appdata"</string>
     <string name="package_name">Pakkens navn</string>
     <string name="failed_to_mount">Kunne ikke montere: %s</string>
     <string name="failed_to_unmount">Kunne ikke demontere: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Velg et spill</string>
+    <string name="mini_game_score">Poeng: %d</string>
+    <string name="mini_game_game_over">Spillet er over</string>
+    <string name="mini_game_try_again">Prøv igjen</string>
+    <string name="mini_game_paused">Pauset</string>
+    <string name="mini_game_resume">Fortsett</string>
+    <string name="mini_game_2048_picker_subtitle">Skyv brikkene for å slå dem sammen</string>
+    <string name="mini_game_flappy_picker_subtitle">Trykk for å fly gjennom rørene</string>
+    <string name="mini_game_flappy_tap_to_start">Trykk for å fly</string>
+    <string name="mini_game_snake_picker_subtitle">Spis mat, ikke treff deg selv</string>
+    <string name="mini_game_snake_swipe_to_start">Sveip for å starte</string>
+    <string name="mini_game_dino_picker_subtitle">Trykk for å hoppe over kaktusene</string>
+    <string name="mini_game_dino_tap_to_start">Trykk for å løpe</string>
     <!-- Settings -->
     <string name="appearance">Utseende</string>
     <string name="advanced">Avansert</string>

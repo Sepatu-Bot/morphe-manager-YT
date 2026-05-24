@@ -270,6 +270,8 @@
     <string name="patcher_error_log">Журнал помилок</string>
     <string name="patcher_error_technical">Технічні деталі</string>
     <string name="patcher_error_dialog_app_info">Інформація про застосунок</string>
+    <string name="patcher_tab_logs">Журнали патчера</string>
+    <string name="patcher_tab_game">Гра</string>
     <string name="patcher_long_step_warning">Цей крок може тривати деякий час. Будь ласка, зачекайте…</string>
     <string name="patcher_installing_subtitle">Майже готово до драйву! 🎸</string>
     <string name="patcher_success_title">Все готово! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">Назва пакета</string>
     <string name="failed_to_mount">Не вдалося змонтувати: %s</string>
     <string name="failed_to_unmount">Не вдалося демонтувати: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Оберіть гру</string>
+    <string name="mini_game_score">Рахунок %d</string>
+    <string name="mini_game_game_over">Кінець гри</string>
+    <string name="mini_game_try_again">Спробувати ще раз</string>
+    <string name="mini_game_paused">Призупинено</string>
+    <string name="mini_game_resume">Продовжити</string>
+    <string name="mini_game_2048_picker_subtitle">Зсувайте плитки, щоб об’єднати їх</string>
+    <string name="mini_game_flappy_picker_subtitle">Натискайте, щоб пролетіти крізь труби</string>
+    <string name="mini_game_flappy_tap_to_start">Натисніть, щоб полетіти</string>
+    <string name="mini_game_snake_picker_subtitle">Їжте їжу, не бийтеся об себе</string>
+    <string name="mini_game_snake_swipe_to_start">Проведіть, щоб почати</string>
+    <string name="mini_game_dino_picker_subtitle">Натискайте, щоб перестрибнути кактуси</string>
+    <string name="mini_game_dino_tap_to_start">Натисніть, щоб бігти</string>
     <!-- Settings -->
     <string name="appearance">Вигляд</string>
     <string name="advanced">Розширені</string>

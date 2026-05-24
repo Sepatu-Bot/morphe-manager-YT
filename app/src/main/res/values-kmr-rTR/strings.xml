@@ -268,6 +268,8 @@ Herêma derveyî (qutkirî): dikare ji aliyê maskeya launcher'ê ve were qutkir
     <string name="patcher_error_log">Log xistina</string>
     <string name="patcher_error_technical">Agahî teknîk</string>
     <string name="patcher_error_dialog_app_info">Agahdariya sepanê</string>
+    <string name="patcher_tab_logs">Logên Patcher</string>
+    <string name="patcher_tab_game">Lîstik</string>
     <string name="patcher_long_step_warning">Ev gav dikare hinekî dem bigire. Heke...</string>
     <string name="patcher_installing_subtitle">Nêzîk e ku hûn şêwaz bin! 🎸</string>
     <string name="patcher_success_title">Hemû tişt qediya! 🎉</string>
@@ -363,6 +365,20 @@ Neqişandin dê hemî daneyên serîlêdanê bi awayê daîmî tune bike"</strin
     <string name="package_name">Navê pakêtê</string>
     <string name="failed_to_mount">Serketina çêkirinê: %s</string>
     <string name="failed_to_unmount">Serketina nebûyîna çêkirinê: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Lîstikek hilbijêre</string>
+    <string name="mini_game_score">Pêvan %d</string>
+    <string name="mini_game_game_over">Dawî</string>
+    <string name="mini_game_try_again">Carek din bicûrbîne</string>
+    <string name="mini_game_paused">Seikin</string>
+    <string name="mini_game_resume">Berde dewam bike</string>
+    <string name="mini_game_2048_picker_subtitle">Tile\'an bişîne da ku bikevin hev</string>
+    <string name="mini_game_flappy_picker_subtitle">Têke da ku ji boriyên derbas bî</string>
+    <string name="mini_game_flappy_tap_to_start">Têke da ku firî</string>
+    <string name="mini_game_snake_picker_subtitle">Xwarin bixwe, xwe negre</string>
+    <string name="mini_game_snake_swipe_to_start">Destpêkirinê da ku destpêbikî</string>
+    <string name="mini_game_dino_picker_subtitle">Têke da ku ji kaktûsan derbas bî</string>
+    <string name="mini_game_dino_tap_to_start">Têke da ku bixwe</string>
     <!-- Settings -->
     <string name="appearance">Xwezî</string>
     <string name="advanced">Zor</string>

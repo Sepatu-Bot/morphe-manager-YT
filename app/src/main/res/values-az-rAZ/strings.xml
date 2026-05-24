@@ -270,6 +270,8 @@ Xarici sahə (ştrixli): başladıcı örtüyündən kəsilə bilər - mühüm h
     <string name="patcher_error_log">Xəta jurnalı</string>
     <string name="patcher_error_technical">Texniki təfsilatlar</string>
     <string name="patcher_error_dialog_app_info">Tətbiq məlumatı</string>
+    <string name="patcher_tab_logs">Yamaqlayıcı Qeydləri</string>
+    <string name="patcher_tab_game">Oyun</string>
     <string name="patcher_long_step_warning">Bu keçid bir müddət çəkə bilər. Zəhmət olmasa, gözləyin...</string>
     <string name="patcher_installing_subtitle">Təqribən silkələnməyə hazırdır! 🎸</string>
     <string name="patcher_success_title">Hamısı Bitdi! 🎉</string>
@@ -365,6 +367,20 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="package_name">Paket adı</string>
     <string name="failed_to_mount">Montajlama uğursuzdu: %s</string>
     <string name="failed_to_unmount">Montajı silmək olmadı: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Oyun seç</string>
+    <string name="mini_game_score">Hesab %d</string>
+    <string name="mini_game_game_over">Oyun Bitdi</string>
+    <string name="mini_game_try_again">Təkrar cəhd et</string>
+    <string name="mini_game_paused">Fasilə edildi</string>
+    <string name="mini_game_resume">Davam et</string>
+    <string name="mini_game_2048_picker_subtitle">Birləşdirmək üçün xanaları sürüşdür</string>
+    <string name="mini_game_flappy_picker_subtitle">Borular arasından uçmaq üçün toxun</string>
+    <string name="mini_game_flappy_tap_to_start">Uçmaq üçün toxun</string>
+    <string name="mini_game_snake_picker_subtitle">Qida ye, özünü toqquşdurma</string>
+    <string name="mini_game_snake_swipe_to_start">Başlamaq üçün sürüşdür</string>
+    <string name="mini_game_dino_picker_subtitle">Kaktusların üstündən hoppanmaq üçün toxun</string>
+    <string name="mini_game_dino_tap_to_start">Qaçmaq üçün toxun</string>
     <!-- Settings -->
     <string name="appearance">Görünüş</string>
     <string name="advanced">Qabaqcıl</string>
@@ -381,9 +397,9 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="settings_appearance_background_particles">Zərrəciklər</string>
     <string name="settings_appearance_background_none">Heç biri</string>
     <string name="settings_appearance_background_random">Təsadüfi</string>
-    <string name="settings_appearance_background_random_interval_launch">Buraxılışda</string>
+    <string name="settings_appearance_background_random_interval_launch">Açılışda</string>
     <string name="settings_appearance_background_random_interval_daily">Gündəlik</string>
-    <string name="settings_appearance_background_random_interval_3days">Hər 3 gündən bir</string>
+    <string name="settings_appearance_background_random_interval_3days">3 gün arası</string>
     <string name="settings_appearance_parallax_effect">Parallaks effekti</string>
     <string name="settings_appearance_parallax_effect_description">Cihazı çevirərkən fonu rəvan şəkildə tərpətmək</string>
     <!-- Settings - Appearance Tab - Theme -->
@@ -398,7 +414,7 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <!-- Settings - Appearance Tab - Language Selector -->
     <string name="settings_appearance_app_language">Tətbiq dili</string>
     <string name="settings_appearance_app_language_current">Hazırkı dil</string>
-    <string name="settings_appearance_translations_info_title">Bəzi dillər üçün tərcümələr yarımçıq və ya qüsurlu ola bilər</string>
+    <string name="settings_appearance_translations_info_title">Bəzi dillər üçün tərcümələr əskik və ya nöqsanlı ola bilər.</string>
     <string name="settings_appearance_translations_info_text">Yeni dilləri tərcümə etmək və ya mövcud tərcümələri təkmilləşdirmək üçün %s -i ziyarət et</string>
     <!-- Settings - Appearance Tab - Home Screen Section -->
     <string name="settings_appearance_home_screen">Əsas ekran</string>
@@ -410,7 +426,7 @@ Quraşdırma ləğvi bütün tətbiq məlumatını qalıcı siləcək"</string>
     <string name="settings_appearance_app_icon_light_2">Səma</string>
     <string name="settings_appearance_app_icon_light_3">Qürub</string>
     <string name="settings_appearance_app_icon_dark_1">Okean</string>
-    <string name="settings_appearance_app_icon_dark_2">Boşluq</string>
+    <string name="settings_appearance_app_icon_dark_2">Sırf qara</string>
     <string name="settings_appearance_app_icon_dark_3">Tünd göy</string>
     <string name="settings_appearance_app_icon_change_dialog_title">Tətbiq simvolu dəyişdirilsin?</string>
     <string name="settings_appearance_app_icon_change_dialog_message">&lt;b&gt;%s&lt;/b&gt; olaraq dəyişdirilib yenidən başladılsın?</string>

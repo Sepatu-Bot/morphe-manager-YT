@@ -270,6 +270,8 @@
     <string name="patcher_error_log">יומן שגיאות</string>
     <string name="patcher_error_technical">פרטי טכניים</string>
     <string name="patcher_error_dialog_app_info">מידע על האפליקציה</string>
+    <string name="patcher_tab_logs">יומני תיקונים</string>
+    <string name="patcher_tab_game">משחק</string>
     <string name="patcher_long_step_warning">שלב זה עשוי לקחת זמן. אנא המתן…</string>
     <string name="patcher_installing_subtitle">כמעט מוכן לרוק! 🎸</string>
     <string name="patcher_success_title">הכל מוכן! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">שם חבילה</string>
     <string name="failed_to_mount">כשל בהרכבה: %s</string>
     <string name="failed_to_unmount">כשל בפירוק: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">בחר משחק</string>
+    <string name="mini_game_score">נקודות %d</string>
+    <string name="mini_game_game_over">סיום משחק</string>
+    <string name="mini_game_try_again">נסה שוב</string>
+    <string name="mini_game_paused">השהה</string>
+    <string name="mini_game_resume">המשך</string>
+    <string name="mini_game_2048_picker_subtitle">החלק כדי למזג אריחים</string>
+    <string name="mini_game_flappy_picker_subtitle">הקש כדי לעוף דרך הצינורות</string>
+    <string name="mini_game_flappy_tap_to_start">הקש כדי לעוף</string>
+    <string name="mini_game_snake_picker_subtitle">אכול אוכל, אל תפגע בעצמך</string>
+    <string name="mini_game_snake_swipe_to_start">החלק כדי להתחיל</string>
+    <string name="mini_game_dino_picker_subtitle">הקש כדי לקפוץ מעל קקטוסים</string>
+    <string name="mini_game_dino_tap_to_start">הקש כדי לרוץ</string>
     <!-- Settings -->
     <string name="appearance">מראה</string>
     <string name="advanced">מתקדם</string>

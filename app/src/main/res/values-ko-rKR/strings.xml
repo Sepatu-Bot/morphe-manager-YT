@@ -270,6 +270,8 @@
     <string name="patcher_error_log">오류 로그</string>
     <string name="patcher_error_technical">기술 세부 정보</string>
     <string name="patcher_error_dialog_app_info">앱 정보</string>
+    <string name="patcher_tab_logs">패처 로그</string>
+    <string name="patcher_tab_game">게임</string>
     <string name="patcher_long_step_warning">이 단계는 시간이 걸릴 수 있습니다. 잠시만 기다려 주세요…</string>
     <string name="patcher_installing_subtitle">신나게 놀 준비가 거의 다 됐어요🎸</string>
     <string name="patcher_success_title">모두 완료! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">패키지 이름</string>
     <string name="failed_to_mount">마운트할 수 없습니다: %s</string>
     <string name="failed_to_unmount">마운트를 해제할 수 없습니다: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">게임 선택</string>
+    <string name="mini_game_score">점수 %d</string>
+    <string name="mini_game_game_over">게임 종료</string>
+    <string name="mini_game_try_again">다시 시도</string>
+    <string name="mini_game_paused">일시 중지</string>
+    <string name="mini_game_resume">계속 진행</string>
+    <string name="mini_game_2048_picker_subtitle">타일 밀어서 병합</string>
+    <string name="mini_game_flappy_picker_subtitle">탭하여 파이프 사이 날기</string>
+    <string name="mini_game_flappy_tap_to_start">날아보려면 탭하세요</string>
+    <string name="mini_game_snake_picker_subtitle">먹이 먹고, 부딪히지 않기</string>
+    <string name="mini_game_snake_swipe_to_start">시작하려면 스와이프하세요</string>
+    <string name="mini_game_dino_picker_subtitle">탭하여 선인장 위 점프</string>
+    <string name="mini_game_dino_tap_to_start">달리려면 탭하세요</string>
     <!-- Settings -->
     <string name="appearance">디자인</string>
     <string name="advanced">고급</string>

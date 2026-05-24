@@ -270,6 +270,8 @@ Panlabas na zone (dashed): maaaring i-clip ng launcher mask—panatilihin ang ma
     <string name="patcher_error_log">Tala ng pagkakamali</string>
     <string name="patcher_error_technical">Teknikal na detalye</string>
     <string name="patcher_error_dialog_app_info">Impormasyon ng app</string>
+    <string name="patcher_tab_logs">Mga Log ng Patcher</string>
+    <string name="patcher_tab_game">Laro</string>
     <string name="patcher_long_step_warning">Maaaring magtagal ang hakbang ito. Mangyaring maghintay…</string>
     <string name="patcher_installing_subtitle">Halos handa na sa rock! 🎸</string>
     <string name="patcher_success_title">Tapos na lahat! 🎉</string>
@@ -365,6 +367,20 @@ Ang pag-uninstall ay permanenteng bubura sa lahat ng data ng app."</string>
     <string name="package_name">Pangalan ng pakete</string>
     <string name="failed_to_mount">Nabigong i-mount: %s</string>
     <string name="failed_to_unmount">Nabigong i-unmount: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Pumili ng laro</string>
+    <string name="mini_game_score">Marka %d</string>
+    <string name="mini_game_game_over">Tapos na ang laro</string>
+    <string name="mini_game_try_again">Subukan Muli</string>
+    <string name="mini_game_paused">Naka-pause</string>
+    <string name="mini_game_resume">Magpatuloy</string>
+    <string name="mini_game_2048_picker_subtitle">I-slide ang mga tile para pagsamahin</string>
+    <string name="mini_game_flappy_picker_subtitle">I-tap para lumipad sa mga tubo</string>
+    <string name="mini_game_flappy_tap_to_start">I-tap para lumipad</string>
+    <string name="mini_game_snake_picker_subtitle">Kumain ng pagkain, huwag saktan ang sarili</string>
+    <string name="mini_game_snake_swipe_to_start">I-swipe para magsimula</string>
+    <string name="mini_game_dino_picker_subtitle">I-tap para tumalon sa mga cactus</string>
+    <string name="mini_game_dino_tap_to_start">I-tap para tumakbo</string>
     <!-- Settings -->
     <string name="appearance">Hitsura</string>
     <string name="advanced">Pagsulong</string>

@@ -269,6 +269,8 @@ Zone extérieure (pointillée) : peut être rognée par le masque du lanceur - g
     <string name="patcher_error_log">Journal d\'erreur</string>
     <string name="patcher_error_technical">Détails techniques</string>
     <string name="patcher_error_dialog_app_info">Informations sur l’application</string>
+    <string name="patcher_tab_logs">Journaux du patcheur</string>
+    <string name="patcher_tab_game">Jeu</string>
     <string name="patcher_long_step_warning">Cette étape peut prendre un certain temps. Veuillez patienter…</string>
     <string name="patcher_installing_subtitle">Bientôt prêt à mettre le feu  ! 🎸</string>
     <string name="patcher_success_title">Tout est prêt ! 🎉</string>
@@ -364,6 +366,20 @@ La désinstallation effacera définitivement toutes les données de l’applicat
     <string name="package_name">Nom de package</string>
     <string name="failed_to_mount">Échec du montage : %s</string>
     <string name="failed_to_unmount">Échec du démontage : %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Choisissez un jeu</string>
+    <string name="mini_game_score">Score %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Réessayer</string>
+    <string name="mini_game_paused">En pause</string>
+    <string name="mini_game_resume">Continuer</string>
+    <string name="mini_game_2048_picker_subtitle">Glissez les tuiles pour les fusionner</string>
+    <string name="mini_game_flappy_picker_subtitle">Touchez pour voler entre les tuyaux</string>
+    <string name="mini_game_flappy_tap_to_start">Touchez pour voler</string>
+    <string name="mini_game_snake_picker_subtitle">Mangez la nourriture, ne vous touchez pas</string>
+    <string name="mini_game_snake_swipe_to_start">Balayez pour commencer</string>
+    <string name="mini_game_dino_picker_subtitle">Touchez pour sauter par-dessus les cactus</string>
+    <string name="mini_game_dino_tap_to_start">Touchez pour courir</string>
     <!-- Settings -->
     <string name="appearance">Apparence</string>
     <string name="advanced">Avancé</string>

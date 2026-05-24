@@ -270,6 +270,8 @@ Spoljna zona (isprekidana): može biti isečena maskom pokretača – držite va
     <string name="patcher_error_log">Dnevnik grešaka</string>
     <string name="patcher_error_technical">Tehničke informacije</string>
     <string name="patcher_error_dialog_app_info">Informacije o aplikaciji</string>
+    <string name="patcher_tab_logs">Evidencije zakrpa</string>
+    <string name="patcher_tab_game">Igra</string>
     <string name="patcher_long_step_warning">Ovaj korak može potrajati. Molimo sačekajte…</string>
     <string name="patcher_installing_subtitle">Skoro spremni za akciju! 🎸</string>
     <string name="patcher_success_title">Sve je završeno! 🎉</string>
@@ -365,6 +367,20 @@ Deinstalacija će trajno obrisati sve podatke aplikacije"</string>
     <string name="package_name">Naziv paketa</string>
     <string name="failed_to_mount">Nije moguće montirati: %s</string>
     <string name="failed_to_unmount">Nije moguće demontirati: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Izaberi igru</string>
+    <string name="mini_game_score">Rezultat %d</string>
+    <string name="mini_game_game_over">Igra je završena</string>
+    <string name="mini_game_try_again">Pokušaj ponovo</string>
+    <string name="mini_game_paused">Pauza</string>
+    <string name="mini_game_resume">Nastavi</string>
+    <string name="mini_game_2048_picker_subtitle">Kliznite pločicama da biste ih spojili</string>
+    <string name="mini_game_flappy_picker_subtitle">Dodirnite da letite kroz cevi</string>
+    <string name="mini_game_flappy_tap_to_start">Dodirnite da letite</string>
+    <string name="mini_game_snake_picker_subtitle">Jedite hranu, nemojte se udarati</string>
+    <string name="mini_game_snake_swipe_to_start">Prevucite prstom da biste počeli</string>
+    <string name="mini_game_dino_picker_subtitle">Dodirnite da preskočite kaktuse</string>
+    <string name="mini_game_dino_tap_to_start">Dodirnite da trčite</string>
     <!-- Settings -->
     <string name="appearance">Izgled</string>
     <string name="advanced">Napredno</string>

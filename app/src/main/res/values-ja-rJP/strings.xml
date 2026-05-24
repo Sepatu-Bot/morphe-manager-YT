@@ -270,6 +270,8 @@
     <string name="patcher_error_log">エラーログ</string>
     <string name="patcher_error_technical">技術的な詳細</string>
     <string name="patcher_error_dialog_app_info">アプリ情報</string>
+    <string name="patcher_tab_logs">パッチャーログ</string>
+    <string name="patcher_tab_game">ゲーム</string>
     <string name="patcher_long_step_warning">この処理には時間がかかる場合があります。お待ちください…</string>
     <string name="patcher_installing_subtitle">もうすぐ準備完了！🎸</string>
     <string name="patcher_success_title">完了しました！🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">パッケージ名</string>
     <string name="failed_to_mount">マウントに失敗しました: %s</string>
     <string name="failed_to_unmount">アンマウントに失敗しました: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">ゲームを選ぶ</string>
+    <string name="mini_game_score">スコア %d</string>
+    <string name="mini_game_game_over">ゲームオーバー</string>
+    <string name="mini_game_try_again">もう一度試す</string>
+    <string name="mini_game_paused">一時停止</string>
+    <string name="mini_game_resume">続行</string>
+    <string name="mini_game_2048_picker_subtitle">スライドしてタイルを結合</string>
+    <string name="mini_game_flappy_picker_subtitle">パイプの間を飛ぶにはタップ</string>
+    <string name="mini_game_flappy_tap_to_start">飛ぶにはタップ</string>
+    <string name="mini_game_snake_picker_subtitle">食べ物を食べて、自分にぶつからないように</string>
+    <string name="mini_game_snake_swipe_to_start">開始するにはスワイプ</string>
+    <string name="mini_game_dino_picker_subtitle">サボテンを飛び越えるにはタップ</string>
+    <string name="mini_game_dino_tap_to_start">走るにはタップ</string>
     <!-- Settings -->
     <string name="appearance">外観</string>
     <string name="advanced">詳細設定</string>

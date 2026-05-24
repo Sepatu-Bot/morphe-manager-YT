@@ -270,6 +270,8 @@ Outerlike sone (gestippel): kan deur die lanseerder masker afgesny word - hou be
     <string name="patcher_error_log">Foutlog</string>
     <string name="patcher_error_technical">Tegniese besonderhede</string>
     <string name="patcher_error_dialog_app_info">App-inligting</string>
+    <string name="patcher_tab_logs">Patcher Logs</string>
+    <string name="patcher_tab_game">Speletjie</string>
     <string name="patcher_long_step_warning">Hierdie stap kan \'n rukkie neem. Wag asseblief…</string>
     <string name="patcher_installing_subtitle">Byna gereed om te rock! 🎸</string>
     <string name="patcher_success_title">Klaar! 🎉</string>
@@ -365,6 +367,20 @@ Deïnstallering sal alle toepassingsdata permanent uitwis."</string>
     <string name="package_name">Pakketnaam</string>
     <string name="failed_to_mount">Kon nie monteer nie: %s</string>
     <string name="failed_to_unmount">Kon nie dedemonteer nie: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Kies \'n speletjie</string>
+    <string name="mini_game_score">Punt %d</string>
+    <string name="mini_game_game_over">Speletjie Einde</string>
+    <string name="mini_game_try_again">Probeer weer</string>
+    <string name="mini_game_paused">Pauze</string>
+    <string name="mini_game_resume">Gaan voort</string>
+    <string name="mini_game_2048_picker_subtitle">Skuif teëls om te saamsmelt</string>
+    <string name="mini_game_flappy_picker_subtitle">Tik om deur die pype te vlieg</string>
+    <string name="mini_game_flappy_tap_to_start">Tik om te vlieg</string>
+    <string name="mini_game_snake_picker_subtitle">Eet kos, moenie jouself tref nie</string>
+    <string name="mini_game_snake_swipe_to_start">Swipe om te begin</string>
+    <string name="mini_game_dino_picker_subtitle">Tik om oor kaktusse te spring</string>
+    <string name="mini_game_dino_tap_to_start">Tik om te hardloop</string>
     <!-- Settings -->
     <string name="appearance">Voorkoms</string>
     <string name="advanced">Gevorderd</string>

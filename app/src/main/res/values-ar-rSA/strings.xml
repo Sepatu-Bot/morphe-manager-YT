@@ -270,6 +270,8 @@
     <string name="patcher_error_log">سجل الأخطاء</string>
     <string name="patcher_error_technical">التفاصيل التقنية</string>
     <string name="patcher_error_dialog_app_info">معلومات التطبيق</string>
+    <string name="patcher_tab_logs">سجلات أداة التعديل</string>
+    <string name="patcher_tab_game">اللعبة</string>
     <string name="patcher_long_step_warning">قد تستغرق هذه الخطوة بعض الوقت. يرجى الانتظار…</string>
     <string name="patcher_installing_subtitle">على وشك أن نكون جاهزين للانطلاق! 🎸</string>
     <string name="patcher_success_title">تم الانتهاء! 🎉</string>
@@ -366,6 +368,20 @@
     <string name="package_name">اسم الحزمة</string>
     <string name="failed_to_mount">فشل تركيب: %s</string>
     <string name="failed_to_unmount">فشل فك تركيب: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">اختر لعبة</string>
+    <string name="mini_game_score">النتيجة %d</string>
+    <string name="mini_game_game_over">انتهت اللعبة</string>
+    <string name="mini_game_try_again">حاول مرة أخرى</string>
+    <string name="mini_game_paused">متوقفة</string>
+    <string name="mini_game_resume">متابعة</string>
+    <string name="mini_game_2048_picker_subtitle">حرك البلاطات لدمجها</string>
+    <string name="mini_game_flappy_picker_subtitle">انقر للطيران عبر الأنابيب</string>
+    <string name="mini_game_flappy_tap_to_start">انقر للطيران</string>
+    <string name="mini_game_snake_picker_subtitle">كل الطعام، لا تضرب نفسك</string>
+    <string name="mini_game_snake_swipe_to_start">اسحب للبدء</string>
+    <string name="mini_game_dino_picker_subtitle">انقر للقفز فوق الصبار</string>
+    <string name="mini_game_dino_tap_to_start">انقر للركض</string>
     <!-- Settings -->
     <string name="appearance">المظهر</string>
     <string name="advanced">الإعدادات المتقدمة</string>
@@ -669,7 +685,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="file_picker_no_files">لا توجد ملفات هنا</string>
     <string name="file_picker_internal_storage">التخزين الداخلي</string>
     <string name="file_picker_sd_card">الذاكرة الخارجية SD</string>
-    <string name="file_picker_root">الجذر (/)</string>
+    <string name="file_picker_root">Root (/)</string>
     <string name="file_picker_sort_name_asc">الاسم (أ–ي)</string>
     <string name="file_picker_sort_name_desc">الاسم (ي–أ)</string>
     <string name="file_picker_sort_size_desc">الحجم (الأكبر أولًا)</string>

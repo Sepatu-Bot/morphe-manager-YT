@@ -270,6 +270,8 @@
     <string name="patcher_error_log">错误日志</string>
     <string name="patcher_error_technical">技术细节</string>
     <string name="patcher_error_dialog_app_info">应用信息</string>
+    <string name="patcher_tab_logs">补丁日志</string>
+    <string name="patcher_tab_game">游戏</string>
     <string name="patcher_long_step_warning">此步骤可能需要一段时间。请稍候…</string>
     <string name="patcher_installing_subtitle">准备摇滚！ 🎸</string>
     <string name="patcher_success_title">全部完成！ 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">包名</string>
     <string name="failed_to_mount">挂载失败：%s</string>
     <string name="failed_to_unmount">取消挂载失败：%s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">选择游戏</string>
+    <string name="mini_game_score">得分：%d</string>
+    <string name="mini_game_game_over">游戏结束</string>
+    <string name="mini_game_try_again">重试</string>
+    <string name="mini_game_paused">暂停</string>
+    <string name="mini_game_resume">继续</string>
+    <string name="mini_game_2048_picker_subtitle">滑动方块进行合并</string>
+    <string name="mini_game_flappy_picker_subtitle">点击穿过管道</string>
+    <string name="mini_game_flappy_tap_to_start">点击飞行</string>
+    <string name="mini_game_snake_picker_subtitle">吃食物，不要撞到自己</string>
+    <string name="mini_game_snake_swipe_to_start">滑动开始</string>
+    <string name="mini_game_dino_picker_subtitle">点击跳过仙人掌</string>
+    <string name="mini_game_dino_tap_to_start">点击奔跑</string>
     <!-- Settings -->
     <string name="appearance">外观</string>
     <string name="advanced">高级</string>

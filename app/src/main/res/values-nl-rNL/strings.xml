@@ -267,6 +267,8 @@ Buitenste zone (gestippeld): kan worden afgesneden door het launcher-masker - ho
     <string name="patcher_error_log">Foutlogboek</string>
     <string name="patcher_error_technical">Technische details</string>
     <string name="patcher_error_dialog_app_info">App-info</string>
+    <string name="patcher_tab_logs">Patcher Logs</string>
+    <string name="patcher_tab_game">Game</string>
     <string name="patcher_long_step_warning">Deze stap kan even duren. Een ogenblik geduld...</string>
     <string name="patcher_installing_subtitle">Bijna klaar om te knallen! 🎸</string>
     <string name="patcher_success_title">Klaar! 🎉</string>
@@ -362,6 +364,20 @@ Deïnstalleren wist alle app-gegevens permanent."</string>
     <string name="package_name">Pakketnaam</string>
     <string name="failed_to_mount">Kon %s niet koppelen</string>
     <string name="failed_to_unmount">Mislukt om te demonteer: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Kies een spel</string>
+    <string name="mini_game_score">Score %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Probeer opnieuw</string>
+    <string name="mini_game_paused">Pauze</string>
+    <string name="mini_game_resume">Doorgaan</string>
+    <string name="mini_game_2048_picker_subtitle">Schuif tegels om ze te combineren</string>
+    <string name="mini_game_flappy_picker_subtitle">Tik om door de pijpen te vliegen</string>
+    <string name="mini_game_flappy_tap_to_start">Tik om te vliegen</string>
+    <string name="mini_game_snake_picker_subtitle">Eet voedsel, raak jezelf niet</string>
+    <string name="mini_game_snake_swipe_to_start">Swipe om te starten</string>
+    <string name="mini_game_dino_picker_subtitle">Tik om over cactussen te springen</string>
+    <string name="mini_game_dino_tap_to_start">Tik om te rennen</string>
     <!-- Settings -->
     <string name="appearance">Uiterlijk</string>
     <string name="advanced">Geavanceerd</string>

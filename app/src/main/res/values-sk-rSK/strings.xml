@@ -270,6 +270,8 @@ Vnútorná zóna (čiarkovaná): môže byť orezaná maskou spúšťača – uc
     <string name="patcher_error_log">Záznam o chybách</string>
     <string name="patcher_error_technical">Technické detaily</string>
     <string name="patcher_error_dialog_app_info">Informácie o aplikácii</string>
+    <string name="patcher_tab_logs">Logy záplat</string>
+    <string name="patcher_tab_game">Hra</string>
     <string name="patcher_long_step_warning">Tento krok môže chvíľu trvať. Čakajte prosím…</string>
     <string name="patcher_installing_subtitle">Ešte chvíľu a môžeme to naplno roztočiť! 🎸</string>
     <string name="patcher_success_title">Všetko je hotové! 🎉</string>
@@ -365,6 +367,20 @@ Odinštalovanie trvalo vymaže všetky údaje aplikácie."</string>
     <string name="package_name">Názov balíka</string>
     <string name="failed_to_mount">Nepodarilo sa pripojiť: %s</string>
     <string name="failed_to_unmount">Nepodarilo sa odpojiť: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Vyberte hru</string>
+    <string name="mini_game_score">Skóre %d</string>
+    <string name="mini_game_game_over">Koniec hry</string>
+    <string name="mini_game_try_again">Skúsiť znova</string>
+    <string name="mini_game_paused">Pozastavené</string>
+    <string name="mini_game_resume">Pokračovať</string>
+    <string name="mini_game_2048_picker_subtitle">Posúvajte dlaždice, aby ste ich spojili</string>
+    <string name="mini_game_flappy_picker_subtitle">Ťuknite a prelette cez rúry</string>
+    <string name="mini_game_flappy_tap_to_start">Ťuknite a lietajte</string>
+    <string name="mini_game_snake_picker_subtitle">Jedzte potravu, nedotýkajte sa seba</string>
+    <string name="mini_game_snake_swipe_to_start">Potiahnite prstom, aby ste začali</string>
+    <string name="mini_game_dino_picker_subtitle">Ťuknite a preskočte kaktusy</string>
+    <string name="mini_game_dino_tap_to_start">Ťuknite a bežte</string>
     <!-- Settings -->
     <string name="appearance">Vzhľad</string>
     <string name="advanced">Pokročilé</string>

@@ -270,6 +270,8 @@
     <string name="patcher_error_log">Журнал ошибок</string>
     <string name="patcher_error_technical">Технические детали</string>
     <string name="patcher_error_dialog_app_info">Информация о приложении</string>
+    <string name="patcher_tab_logs">Журналы патчера</string>
+    <string name="patcher_tab_game">Игра</string>
     <string name="patcher_long_step_warning">Этот шаг может занять некоторое время. Пожалуйста, подождите…</string>
     <string name="patcher_installing_subtitle">Почти готово к работе! 🎸</string>
     <string name="patcher_success_title">Все готово! 🎉</string>
@@ -365,6 +367,20 @@
     <string name="package_name">Имя пакета</string>
     <string name="failed_to_mount">Не удалось смонтировать: %s</string>
     <string name="failed_to_unmount">Не удалось размонтировать: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Выберите игру</string>
+    <string name="mini_game_score">Счет %d</string>
+    <string name="mini_game_game_over">Игра окончена</string>
+    <string name="mini_game_try_again">Попробовать снова</string>
+    <string name="mini_game_paused">Пауза</string>
+    <string name="mini_game_resume">Продолжить</string>
+    <string name="mini_game_2048_picker_subtitle">Сдвигайте плитки, чтобы объединять их</string>
+    <string name="mini_game_flappy_picker_subtitle">Касайтесь экрана, чтобы пролетать сквозь трубы</string>
+    <string name="mini_game_flappy_tap_to_start">Касайтесь экрана, чтобы лететь</string>
+    <string name="mini_game_snake_picker_subtitle">Ешьте еду, не ударяйтесь о себя</string>
+    <string name="mini_game_snake_swipe_to_start">Смахните, чтобы начать</string>
+    <string name="mini_game_dino_picker_subtitle">Касайтесь экрана, чтобы перепрыгивать кактусы</string>
+    <string name="mini_game_dino_tap_to_start">Касайтесь экрана, чтобы бежать</string>
     <!-- Settings -->
     <string name="appearance">Внешний вид</string>
     <string name="advanced">Дополнительно</string>

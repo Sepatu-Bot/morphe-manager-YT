@@ -270,6 +270,8 @@ Für optimale Ergebnisse empfiehlt diese App eine &lt;b&gt;vollständige APK&lt;
     <string name="patcher_error_log">Fehlerprotokoll</string>
     <string name="patcher_error_technical">Technische Details</string>
     <string name="patcher_error_dialog_app_info">App-Informationen</string>
+    <string name="patcher_tab_logs">Patcher-Protokolle</string>
+    <string name="patcher_tab_game">Spiel</string>
     <string name="patcher_long_step_warning">Dieser Schritt kann eine Weile dauern. Bitte warten…</string>
     <string name="patcher_installing_subtitle">Fast fertig zum Rocken! 🎸</string>
     <string name="patcher_success_title">Alles erledigt! 🎉</string>
@@ -365,6 +367,20 @@ Durch die Deinstallation werden alle App-Daten dauerhaft gelöscht"</string>
     <string name="package_name">Paketname</string>
     <string name="failed_to_mount">Mounten fehlgeschlagen: %s</string>
     <string name="failed_to_unmount">Unmounten fehlgeschlagen: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Wähle ein Spiel</string>
+    <string name="mini_game_score">Punktzahl %d</string>
+    <string name="mini_game_game_over">Spiel vorbei</string>
+    <string name="mini_game_try_again">Erneut versuchen</string>
+    <string name="mini_game_paused">Pausiert</string>
+    <string name="mini_game_resume">Weiter</string>
+    <string name="mini_game_2048_picker_subtitle">Schiebe die Kacheln, um sie zu verbinden</string>
+    <string name="mini_game_flappy_picker_subtitle">Tippe, um durch die Rohre zu fliegen</string>
+    <string name="mini_game_flappy_tap_to_start">Tippen zum Fliegen</string>
+    <string name="mini_game_snake_picker_subtitle">Futter essen, sich nicht selbst treffen</string>
+    <string name="mini_game_snake_swipe_to_start">Wischen, um zu starten</string>
+    <string name="mini_game_dino_picker_subtitle">Tippen, um über Kakteen zu springen</string>
+    <string name="mini_game_dino_tap_to_start">Tippen zum Rennen</string>
     <!-- Settings -->
     <string name="appearance">Darstellung</string>
     <string name="advanced">Erweitert</string>

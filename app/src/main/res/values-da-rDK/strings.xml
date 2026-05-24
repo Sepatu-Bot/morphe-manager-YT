@@ -270,6 +270,8 @@ Ydre zone (stiplet): Kan blive beskåret af launcher-masken – hold vigtige det
     <string name="patcher_error_log">Fejllog</string>
     <string name="patcher_error_technical">Tekniske oplysninger</string>
     <string name="patcher_error_dialog_app_info">App-oplysninger</string>
+    <string name="patcher_tab_logs">Patcher Logs</string>
+    <string name="patcher_tab_game">Spil</string>
     <string name="patcher_long_step_warning">Dette trin kan tage et stykke tid. Vent venligst...</string>
     <string name="patcher_installing_subtitle">Næsten klar til at rocke! 🎸</string>
     <string name="patcher_success_title">Alt færdigt! 🎉</string>
@@ -365,6 +367,20 @@ Afinstallation sletter permanent alle appdata."</string>
     <string name="package_name">Pakkenavn</string>
     <string name="failed_to_mount">Kunne ikke montere: %s</string>
     <string name="failed_to_unmount">Kunne ikke afmontere: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Vælg et spil</string>
+    <string name="mini_game_score">Score %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Prøv igen</string>
+    <string name="mini_game_paused">Pauset</string>
+    <string name="mini_game_resume">Fortsæt</string>
+    <string name="mini_game_2048_picker_subtitle">Skub fliser for at sammenlægge</string>
+    <string name="mini_game_flappy_picker_subtitle">Tryk for at flyve gennem rør</string>
+    <string name="mini_game_flappy_tap_to_start">Tryk for at flyve</string>
+    <string name="mini_game_snake_picker_subtitle">Spis mad, ram ikke dig selv</string>
+    <string name="mini_game_snake_swipe_to_start">Stryk for at starte</string>
+    <string name="mini_game_dino_picker_subtitle">Tryk for at hoppe over kaktusser</string>
+    <string name="mini_game_dino_tap_to_start">Tryk for at løbe</string>
     <!-- Settings -->
     <string name="appearance">Udseende</string>
     <string name="advanced">Avanceret</string>

@@ -288,6 +288,7 @@ Teruskannya mungkin boleh menyebabkan aplikasi tidak dapat berfungsi</string>
     <string name="package_name">Nama pakej</string>
     <string name="failed_to_mount">Gagal untuk ditunggang: %s</string>
     <string name="failed_to_unmount">Gagal untuk nyah-tunggang %s</string>
+    <!-- Patcher Screen - Mini-games -->
     <!-- Settings -->
     <string name="appearance">Penampilan</string>
     <string name="advanced">Lebih mahir</string>

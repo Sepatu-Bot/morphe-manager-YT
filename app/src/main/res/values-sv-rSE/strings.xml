@@ -363,6 +363,8 @@ Yttre zonen (streckad): kan beskäras av startprogrammets mask – håll viktiga
     <string name="package_name">Paketnamn</string>
     <string name="failed_to_mount">Det gick inte att montera: %s</string>
     <string name="failed_to_unmount">Det gick inte att avmontera: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_resume">Fortsätt</string>
     <!-- Settings -->
     <string name="appearance">Utseende</string>
     <string name="advanced">Avancerat</string>
@@ -415,7 +417,7 @@ Yttre zonen (streckad): kan beskäras av startprogrammets mask – håll viktiga
     <string name="settings_appearance_app_icon_change_dialog_confirm">Ändra ikon</string>
     <!-- Settings - Advanced Tab - Updates Section -->
     <string name="settings_advanced_updates">Uppdateringar</string>
-    <string name="settings_advanced_updates_use_prereleases">Förhandsversioner av uppdateringar</string>
+    <string name="settings_advanced_updates_use_prereleases">Uppdatera med förhandsversioner</string>
     <string name="settings_advanced_updates_use_prereleases_description">Tidig åtkomst till nya versioner av Morphe-appen. Aktivera förhandsversioner för enskilda källor i Tillägskällor</string>
     <string name="settings_advanced_updates_allow_metered">Uppdateringar via mobildata</string>
     <string name="settings_advanced_updates_allow_metered_description">Tillåter att uppdateringar för Morphe och tillägg laddas ned via mobildata</string>
@@ -575,7 +577,7 @@ Bildernas mått ska vara följande:
     <string name="installer_unavailable_message">Din föredragna installerare (%s) är för närvarande inte tillgänglig. Du kan åtgärda problemet och försöka igen eller använda standardinstalleraren istället</string>
     <string name="installer_unavailable_shizuku_hint">Se till att Shizuku körs och att appen har tilldelats behörighet</string>
     <string name="installer_use_standard">Använd standardinstalleraren</string>
-    <string name="settings_prompt_installer_on_install">Be om att välja installerare</string>
+    <string name="settings_prompt_installer_on_install">Uppmaning om val av installerare</string>
     <string name="settings_prompt_installer_on_install_description">Visar en dialogruta för att välja en installerare varje gång en modifierad app installeras</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Batterioptimering</string>
@@ -620,6 +622,7 @@ Bildernas mått ska vara följande:
     <string name="settings_system_export_debug_logs_export_failed">Det gick inte att exportera loggar</string>
     <string name="settings_system_export_debug_logs_export_success">Loggar exporterades</string>
     <!-- Settings - System Tab - Files & Storage Section -->
+    <string name="settings_system_files">Filer och lagring</string>
     <string name="settings_system_apks_size">Total storlek: %s</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Modifierade APK-filer</string>
@@ -658,7 +661,20 @@ Bildernas mått ska vara följande:
     <string name="settings_system_patch_options_title">Tilläggsalternativ (%s)</string>
     <string name="settings_system_no_patches_or_options">Inga tillägg eller alternativ har sparats</string>
     <!-- Settings - System Tab - Custom file picker -->
+    <string name="settings_system_custom_file_picker">Anpassad filväljare</string>
+    <string name="settings_system_custom_file_picker_description">Bläddra i lagringen med Morphes inbyggda filväljare istället för systemets standardfilväljare</string>
     <!-- File Picker -->
+    <string name="file_picker_previous_directory">Föregående katalog</string>
+    <string name="file_picker_no_files">Inga filer här</string>
+    <string name="file_picker_internal_storage">Intern lagring</string>
+    <string name="file_picker_sd_card">SD-kort</string>
+    <string name="file_picker_root">Rotkatalog (/)</string>
+    <string name="file_picker_sort_name_asc">Namn (A–Ö)</string>
+    <string name="file_picker_sort_name_desc">Namn (Ö–A)</string>
+    <string name="file_picker_sort_size_desc">Storlek (största först)</string>
+    <string name="file_picker_sort_size_asc">Storlek (minsta först)</string>
+    <string name="file_picker_sort_date_desc">Datum (nyaste först)</string>
+    <string name="file_picker_sort_date_asc">Datum (äldsta först)</string>
     <!-- Settings - System Tab - About Section -->
     <string name="settings_system_about">Om</string>
     <string name="settings_system_share_website">Dela webbplatsen</string>
@@ -669,6 +685,8 @@ Bildernas mått ska vara följande:
     <string name="credits_prior_development">Tidigare utveckling</string>
     <string name="opensource_licenses">Licenser för öppen källkod</string>
     <!-- Shared strings -->
+    <string name="select_file">Välj fil</string>
+    <string name="select_folder">Välj mapp</string>
     <string name="patches">Tillägg</string>
     <string name="home">Hem</string>
     <string name="settings">Inställningar</string>

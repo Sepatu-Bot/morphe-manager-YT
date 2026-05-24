@@ -270,6 +270,8 @@ Zona exterioară (întreruptă): poate fi decupată de masca lansatorului - păs
     <string name="patcher_error_log">Jurnal erori</string>
     <string name="patcher_error_technical">Detalii tehnice</string>
     <string name="patcher_error_dialog_app_info">Informații aplicație</string>
+    <string name="patcher_tab_logs">Jurnale patcher</string>
+    <string name="patcher_tab_game">Joc</string>
     <string name="patcher_long_step_warning">Acest pas poate dura ceva timp. Vă rugăm să așteptați…</string>
     <string name="patcher_installing_subtitle">Aproape gata de distracție! 🎸</string>
     <string name="patcher_success_title">Totul gata! 🎉</string>
@@ -365,6 +367,20 @@ Dezinstalarea va șterge definitiv toate datele aplicației."</string>
     <string name="package_name">Nume pachet</string>
     <string name="failed_to_mount">Montare eșuată: %s</string>
     <string name="failed_to_unmount">Demontare eșuată: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Alege un joc</string>
+    <string name="mini_game_score">Punctaj %d</string>
+    <string name="mini_game_game_over">Game Over</string>
+    <string name="mini_game_try_again">Încearcă din nou</string>
+    <string name="mini_game_paused">Pauză</string>
+    <string name="mini_game_resume">Continuă</string>
+    <string name="mini_game_2048_picker_subtitle">Glisează plăcile pentru a le îmbina</string>
+    <string name="mini_game_flappy_picker_subtitle">Atinge pentru a zbura printre țevi</string>
+    <string name="mini_game_flappy_tap_to_start">Atinge pentru a zbura</string>
+    <string name="mini_game_snake_picker_subtitle">Mănâncă mâncare, nu te lovi de tine</string>
+    <string name="mini_game_snake_swipe_to_start">Glisează pentru a începe</string>
+    <string name="mini_game_dino_picker_subtitle">Atinge pentru a sări peste cactuși</string>
+    <string name="mini_game_dino_tap_to_start">Atinge pentru a alerga</string>
     <!-- Settings -->
     <string name="appearance">Aspect</string>
     <string name="advanced">Avansat</string>

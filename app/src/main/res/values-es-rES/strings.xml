@@ -270,6 +270,8 @@ Zona exterior (discontinua): puede quedar recortada por la máscara del launcher
     <string name="patcher_error_log">Registro de errores</string>
     <string name="patcher_error_technical">Detalles técnicos</string>
     <string name="patcher_error_dialog_app_info">Información de la app</string>
+    <string name="patcher_tab_logs">Registros del parcheador</string>
+    <string name="patcher_tab_game">Juego</string>
     <string name="patcher_long_step_warning">Este paso puede tardar un tiempo. Por favor, espere…</string>
     <string name="patcher_installing_subtitle">¡Casi listo para empezar! 🎸</string>
     <string name="patcher_success_title">¡Todo listo! 🎉</string>
@@ -365,6 +367,20 @@ Desinstalar borrará permanentemente todos los datos de la aplicación."</string
     <string name="package_name">Nombre del paquete</string>
     <string name="failed_to_mount">Error al montar: %s</string>
     <string name="failed_to_unmount">Error al desmontar: %s</string>
+    <!-- Patcher Screen - Mini-games -->
+    <string name="mini_game_picker_title">Elige un juego</string>
+    <string name="mini_game_score">Puntuación %d</string>
+    <string name="mini_game_game_over">Fin del juego</string>
+    <string name="mini_game_try_again">Volver a intentar</string>
+    <string name="mini_game_paused">Pausado</string>
+    <string name="mini_game_resume">Continuar</string>
+    <string name="mini_game_2048_picker_subtitle">Desliza las fichas para combinarlas</string>
+    <string name="mini_game_flappy_picker_subtitle">Toca para volar entre los tubos</string>
+    <string name="mini_game_flappy_tap_to_start">Toca para volar</string>
+    <string name="mini_game_snake_picker_subtitle">Come comida, no te golpees a ti mismo</string>
+    <string name="mini_game_snake_swipe_to_start">Desliza para empezar</string>
+    <string name="mini_game_dino_picker_subtitle">Toca para saltar sobre los cactus</string>
+    <string name="mini_game_dino_tap_to_start">Toca para correr</string>
     <!-- Settings -->
     <string name="appearance">Apariencia</string>
     <string name="advanced">Avanzado</string>

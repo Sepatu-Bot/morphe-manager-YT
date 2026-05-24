@@ -1,2 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <plurals name="patch_count">
+        <item quantity="one">%s закрпа</item>
+        <item quantity="other">%s закрпи</item>
+    </plurals>
+    <plurals name="option_count">
+        <item quantity="one">%s опција за закрпување</item>
+        <item quantity="other">%s опции за закрпување</item>
+    </plurals>
+    <plurals name="source_count">
+        <item quantity="one">%s извор</item>
+        <item quantity="other">%s извори</item>
+    </plurals>
+    <plurals name="package_count">
+        <item quantity="one">%s пакет</item>
+        <item quantity="other">%s пакети</item>
+    </plurals>
+    <plurals name="patches_executed">
+        <item quantity="one">Извршена %s закрпа</item>
+        <item quantity="other">Извршени %s закрпи</item>
+    </plurals>
+    <plurals name="settings_system_apks_count">
+        <item quantity="one">%s APK датотека</item>
+        <item quantity="other">%s APK датотеки</item>
+    </plurals>
+    <plurals name="home_app_info_repatch_cleaned_invalid_data">
+        <item quantity="one">Отстранета %s застарена закрпа од зачуваниот избор</item>
+        <item quantity="other">Отстранети %s застарени поправки од зачуваниот избор</item>
+    </plurals>
+    <plurals name="sources_management_subtitle">
+        <item quantity="one">%s извор инсталиран</item>
+        <item quantity="other">%s извори инсталирани</item>
+    </plurals>
+    <plurals name="patch_selection_total_patches">
+        <item quantity="one">%s закрпа избрана</item>
+        <item quantity="other">%s закрпи избрани</item>
+    </plurals>
+    <plurals name="home_app_show_hidden_count">
+        <item quantity="one">%s скриена апликација</item>
+        <item quantity="other">%s скриени апликации</item>
+    </plurals>
+</resources>
