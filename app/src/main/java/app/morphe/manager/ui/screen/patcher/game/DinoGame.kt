@@ -93,7 +93,7 @@ class DinoGameState : MiniGameStateBase {
     private var lastCloudMs = 0L
 
     fun tap() {
-        if (isGameOver) { restart(); return }
+        if (isGameOver) return
         if (!isStarted) isStarted = true
         if (dinoJump == 0f) velocity = JUMP_VEL
     }

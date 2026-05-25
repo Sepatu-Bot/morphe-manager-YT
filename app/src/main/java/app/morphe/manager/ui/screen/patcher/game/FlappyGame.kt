@@ -22,6 +22,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -73,7 +74,7 @@ class FlappyGameState : MiniGameStateBase {
     private var lastSpawnMs = 0L
 
     fun tap() {
-        if (isGameOver) { restart(); return }
+        if (isGameOver) return
         if (!isStarted) isStarted = true
         velocity = TAP_IMPULSE
     }
@@ -199,23 +200,26 @@ private fun FlappyCanvas(state: FlappyGameState, modifier: Modifier) {
             val bx = BIRD_X * w
             val by = state.birdY * h
             val br = BIRD_RADIUS * h
+            val angle = (state.velocity * 50f).coerceIn(-25f, 90f)
 
-            drawCircle(FlappyBirdBody, radius = br, center = Offset(bx, by))
+            rotate(degrees = angle, pivot = Offset(bx, by)) {
+                drawCircle(FlappyBirdBody, radius = br, center = Offset(bx, by))
 
-            // Eye (white + pupil)
-            drawCircle(Color.White, radius = br * 0.38f, center = Offset(bx + br * 0.3f, by - br * 0.15f))
-            drawCircle(FlappyPupil, radius = br * 0.2f, center = Offset(bx + br * 0.38f, by - br * 0.15f))
+                // Eye (white + pupil)
+                drawCircle(Color.White, radius = br * 0.38f, center = Offset(bx + br * 0.3f, by - br * 0.15f))
+                drawCircle(FlappyPupil, radius = br * 0.2f, center = Offset(bx + br * 0.38f, by - br * 0.15f))
 
-            // Beak (right-pointing triangle)
-            drawPath(
-                path = Path().apply {
-                    moveTo(bx + br * 0.85f, by - br * 0.18f)
-                    lineTo(bx + br * 1.55f, by)
-                    lineTo(bx + br * 0.85f, by + br * 0.18f)
-                    close()
-                },
-                color = FlappyBirdBeak
-            )
+                // Beak (right-pointing triangle)
+                drawPath(
+                    path = Path().apply {
+                        moveTo(bx + br * 0.85f, by - br * 0.18f)
+                        lineTo(bx + br * 1.55f, by)
+                        lineTo(bx + br * 0.85f, by + br * 0.18f)
+                        close()
+                    },
+                    color = FlappyBirdBeak
+                )
+            }
         }
 
         if (!state.isStarted && !state.isGameOver) {
