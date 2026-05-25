@@ -399,6 +399,7 @@ Uninstalling will permanently erase all app data"</string>
     <string name="mini_game_picker_title">Pick a game</string>
     <string name="mini_game_score">Score %d</string>
     <string name="mini_game_best">Best %d</string>
+    <string name="mini_game_new_record">New record!</string>
     <string name="mini_game_game_over">Game Over</string>
     <string name="mini_game_try_again">Try Again</string>
     <string name="mini_game_paused">Paused</string>

@@ -52,7 +52,10 @@ data class FlappyPipe(
 )
 
 @Stable
-class FlappyGameState : MiniGameStateBase {
+class FlappyGameState(
+    initialHighScore: Int = 0,
+    private val onHighScoreUpdated: (Int) -> Unit = {}
+) : MiniGameStateBase {
     var birdY by mutableFloatStateOf(0.45f)
         private set
     var velocity by mutableFloatStateOf(0f)
@@ -61,7 +64,7 @@ class FlappyGameState : MiniGameStateBase {
         private set
     override var score by mutableIntStateOf(0)
         private set
-    override var highScore by mutableIntStateOf(0)
+    override var highScore by mutableIntStateOf(initialHighScore)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -88,7 +91,7 @@ class FlappyGameState : MiniGameStateBase {
         birdY += velocity * dt
 
         if (birdY - BIRD_RADIUS < 0f || birdY + BIRD_RADIUS > 1f) {
-            if (score > highScore) highScore = score
+            if (score > highScore) { highScore = score; onHighScoreUpdated(highScore) }
             isGameOver = true; return
         }
 
@@ -114,7 +117,7 @@ class FlappyGameState : MiniGameStateBase {
             pipe.copy(x = nx, passed = pipe.passed || nowPassed)
         }
         if (hit) {
-            if (score > highScore) highScore = score
+            if (score > highScore) { highScore = score; onHighScoreUpdated(highScore) }
             isGameOver = true
         }
     }

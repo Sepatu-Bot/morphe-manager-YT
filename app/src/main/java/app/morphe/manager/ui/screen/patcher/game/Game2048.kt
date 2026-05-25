@@ -32,13 +32,16 @@ import kotlin.random.Random
 private const val BOARD_SIZE = 4
 
 @Stable
-class Game2048State : MiniGameStateBase {
+class Game2048State(
+    initialHighScore: Int = 0,
+    private val onHighScoreUpdated: (Int) -> Unit = {}
+) : MiniGameStateBase {
     private var _board by mutableStateOf(emptyBoard())
     private var _score by mutableIntStateOf(0)
     private var _isGameOver by mutableStateOf(false)
     private var _hasWon by mutableStateOf(false)
     private var _isPaused by mutableStateOf(false)
-    private var _highScore by mutableIntStateOf(0)
+    private var _highScore by mutableIntStateOf(initialHighScore)
 
     // board is read-only from outside; only accessed within this file via BoardGrid
     val board: Array<IntArray> get() = _board
@@ -144,7 +147,10 @@ class Game2048State : MiniGameStateBase {
             if (c + 1 < BOARD_SIZE && _board[r][c + 1] == v) return
             if (r + 1 < BOARD_SIZE && _board[r + 1][c] == v) return
         }
-        if (_score > _highScore) _highScore = _score
+        if (_score > _highScore) {
+            _highScore = _score
+            onHighScoreUpdated(_highScore)
+        }
         _isGameOver = true
     }
 

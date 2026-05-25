@@ -61,7 +61,10 @@ data class DinoCloud(
 )
 
 @Stable
-class DinoGameState : MiniGameStateBase {
+class DinoGameState(
+    initialHighScore: Int = 0,
+    private val onHighScoreUpdated: (Int) -> Unit = {}
+) : MiniGameStateBase {
     var dinoJump by mutableFloatStateOf(0f)  // upward offset from ground, fraction of canvas height
         private set
     var velocity by mutableFloatStateOf(0f)
@@ -70,7 +73,7 @@ class DinoGameState : MiniGameStateBase {
         private set
     override var score by mutableIntStateOf(0)
         private set
-    override var highScore by mutableIntStateOf(0)
+    override var highScore by mutableIntStateOf(initialHighScore)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -143,7 +146,7 @@ class DinoGameState : MiniGameStateBase {
         }
         obstacles = moved
         if (hit) {
-            if (score > highScore) highScore = score
+            if (score > highScore) { highScore = score; onHighScoreUpdated(highScore) }
             isGameOver = true
         }
 

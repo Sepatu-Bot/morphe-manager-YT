@@ -19,6 +19,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -27,10 +28,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
+import app.morphe.manager.domain.manager.PreferencesManager
 import app.morphe.manager.ui.screen.shared.GradientCircleIcon
 import app.morphe.manager.ui.screen.shared.MorpheAnimations
 import app.morphe.manager.ui.screen.shared.MorpheCard
 import app.morphe.manager.ui.screen.shared.MorpheDefaults
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 /** Available mini-games that can be played during patching. */
 enum class MiniGame {
@@ -52,11 +56,23 @@ interface MiniGameStateBase {
  * Add new game states here as new games are introduced.
  */
 @Stable
-class MiniGameState {
-    val game2048 = Game2048State()
-    val flappy = FlappyGameState()
-    val snake = SnakeGameState()
-    val dino = DinoGameState()
+class MiniGameState(prefs: PreferencesManager, scope: CoroutineScope) {
+    val game2048 = Game2048State(
+        initialHighScore = prefs.miniGame2048HighScore.getBlocking(),
+        onHighScoreUpdated = { scope.launch { prefs.miniGame2048HighScore.update(it) } }
+    )
+    val flappy = FlappyGameState(
+        initialHighScore = prefs.miniGameFlappyHighScore.getBlocking(),
+        onHighScoreUpdated = { scope.launch { prefs.miniGameFlappyHighScore.update(it) } }
+    )
+    val snake = SnakeGameState(
+        initialHighScore = prefs.miniGameSnakeHighScore.getBlocking(),
+        onHighScoreUpdated = { scope.launch { prefs.miniGameSnakeHighScore.update(it) } }
+    )
+    val dino = DinoGameState(
+        initialHighScore = prefs.miniGameDinoHighScore.getBlocking(),
+        onHighScoreUpdated = { scope.launch { prefs.miniGameDinoHighScore.update(it) } }
+    )
     var selectedGame by mutableStateOf<MiniGame?>(null)
 
     /** Restarts and selects [game], replacing any currently active game. */
@@ -405,7 +421,14 @@ internal fun GameOverOverlay(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurface
             )
-            if (score < highScore) {
+            if (score >= highScore) {
+                Text(
+                    text = stringResource(R.string.mini_game_new_record),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    color = Color(0xFFEDC22E)
+                )
+            } else {
                 Text(
                     text = stringResource(R.string.mini_game_best, highScore),
                     style = MaterialTheme.typography.titleMedium,

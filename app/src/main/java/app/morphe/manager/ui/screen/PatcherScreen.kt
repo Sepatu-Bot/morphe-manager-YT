@@ -79,7 +79,8 @@ fun PatcherScreen(
 
     // Remember patcher state
     val state = rememberMorphePatcherState(patcherViewModel)
-    val miniGameState = remember { MiniGameState() }
+    val scope = rememberCoroutineScope()
+    val miniGameState = remember { MiniGameState(prefs, scope) }
 
     // Notification prompt: driven by ViewModel after successful export or install
     val shouldPromptNotification by patcherViewModel.shouldPromptNotification.collectAsStateWithLifecycle()

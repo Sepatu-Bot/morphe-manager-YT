@@ -36,7 +36,10 @@ import kotlin.random.Random
 private const val SNAKE_GRID = 20
 
 @Stable
-class SnakeGameState : MiniGameStateBase {
+class SnakeGameState(
+    initialHighScore: Int = 0,
+    private val onHighScoreUpdated: (Int) -> Unit = {}
+) : MiniGameStateBase {
     var snake by mutableStateOf(listOf(10 to 10, 9 to 10, 8 to 10))
         private set
     var food by mutableStateOf(15 to 10)
@@ -45,7 +48,7 @@ class SnakeGameState : MiniGameStateBase {
     private var pendingDir = SnakeDir.RIGHT
     override var score by mutableIntStateOf(0)
         private set
-    override var highScore by mutableIntStateOf(0)
+    override var highScore by mutableIntStateOf(initialHighScore)
         private set
     var isGameOver by mutableStateOf(false)
         private set
@@ -74,7 +77,7 @@ class SnakeGameState : MiniGameStateBase {
         if (newHead.first !in 0 until SNAKE_GRID ||
             newHead.second !in 0 until SNAKE_GRID ||
             snake.contains(newHead)) {
-            if (score > highScore) highScore = score
+            if (score > highScore) { highScore = score; onHighScoreUpdated(highScore) }
             isGameOver = true; return
         }
         val ateFood = newHead == food
