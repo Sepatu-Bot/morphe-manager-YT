@@ -1,3 +1,11 @@
+# [1.19.0-dev.14](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.13...v1.19.0-dev.14) (2026-05-27)
+
+
+### Bug Fixes
+
+* Keystore compatibility with CLI ([f8cde49](https://github.com/MorpheApp/morphe-manager/commit/f8cde49a1545a50ee888782d5876f3dfb387ca52))
+* Use SD card and developer mode icons in file picker ([2fb9079](https://github.com/MorpheApp/morphe-manager/commit/2fb9079c33d2d5c122e5cd8f607c5bee557bad88))
+
 # [1.19.0-dev.13](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.12...v1.19.0-dev.13) (2026-05-27)
 
 
