@@ -1,3 +1,15 @@
+# [1.19.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.11...v1.19.0-dev.12) (2026-05-27)
+
+
+### Bug Fixes
+
+* Always show saved APK option when versions match installed ([293d2db](https://github.com/MorpheApp/morphe-manager/commit/293d2db7799ebe8ff64b7cd383723333bbdbe235))
+
+
+### Features
+
+* Add installed app picker for universal patch flow ([afdb28d](https://github.com/MorpheApp/morphe-manager/commit/afdb28d438b383f005d4f46f0bbb95eec492233e))
+
 # [1.19.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.10...v1.19.0-dev.11) (2026-05-25)
 
 

@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-05-25T19:50:59",
-  "description": "# [1.19.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.10...v1.19.0-dev.11) (2026-05-25)\n\n\n### Features\n\n* Persist mini-game high scores across sessions ([510b526](https://github.com/MorpheApp/morphe-manager/commit/510b526560a857311f3cc61bb0da7e2c6ab05d40))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.11/morphe-manager-1.19.0-dev.11.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.11/morphe-manager-1.19.0-dev.11.apk.asc",
-  "version": "1.19.0-dev.11"
+  "created_at": "2026-05-27T14:08:30",
+  "description": "# [1.19.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.19.0-dev.11...v1.19.0-dev.12) (2026-05-27)\n\n\n### Bug Fixes\n\n* Always show saved APK option when versions match installed ([293d2db](https://github.com/MorpheApp/morphe-manager/commit/293d2db7799ebe8ff64b7cd383723333bbdbe235))\n\n\n### Features\n\n* Add installed app picker for universal patch flow ([afdb28d](https://github.com/MorpheApp/morphe-manager/commit/afdb28d438b383f005d4f46f0bbb95eec492233e))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.12/morphe-manager-1.19.0-dev.12.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.19.0-dev.12/morphe-manager-1.19.0-dev.12.apk.asc",
+  "version": "1.19.0-dev.12"
 }
