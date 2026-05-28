@@ -25,13 +25,13 @@ char *GetPropOverride(const std::string &key) {
 extern "C" int property_get(const char *key, char *value, const char *default_value) {
     auto replacement = GetPropOverride(std::string(key));
     if (replacement) {
-        int len = strnlen(replacement, PROP_VALUE_MAX);
+        auto len = static_cast<int>(strnlen(replacement, PROP_VALUE_MAX));
 
         strncpy(value, replacement, len);
         return len;
     }
 
-    static property_get_ptr original = NULL;
+    static property_get_ptr original = nullptr;
     if (!original) {
         // Get the address of the original function.
         original = reinterpret_cast<property_get_ptr>(dlsym(RTLD_NEXT, "property_get"));
@@ -50,10 +50,10 @@ std::string GetProperty(const std::string &, const std::string &) asm(GET_PROPER
 std::string GetProperty(const std::string &key, const std::string &default_value) {
     auto replacement = GetPropOverride(key);
     if (replacement) {
-        return std::string(replacement);
+        return {replacement};
     }
 
-    static GetProperty_ptr original = NULL;
+    static GetProperty_ptr original = nullptr;
     if (!original) {
         original = reinterpret_cast<GetProperty_ptr>(dlsym(RTLD_NEXT, GET_PROPERTY_MANGLED_NAME));
     }
