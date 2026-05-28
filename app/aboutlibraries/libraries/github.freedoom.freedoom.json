@@ -1,0 +1,8 @@
+{
+  "uniqueId": "github.freedoom.freedoom",
+  "name": "Freedoom",
+  "description": "Free content game based on the Doom engine, used as the game data for the built-in mini-game.",
+  "website": "https://freedoom.github.io",
+  "developers": [{"name": "Contributors to the Freedoom project"}],
+  "licenses": ["Freedoom-BSD-3-Clause"]
+}

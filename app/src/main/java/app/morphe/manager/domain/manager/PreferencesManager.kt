@@ -116,6 +116,8 @@ class PreferencesManager(
     val miniGameFlappyHighScore = intPreference("mini_game_flappy_high_score", 0)
     val miniGameSnakeHighScore  = intPreference("mini_game_snake_high_score", 0)
     val miniGameDinoHighScore   = intPreference("mini_game_dino_high_score", 0)
+    /** Filename of the user-selected WAD inside filesDir; empty = use bundled WAD. */
+    val miniGameDoomWadName     = stringPreference("mini_game_doom_wad_name", "")
 
     /**  Hidden preference to track if prerelease was auto-enabled. */
     private val prereleaseAutoEnabled = booleanPreference("prerelease_auto_enabled", false)

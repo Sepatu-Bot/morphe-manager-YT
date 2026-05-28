@@ -40,7 +40,8 @@ enum class MiniGame {
     GAME_2048,
     FLAPPY,
     SNAKE,
-    DINO
+    DINO,
+    DOOM
 }
 
 /** Common state contract for all mini-games, exposes only what the shared UI layer needs. */
@@ -72,6 +73,7 @@ class MiniGameState(prefs: PreferencesManager, scope: CoroutineScope) {
         initialHighScore = prefs.miniGameDinoHighScore.getBlocking(),
         onHighScoreUpdated = { scope.launch { prefs.miniGameDinoHighScore.update(it) } }
     )
+    val doom = DoomMiniGameState()
     var selectedGame by mutableStateOf<MiniGame?>(null)
 
     /** Restarts and selects [game], replacing any currently active game. */
@@ -81,6 +83,7 @@ class MiniGameState(prefs: PreferencesManager, scope: CoroutineScope) {
             MiniGame.FLAPPY -> flappy.restart()
             MiniGame.SNAKE -> snake.restart()
             MiniGame.DINO -> dino.restart()
+            MiniGame.DOOM -> {}
         }
         selectedGame = game
     }
@@ -92,6 +95,7 @@ class MiniGameState(prefs: PreferencesManager, scope: CoroutineScope) {
             MiniGame.FLAPPY -> flappy.pause()
             MiniGame.SNAKE -> snake.pause()
             MiniGame.DINO -> dino.pause()
+            MiniGame.DOOM -> {}
             null -> {}
         }
     }
@@ -174,6 +178,13 @@ internal fun GamePickerContent(
                 modifier = Modifier.weight(1f).fillMaxHeight()
             )
         }
+        GamePickerGridCard(
+            icon = Icons.Outlined.VideogameAsset,
+            title = stringResource(R.string.mini_game_doom),
+            subtitle = stringResource(R.string.mini_game_doom_picker_subtitle),
+            onClick = { onSelect(MiniGame.DOOM) },
+            modifier = Modifier.fillMaxWidth().weight(0.7f)
+        )
     }
 }
 
@@ -243,6 +254,7 @@ internal fun MiniGameContent(
                     MiniGame.FLAPPY -> state.flappy
                     MiniGame.SNAKE -> state.snake
                     MiniGame.DINO -> state.dino
+                    MiniGame.DOOM -> state.doom
                 }
                 Column(
                     modifier = Modifier.fillMaxSize().padding(8.dp),
@@ -256,14 +268,18 @@ internal fun MiniGameContent(
                         onChangeGame = { state.selectedGame = null }
                     )
                     Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
-                        BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-                            val size = minOf(maxWidth, maxHeight)
-                            Box(
-                                modifier = Modifier
-                                    .size(size)
-                                    .align(Alignment.Center)
-                            ) {
-                                GameCanvasSlot(selected = selected, state = state)
+                        if (selected == MiniGame.DOOM) {
+                            GameCanvasSlot(selected = selected, state = state)
+                        } else {
+                            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+                                val size = minOf(maxWidth, maxHeight)
+                                Box(
+                                    modifier = Modifier
+                                        .size(size)
+                                        .align(Alignment.Center)
+                                ) {
+                                    GameCanvasSlot(selected = selected, state = state)
+                                }
                             }
                         }
                     }
@@ -280,6 +296,7 @@ private fun GameCanvasSlot(selected: MiniGame, state: MiniGameState) {
         MiniGame.FLAPPY -> FlappyBirdGame(state = state.flappy)
         MiniGame.SNAKE -> SnakeGame(state = state.snake)
         MiniGame.DINO -> DinoGame(state = state.dino)
+        MiniGame.DOOM -> DoomGame()
     }
 }
 

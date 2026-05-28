@@ -426,6 +426,11 @@ Uninstalling will permanently erase all app data"</string>
     <string name="mini_game_dino_picker_subtitle">Tap to jump over cacti</string>
     <string name="mini_game_dino_tap_to_start">Tap to run</string>
 
+    <string name="mini_game_doom" translatable="false">Doom</string>
+    <string name="mini_game_doom_picker_subtitle">Knee-Deep in the Dead</string>
+    <string name="mini_game_doom_wad_pending">Restart the app to apply the new WAD</string>
+    <string name="mini_game_doom_wad_missing">Place doom1.wad or freedoom1.wad in app/src/main/assets</string>
+
     <!-- Settings -->
     <string name="appearance">Appearance</string>
     <string name="advanced">Advanced</string>

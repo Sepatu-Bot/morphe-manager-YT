@@ -1,0 +1,8 @@
+{
+  "uniqueId": "github.ozkl.doomgeneric",
+  "name": "doomgeneric",
+  "description": "Doom port designed to be easily ported to any platform, used as the native game engine for the built-in mini-game.",
+  "website": "https://github.com/ozkl/doomgeneric",
+  "developers": [{"name": "ozkl"}],
+  "licenses": ["GPL-2.0-only"]
+}
