@@ -17,7 +17,7 @@
     <string name="deep_link_add_source_warning">Yalnız etibar etdiyiniz mənbələri əlavə edin</string>
     <!-- Home Screen - Update Notifications -->
     <string name="home_update_available">Əlçatan Morphe yenilənməsi</string>
-    <string name="home_update_available_subtitle">Yeni versiya quraşdırmaq üçün hazır</string>
+    <string name="home_update_available_subtitle">Yeni versiya quraşdırılmağa hazırdır</string>
     <string name="home_update_error">Yenilənmə uğursuz oldu</string>
     <string name="home_update_error_subtitle">İnternet bağlantınızı yoxlayın və təkrar cəhd edin</string>
     <string name="home_update_skipped_metered">Yenilənmələr ötürüldü</string>
@@ -40,7 +40,7 @@
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">Hazır olun, yamaqlanma vaxtıdır</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
-    <string name="home_greeting_4">Başqa gün, başqa reklam bloklayan ustad əsər</string>
+    <string name="home_greeting_4">Daha bir gün, daha bir reklamsız şah əsər!</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
     <string name="home_greeting_5">Reklamlara baxmaq istəyirsiniz? Mən də heç birinə</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
@@ -50,7 +50,7 @@
     <!-- From mediocrity to amazing -->
     <string name="home_greeting_8">Məyusedici olanı mükəmmələ çevirməyə hazırsınız?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
-    <string name="home_greeting_9">Bu gündən etibarən tətbiqlər özlərindən müstəsna edilir</string>
+    <string name="home_greeting_9">Bu gündən etibarən tətbiqlər özlərindən azad olunur</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
     <string name="home_greeting_10">Kofein və yaxşı yamaqlar ilə gücləndirilib</string>
     <!-- Home Screen - Sources Management -->
@@ -130,6 +130,13 @@
     <string name="home_recommended_version">Tövsiyə olunan versiya</string>
     <string name="home_selected_version">Seçilən versiya</string>
     <string name="home_select_apk_title">APK Seçin</string>
+    <string name="home_select_any_apk_description">İstənilən tətbiqin APK faylın yaxud bu cihazda artıq quraşdırılan tətbiq seç</string>
+    <string name="home_use_installed_app">Quraşdırılan tətbiqi istifadə et</string>
+    <string name="home_installed_app_picker_title">Quraşdırılan tətbiqi seç</string>
+    <string name="home_installed_app_picker_empty">Tətbiq tapılmadı</string>
+    <string name="home_installed_app_picker_filter_all">Bütün tətbiqlər</string>
+    <string name="home_installed_app_picker_filter_user">Ancaq istifadəçi tətbiqləri</string>
+    <string name="home_installed_app_picker_filter_system">Ancaq sistem tətbiqləri</string>
     <string name="home_invalid_apk_unreadable">Faylı oxumaq mümkün olmadı. \'Xarici Yaddaş\'ın batareya məhdudiyyətli olmadığını yoxlayın</string>
     <string name="home_invalid_apk_not_an_apk">Seçilən fayl yararlı APK deyil</string>
     <string name="home_invalid_apk_io_error">Faylı açmaq olmadı. Xahiş olunur, təkrar cəhd et</string>
@@ -138,7 +145,7 @@
     <string name="expert_mode_title">Mütəxəssis rejimi</string>
     <string name="expert_mode_search">Yamaqları axtar</string>
     <string name="expert_mode_proceed">Yamaqlamağa davam et</string>
-    <string name="expert_mode_disable_all">Hamısını qapat</string>
+    <string name="expert_mode_disable_all">Hamısını qapa</string>
     <string name="expert_mode_disable_all_done">Bütün yamaqlar qapadılıb</string>
     <string name="expert_mode_enable_all">Hamısını aktivləşdir</string>
     <string name="expert_mode_enable_all_done">Bütün yamaqlar işləkdir</string>
@@ -566,7 +573,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_advanced_patch_options_hide_shorts_widget_description">Başladıcı vidjetindən Shorts düyməsini silir</string>
     <!-- Settings - System Tab - Installer Section -->
     <string name="installer">Quraşdırıcı</string>
-    <string name="installer_title">Quraşdırıcını seçin</string>
+    <string name="installer_title">Quraşdırıcını seç</string>
     <string name="installer_internal_name">Sistem quraşdırıcısı</string>
     <string name="installer_internal_description">Android paket quraşdırıcısı istifadə edilir</string>
     <string name="installer_auto_saved_name">Root-lu montajlama quraşdırıcısı</string>
@@ -598,11 +605,11 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_battery_optimization">Batareya yaxşılaşdırma</string>
     <string name="settings_system_battery_optimization_description">Tətbiq qısılanda yamaqlayıcını işlək saxlayır</string>
     <string name="settings_system_performance">Məhsuldarlıq</string>
-    <string name="settings_system_process_runtime">Emalın işlənilməsi müddəti</string>
+    <string name="settings_system_process_runtime">Emal sərf olunması müddəti</string>
     <string name="settings_system_process_runtime_description">Daha yaxşı sabitlik üçün yamaqlanmanı ayrıca emalda işlədir</string>
     <string name="settings_system_process_runtime_memory_limit">Yaddaş həddi</string>
     <string name="settings_system_process_runtime_memory_limit_description">Daha yüksək hədlər keyfiyyətli cihazlarda yamaqlanmanı sürətləndirir</string>
-    <string name="settings_system_process_runtime_enable">Emal işlənilmə müddətini aktivləşdir</string>
+    <string name="settings_system_process_runtime_enable">Emal sərf olunma müddətin aktivləşdir</string>
     <string name="settings_system_memory_limit_subtitle">Yamaqlanma üçün əlçatan yaddaş</string>
     <string name="settings_system_memory_limit_warning">Daha həcmli tətbiqlər yamaqlananda aşağı yaddaş həddi, uğursuzluqlara səbəb ola bilər</string>
     <string name="settings_system_process_runtime_enabled_description">%s MB hədd</string>
@@ -660,12 +667,12 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_patch_selection_reset_package_confirm_title">Paket seçimləri sıfırlansın?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Mənbə seçimi sıfırlansın?</string>
     <string name="settings_system_patch_selection_no_saved">Saxlanılan yamaq seçimləri yoxdur</string>
-    <string name="settings_system_patch_selection_total_summary_format">%2$s arası %1$s</string>
-    <string name="settings_system_patch_selection_patches_in_sources_format">%2$s-də %1$s</string>
+    <string name="settings_system_patch_selection_total_summary_format">%2$s üzrə %1$s</string>
+    <string name="settings_system_patch_selection_patches_in_sources_format">%2$s daxilində %1$s</string>
     <string name="settings_system_patch_selection_source_format">Mənbə #%s</string>
     <string name="settings_system_patch_selection_will_delete">Bu siləcək:</string>
     <string name="settings_system_patch_selection_reset_all_warning">Bu, bütün paketlər və mənbələr üçün saxlanılan bütün yamaq seçimlərini daimi siləcək</string>
-    <string name="settings_system_patch_selection_reset_package_warning">Bu, bütün mənbələr arası %s üçün saxlanılan bütün yamaq seçimlərini daimi siləcək</string>
+    <string name="settings_system_patch_selection_reset_package_warning">Bu, bütün mənbələr üzrə %s üçün saxlanılan bütün yamaq seçimlərini daimi siləcək</string>
     <string name="settings_system_patch_selection_reset_source_warning">Bu, #%2$s mənbəsində %1$s üçün saxlanılan yamaq seçimlərini daimi siləcək</string>
     <string name="settings_system_export_source_data_fail">Mənbə məlumatını ixrac etmək olmadı</string>
     <string name="settings_system_export_source_data_success">Mənbə məlumatı uğurla ixrac olundu</string>
@@ -695,7 +702,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_share_website">Veb saytı paylaş</string>
     <string name="settings_system_share_website_description">Rəsmi Morphe veb saytı paylaşılır</string>
     <string name="settings_system_manager_description">İcma əlaqələri və töhfələri ilə idarə olunan məşhur Android tətbiqlərinin müasir, rəvan yamaqlanması üçün açıq mənbəli layihə</string>
-    <string name="credits">Sərmayələr</string>
+    <string name="credits">Heyət</string>
     <string name="credits_current_development">Hazırkı inkişaf</string>
     <string name="credits_prior_development">Əvvəlki inkişaf</string>
     <string name="opensource_licenses">Açıq mənbə lisenziyaları</string>
@@ -716,7 +723,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="error_">Xəta</string>
     <string name="retry">Təkrar sına</string>
     <string name="add">Əlavə et</string>
-    <string name="close">Qapat</string>
+    <string name="close">Qapa</string>
     <string name="clear">Təmizlə</string>
     <string name="delete">Sil</string>
     <string name="remove">Sil</string>

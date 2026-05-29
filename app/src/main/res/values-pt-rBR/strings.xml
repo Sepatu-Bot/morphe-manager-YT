@@ -130,13 +130,13 @@
     <string name="home_recommended_version">Versão recomendada</string>
     <string name="home_selected_version">Versão selecionada</string>
     <string name="home_select_apk_title">Selecionar APK</string>
-    <string name="home_select_any_apk_description">Selecione um arquivo APK de qualquer aplicativo, ou escolha um aplicativo já instalado neste dispositivo</string>
-    <string name="home_use_installed_app">Usar aplicativo instalado</string>
-    <string name="home_installed_app_picker_title">Selecionar aplicativo instalado</string>
-    <string name="home_installed_app_picker_empty">Nenhum aplicativo encontrado</string>
-    <string name="home_installed_app_picker_filter_all">Todos os aplicativos</string>
-    <string name="home_installed_app_picker_filter_user">Apenas aplicativos do usuário</string>
-    <string name="home_installed_app_picker_filter_system">Apenas aplicativos do sistema</string>
+    <string name="home_select_any_apk_description">Selecione um arquivo APK de qualquer app, ou escolha um app já instalado neste dispositivo</string>
+    <string name="home_use_installed_app">Usar app instalado</string>
+    <string name="home_installed_app_picker_title">Selecionar app instalado</string>
+    <string name="home_installed_app_picker_empty">Nenhum app encontrado</string>
+    <string name="home_installed_app_picker_filter_all">Todos os apps</string>
+    <string name="home_installed_app_picker_filter_user">Apenas apps do usuário</string>
+    <string name="home_installed_app_picker_filter_system">Apenas apps do sistema</string>
     <string name="home_invalid_apk_unreadable">Não foi possível ler o arquivo. Verifique se o \'Armazenamento Externo\' não está com o uso da bateria restrito</string>
     <string name="home_invalid_apk_not_an_apk">O arquivo selecionado não é um APK válido</string>
     <string name="home_invalid_apk_io_error">Falha ao abrir o arquivo. Tente novamente</string>
@@ -499,7 +499,7 @@ A desinstalação apagará permanentemente todos os dados do aplicativo."</strin
     <string name="settings_advanced_patch_options_restart_message">Alterar opções de patch requer reiniciar o aplicativo para fazer efeito</string>
     <string name="settings_advanced_patch_options_expert_mode_notice">Em modo avançado, as opções de patch estarão disponíveis durante o processo de patching</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Theme Colors -->
-    <string name="settings_advanced_patch_options_theme_colors">Cores do tema do aplicativo</string>
+    <string name="settings_advanced_patch_options_theme_colors">Cores do tema do app</string>
     <string name="settings_advanced_patch_options_theme_colors_description">Altera a cor de fundo</string>
     <string name="settings_advanced_patch_options_dark_theme_color">Cor de fundo claro</string>
     <string name="settings_advanced_patch_options_light_theme_color">Cor de fundo escuro</string>
@@ -509,10 +509,10 @@ A desinstalação apagará permanentemente todos os dados do aplicativo."</strin
     <string name="settings_advanced_patch_options_load_error">Falha ao carregar opções de patch</string>
     <string name="settings_advanced_patch_options_no_available">Não há opções disponíveis para esse patch</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
-    <string name="settings_advanced_patch_options_custom_branding">Marcação personalizada</string>
+    <string name="settings_advanced_patch_options_custom_branding">Personalização do app</string>
     <string name="settings_advanced_patch_options_custom_branding_description">Altera o nome de exibição do app</string>
-    <string name="settings_advanced_patch_options_custom_branding_app_name">Nome do aplicativo</string>
-    <string name="settings_advanced_patch_options_custom_branding_app_name_hint">Informe o nome personalizado</string>
+    <string name="settings_advanced_patch_options_custom_branding_app_name">Nome do app</string>
+    <string name="settings_advanced_patch_options_custom_branding_app_name_hint">Escreva o nome personalizado</string>
     <string name="settings_advanced_patch_options_custom_branding_custom_icon">Ícone personalizado</string>
     <string name="settings_advanced_patch_options_custom_branding_custom_icon_instruction">"Pasta com imagens para usar como um ícone personalizado.
 
@@ -547,9 +547,9 @@ Opcionalmente, o caminho contém um ícone de notificação em um dos seguintes 
   drawable-xxhdpi/morphe_notification_icon_custom.png (72x72 px)
   drawable-xxxhdpi/morphe_notification_icon_custom.png (96x96 px)"</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Header -->
-    <string name="settings_advanced_patch_options_custom_header">Logotipo personalizado</string>
-    <string name="settings_advanced_patch_options_custom_header_description">Altera o logotipo do cabeçalho</string>
-    <string name="settings_advanced_patch_options_custom_header_instruction">"Pasta com imagens para usar como logotipo personalizado.
+    <string name="settings_advanced_patch_options_custom_header">Logo personalizado do cabeçalho</string>
+    <string name="settings_advanced_patch_options_custom_header_description">Altera o logo do cabeçalho</string>
+    <string name="settings_advanced_patch_options_custom_header_instruction">"Pasta com imagens para usar como logo personalizado no cabeçalho.
 
 A pasta deve conter uma ou mais das seguintes pastas, de acordo com a DPI do dispositivo:
 - drawable-hdpi

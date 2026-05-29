@@ -126,12 +126,12 @@
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <string name="home_file_picker_prompt_title">Вибрати завантажений APK файл</string>
     <string name="home_file_picker_prompt_description">Виберіть APK файл &lt;b&gt;%s&lt;/b&gt;, який ви щойно завантажили</string>
-    <string name="home_file_picker_prompt_open_apk">Відкрийте APK файл</string>
+    <string name="home_file_picker_prompt_open_apk">Відкрити APK файл</string>
     <string name="home_recommended_version">Рекомендована версія</string>
     <string name="home_selected_version">Вибрана версія</string>
     <string name="home_select_apk_title">Вибрати APK файл</string>
     <string name="home_select_any_apk_description">Оберіть APK-файл будь-якого застосунку або виберіть застосунок, уже встановлений на цьому пристрої</string>
-    <string name="home_use_installed_app">Використати встановлений застосунок</string>
+    <string name="home_use_installed_app">Встановлений застосунок</string>
     <string name="home_installed_app_picker_title">Вибрати встановлений застосунок</string>
     <string name="home_installed_app_picker_empty">Не знайдено застосунків</string>
     <string name="home_installed_app_picker_filter_all">Усі застосунки</string>

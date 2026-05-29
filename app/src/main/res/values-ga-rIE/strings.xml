@@ -130,8 +130,8 @@
     <string name="home_recommended_version">Leagan molta</string>
     <string name="home_selected_version">Leagan roghnaithe</string>
     <string name="home_select_apk_title">Roghnaigh APK</string>
-    <string name="home_select_any_apk_description">Roghnaigh comhad APK de aon aip, nó roghnaigh aip atá suiteáilte cheana féin ar an gceann seo</string>
-    <string name="home_use_installed_app">Úsáid aip suiteáilte</string>
+    <string name="home_select_any_apk_description">Roghnaigh comhad APK d\'aon aip, nó roghnaigh aip atá suiteáilte cheana féin ar an ngléas seo</string>
+    <string name="home_use_installed_app">Bain úsáid as aip suiteáilte</string>
     <string name="home_installed_app_picker_title">Roghnaigh aip suiteáilte</string>
     <string name="home_installed_app_picker_empty">Níor aimsíodh aon aipeanna</string>
     <string name="home_installed_app_picker_filter_all">Gach aip</string>

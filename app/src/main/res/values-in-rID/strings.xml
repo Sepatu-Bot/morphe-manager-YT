@@ -130,10 +130,10 @@
     <string name="home_recommended_version">Rekomendasi versi</string>
     <string name="home_selected_version">Versi yang terpilih</string>
     <string name="home_select_apk_title">Pilih APK</string>
-    <string name="home_select_any_apk_description">Pilih file APK aplikasi apa pun, atau pilih aplikasi yang sudah terpasang di perangkat ini</string>
+    <string name="home_select_any_apk_description">Pilih berkas APK dari aplikasi apa pun, atau pilih aplikasi yang sudah terpasang di perangkat ini</string>
     <string name="home_use_installed_app">Gunakan aplikasi yang terpasang</string>
     <string name="home_installed_app_picker_title">Pilih aplikasi terpasang</string>
-    <string name="home_installed_app_picker_empty">Tidak ada aplikasi yang ditemukan</string>
+    <string name="home_installed_app_picker_empty">Tidak ditemukan aplikasi</string>
     <string name="home_installed_app_picker_filter_all">Semua aplikasi</string>
     <string name="home_installed_app_picker_filter_user">Aplikasi pengguna saja</string>
     <string name="home_installed_app_picker_filter_system">Aplikasi sistem saja</string>
@@ -624,7 +624,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_import_keystore_dialog_title">Masukkan kredensial keystore</string>
     <string name="settings_system_import_keystore_dialog_description">Anda perlu memasukkan kredensial keystore untuk mengimpornya</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Nama pengguna (Alias)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Kata sandi</string>
+    <string name="settings_system_import_keystore_dialog_password_field">Kata Sandi</string>
     <string name="settings_system_import_keystore_dialog_format_field">Format Keystore</string>
     <string name="settings_system_import_keystore_wrong_credentials">Kredensial keystore tidak sah</string>
     <string name="settings_system_import_keystore_success">Keystore diimpor</string>

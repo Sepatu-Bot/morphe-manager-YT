@@ -297,6 +297,7 @@
     <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_keystore">कीस्टोर</string>
     <string name="settings_system_import_keystore_description">तुमचे साइनिंग कीस्टोअर आयात किंवा निर्यात करते</string>
+    <string name="settings_system_import_keystore_dialog_password_field">पासवर्ड</string>
     <string name="settings_system_import_keystore_dialog_format_field">कीस्टोअर स्वरूप</string>
     <string name="settings_system_export_keystore_failed">कीस्टोअर निर्यात करण्यात अयशस्वी</string>
     <string name="settings_system_morphe_settings">मॉर्फ सेटिंग्ज</string>

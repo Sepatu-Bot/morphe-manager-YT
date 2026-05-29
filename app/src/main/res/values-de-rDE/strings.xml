@@ -130,7 +130,7 @@
     <string name="home_recommended_version">Empfohlene Version</string>
     <string name="home_selected_version">Ausgewählte Version</string>
     <string name="home_select_apk_title">APK auswählen</string>
-    <string name="home_select_any_apk_description">Wählen Sie eine APK-Datei einer beliebigen App aus oder wählen Sie eine App, die bereits auf diesem Gerät installiert ist.</string>
+    <string name="home_select_any_apk_description">Wählen Sie eine APK-Datei einer beliebigen App aus oder wählen Sie eine App, die bereits auf diesem Gerät installiert ist</string>
     <string name="home_use_installed_app">Installierte App verwenden</string>
     <string name="home_installed_app_picker_title">Installierte App auswählen</string>
     <string name="home_installed_app_picker_empty">Keine Apps gefunden</string>

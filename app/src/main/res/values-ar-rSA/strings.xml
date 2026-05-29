@@ -134,7 +134,7 @@
     <string name="home_use_installed_app">استخدم التطبيق المثبت</string>
     <string name="home_installed_app_picker_title">اختر التطبيق المثبت</string>
     <string name="home_installed_app_picker_empty">لم يتم العثور على تطبيقات</string>
-    <string name="home_installed_app_picker_filter_all">جميع التطبيقات</string>
+    <string name="home_installed_app_picker_filter_all">كل التطبيقات</string>
     <string name="home_installed_app_picker_filter_user">تطبيقات المستخدم فقط</string>
     <string name="home_installed_app_picker_filter_system">تطبيقات النظام فقط</string>
     <string name="home_invalid_apk_unreadable">⁯لا يمكن قراءة الملف. تحقق من أن \'وحدة التخزين الخارجية\' غير مقيدة بالبطارية</string>

@@ -623,7 +623,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_import_keystore_dialog_title">คุณต้องต้องแน่ใจว่าต้องป้อนชื่อและรหัสของไฟล์ตัวเลือก</string>
     <string name="settings_system_import_keystore_dialog_description">คุณต้องป้อนข้อมูลรับรองของคลังคีย์เพื่อนำเข้า</string>
     <string name="settings_system_import_keystore_dialog_alias_field">รหัส</string>
-    <string name="settings_system_import_keystore_dialog_password_field">รหัสไฟล์ตัวเลือกไม่ถูกต้อง</string>
+    <string name="settings_system_import_keystore_dialog_password_field">รหัสผ่าน</string>
     <string name="settings_system_import_keystore_dialog_format_field">รูปแบบคีย์สโตร์</string>
     <string name="settings_system_import_keystore_wrong_credentials">ล้มการนำเข้าไฟล์ตัวเลือก</string>
     <string name="settings_system_import_keystore_success">ส่งออกไฟล์ตัวเลือก</string>

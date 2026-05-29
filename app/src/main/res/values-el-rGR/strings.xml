@@ -623,7 +623,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_import_keystore_dialog_title">Εισαγωγή διαπιστευτηρίων αποθήκης κλειδιών</string>
     <string name="settings_system_import_keystore_dialog_description">Θα χρειαστεί να καταχωρίσεις τα διαπιστευτήρια της αποθήκης κλειδιών για να τα εισάγεις</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Όνομα χρήστη(Ψευδώνυμο)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Κωδικός</string>
+    <string name="settings_system_import_keystore_dialog_password_field">Κωδικός πρόσβασης</string>
     <string name="settings_system_import_keystore_dialog_format_field">Μορφή καταστήματος κλειδιών</string>
     <string name="settings_system_import_keystore_wrong_credentials">Λανθασμένα διαπιστευτήρια αποθήκης κλειδιών</string>
     <string name="settings_system_import_keystore_success">Επιτυχής εισαγωγή αποθήκης κλειδιών </string>

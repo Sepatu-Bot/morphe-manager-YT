@@ -130,10 +130,10 @@
     <string name="home_recommended_version">권장 버전</string>
     <string name="home_selected_version">선택된 버전</string>
     <string name="home_select_apk_title">APK 선택</string>
-    <string name="home_select_any_apk_description">앱의 APK 파일을 선택하거나, 이 장치에 이미 설치된 앱을 선택하세요.</string>
+    <string name="home_select_any_apk_description">APK 파일을 선택하거나, 이 기기에 이미 설치된 앱을 선택하세요</string>
     <string name="home_use_installed_app">설치된 앱 사용</string>
     <string name="home_installed_app_picker_title">설치된 앱 선택</string>
-    <string name="home_installed_app_picker_empty">앱을 찾을 수 없음</string>
+    <string name="home_installed_app_picker_empty">앱을 찾을 수 없습니다</string>
     <string name="home_installed_app_picker_filter_all">모든 앱</string>
     <string name="home_installed_app_picker_filter_user">사용자 앱만</string>
     <string name="home_installed_app_picker_filter_system">시스템 앱만</string>

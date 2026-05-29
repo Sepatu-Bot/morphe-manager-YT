@@ -619,7 +619,7 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_import_keystore_dialog_title">Sernameyê (Alias) dafîne</string>
     <string name="settings_system_import_keystore_dialog_description">Hûn dê pêwist be serdanan kredensiyelên keystorê bidin da ku ew sazkirin</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Karanbera (Alias)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Nexweş</string>
+    <string name="settings_system_import_keystore_dialog_password_field">Parola</string>
     <string name="settings_system_import_keystore_dialog_format_field">Formata kilîdparêzê</string>
     <string name="settings_system_import_keystore_wrong_credentials">Nivîsandina parçehuyê xeṭî ye</string>
     <string name="settings_system_import_keystore_success">Parçehuyê zafortir hate kirin</string>

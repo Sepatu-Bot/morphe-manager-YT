@@ -482,7 +482,6 @@ Dimensi gambar mestilah seperti berikut:
     <string name="settings_system_import_keystore_dialog_title">Masukkan kelayakan kunci simpanan</string>
     <string name="settings_system_import_keystore_dialog_description">Anda perlu masukkan kelayakan kad pengaman untuk mengimportnya</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Nama pengguna (Alias)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Kata lalu</string>
     <string name="settings_system_import_keystore_wrong_credentials">Kelayakan kunci simpanan tidak betul</string>
     <string name="settings_system_import_keystore_success">Kunci simpanan diimport</string>
     <string name="settings_system_import_keystore_failed">Gagal mengimport kunci simpanan</string>

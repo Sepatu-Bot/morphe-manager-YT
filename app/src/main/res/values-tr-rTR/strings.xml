@@ -52,7 +52,7 @@
     <!-- Playful exaggeration, making patching feel heroic -->
     <string name="home_greeting_9">Bugünden itibaren uygulamaları kendilerinden kurtarıyoruz</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
-    <string name="home_greeting_10">Kafein ve iyi yamalarla güçlendirilmiştir</string>
+    <string name="home_greeting_10">Gücünü kafein ve iyi yamalardan alır</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
@@ -381,12 +381,12 @@ Kaldırma işlemi tüm uygulama verilerini kalıcı olarak silecektir"</string>
     <string name="mini_game_try_again">Tekrar Dene</string>
     <string name="mini_game_paused">Duraklatıldı</string>
     <string name="mini_game_resume">Devam et</string>
-    <string name="mini_game_2048_picker_subtitle">Karoları birleştirmek için kaydırın</string>
-    <string name="mini_game_flappy_picker_subtitle">Borulardan uçmak için dokunun</string>
+    <string name="mini_game_2048_picker_subtitle">Karoları birleştirmek için kaydır</string>
+    <string name="mini_game_flappy_picker_subtitle">Borulardan uçmak için dokun</string>
     <string name="mini_game_flappy_tap_to_start">Uçmak için dokunun</string>
     <string name="mini_game_snake_picker_subtitle">Yemek ye, kendine çarpma</string>
     <string name="mini_game_snake_swipe_to_start">Başlamak için kaydırın</string>
-    <string name="mini_game_dino_picker_subtitle">Kaktüslerin üzerinden atlamak için dokunun</string>
+    <string name="mini_game_dino_picker_subtitle">Kaktüslerin üzerinden atlamak için dokun</string>
     <string name="mini_game_dino_tap_to_start">Koşmak için dokunun</string>
     <!-- Settings -->
     <string name="appearance">Görünüm</string>
@@ -623,7 +623,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_import_keystore_dialog_title">Anahtar deposu kimlik bilgilerini girin</string>
     <string name="settings_system_import_keystore_dialog_description">İçe aktarmak için anahtar deposu kimlik bilgilerini girmeniz gerekecek</string>
     <string name="settings_system_import_keystore_dialog_alias_field">Kullanıcı Adı (Takma Ad)</string>
-    <string name="settings_system_import_keystore_dialog_password_field">Parola</string>
+    <string name="settings_system_import_keystore_dialog_password_field">Şifre</string>
     <string name="settings_system_import_keystore_dialog_format_field">Anahtar deposu formatı</string>
     <string name="settings_system_import_keystore_wrong_credentials">Yanlış anahtar deposu kimlik bilgileri</string>
     <string name="settings_system_import_keystore_success">Anahtar deposu içe aktarıldı</string>
