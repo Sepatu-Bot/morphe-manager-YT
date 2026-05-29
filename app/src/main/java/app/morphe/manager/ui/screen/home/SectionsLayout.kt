@@ -31,6 +31,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -3070,17 +3071,12 @@ fun AppLoadingCard(
             modifier = Modifier
                 .fillMaxSize()
                 .clip(shape)
-                .background(
-                    brush = Brush.linearGradient(
-                        colors = listOf(
-                            Color.White.copy(alpha = 0f),
-                            Color.White.copy(alpha = 0.3f),
-                            Color.White.copy(alpha = 0f)
-                        ),
-                        start = Offset(shimmerOffset * 1000, 0f),
-                        end = Offset((shimmerOffset + 1f) * 1000, 0f)
+                .drawBehind {
+                    drawDiagonalShimmer(
+                        progress = (shimmerOffset + 1f) / 3f,
+                        color = Color.White.copy(alpha = 0.3f)
                     )
-                )
+                }
         )
 
         // Content skeleton

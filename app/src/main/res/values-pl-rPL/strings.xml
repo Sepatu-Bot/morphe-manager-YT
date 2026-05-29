@@ -687,9 +687,9 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_custom_file_picker">Własna przeglądarka plików</string>
     <string name="settings_system_custom_file_picker_description">Przeglądaj pamięć za pomocą wbudowanej przeglądarki plików Morphe zamiast domyślnej systemowej</string>
     <!-- File Picker -->
-    <string name="file_picker_previous_directory">Poprzedni katalog</string>
+    <string name="file_picker_previous_directory">Poprzedni folder</string>
     <string name="file_picker_no_files">Brak plików</string>
-    <string name="file_picker_read_error">Nie można odczytać tego katalogu</string>
+    <string name="file_picker_read_error">Nie można odczytać tego folderu</string>
     <string name="file_picker_internal_storage">Pamięć wewnętrzna</string>
     <string name="file_picker_sd_card">Karta SD</string>
     <string name="file_picker_root">Katalog główny (/)</string>

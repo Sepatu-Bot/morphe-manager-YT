@@ -22,8 +22,26 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+
+// progress in [0, 1]: 0 = band fully off top-left, 1 = band fully off bottom-right
+internal fun DrawScope.drawDiagonalShimmer(progress: Float, color: Color) {
+    val totalDiag = size.width + size.height
+    val bandWidth = totalDiag * 0.4f
+    val cCenter = progress * (totalDiag + bandWidth * 2f) - bandWidth
+    val cStart = cCenter - bandWidth
+    val cEnd = cCenter + bandWidth
+    drawRect(
+        brush = Brush.linearGradient(
+            colors = listOf(Color.Transparent, color, Color.Transparent),
+            start = Offset(cStart / 2f, cStart / 2f),
+            end = Offset(cEnd / 2f, cEnd / 2f)
+        )
+    )
+}
 
 /**
  * Base shimmer box with animated gradient effect.
@@ -38,8 +56,14 @@ fun ShimmerBox(
     baseAlpha: Float = 0.2f
 ) {
     val onSurface = MaterialTheme.colorScheme.onSurface
+    val surface = MaterialTheme.colorScheme.surface
     val resolvedBaseColor = if (baseColor == Color.Unspecified) onSurface else baseColor
-    val resolvedShimmerColor = if (shimmerColor == Color.Unspecified) onSurface.copy(alpha = 0.35f) else shimmerColor
+    // The shimmer band must be lighter than the base. In dark theme onSurface is light so it works
+    // directly; in light theme surface is lighter, so use it instead to produce a bright glint
+    val resolvedShimmerColor = if (shimmerColor == Color.Unspecified) {
+        if (surface.luminance() > onSurface.luminance()) surface.copy(alpha = 0.7f)
+        else onSurface.copy(alpha = 0.35f)
+    } else shimmerColor
 
     val infiniteTransition = rememberInfiniteTransition(label = "shimmer")
 
@@ -70,17 +94,8 @@ fun ShimmerBox(
             .drawBehind {
                 val progress = shimmerProgressState.value % 1f
                 val alpha = pulseAlphaState.value
-                val bandWidth = size.width * 0.7f
-                val startX = progress * (size.width + bandWidth) - bandWidth
-
                 drawRect(color = resolvedBaseColor.copy(alpha = alpha))
-                drawRect(
-                    brush = Brush.linearGradient(
-                        colors = listOf(Color.Transparent, resolvedShimmerColor, Color.Transparent),
-                        start = Offset(startX, 0f),
-                        end = Offset(startX + bandWidth, 0f)
-                    )
-                )
+                drawDiagonalShimmer(progress, resolvedShimmerColor)
             }
     )
 }
@@ -173,8 +188,7 @@ fun ShimmerChangelogHeader() {
             ShimmerBox(
                 modifier = Modifier.size(56.dp),
                 shape = CircleShape,
-                baseColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
-                shimmerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)
+                baseColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f)
             )
 
             // Text shimmer

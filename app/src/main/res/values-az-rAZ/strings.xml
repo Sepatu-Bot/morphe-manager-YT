@@ -688,6 +688,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Əvvəlki kataloq</string>
     <string name="file_picker_no_files">Burada fayl yoxdur</string>
+    <string name="file_picker_read_error">Bu kataloqu oxumaq olmur</string>
     <string name="file_picker_internal_storage">Daxili yaddaş</string>
     <string name="file_picker_sd_card">SD kart</string>
     <string name="file_picker_root">Root (/)</string>

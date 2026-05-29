@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Home Screen -->
+    <string name="home_other_apps">Kitos programos</string>
+    <string name="home_not_patched_yet">Dar neužtaisyta</string>
+    <string name="home_no_patches_available">Nėra prieinamų pataisų</string>
+    <string name="home_app_hide_title">Paslėpti šią programą?</string>
+    <string name="home_app_hide_message">Ši programa bus paslėpta iš pagrindinio ekrano. Vėliau ją galite atkelti iš paslėptų programų naudodami mygtuką apačioje esančio sąrašo</string>
+    <string name="home_app_will_be_hidden">Ši programa bus paslėpta</string>
+    <string name="home_app_no_hidden">Nėra slaptų programų</string>
+    <string name="home_app_hidden_apps_title">Paslėptos programos</string>
+    <string name="home_app_hidden_apps_hint">Palieskite, kad parodytumėte</string>
+    <string name="android_11_bug_dialog_title">Android 11 triktis</string>
+    <string name="android_11_bug_dialog_description">Programos diegimo leidimas turi būti suteiktas iš anksto, kad būtų išvengta trikdžiū Android 11 sistemoje, kuri neigiamai paveiks vartotojo patirtį</string>
+    <string name="deep_link_add_source_title">Pridėti šaltinį</string>
+    <string name="deep_link_add_source_message">Ar norite pridėti šį pataisos šaltinį prie Morphe?</string>
+    <string name="deep_link_add_source_warning">Įtraukite tik patikimus šaltinius</string>
     <!-- Home Screen - Update Notifications -->
-    <string name="home_update_error">Nepavyko atnaujinti</string>
+    <string name="home_update_available">Morphe atnaujinimas prieinamas</string>
+    <string name="home_update_available_subtitle">Nauja versija paruošta įdiegti</string>
+    <string name="home_update_error">Atnaujinimas nepavyko</string>
+    <string name="home_update_error_subtitle">Patikrinkite savo interneto ryšį ir bandykite dar kartą</string>
+    <string name="home_update_skipped_metered">Atnaujinamai praleisti</string>
+    <string name="home_update_skipped_metered_subtitle">Mobilusis duomenys įjungti</string>
+    <string name="home_updating_sources">Atnaujinimū šaltiniai…</string>
+    <string name="home_update_progress_format">%s apdorota</string>
+    <string name="home_update_success">Šaltinių atnaujinimas baigtas</string>
+    <string name="home_update_success_subtitle">Jūsų šaltiniai atnaujinti</string>
+    <string name="home_sources_are_loading">Šaltiniai kraunami, palaukite…</string>
+    <string name="home_search_apps">Ieškoti programų</string>
+    <string name="home_no_apps_title">Nėra pasiekiamų programų</string>
+    <string name="home_no_apps_subtitle">Pridėti pataisos šaltinį arba įjungti jau esantį iš %s</string>
+    <string name="home_no_apps_search_subtitle">Nėra programų, atitinkančių \"%s\"</string>
+    <string name="home_all_apps_hidden_title">Visos programos paslėptos</string>
+    <string name="home_all_apps_hidden_subtitle">Jūs paslėpėte visas programėles iš pagrindinio ekrano</string>
     <!-- Home Screen - Home Greetings -->
     <string name="home_greeting_1">Kokią programėlę norėtumėte pataisyti?</string>
     <!-- Humorous hype message with light nostalgia -->
+    <string name="home_greeting_2">Ar norite padaryti programas vėl legendinėmis?</string>
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
+    <string name="home_greeting_3">Susisegėkite, metas pataisyti</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
+    <string name="home_greeting_4">Dar viena diena, dar vienas šedevras be reklamų</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
     <string name="home_greeting_5">Norite žiūrėti reklamas? Aš irgi ne</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
+    <string name="home_greeting_6">Priverskime programėles elgtis</string>
     <!-- Whimsical forecast-style joke, not meant literally -->
+    <string name="home_greeting_7" formatted="false">Šiandienos prognozė: 100 % tikimybė pataisų</string>
     <!-- From mediocrity to amazing -->
+    <string name="home_greeting_8">Ar esate pasiruošę nepribloškiančio paversti nuostabiu?</string>
     <!-- Playful exaggeration, making patching feel heroic -->
+    <string name="home_greeting_9">Saugome programas nuo pačių saves nuo šiandien</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
+    <string name="home_greeting_10">Veikia nuo kofeino ir gerų pataisų</string>
     <!-- Home Screen - Sources Management -->
+    <string name="sources_management_title">Pataisų šaltiniai</string>
     <string name="sources_management_open_in_browser">Atidaryti naršyklėje</string>
     <string name="sources_management_failed_to_open_url">Nepavyko atidaryti nuorodos</string>
+    <string name="sources_management_prerelease_toggle">Bandomosios versijos pataisos</string>
+    <string name="sources_management_prerelease_toggle_description">Gaukite ankstyvą prieigą prie naujų eksperimentinių pataisos versijų</string>
+    <string name="sources_management_experimental_versions_toggle">Eksperimentinės programos versijos</string>
     <!-- Home Screen - Sources Dialogs -->
     <!-- Home Screen - Dialog 1: APK Availability -->
     <!-- Home Screen - Dialog 2: Download Instructions -->
     <string name="home_download_instructions_steps_title">Instrukcijos:</string>
-    <string name="home_download_instructions_step1">Paspauskite \'%s\' mygtuką</string>
+    <string name="home_download_instructions_step1">Paspauskite \'%s\' mygtuką apačioje</string>
     <string name="home_download_instructions_download_button_toast">Paspauskite atsisiųsti (Download) puslapyje, o ne čia 😊</string>
     <!-- Home Screen - Dialog 3: File Picker Prompt -->
     <string name="home_recommended_version">Rekomenduojama versija</string>
