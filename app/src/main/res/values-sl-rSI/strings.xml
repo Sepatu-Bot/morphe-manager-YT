@@ -735,6 +735,9 @@ Dimenzije slike morajo biti naslednje:
     <string name="add">Dodaj</string>
     <string name="close">Zapri</string>
     <string name="back">Nazaj</string>
+    <string name="next">Naprej</string>
+    <string name="done">Končano</string>
+    <string name="skip">Preskoči</string>
     <string name="clear">Počisti</string>
     <string name="delete">Izbriši</string>
     <string name="remove">Odstrani</string>
@@ -815,6 +818,27 @@ Dimenzije slike morajo biti naslednje:
     <string name="download_update_confirmation">Prenesem posodobitev?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d od %2$d</string>
+    <string name="onboarding_sources_desc">Upravljajte vire popravkov. Vsak vir zagotavlja popravke, ki jih je mogoče uporabiti za vaše aplikacije</string>
+    <string name="onboarding_swipe_title">Gestikulacije z drsenjem</string>
+    <string name="onboarding_swipe_desc">Drgnite v desno po kartici aplikacije, da si ogledate razpoložljive popravke. Drgnite v levo, da skrijete kartico z začetnega zaslona</string>
+    <string name="onboarding_settings_desc">Prilagodite Morphe: videz, napredne možnosti in sistemska orodja</string>
+    <string name="onboarding_sources_patches_desc">Dotaknite se, da si ogledate vse popravke, ki so na voljo iz tega vira</string>
+    <string name="onboarding_sources_version_desc">Dotaknite se različice, da si ogledate celoten seznam sprememb za ta vir</string>
+    <string name="onboarding_sources_prerelease_desc">Omogočite to, da prejemate predizdajne različice popravkov iz tega vira</string>
+    <string name="onboarding_appearance_tab_desc">Prilagodite videz aplikacije: temo, barvo poudarka in ozadje</string>
+    <string name="onboarding_appearance_theme_desc">Izberite med svetlo, temno ali sistemsko temo. Izberete lahko tudi barvo poudarka po meri ali omogočite dinamično barvo</string>
+    <string name="onboarding_expert_mode_desc">Omogočite način strokovnjaka, da odklepate izbor popravkov, možnosti po meri in druge napredne funkcije</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Zavihek Sistem</string>
+    <string name="onboarding_system_tab_desc">Upravljanje shranjenega ključa, orodja za uvoz/izvoz in informacije o aplikaciji</string>
+    <string name="onboarding_system_installer_desc">Izberite, kako se popravljene aplikacije namestijo: standardno, v korenske mape ali s Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Zaženite popravljanje v ločenem procesu za izboljšanje stabilnosti in nadzor porabe pomnilnika. Priporočljivo za velike aplikacije</string>
+    <string name="onboarding_system_file_picker_desc">Omogočite uporabo vgrajenega brskalnika datotek namesto sistemskega izbirnika pri izbiri datotek APK ali shranjenih ključev</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Hiter pregled funkcij</string>
+    <string name="tour_prompt_desc">Želite hiter pregled ključnih funkcij Morphe?</string>
+    <string name="tour_prompt_confirm">Pokaži mi</string>
+    <string name="onboarding_restart_title">Pregled funkcij</string>
+    <string name="onboarding_restart_desc">Izvedite voden pregled ključnih funkcij Morphe</string>
 </resources>

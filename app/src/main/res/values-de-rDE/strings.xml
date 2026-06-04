@@ -842,5 +842,5 @@ Wollen Sie trotzdem fortfahren?"</string>
     <string name="tour_prompt_desc">Möchten Sie eine kurze Tour durch die wichtigsten Funktionen von Morphe machen?</string>
     <string name="tour_prompt_confirm">Zeigen Sie mir alles</string>
     <string name="onboarding_restart_title">Feature-Tour</string>
-    <string name="onboarding_restart_desc">Machen Sie eine geführte Tour durch die wichtigsten Funktionen von Morphe</string>
+    <string name="onboarding_restart_desc">Machen Sie einen geführten Rundgang durch die wichtigsten Funktionen von Morphe.</string>
 </resources>

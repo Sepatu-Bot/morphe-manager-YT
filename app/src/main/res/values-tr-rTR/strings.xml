@@ -52,7 +52,7 @@
     <!-- Playful exaggeration, making patching feel heroic -->
     <string name="home_greeting_9">Bugünden itibaren uygulamaları kendilerinden kurtarıyoruz</string>
     <!-- Light sarcasm, casual and tech-savvy humor -->
-    <string name="home_greeting_10">Gücünü kafein ve iyi yamalardan alır</string>
+    <string name="home_greeting_10">Kafein ve iyi yamalarla güçlendirilmiştir</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
@@ -136,7 +136,7 @@
     <string name="home_selected_version">Seçilen sürüm</string>
     <string name="home_select_apk_title">APK seç</string>
     <string name="home_select_any_apk_description">Herhangi bir uygulamanın APK dosyasını seçin veya bu cihazda zaten yüklü olan bir uygulamayı seçin</string>
-    <string name="home_use_installed_app">Yüklenmiş uygulamayı kullan</string>
+    <string name="home_use_installed_app">Yüklü uygulamayı kullan</string>
     <string name="home_installed_app_picker_title">Yüklü uygulamayı seç</string>
     <string name="home_installed_app_picker_empty">Uygulama bulunamadı</string>
     <string name="home_installed_app_picker_filter_all">Tüm uygulamalar</string>
@@ -735,6 +735,8 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="add">Ekle</string>
     <string name="close">Kapat</string>
     <string name="back">Geri</string>
+    <string name="next">İleri</string>
+    <string name="done">Tamam</string>
     <string name="skip">Atla</string>
     <string name="clear">Temizle</string>
     <string name="delete">Sil</string>
@@ -818,6 +820,27 @@ Devam etmek istiyor musunuz?"</string>
     <string name="download_update_confirmation">Güncelleme indirilsin mi?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">Yama kaynaklarınızı yönetin. Her kaynak, uygulamalarınıza uygulanabilecek yamalar sağlar</string>
+    <string name="onboarding_swipe_title">Kaydırma hareketleri</string>
+    <string name="onboarding_swipe_desc">Bir uygulama kartında bulunan yamaları görmek için sağa kaydırın. Kartı ana ekranından gizlemek için sola kaydırın</string>
+    <string name="onboarding_settings_desc">Morphe\'yi özelleştirin: görünüm, gelişmiş seçenekler ve sistem araçları</string>
+    <string name="onboarding_sources_patches_desc">Bu kaynaktan mevcut tüm yamaları görmek için dokunun</string>
+    <string name="onboarding_sources_version_desc">Bu kaynağın tam sürüm notlarını görmek için sürüme dokunun</string>
+    <string name="onboarding_sources_prerelease_desc">Bu kaynaktan ön sürüm yama sürümleri almak için bunu etkinleştirin</string>
+    <string name="onboarding_appearance_tab_desc">Uygulamanın görünümünü özelleştirin: tema, vurgu rengi ve arka plan</string>
+    <string name="onboarding_appearance_theme_desc">Açık, koyu veya sistem teması arasında seçim yapın. Ayrıca özel bir vurgu rengi seçebilir veya Dinamik Renk\'i etkinleştirebilirsiniz</string>
+    <string name="onboarding_expert_mode_desc">Yama seçimi, özel seçenekler ve diğer gelişmiş özellikleri açmak için Uzman Modu\'nu etkinleştirin</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Sistem sekmesi</string>
+    <string name="onboarding_system_tab_desc">Anahtar deposu yönetimi, içe/dışa aktarma araçları ve uygulama bilgileri</string>
+    <string name="onboarding_system_installer_desc">Yamalanmış uygulamaların nasıl yükleneceğini seçin: standart, root bağlama veya Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Kararlılığı artırmak ve bellek kullanımını kontrol etmek için yamalamayı ayrı bir süreçte gerçekleştirin. Büyük uygulamalar için önerilir</string>
+    <string name="onboarding_system_file_picker_desc">APK veya anahtar depoları seçerken sistem seçici yerine yerleşik dosya tarayıcısını kullanmak için etkinleştirin</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Hızlı özellik turu</string>
+    <string name="tour_prompt_desc">Morphe\'nin temel özelliklerine hızlı bir bakış atmak ister misiniz?</string>
+    <string name="tour_prompt_confirm">Bana etrafı göster</string>
+    <string name="onboarding_restart_title">Özellik turu</string>
+    <string name="onboarding_restart_desc">Morphe\'nin temel özelliklerinde rehberli bir tura çıkın</string>
 </resources>

@@ -822,26 +822,27 @@ morphe_adaptive_monochrome_custom.xml
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
     <string name="onboarding_step_of">‎%1$d من %2$d‎</string>
-    <string name="onboarding_sources_desc">إدارة مصادر التصحيحات الخاصة بك. يوفر كل مصدر تصحيحات يمكن تطبيقها على تطبيقاتك.</string>
+    <string name="onboarding_sources_desc">إدارة مصادر التعديلات الخاصة بك. يوفر كل مصدر تعديلات يمكن تطبيقها على تطبيقاتك</string>
     <string name="onboarding_swipe_title">إيماءات التمرير</string>
-    <string name="onboarding_swipe_desc">مرر لليمين على بطاقة التطبيق لعرض التصحيحات المتاحة له. مرر لليسار لإخفاء البطاقة من الشاشة الرئيسية.</string>
-    <string name="onboarding_settings_desc">تخصيص Morphe: المظهر والخيارات المتقدمة وأدوات النظام.</string>
-    <string name="onboarding_sources_patches_desc">اضغط لعرض جميع التصحيحات المتاحة من هذا المصدر.</string>
-    <string name="onboarding_sources_version_desc">اضغط على الإصدار لعرض سجل التغييرات الكامل لهذا المصدر.</string>
-    <string name="onboarding_sources_prerelease_desc">قم بتمكين هذا لاستقبال إصدارات تصحيح ما قبل الإصدار من هذا المصدر.</string>
-    <string name="onboarding_appearance_tab_desc">تخصيص مظهر التطبيق: السمة واللون المميز والخلفية.</string>
-    <string name="onboarding_appearance_theme_desc">اختر بين السمة الفاتحة والداكنة أو سمة النظام. يمكنك أيضًا اختيار لون مميز مخصص أو تمكين الألوان الديناميكية.</string>
-    <string name="onboarding_expert_mode_desc">قم بتمكين الوضع الخبير لفتح تحديد التصحيح والخيارات المخصصة والميزات المتقدمة الأخرى.</string>
+    <string name="onboarding_swipe_desc">مرِّر لليمين على بطاقة التطبيق لعرض التعديلات المتاحة له. مرٍّر لليسار لإخفاء البطاقة من الشاشة الرئيسية</string>
+    <string name="onboarding_settings_desc">تخصيص Morphe: المظهر، الخيارات المتقدمة، وأدوات النظام</string>
+    <string name="onboarding_sources_patches_desc">انقر لعرض جميع التعديلات المتاحة من هذا المصدر</string>
+    <string name="onboarding_sources_version_desc">انقر على الإصدار لعرض سجل التغييرات الكامل لهذا المصدر</string>
+    <string name="onboarding_sources_prerelease_desc">قم بتمكين هذا لتلقي إصدارات تعديلات ما قبل الإطلاق من هذا المصدر</string>
+    <string name="onboarding_appearance_tab_desc">تخصيص مظهر التطبيق: السمة، لون التمييز، والخلفية</string>
+    <string name="onboarding_appearance_theme_desc">اختر بين المظهر الفاتح، الداكن، أو مظهر النظام. يمكنك أيضًا اختيار لون تمييز مخصص أو تمكين الألوان الديناميكية</string>
+    <string name="onboarding_expert_mode_desc">قم بتمكين وضع الخبير لفتح اختيار التعديل، الخيارات المخصصة، والميزات المتقدمة الأخرى</string>
     <!-- Translate "System" the same way as the System settings tab -->
     <string name="onboarding_system_tab_title">علامة تبويب النظام</string>
-    <string name="onboarding_system_tab_desc">إدارة المفاتيح، وأدوات الاستيراد/التصدير، ومعلومات التطبيق.</string>
-    <string name="onboarding_system_installer_desc">اختر كيفية تثبيت التطبيقات التي تم تصحيحها: قياسي، أو تثبيت الجذر، أو Shizuku.</string>
-    <string name="onboarding_system_process_runtime_desc">قم بتشغيل التصحيح في عملية منفصلة لتحسين الاستقرار والتحكم في استخدام الذاكرة. موصى به للتطبيقات الكبيرة.</string>
-    <string name="onboarding_system_file_picker_desc">قم بتمكين هذا لاستخدام متصفح الملفات المدمج بدلاً من منتقي النظام عند تحديد ملفات APK أو المفاتيح.</string>
+    <string name="onboarding_system_tab_desc">إدارة المفاتيح، أدوات الاستيراد/التصدير، ومعلومات التطبيق</string>
+    <string name="onboarding_system_installer_desc">اختر كيفية تثبيت التطبيقات التي تم تعديلها: قياسي، Root Mount، أو Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">تشغيل التعديل في عملية منفصلة لتحسين الاستقرار والتحكم في استخدام الذاكرة.
+موصى به للتطبيقات الكبيرة</string>
+    <string name="onboarding_system_file_picker_desc">قم بتمكين هذا لاستخدام متصفح الملفات المدمج بدلًا من منتقي النظام عند تحديد ملفات APK أو المفاتيح</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
     <string name="tour_prompt_title">جولة سريعة في الميزات</string>
     <string name="tour_prompt_desc">هل تريد جولة سريعة في الميزات الرئيسية لـ Morphe؟</string>
-    <string name="tour_prompt_confirm">أرني</string>
+    <string name="tour_prompt_confirm">خذني في جولة</string>
     <string name="onboarding_restart_title">جولة في الميزات</string>
-    <string name="onboarding_restart_desc">قم بجولة إرشادية في الميزات الرئيسية لـ Morphe.</string>
+    <string name="onboarding_restart_desc">قم بجولة إرشادية في الميزات الرئيسية لـ Morphe</string>
 </resources>

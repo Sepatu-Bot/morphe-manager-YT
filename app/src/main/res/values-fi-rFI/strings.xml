@@ -838,9 +838,9 @@ Haluatko silti jatkaa?"</string>
     <string name="onboarding_system_process_runtime_desc">Suorita korjaus erillisessä prosessissa vakauden parantamiseksi ja muistin käytön hallitsemiseksi. Suositeltavaa suurille sovelluksille</string>
     <string name="onboarding_system_file_picker_desc">Ota tämä käyttöön käyttääksesi sisäänrakennettua tiedostoselainta järjestelmän valitsimen sijaan APK-tiedostoja tai avaimia valittaessa</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
-    <string name="tour_prompt_title">Pikatutoriaali</string>
+    <string name="tour_prompt_title">Nopea ominaisuusesittely</string>
     <string name="tour_prompt_desc">Haluatko pikatutoriaalin Morphen tärkeimmistä ominaisuuksista?</string>
     <string name="tour_prompt_confirm">Näytä minulle</string>
-    <string name="onboarding_restart_title">Ominaisuuksien tutoriaali</string>
+    <string name="onboarding_restart_title">Ominaisuusesittely</string>
     <string name="onboarding_restart_desc">Käy opastetulla kierroksella Morphen tärkeimmissä ominaisuuksissa</string>
 </resources>

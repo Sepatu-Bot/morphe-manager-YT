@@ -218,6 +218,9 @@ Norint gauti geriausią rezultatą, ši programa rekomenduoja pataisyti &lt;b&gt
     <string name="adaptive_icon_no_transparency_warning">Paveiksle nėra skaidrių pikselių. Rezultatas gali atrodyti neteisingai</string>
     <string name="adaptive_icon_created_success">Sėkmingai sukurtas pasikeiciantis piktogramos ženklas</string>
     <string name="adaptive_icon_creation_failed">Nepavyko sukurti pasikeiciancios piktogramos</string>
+    <string name="adaptive_icon_label">Prisitaikantis</string>
+    <string name="adaptive_icon_monochrome_label">Vienspalvis</string>
+    <string name="adaptive_icon_guide">Piktogramos kūrimo vadovas</string>
     <!-- Header Creator -->
     <!-- Home Screen - App Info Screen -->
     <!-- Home Screen - Root Mode -->

@@ -719,6 +719,8 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="add">Dodaj</string>
     <string name="close">Zatvori</string>
     <string name="back">Nazad</string>
+    <string name="next">Sledeće</string>
+    <string name="done">Gotovo</string>
     <string name="skip">Preskoči</string>
     <string name="clear">Obriši</string>
     <string name="delete">Izbriši</string>
@@ -802,6 +804,27 @@ Da li i dalje želite da nastavite?"</string>
     <string name="download_update_confirmation">Preuzeti ažuriranje?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d od %2$d</string>
+    <string name="onboarding_sources_desc">Upravljajte izvorima zakrpa. Svaki izvor obezbeđuje zakrpe koje se mogu primeniti na vaše aplikacije.</string>
+    <string name="onboarding_swipe_title">Gestovi prevlačenja</string>
+    <string name="onboarding_swipe_desc">Prevučite prstom udesno na kartici aplikacije da biste videli dostupne zakrpe. Prevučite prstom ulevo da biste sakrili karticu sa početnog ekrana.</string>
+    <string name="onboarding_settings_desc">Prilagodite Morphe: izgled, napredne opcije i sistemske alate.</string>
+    <string name="onboarding_sources_patches_desc">Dodirnite da biste videli sve zakrpe dostupne iz ovog izvora.</string>
+    <string name="onboarding_sources_version_desc">Dodirnite verziju da biste videli kompletan spisak izmena za ovaj izvor.</string>
+    <string name="onboarding_sources_prerelease_desc">Omogućite ovo da biste primali verzije zakrpa u beta fazi iz ovog izvora.</string>
+    <string name="onboarding_appearance_tab_desc">Prilagodite izgled aplikacije: temu, boju naglaska i pozadinu.</string>
+    <string name="onboarding_appearance_theme_desc">Izaberite između svetle, tamne ili sistemske teme. Takođe možete odabrati prilagođenu boju naglaska ili uključiti dinamičku boju.</string>
+    <string name="onboarding_expert_mode_desc">Omogućite režim eksperta da biste otključali izbor zakrpa, prilagođene opcije i druge napredne funkcije.</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Sistemska kartica</string>
+    <string name="onboarding_system_tab_desc">Upravljanje kejstorom, alati za uvoz/izvoz i informacije o aplikaciji.</string>
+    <string name="onboarding_system_installer_desc">Izaberite kako se zakrljane aplikacije instaliraju: standardno, root mount ili Shizuku.</string>
+    <string name="onboarding_system_process_runtime_desc">Pokrenite zakrpljivanje u odvojenom procesu da biste poboljšali stabilnost i kontrolisali upotrebu memorije. Preporučeno za velike aplikacije.</string>
+    <string name="onboarding_system_file_picker_desc">Omogućite ovo da biste koristili ugrađeni pregledač datoteka umesto sistemskog pikera prilikom odabira APK ili kejstora.</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Brza tura po funkcijama</string>
+    <string name="tour_prompt_desc">Želite brzu turu po ključnim funkcijama Morphe?</string>
+    <string name="tour_prompt_confirm">Pokaži mi</string>
+    <string name="onboarding_restart_title">Tura po funkcijama</string>
+    <string name="onboarding_restart_desc">Prođite kroz vođenu turu po ključnim funkcijama Morphe.</string>
 </resources>

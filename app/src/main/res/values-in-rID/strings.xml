@@ -608,9 +608,9 @@ Dimensi gambar harus sebagai berikut:
     <string name="installer_use_standard">Gunakan standar</string>
     <string name="settings_prompt_installer_on_install">Permintaan pemilihan pemasang</string>
     <string name="settings_prompt_installer_on_install_description">Menampilkan dialog pemilihan pemasang setiap kali Anda memasang aplikasi yang ditambal</string>
-    <string name="settings_auto_install_with_shizuku">Instal otomatis setelah patching</string>
-    <string name="settings_auto_install_with_shizuku_description">Secara senyap menginstal APK yang telah di-patch segera setelah patching selesai</string>
-    <string name="settings_auto_install_prompt_conflict">\"%s\" diaktifkan - instal otomatis akan dilewati</string>
+    <string name="settings_auto_install_with_shizuku">Pasang otomatis setelah menambal</string>
+    <string name="settings_auto_install_with_shizuku_description">Secara senyap memasang APK yang telah ditambal segera setelah proses penambalan selesai</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" diaktifkan - pasang otomatis akan dilewati</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Optimisasi baterai</string>
     <string name="settings_system_battery_optimization_description">Menjaga penambal tetap berjalan saat aplikasi diminimalkan</string>
@@ -822,22 +822,22 @@ Apakah Anda masih ingin melanjutkan?"</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
     <string name="onboarding_step_of">%1$d dari %2$d</string>
-    <string name="onboarding_sources_desc">Kelola sumber patch Anda. Setiap sumber menyediakan patch yang dapat diterapkan ke aplikasi Anda</string>
+    <string name="onboarding_sources_desc">Kelola sumber tambalan Anda. Setiap sumber menyediakan tambalan yang dapat diterapkan ke aplikasi Anda</string>
     <string name="onboarding_swipe_title">Gerakan usapan</string>
-    <string name="onboarding_swipe_desc">Usap ke kanan pada kartu aplikasi untuk melihat patch yang tersedia. Usap ke kiri untuk menyembunyikan kartu dari layar utama</string>
-    <string name="onboarding_settings_desc">Sesuaikan Morphe: tampilan, opsi lanjutan, dan alat sistem</string>
-    <string name="onboarding_sources_patches_desc">Ketuk untuk melihat semua patch yang tersedia dari sumber ini</string>
+    <string name="onboarding_swipe_desc">Usap ke kanan pada kartu aplikasi untuk melihat tambalan yang tersedia. Usap ke kiri untuk menyembunyikan kartu dari layar utama</string>
+    <string name="onboarding_settings_desc">Sesuaikan Morphe: tampilan, pilihan lanjutan, dan peralatan sistem</string>
+    <string name="onboarding_sources_patches_desc">Ketuk untuk melihat semua tambalan yang tersedia dari sumber ini</string>
     <string name="onboarding_sources_version_desc">Ketuk versi untuk melihat seluruh catatan perubahan untuk sumber ini</string>
-    <string name="onboarding_sources_prerelease_desc">Aktifkan ini untuk menerima versi patch pra-rilis dari sumber ini</string>
+    <string name="onboarding_sources_prerelease_desc">Aktifkan ini untuk menerima versi tambalan pra-rilis dari sumber ini</string>
     <string name="onboarding_appearance_tab_desc">Sesuaikan tampilan aplikasi: tema, warna aksen, dan latar belakang</string>
     <string name="onboarding_appearance_theme_desc">Pilih antara tema terang, gelap, atau sistem. Anda juga dapat memilih warna aksen khusus atau mengaktifkan Warna Dinamis</string>
-    <string name="onboarding_expert_mode_desc">Aktifkan Mode Ahli untuk membuka pemilihan patch, opsi khusus, dan fitur lanjutan lainnya</string>
+    <string name="onboarding_expert_mode_desc">Aktifkan Mode Ahli untuk membuka pemilihan tambalan, pilihan khusus, dan fitur lanjutan lainnya</string>
     <!-- Translate "System" the same way as the System settings tab -->
     <string name="onboarding_system_tab_title">Tab Sistem</string>
-    <string name="onboarding_system_tab_desc">Manajemen Keystore, alat impor/ekspor, dan informasi aplikasi</string>
-    <string name="onboarding_system_installer_desc">Pilih cara aplikasi yang telah di-patch diinstal: standar, root mount, atau Shizuku</string>
-    <string name="onboarding_system_process_runtime_desc">Jalankan patching dalam proses terpisah untuk meningkatkan stabilitas dan mengontrol penggunaan memori. Disarankan untuk aplikasi besar</string>
-    <string name="onboarding_system_file_picker_desc">Aktifkan untuk menggunakan browser file bawaan alih-alih pemilih sistem saat memilih APK atau keystore</string>
+    <string name="onboarding_system_tab_desc">Pengelola Keystore, peralatan impor/ekspor, dan informasi aplikasi</string>
+    <string name="onboarding_system_installer_desc">Pilih cara aplikasi yang telah ditambal tersebut dipasang: standar, root mount, atau Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Jalankan penambalan dalam proses terpisah untuk meningkatkan stabilitas dan mengontrol penggunaan memori. Disarankan untuk aplikasi ukuran besar</string>
+    <string name="onboarding_system_file_picker_desc">Aktifkan untuk menggunakan penjelajah berkas bawaan daripada pemilih sistem saat memilih APK atau keystore</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
     <string name="tour_prompt_title">Tur fitur cepat</string>
     <string name="tour_prompt_desc">Ingin tur cepat fitur utama Morphe?</string>

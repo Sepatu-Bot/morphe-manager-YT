@@ -735,6 +735,8 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="add">Adaugă</string>
     <string name="close">Închide</string>
     <string name="back">Înapoi</string>
+    <string name="next">Următorul</string>
+    <string name="done">Gata</string>
     <string name="skip">Omitere</string>
     <string name="clear">Golește</string>
     <string name="delete">Șterge</string>
@@ -818,6 +820,27 @@ Doriți totuși să continuați?"</string>
     <string name="download_update_confirmation">Descarci actualizarea?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d din %2$d</string>
+    <string name="onboarding_sources_desc">Gestionează sursele de patch-uri. Fiecare sursă oferă patch-uri care pot fi aplicate aplicațiilor tale</string>
+    <string name="onboarding_swipe_title">Gesturi de glisare</string>
+    <string name="onboarding_swipe_desc">Glisează spre dreapta pe o carte de aplicație pentru a vedea patch-urile disponibile. Glisează spre stânga pentru a ascunde cardul de pe ecranul principal</string>
+    <string name="onboarding_settings_desc">Personalizează Morphe: aspect, opțiuni avansate și instrumente de sistem</string>
+    <string name="onboarding_sources_patches_desc">Atinge pentru a vedea toate patch-urile disponibile din această sursă</string>
+    <string name="onboarding_sources_version_desc">Atinge versiunea pentru a vedea istoricul complet al modificărilor pentru această sursă</string>
+    <string name="onboarding_sources_prerelease_desc">Activează această opțiune pentru a primi versiuni de patch-uri pre-lansare de la această sursă</string>
+    <string name="onboarding_appearance_tab_desc">Personalizează aspectul aplicației: temă, culoare de accent și fundal</string>
+    <string name="onboarding_appearance_theme_desc">Alege între tema deschisă, închisă sau cea de sistem. De asemenea, poți alege o culoare de accent personalizată sau poți activa Culoare dinamică</string>
+    <string name="onboarding_expert_mode_desc">Activează Modul Expert pentru a debloca selecția patch-urilor, opțiuni personalizate și alte funcții avansate</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Tabloul Sistem</string>
+    <string name="onboarding_system_tab_desc">Gestionarea stocării cheilor, instrumente de import/export și informații despre aplicație</string>
+    <string name="onboarding_system_installer_desc">Alege modul în care aplicațiile patch-uite sunt instalate: standard, montare root sau Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Rulează patch-urile într-un proces separat pentru a îmbunătăți stabilitatea și a controla utilizarea memoriei. Recomandat pentru aplicații mari</string>
+    <string name="onboarding_system_file_picker_desc">Activează pentru a utiliza browserul de fișiere încorporat în loc de selectorul de sistem când selectezi fișiere APK sau stocări de chei</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Tur rapid de prezentare</string>
+    <string name="tour_prompt_desc">Dorești un tur rapid al funcțiilor cheie Morphe?</string>
+    <string name="tour_prompt_confirm">Arată-mi</string>
+    <string name="onboarding_restart_title">Tur de prezentare</string>
+    <string name="onboarding_restart_desc">Fă un tur ghidat al funcțiilor cheie Morphe</string>
 </resources>

@@ -822,26 +822,26 @@ Voulez-vous tout de même continuer ?"</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
     <string name="onboarding_step_of">%1$d sur %2$d</string>
-    <string name="onboarding_sources_desc">Gérez vos sources de correctifs. Chaque source fournit des correctifs qui peuvent être appliqués à vos applications.</string>
-    <string name="onboarding_swipe_title">Gestes de glissement</string>
-    <string name="onboarding_swipe_desc">Faites glisser votre doigt vers la droite sur une carte d\'application pour afficher les correctifs disponibles. Faites glisser votre doigt vers la gauche pour masquer la carte de l\'écran d\'accueil.</string>
-    <string name="onboarding_settings_desc">Personnalisez Morphe : apparence, options avancées et outils système.</string>
-    <string name="onboarding_sources_patches_desc">Appuyez pour afficher tous les correctifs disponibles dans cette source.</string>
-    <string name="onboarding_sources_version_desc">Appuyez sur la version pour afficher l\'historique complet des modifications de cette source.</string>
-    <string name="onboarding_sources_prerelease_desc">Activez cette option pour recevoir les versions de correctifs pré-versions de cette source.</string>
-    <string name="onboarding_appearance_tab_desc">Personnalisez l\'apparence de l\'application : thème, couleur d\'accent et arrière-plan.</string>
-    <string name="onboarding_appearance_theme_desc">Choisissez entre un thème clair, sombre ou système. Vous pouvez également choisir une couleur d\'accent personnalisée ou activer la couleur dynamique.</string>
-    <string name="onboarding_expert_mode_desc">Activez le mode Expert pour déverrouiller la sélection de correctifs, les options personnalisées et les autres fonctionnalités avancées.</string>
+    <string name="onboarding_sources_desc">Gérez vos sources de patchs. Chaque source fournit des patchs pouvant être appliqués à vos applications</string>
+    <string name="onboarding_swipe_title">Gestes de balayage</string>
+    <string name="onboarding_swipe_desc">Balayez vers la droite sur une carte d’application pour afficher les patchs disponibles. Balayez vers la gauche pour la masquer de l’écran d’accueil</string>
+    <string name="onboarding_settings_desc">Personnalisez Morphe : apparence, options avancées et outils système</string>
+    <string name="onboarding_sources_patches_desc">Appuyez pour afficher tous les patchs disponibles depuis cette source</string>
+    <string name="onboarding_sources_version_desc">Appuyez sur la version pour afficher l’historique complet des modifications de cette source</string>
+    <string name="onboarding_sources_prerelease_desc">Activez cette option pour recevoir des versions de patchs en préversion de cette source</string>
+    <string name="onboarding_appearance_tab_desc">Personnalisez l’apparence de l’application : thème, couleur d’accentuation et arrière-plan</string>
+    <string name="onboarding_appearance_theme_desc">Choisissez entre le thème clair, sombre ou système. Vous pouvez également sélectionner une couleur d’accentuation personnalisée ou activer les couleurs dynamiques</string>
+    <string name="onboarding_expert_mode_desc">Activez le mode Expert pour débloquer la sélection de patchs, les options personnalisées et d’autres fonctionnalités avancées</string>
     <!-- Translate "System" the same way as the System settings tab -->
     <string name="onboarding_system_tab_title">Onglet Système</string>
-    <string name="onboarding_system_tab_desc">Gestion du trousseau, outils d\'importation/exportation et informations sur l\'application.</string>
-    <string name="onboarding_system_installer_desc">Choisissez comment les applications corrigées sont installées : standard, montage racine ou Shizuku.</string>
-    <string name="onboarding_system_process_runtime_desc">Exécutez le correctif dans un processus séparé pour améliorer la stabilité et contrôler l\'utilisation de la mémoire. Recommandé pour les applications volumineuses.</string>
-    <string name="onboarding_system_file_picker_desc">Activez cette option pour utiliser le navigateur de fichiers intégré au lieu du sélecteur système lors de la sélection d\'APK ou de trousseaux.</string>
+    <string name="onboarding_system_tab_desc">Gestion des keystores, outils d’import/export et informations sur les applications</string>
+    <string name="onboarding_system_installer_desc">Choisissez la méthode d’installation des applications patchées : installation standard, montage root ou Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Exécutez le patchage dans un processus distinct afin d’améliorer la stabilité et de mieux contrôler l’utilisation de la mémoire. Recommandé pour les applications volumineuses</string>
+    <string name="onboarding_system_file_picker_desc">Activez cette option pour utiliser l’explorateur de fichiers intégré à la place du sélecteur système lors de la sélection d’APK ou de keystores</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
-    <string name="tour_prompt_title">Visite guidée rapide</string>
-    <string name="tour_prompt_desc">Souhaitez-vous une visite guidée rapide des principales fonctionnalités de Morphe ?</string>
+    <string name="tour_prompt_title">Visite guidée rapide des fonctionnalités</string>
+    <string name="tour_prompt_desc">Vous souhaitez découvrir rapidement les principales fonctionnalités de Morphe ?</string>
     <string name="tour_prompt_confirm">Faites-moi découvrir</string>
-    <string name="onboarding_restart_title">Visite guidée</string>
-    <string name="onboarding_restart_desc">Faites une visite guidée des principales fonctionnalités de Morphe.</string>
+    <string name="onboarding_restart_title">Visite guidée des fonctionnalités</string>
+    <string name="onboarding_restart_desc">Découvrez les principales fonctionnalités de Morphe grâce à une visite guidée</string>
 </resources>

@@ -735,6 +735,8 @@ morphe_header_custom_dark.png
     <string name="add">เพิ่ม</string>
     <string name="close">ปิด</string>
     <string name="back">ย้อนกลับ</string>
+    <string name="next">ถัดไป</string>
+    <string name="done">เสร็จสิ้น</string>
     <string name="skip">ข้าม</string>
     <string name="clear">ล้าง</string>
     <string name="delete">ลบ</string>
@@ -818,6 +820,27 @@ morphe_header_custom_dark.png
     <string name="download_update_confirmation">ดาวน์โหลดอัปเดตหรือไม่?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d จาก %2$d</string>
+    <string name="onboarding_sources_desc">จัดการแหล่งแพตช์ของคุณ แต่ละแหล่งให้แพตช์ที่สามารถนำไปใช้กับแอปของคุณได้</string>
+    <string name="onboarding_swipe_title">ท่าทางสัมผัส</string>
+    <string name="onboarding_swipe_desc">ปัดไปทางขวาบนการ์ดแอปเพื่อดูแพตช์ที่มีอยู่ ปัดไปทางซ้ายเพื่อซ่อนการ์ดออกจากหน้าจอหลัก</string>
+    <string name="onboarding_settings_desc">ปรับแต่ง Morphe: รูปลักษณ์ ตัวเลือกขั้นสูง และเครื่องมือระบบ</string>
+    <string name="onboarding_sources_patches_desc">แตะเพื่อดูแพตช์ทั้งหมดจากแหล่งนี้</string>
+    <string name="onboarding_sources_version_desc">แตะที่เวอร์ชันเพื่อดูบันทึกการเปลี่ยนแปลงทั้งหมดสำหรับแหล่งนี้</string>
+    <string name="onboarding_sources_prerelease_desc">เปิดใช้งานเพื่อรับแพตช์เวอร์ชันก่อนวางจำหน่ายจากแหล่งนี้</string>
+    <string name="onboarding_appearance_tab_desc">ปรับแต่งรูปลักษณ์ของแอป: ธีม สีหลัก และพื้นหลัง</string>
+    <string name="onboarding_appearance_theme_desc">เลือกระหว่างธีมสว่าง ธีมเข้ม หรือธีมระบบ คุณยังสามารถเลือกสีหลักแบบกำหนดเองหรือเปิดใช้งาน Dynamic Color ได้</string>
+    <string name="onboarding_expert_mode_desc">เปิดใช้งานโหมดผู้เชี่ยวชาญเพื่อปลดล็อกการเลือกแพตช์ ตัวเลือกที่กำหนดเอง และคุณสมบัติขั้นสูงอื่นๆ</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">แท็บระบบ</string>
+    <string name="onboarding_system_tab_desc">การจัดการคีย์สโตร์ เครื่องมือในการนำเข้า/ส่งออก และข้อมูลแอป</string>
+    <string name="onboarding_system_installer_desc">เลือกวิธีการติดตั้งแอปที่ได้รับการแพตช์: มาตรฐาน, root mount หรือ Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">เรียกใช้การแพตช์ในกระบวนการแยกต่างหากเพื่อปรับปรุงความเสถียรและควบคุมการใช้หน่วยความจำ แนะนำสำหรับแอปขนาดใหญ่</string>
+    <string name="onboarding_system_file_picker_desc">เปิดใช้งานเพื่อใช้ตัวเลือกไฟล์ในตัวแทนตัวเลือกของระบบเมื่อเลือก APK หรือคีย์สโตร์</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">ทัวร์คุณสมบัติอย่างรวดเร็ว</string>
+    <string name="tour_prompt_desc">ต้องการทัวร์อย่างรวดเร็วเกี่ยวกับคุณสมบัติหลักของ Morphe หรือไม่</string>
+    <string name="tour_prompt_confirm">พาฉันดูรอบๆ</string>
+    <string name="onboarding_restart_title">ทัวร์คุณสมบัติ</string>
+    <string name="onboarding_restart_desc">เข้าร่วมทัวร์แนะนำคุณสมบัติหลักของ Morphe</string>
 </resources>

@@ -733,8 +733,8 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="add">Cuir leis</string>
     <string name="close">Dún</string>
     <string name="back">Ar ais</string>
-    <string name="next">Next</string>
-    <string name="done">Done</string>
+    <string name="next">Ar Aghaidh</string>
+    <string name="done">Déanta</string>
     <string name="skip">Scipeáil</string>
     <string name="clear">Glan</string>
     <string name="delete">Scrios</string>
@@ -819,26 +819,26 @@ Ar mhaith leat leanúint ar aghaidh fós?"</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
     <string name="onboarding_step_of">%1$d de %2$d</string>
-    <string name="onboarding_sources_desc">Bain úsáid as do fhoinsí patcha. Soláthraíonn gach foinse patchaí a féidir a chur i bhfeidhm ar do aipeanna</string>
-    <string name="onboarding_swipe_title">Gestanna scáthfaidh</string>
-    <string name="onboarding_swipe_desc">Scaith ar dheis ar chárta aip a fheiceáil ar a bhfuil patchaí ar fáil. Scaith ar chlé chun an cárta a cheilt ón scáthán baile</string>
-    <string name="onboarding_settings_desc">Cuir Morphe in oiriú: dealramh, roghanna ardaithe, agus uirlisí córais</string>
-    <string name="onboarding_sources_patches_desc">Tapa chun féachaint ar na patchaí uile atá ar fáil ón foinse seo</string>
-    <string name="onboarding_sources_version_desc">Tapa ar an leagan chun an log athraithe iomlán don foinse seo a fheiceáil</string>
-    <string name="onboarding_sources_prerelease_desc">Comaoinigh seo chun leaganacha patcha roimhtháthaithe a fháil ón foinse seo</string>
-    <string name="onboarding_appearance_tab_desc">Cuir in oiriú ar an dealramh aipe: téama, dath leabhar, agus cúlra</string>
-    <string name="onboarding_appearance_theme_desc">Roghnaigh idir téama éadrom, dorcha, nó córais. Is féidir leat dath leabhar sainbhunaithe a roghnú freisin nó Dath Dinimiciúil a chumasú</string>
-    <string name="onboarding_expert_mode_desc">Comaoinigh Mód Saineolaithe chun roghnú patcha a dhíbhéascadh, roghanna sainbhunaithe, agus gnéithe ardaithe eile</string>
+    <string name="onboarding_sources_desc">Bainistigh do fhoinsí paistí. Soláthraíonn gach foinse paistí is féidir a chur i bhfeidhm ar d’aipeanna.</string>
+    <string name="onboarding_swipe_title">Gothaí svaidhpeála</string>
+    <string name="onboarding_swipe_desc">Svaidhpeáil ar dheis ar chárta aipe chun na paistí atá ar fáil a fheiceáil. Svaidhpeáil ar chlé chun an cárta a cheilt ón scáileán baile.</string>
+    <string name="onboarding_settings_desc">Saincheap Morphe: cuma, roghanna ardleibhéil, agus uirlisí córais</string>
+    <string name="onboarding_sources_patches_desc">Tapáil chun na paistí uile atá ar fáil ón bhfoinse seo a fheiceáil</string>
+    <string name="onboarding_sources_version_desc">Beartaigh an leagan chun an loga athraithe iomlán don fhoinse seo a fheiceáil</string>
+    <string name="onboarding_sources_prerelease_desc">Cumasaigh seo chun leaganacha paiste réamh-eisiúna a fháil ón bhfoinse seo</string>
+    <string name="onboarding_appearance_tab_desc">Saincheap cuma an aip: téama, dath béime, agus cúlra</string>
+    <string name="onboarding_appearance_theme_desc">Roghnaigh idir téama geal, dorcha, nó córais. Is féidir leat dath béime saincheaptha a roghnú nó Dath Dinimiciúil a chumasú freisin.</string>
+    <string name="onboarding_expert_mode_desc">Cumasaigh Mód Saineolaí chun roghnú paiste, roghanna saincheaptha agus gnéithe ardleibhéil eile a dhíghlasáil</string>
     <!-- Translate "System" the same way as the System settings tab -->
-    <string name="onboarding_system_tab_title">Clár Córais</string>
-    <string name="onboarding_system_tab_desc">Bainistíocht keystore, uirlisí allmúcháin/easpórtála, agus faisnéis aip</string>
-    <string name="onboarding_system_installer_desc">Roghnaigh conas a chuirtear aipeanna patcheda i gceart: caighdeánach, feisteas fhréamh, nó Shizuku</string>
-    <string name="onboarding_system_process_runtime_desc">Rith patcháil i bpróiseas ar leith chun cobhsaíocht a fheabhsú agus úsáid cuimhne a rialú. Moladh le hagall aipanna móra</string>
-    <string name="onboarding_system_file_picker_desc">Comaoinigh chun an brabhsáiloir comhaid tógtha a úsáid ina ionad an roghnúraí córais nuair a roghnaítear APKanna nó keystores</string>
+    <string name="onboarding_system_tab_title">Táb an chórais</string>
+    <string name="onboarding_system_tab_desc">Bainistíocht stórais eochrach, uirlisí allmhairithe/onnmhairithe, agus faisnéis faoi aipeanna</string>
+    <string name="onboarding_system_installer_desc">Roghnaigh conas a shuiteáiltear aipeanna paisteáilte: caighdeánach, fréamh-suite, nó Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Rith paisteáil i bpróiseas ar leith chun cobhsaíocht a fheabhsú agus úsáid chuimhne a rialú. Molta d\'aipeanna móra.</string>
+    <string name="onboarding_system_file_picker_desc">Cumasaigh úsáid a bhaint as an mbrabhsálaí comhad ionsuite in ionad an roghnóra córais agus APKanna nó stórais eochracha á roghnú agat</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
-    <string name="tour_prompt_title">Turais gné tapa</string>
-    <string name="tour_prompt_desc">Ar mhaith leat taispeáint tapa de na gnéithe tábhachtacha de Morphe?</string>
+    <string name="tour_prompt_title">Turas gairid ar ghnéithe</string>
+    <string name="tour_prompt_desc">Ar mhaith leat turas gairid a fháil ar phríomhghnéithe Morphe?</string>
     <string name="tour_prompt_confirm">Taispeáin dom timpeall</string>
-    <string name="onboarding_restart_title">Turas gné</string>
-    <string name="onboarding_restart_desc">Glan turas treoraithe trí na gnéithe tábhachtacha de Morphe</string>
+    <string name="onboarding_restart_title">Turas gné-ghnéithe</string>
+    <string name="onboarding_restart_desc">Tabhair cuairt threoraithe ar phríomhghnéithe Morphe</string>
 </resources>

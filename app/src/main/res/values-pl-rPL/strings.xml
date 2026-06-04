@@ -821,26 +821,26 @@ Czy mimo to chcesz kontynuować?"</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
     <string name="onboarding_step_of">%1$d z %2$d</string>
-    <string name="onboarding_sources_desc">Zarządzaj źródłami paczek. Każde źródło udostępnia paczki, które można zastosować do swoich aplikacji.</string>
+    <string name="onboarding_sources_desc">Zarządzaj źródłami. Każde z nich oferuje modyfikacje, które możesz zastosować w swoich aplikacjach</string>
     <string name="onboarding_swipe_title">Gesty przesunięcia</string>
-    <string name="onboarding_swipe_desc">Przesuń palcem w prawo po karcie aplikacji, aby wyświetlić dostępne dla niej paczki. Przesuń palcem w lewo, aby ukryć kartę z ekranu głównego.</string>
-    <string name="onboarding_settings_desc">Dostosuj Morphe: wygląd, zaawansowane opcje i narzędzia systemowe.</string>
-    <string name="onboarding_sources_patches_desc">Dotknij, aby wyświetlić wszystkie paczki dostępne z tego źródła.</string>
-    <string name="onboarding_sources_version_desc">Dotknij wersji, aby wyświetlić pełen dziennik zmian dla tego źródła.</string>
-    <string name="onboarding_sources_prerelease_desc">Włącz, aby otrzymywać wersje paczek przedpremierowych z tego źródła.</string>
-    <string name="onboarding_appearance_tab_desc">Dostosuj wygląd aplikacji: motyw, kolor akcentu i tło.</string>
-    <string name="onboarding_appearance_theme_desc">Wybierz między jasnym, ciemnym lub motywem systemowym. Możesz również wybrać niestandardowy kolor akcentu lub włączyć Dynamic Color.</string>
-    <string name="onboarding_expert_mode_desc">Włącz Tryb Eksperta, aby odblokować wybór paczek, niestandardowe opcje i inne zaawansowane funkcje.</string>
+    <string name="onboarding_swipe_desc">Przesuń kartę aplikacji w prawo, aby zobaczyć dostępne modyfikacje. Przesuń w lewo, aby ukryć ją z ekranu głównego</string>
+    <string name="onboarding_settings_desc">Dostosuj Morphe: wygląd, opcje zaawansowane i narzędzia systemowe</string>
+    <string name="onboarding_sources_patches_desc">Dotknij, aby zobaczyć wszystkie modyfikacje z tego źródła</string>
+    <string name="onboarding_sources_version_desc">Dotknij numeru wersji, aby zobaczyć pełną listę zmian dla tego źródła</string>
+    <string name="onboarding_sources_prerelease_desc">Włącz, aby otrzymywać przedpremierowe wersje modyfikacji z tego źródła</string>
+    <string name="onboarding_appearance_tab_desc">Dostosuj wygląd aplikacji: motyw, kolor akcentu i tło</string>
+    <string name="onboarding_appearance_theme_desc">Wybierz motyw jasny, ciemny lub systemowy. Możesz też ustawić własny kolor akcentu albo włączyć dynamiczne kolory</string>
+    <string name="onboarding_expert_mode_desc">Włącz tryb eksperta, aby odblokować wybór modyfikacji, niestandardowe opcje i inne zaawansowane funkcje</string>
     <!-- Translate "System" the same way as the System settings tab -->
-    <string name="onboarding_system_tab_title">Zakładka Systemowa</string>
-    <string name="onboarding_system_tab_desc">Zarządzanie Keystore, narzędzia importu/eksportu oraz informacje o aplikacji.</string>
-    <string name="onboarding_system_installer_desc">Wybierz sposób instalowania poprawionych aplikacji: standardowy, root mount lub Shizuku.</string>
-    <string name="onboarding_system_process_runtime_desc">Uruchom poprawianie w osobnym procesie, aby poprawić stabilność i kontrolować wykorzystanie pamięci. Zalecane dla dużych aplikacji.</string>
-    <string name="onboarding_system_file_picker_desc">Włącz, aby używać wbudowanego menedżera plików zamiast selektora systemowego podczas wybierania plików APK lub Keystore.</string>
+    <string name="onboarding_system_tab_title">Zakładka System</string>
+    <string name="onboarding_system_tab_desc">Zarządzanie magazynem kluczy, narzędzia importu/eksportu oraz informacje o aplikacji</string>
+    <string name="onboarding_system_installer_desc">Wybierz sposób instalacji zmodyfikowanych aplikacji: standardowy, przez montowanie root lub Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Wykonuj modyfikacje w osobnym procesie, aby poprawić stabilność i kontrolować zużycie pamięci. Zalecane przy dużych aplikacjach</string>
+    <string name="onboarding_system_file_picker_desc">Włącz, aby przy wyborze plików APK lub magazynu kluczy używać wbudowanej przeglądarki plików zamiast systemowej</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
-    <string name="tour_prompt_title">Szybki przewodnik po funkcjach</string>
-    <string name="tour_prompt_desc">Chcesz szybko zapoznać się z kluczowymi funkcjami Morphe?</string>
+    <string name="tour_prompt_title">Szybki przewodnik</string>
+    <string name="tour_prompt_desc">Chcesz szybko poznać najważniejsze funkcje Morphe?</string>
     <string name="tour_prompt_confirm">Pokaż mi</string>
     <string name="onboarding_restart_title">Przewodnik po funkcjach</string>
-    <string name="onboarding_restart_desc">Weź udział w interaktywnym przewodniku po kluczowych funkcjach Morphe.</string>
+    <string name="onboarding_restart_desc">Przejdź przez krótki przewodnik, aby poznać najważniejsze funkcje Morphe</string>
 </resources>

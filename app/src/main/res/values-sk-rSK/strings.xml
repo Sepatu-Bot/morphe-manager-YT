@@ -735,6 +735,8 @@ Rozmery obrázka musia byť nasledovné:
     <string name="add">Pridať</string>
     <string name="close">Zatvoriť</string>
     <string name="back">Späť</string>
+    <string name="next">Ďalej</string>
+    <string name="done">Hotovo</string>
     <string name="skip">Preskočiť</string>
     <string name="clear">Vyčistiť</string>
     <string name="delete">Odstrániť</string>
@@ -818,6 +820,27 @@ Chcete aj tak pokračovať?"</string>
     <string name="download_update_confirmation">Stiahnuť aktualizáciu?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d z %2$d</string>
+    <string name="onboarding_sources_desc">Spravujte svoje zdroje záplat. Každý zdroj poskytuje záplaty, ktoré je možné použiť na vaše aplikácie</string>
+    <string name="onboarding_swipe_title">Gestá pre posúvanie prstom</string>
+    <string name="onboarding_swipe_desc">Posúňte prstom doprava na kartičke aplikácie, aby ste zobrazili dostupné záplaty. Posúňte prstom doľava, aby ste skryli kartičku z domovskej obrazovky</string>
+    <string name="onboarding_settings_desc">Prispôsobte si Morphe: vzhľad, pokročilé možnosti a systémové nástroje</string>
+    <string name="onboarding_sources_patches_desc">Ťuknite na obrazovku, aby ste zobrazili všetky záplaty dostupné z tohto zdroja</string>
+    <string name="onboarding_sources_version_desc">Ťuknite na verziu, aby ste zobrazili úplný zoznam zmien pre tento zdroj</string>
+    <string name="onboarding_sources_prerelease_desc">Povolením tohto nastavenia budete dostávať predbežné verzie záplat z tohto zdroja</string>
+    <string name="onboarding_appearance_tab_desc">Prispôsobte si vzhľad aplikácie: téma, farba akcentu a pozadie</string>
+    <string name="onboarding_appearance_theme_desc">Vyberte si medzi svetlou, tmavou alebo systémovou témou. Môžete tiež vybrať vlastnú farbu akcentu alebo povoliť dynamickú farbu</string>
+    <string name="onboarding_expert_mode_desc">Povolením režimu experta odomknete výber záplat, vlastné možnosti a ďalšie pokročilé funkcie</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Systémová záložka</string>
+    <string name="onboarding_system_tab_desc">Správa úložiska kľúčov, nástroje na import/export a informácie o aplikácii</string>
+    <string name="onboarding_system_installer_desc">Vyberte si, ako sa budú inštalovať záplatované aplikácie: štandardne, pripojenie na root alebo Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Spustite zápletovanie v samostatnom procese na zlepšenie stability a kontrolu využívania pamäte. Odporúča sa pre veľké aplikácie</string>
+    <string name="onboarding_system_file_picker_desc">Povolením tohto nastavenia použijete vstavaný prehliadač súborov namiesto systémového výberu pri výbere APK alebo úložiska kľúčov</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Rýchly prehľad funkcií</string>
+    <string name="tour_prompt_desc">Chcete si rýchlo pozrieť kľúčové funkcie Morphe?</string>
+    <string name="tour_prompt_confirm">Prevezmite ma</string>
+    <string name="onboarding_restart_title">Prehliadka funkcií</string>
+    <string name="onboarding_restart_desc">Pozrite si prehliadku kľúčových funkcií Morphe</string>
 </resources>

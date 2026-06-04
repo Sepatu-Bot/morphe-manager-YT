@@ -118,6 +118,11 @@
     <string name="home_download_instructions_step1">Dodirnite tipku \'%s\' ispod</string>
     <string name="home_download_instructions_step2_part1">Povucite stranicu prema dolje i dodirnite</string>
     <string name="home_download_instructions_download_button_toast">Dodirnite download na web stranici, a ne ovdje 😊</string>
+    <string name="home_download_instructions_download_button_toast_2">Savršeno! Sada kliknite na nastavak ispod i idite na web stranicu 👆</string>
+    <string name="home_download_instructions_download_button_toast_3">Vježba čini majstora, napreduješ! 💪</string>
+    <string name="home_download_instructions_download_button_toast_4">Još uvijek nije ovdje… još uvijek nije ovdje… 🙈</string>
+    <string name="home_download_instructions_download_button_toast_5">U redu, poštujem predanost 🫡</string>
+    <string name="home_download_instructions_download_button_toast_6">Vi ste sada službeni tester tipke Morphe 🏅</string>
     <string name="home_download_instructions_step3">Pričekajte da se preuzimanje dovrši i &lt;b&gt;nemojte instalirati&lt;/b&gt; aplikaciju</string>
     <string name="home_download_instructions_step3_mount">Pričekajte da se preuzimanje završi, a zatim &lt;b&gt;instalirajte aplikaciju&lt;/b&gt;</string>
     <string name="home_download_instructions_step4">Nakon što preuzimanje završi, vrati se u Morphe</string>
@@ -130,6 +135,13 @@
     <string name="home_recommended_version">Preporučena verzija</string>
     <string name="home_selected_version">Odabrana verzija</string>
     <string name="home_select_apk_title">Odaberite aplikaciju</string>
+    <string name="home_select_any_apk_description">Odaberite APK datoteku bilo koje aplikacije ili odaberite aplikaciju koja je već instalirana na ovom uređaju</string>
+    <string name="home_use_installed_app">Koristi instaliranu aplikaciju</string>
+    <string name="home_installed_app_picker_title">Odaberi instaliranu aplikaciju</string>
+    <string name="home_installed_app_picker_empty">Nema pronađenih aplikacija</string>
+    <string name="home_installed_app_picker_filter_all">Sve aplikacije</string>
+    <string name="home_installed_app_picker_filter_user">Samo aplikacije korisnika</string>
+    <string name="home_installed_app_picker_filter_system">Samo aplikacije sustava</string>
     <string name="home_invalid_apk_unreadable">Nije moguće pročitati datoteku. Provjerite je li \'Vanjska pohrana\' ograničena baterijom</string>
     <string name="home_invalid_apk_not_an_apk">Odabrana datoteka nije valjani APK</string>
     <string name="home_invalid_apk_io_error">Nije moguće otvoriti datoteku. Molimo pokušajte ponovo</string>
@@ -595,6 +607,9 @@ Dimenzije slike moraju biti sljedeće:
     <string name="installer_use_standard">Koristi standardno</string>
     <string name="settings_prompt_installer_on_install">Izbor instalatora</string>
     <string name="settings_prompt_installer_on_install_description">Prikazuje dijaloške okvire za odabir instalacijskog programa svaki put kada je patchana aplikacija instalirana</string>
+    <string name="settings_auto_install_with_shizuku">Automatska instalacija nakon \"patchanja\"</string>
+    <string name="settings_auto_install_with_shizuku_description">Tiho instalira patchanu APK odmah nakon dovršetka patchanja</string>
+    <string name="settings_auto_install_prompt_conflict">\"%s\" je omogućeno - automatska instalacija će biti preskočena</string>
     <!-- Settings - System Tab - Performance Section -->
     <string name="settings_system_battery_optimization">Optimizacija baterije</string>
     <string name="settings_system_battery_optimization_description">Održava aplikaciju pokrenutom čak i kada je minimizirana</string>
@@ -682,6 +697,7 @@ Dimenzije slike moraju biti sljedeće:
     <!-- File Picker -->
     <string name="file_picker_previous_directory">Prethodna mapa</string>
     <string name="file_picker_no_files">Nema datoteka ovdje</string>
+    <string name="file_picker_read_error">Nije moguće pročitati ovu mapu</string>
     <string name="file_picker_internal_storage">Unutarnja pohrana</string>
     <string name="file_picker_sd_card">SD kartica</string>
     <string name="file_picker_root">Root (/)</string>
@@ -718,6 +734,10 @@ Dimenzije slike moraju biti sljedeće:
     <string name="retry">Pokušaj ponovno</string>
     <string name="add">Dodaj</string>
     <string name="close">Zatvori</string>
+    <string name="back">Natrag</string>
+    <string name="next">Dalje</string>
+    <string name="done">Gotovo</string>
+    <string name="skip">Preskoči</string>
     <string name="clear">Izbriši</string>
     <string name="delete">Izbriši</string>
     <string name="remove">Ukloni</string>
@@ -801,6 +821,27 @@ Dimenzije slike moraju biti sljedeće:
     <string name="download_update_confirmation">Preuzeti ažuriranje?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d od %2$d</string>
+    <string name="onboarding_sources_desc">Upravljajte izvorima patcheva. Svaki izvor pruža patcheve koje se mogu primijeniti na vaše aplikacije</string>
+    <string name="onboarding_swipe_title">Geste povlačenja</string>
+    <string name="onboarding_swipe_desc">Povucite desno preko kartice aplikacije kako biste vidjeli dostupne patcheve. Povucite lijevo kako biste sakrili karticu s početnog zaslona</string>
+    <string name="onboarding_settings_desc">Prilagodite Morphe: izgled, napredne opcije i alate sustava</string>
+    <string name="onboarding_sources_patches_desc">Dodirnite za prikaz svih patcheva dostupnih iz ovog izvora</string>
+    <string name="onboarding_sources_version_desc">Dodirnite verziju kako biste vidjeli cjelovitu povijest promjena za ovaj izvor</string>
+    <string name="onboarding_sources_prerelease_desc">Omogućite ovo kako biste primali pre-release patcheve iz ovog izvora</string>
+    <string name="onboarding_appearance_tab_desc">Prilagodite izgled aplikacije: tema, naglasna boja i pozadina</string>
+    <string name="onboarding_appearance_theme_desc">Odaberite između svijetle, tamne ili teme sustava. Možete odabrati i prilagođenu boju naglašavanja ili omogućiti Dinamičnu boju</string>
+    <string name="onboarding_expert_mode_desc">Omogućite Ekspert način rada za otključavanje odabira patcheva, prilagođenih opcija i drugih naprednih značajki</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Sustav</string>
+    <string name="onboarding_system_tab_desc">Upravljanje spremnikom ključeva, alatima za uvoz/izvoz te informacije o aplikaciji</string>
+    <string name="onboarding_system_installer_desc">Odaberite kako se patchane aplikacije instaliraju: standardno, root mount ili Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Pokreni patchanje u zasebnom procesu kako bi poboljšao stabilnost i kontrolirao potrošnju memorije. Preporučeno za velike aplikacije</string>
+    <string name="onboarding_system_file_picker_desc">Omogućite korištenje ugrađenog preglednika datoteka umjesto odabira sustava pri odabiru APK datoteka ili spremnika ključeva</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Brzi obilazak značajki</string>
+    <string name="tour_prompt_desc">Želite li brzi obilazak ključnih značajki Morphea?</string>
+    <string name="tour_prompt_confirm">Pokaži mi okolo</string>
+    <string name="onboarding_restart_title">Obilazak značajki</string>
+    <string name="onboarding_restart_desc">Krenite s vodičem kroz ključne značajke Morphea</string>
 </resources>

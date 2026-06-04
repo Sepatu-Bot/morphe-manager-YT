@@ -735,6 +735,8 @@ morphe_header_custom_dark.png
     <string name="add">Додај</string>
     <string name="close">Затвори</string>
     <string name="back">Назад</string>
+    <string name="next">Следеће</string>
+    <string name="done">Готово</string>
     <string name="skip">Прескочи</string>
     <string name="clear">Очисти</string>
     <string name="delete">Избриши</string>
@@ -818,6 +820,27 @@ morphe_header_custom_dark.png
     <string name="download_update_confirmation">Преузети ажурирање?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d од %2$d</string>
+    <string name="onboarding_sources_desc">Управљајте изворима за закрпе. Сваки извор пружа закрпе које могу да се примене на ваше апликације</string>
+    <string name="onboarding_swipe_title">Покрети превлачења</string>
+    <string name="onboarding_swipe_desc">Превуците удесно преко картице апликације да бисте видели доступне закрпе. Превуците улево да бисте сакрили картицу са почетног екрана</string>
+    <string name="onboarding_settings_desc">Прилагодите Морфе: изглед, напредне опције и системске алатке</string>
+    <string name="onboarding_sources_patches_desc">Додирните да бисте видели све закрпе доступне из овог извора</string>
+    <string name="onboarding_sources_version_desc">Додирните верзију да бисте видели комплетне промене за овај извор</string>
+    <string name="onboarding_sources_prerelease_desc">Омогућите ово да бисте примали верзије закрпа у припреми из овог извора</string>
+    <string name="onboarding_appearance_tab_desc">Прилагодите изглед апликације: тему, боју акцента и позадину</string>
+    <string name="onboarding_appearance_theme_desc">Изаберите између светле, тамне или системске теме. Такође можете одабрати прилагођену боју акцента или омогућити Динамичку боју</string>
+    <string name="onboarding_expert_mode_desc">Омогућите Експертни режим да бисте откључали избор закрпа, прилагођене опције и друге напредне функције</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Системска картица</string>
+    <string name="onboarding_system_tab_desc">Управљање складиштем кључева, алати за увез/извоз и информације о апликацији</string>
+    <string name="onboarding_system_installer_desc">Изаберите како се закрпљене апликације инсталирају: стандардно, монтирање рута или Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Покрените закрпу у засебном процесу да бисте побољшали стабилност и контролисали коришћење меморије. Препоручује се за велике апликације</string>
+    <string name="onboarding_system_file_picker_desc">Омогућите да бисте користили уграђени прегледач датотека уместо системског бирача приликом избора APK-ова или складишта кључева</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Брзи водич кроз функције</string>
+    <string name="tour_prompt_desc">Желите брзи водич кроз кључне функције Морфе?</string>
+    <string name="tour_prompt_confirm">Покажи ми</string>
+    <string name="onboarding_restart_title">Водич кроз функције</string>
+    <string name="onboarding_restart_desc">Прођите кроз водич о кључним функцијама Морфе</string>
 </resources>

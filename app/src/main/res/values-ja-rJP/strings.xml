@@ -120,7 +120,7 @@
     <string name="home_download_instructions_download_button_toast">ここではなく、ウェブサイトにあるボタンをタップしてください😊</string>
     <string name="home_download_instructions_download_button_toast_2">それでは、下の「続行」をタップしてウェブサイトへ進んでください👆</string>
     <string name="home_download_instructions_download_button_toast_3">練習あるのみ！着実に上達していますよ！💪</string>
-    <string name="home_download_instructions_download_button_toast_4">まだまだ先です…🙈</string>
+    <string name="home_download_instructions_download_button_toast_4">ゴールはまだまだ先です…🙈</string>
     <string name="home_download_instructions_download_button_toast_5">分かりました。その熱意に敬意を表します🫡</string>
     <string name="home_download_instructions_download_button_toast_6">これであなたも Morphe の公式「ボタン」テスターです🏅</string>
     <string name="home_download_instructions_step3">ダウンロードが完了するまで待ち、その APK はまだ &lt;b&gt;インストールしない&lt;b&gt;</string>
@@ -820,27 +820,27 @@ morphe_header_custom_dark.png
     <string name="download_update_confirmation">アップデートをダウンロードしますか？</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
-    <string name="onboarding_step_of">%2$d 内の %1$d</string>
-    <string name="onboarding_sources_desc">アプリに適用できるパッチを提供するパッチソースを管理します</string>
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">パッチソースを管理できます。各ソースは、アプリに適用できるパッチを提供します</string>
     <string name="onboarding_swipe_title">ジェスチャー操作</string>
     <string name="onboarding_swipe_desc">アプリカードを右にスワイプすると、利用可能なパッチを表示できます。左にスワイプすると、ホーム画面からカードを非表示にできます</string>
-    <string name="onboarding_settings_desc">Morphe の外観、高度なオプション、およびシステムツールをカスタマイズします</string>
-    <string name="onboarding_sources_patches_desc">このソースから利用可能なすべてのパッチを表示するには、タップしてください</string>
-    <string name="onboarding_sources_version_desc">このソースの完全な変更ログを表示するには、バージョンをタップしてください</string>
-    <string name="onboarding_sources_prerelease_desc">これを有効にすると、このソースからプレリリース パッチバージョンを受信できます</string>
-    <string name="onboarding_appearance_tab_desc">アプリの見た目をカスタマイズします: テーマ、アクセントカラー、背景</string>
-    <string name="onboarding_appearance_theme_desc">ライト、ダーク、またはシステムテーマの中から選択します。カスタムアクセントカラーを選択したり、Dynamic Color を有効にしたりすることもできます</string>
-    <string name="onboarding_expert_mode_desc">Expert モードを有効にすると、パッチの選択、カスタムオプション、その他の高度な機能のロックを解除できます</string>
+    <string name="onboarding_settings_desc">Morphe の外観設定や高度な設定、システムツールをカスタマイズできます</string>
+    <string name="onboarding_sources_patches_desc">タップして、このソースで利用できるパッチ一覧を表示できます</string>
+    <string name="onboarding_sources_version_desc">バージョンをタップすると、このソースの変更履歴を確認できます</string>
+    <string name="onboarding_sources_prerelease_desc">有効にすると、このソースからプレリリース版のパッチを受け取れます</string>
+    <string name="onboarding_appearance_tab_desc">アプリの見た目をカスタマイズできます。テーマ、アクセントカラー、背景を変更できます</string>
+    <string name="onboarding_appearance_theme_desc">ライト、ダーク、またはシステムテーマを選択できます。カスタムアクセントカラーの設定や、ダイナミックカラーの有効化もできます</string>
+    <string name="onboarding_expert_mode_desc">エキスパートモードを有効にすると、パッチ セレクションやカスタムオプションなどの高度な機能を利用できるようになります</string>
     <!-- Translate "System" the same way as the System settings tab -->
     <string name="onboarding_system_tab_title">システムタブ</string>
-    <string name="onboarding_system_tab_desc">キーストアの管理、インポート/エクスポートツール、およびアプリ情報</string>
-    <string name="onboarding_system_installer_desc">パッチされたアプリのインストール方法を選択します: 標準、ルートマウント、または Shizuku</string>
-    <string name="onboarding_system_process_runtime_desc">安定性とメモリ使用量の制御を改善するために、パッチ処理を別のプロセスで実行します。大規模なアプリには推奨されます</string>
-    <string name="onboarding_system_file_picker_desc">APK またはキーストアを選択する際に、システムピッカーの代わりに組み込みのファイルブラウザを使用するように設定します</string>
+    <string name="onboarding_system_tab_desc">キーストア管理、インポート/エクスポートツール、アプリ情報を利用できます</string>
+    <string name="onboarding_system_installer_desc">パッチ適用済みアプリのインストール方法を、標準、Root マウント、または Shizuku から選択できます</string>
+    <string name="onboarding_system_process_runtime_desc">安定性を向上させ、メモリ使用量を抑えるためにパッチ処理を別プロセスで実行します。大きなアプリにおすすめです</string>
+    <string name="onboarding_system_file_picker_desc">有効にすると、APK やキーストアを選択する際に、システム標準ではなく内蔵ファイルブラウザーを使用します</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
-    <string name="tour_prompt_title">クイック機能ツアー</string>
-    <string name="tour_prompt_desc">Morphe の主な機能の簡単なツアーを試してみませんか？</string>
-    <string name="tour_prompt_confirm">案内してください</string>
-    <string name="onboarding_restart_title">機能ツアー</string>
-    <string name="onboarding_restart_desc">Morphe の主な機能を紹介するガイド付きツアーに参加しましょう</string>
+    <string name="tour_prompt_title">かんたん機能ガイド</string>
+    <string name="tour_prompt_desc">Morphe の主要な機能を簡単なツアーで見てみませんか？</string>
+    <string name="tour_prompt_confirm">ガイドを開始</string>
+    <string name="onboarding_restart_title">機能ガイド</string>
+    <string name="onboarding_restart_desc">Morphe の主要な機能をガイド付きで紹介します</string>
 </resources>

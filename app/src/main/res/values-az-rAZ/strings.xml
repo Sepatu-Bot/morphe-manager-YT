@@ -733,6 +733,9 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="retry">Təkrar sına</string>
     <string name="add">Əlavə et</string>
     <string name="close">Qapa</string>
+    <string name="back">Geri</string>
+    <string name="next">Növbəti</string>
+    <string name="done">Bitdi</string>
     <string name="skip">Ötür</string>
     <string name="clear">Təmizlə</string>
     <string name="delete">Sil</string>
@@ -816,6 +819,27 @@ Hələ də davam etmək istəyirsiniz?"</string>
     <string name="download_update_confirmation">Yeniləmə yüklənilsin?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">​%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">Yamaq mənbələrinizi idarə edin. Hər mənbə tətbiqlərinizə tətbiq oluna bilən yamaqlar təmin edir</string>
+    <string name="onboarding_swipe_title">Sürüşdürmə jestləri</string>
+    <string name="onboarding_swipe_desc">Mövcud yamaqlara baxmaq üçün tətbiq kartında sağa sürüşdür. Kartı əsas ekrandan gizlətmək üçün sola sürüşdür</string>
+    <string name="onboarding_settings_desc">Morphe-ni fərdiləşdir: görünüş, qabaqcıl seçimlər və sistem alətləri</string>
+    <string name="onboarding_sources_patches_desc">Bu mənbədən əlçatan bütün yamaqlara baxmaq üçün toxun</string>
+    <string name="onboarding_sources_version_desc">Bu mənbə üçün tam dəyişiklik jurnalına baxmaq məqsədilə versiyaya toxun</string>
+    <string name="onboarding_sources_prerelease_desc">Bu mənbədən ilkin buraxılış yamaq versiyalarını almaq üçün bunu aktivləşdir</string>
+    <string name="onboarding_appearance_tab_desc">Tətbiq görünüşünü fərdiləşdir: kolorit, cila rəngi və fon</string>
+    <string name="onboarding_appearance_theme_desc">İşıqlı, qaranlıq və ya sistem koloriti arasında seç. Həmçinin fərdi cila rəngi seçə və ya Dinamik Rəngi aktivləşdirə bilərsiniz</string>
+    <string name="onboarding_expert_mode_desc">Yamaq seçimini, fərdi seçimləri və digər qabaqcıl xüsusiyyətləri açmaq üçün Mütəxəssis Rejimin aktivləşdir</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Sistem tabeli</string>
+    <string name="onboarding_system_tab_desc">Açar ehtiyatının idarə olunması, idxal/ixrac alətləri və tətbiq məlumatı</string>
+    <string name="onboarding_system_installer_desc">Yamaqlanmış tətbiqləri necə quraşdırdığını seç: standart, root montajlama və ya Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Sabitliyi artırmaq və yaddaş istifadəsinə nəzarət etmək üçün yamaqlanmanı ayrıca emalda işlət. Böyük tətbiqlər üçün tövsiyə olunur</string>
+    <string name="onboarding_system_file_picker_desc">APK və ya açar ehtiyatları seçəndə sistem seçicisi əvəzinə qurulu fayl tədqiqin istifadə etmək məqsədilə aktivləşdir</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Sürətli xüsusiyyət tanışlığı</string>
+    <string name="tour_prompt_desc">Morphe-nin əsas xüsusiyyətlərinə qısa baxış istəyirsiniz?</string>
+    <string name="tour_prompt_confirm">Mənə göstər</string>
+    <string name="onboarding_restart_title">Xüsusiyyət tanışlığı</string>
+    <string name="onboarding_restart_desc">Morphe-nin əsas xüsusiyyətlərinin bələdçi turuna başla</string>
 </resources>

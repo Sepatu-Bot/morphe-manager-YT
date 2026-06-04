@@ -735,6 +735,8 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="add">Añadir</string>
     <string name="close">Cerrar</string>
     <string name="back">Atrás</string>
+    <string name="next">Siguiente</string>
+    <string name="done">Listo</string>
     <string name="skip">Omitir</string>
     <string name="clear">Limpiar</string>
     <string name="delete">Eliminar</string>
@@ -818,6 +820,27 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="download_update_confirmation">¿Descargar actualización?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d de %2$d</string>
+    <string name="onboarding_sources_desc">Administra tus fuentes de parches. Cada fuente proporciona parches que se pueden aplicar a tus aplicaciones.</string>
+    <string name="onboarding_swipe_title">Gestos de deslizamiento</string>
+    <string name="onboarding_swipe_desc">Desliza el dedo hacia la derecha en una tarjeta de aplicación para ver los parches disponibles. Desliza el dedo hacia la izquierda para ocultar la tarjeta de la pantalla de inicio.</string>
+    <string name="onboarding_settings_desc">Personaliza Morphe: apariencia, opciones avanzadas y herramientas del sistema.</string>
+    <string name="onboarding_sources_patches_desc">Toca para ver todos los parches disponibles de esta fuente.</string>
+    <string name="onboarding_sources_version_desc">Toca la versión para ver el registro de cambios completo de esta fuente.</string>
+    <string name="onboarding_sources_prerelease_desc">Activa esta opción para recibir versiones de parches pre-lanzamiento de esta fuente.</string>
+    <string name="onboarding_appearance_tab_desc">Personaliza el aspecto de la aplicación: tema, color de acento y fondo.</string>
+    <string name="onboarding_appearance_theme_desc">Elige entre tema claro, oscuro o del sistema. También puedes elegir un color de acento personalizado o activar Color dinámico.</string>
+    <string name="onboarding_expert_mode_desc">Activa el Modo Experto para desbloquear la selección de parches, opciones personalizadas y otras funciones avanzadas.</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Pestaña del sistema</string>
+    <string name="onboarding_system_tab_desc">Administración de almacenes de claves, herramientas de importación/exportación e información de la aplicación.</string>
+    <string name="onboarding_system_installer_desc">Elige cómo se instalan las aplicaciones parcheadas: estándar, montaje root o Shizuku.</string>
+    <string name="onboarding_system_process_runtime_desc">Ejecuta el parcheo en un proceso separado para mejorar la estabilidad y controlar el uso de la memoria. Recomendado para aplicaciones grandes.</string>
+    <string name="onboarding_system_file_picker_desc">Activa esta opción para usar el explorador de archivos integrado en lugar del selector del sistema al seleccionar archivos APK o almacenes de claves.</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Tour rápido de funciones</string>
+    <string name="tour_prompt_desc">¿Quieres un tour rápido de las funciones clave de Morphe?</string>
+    <string name="tour_prompt_confirm">Muéstrame</string>
+    <string name="onboarding_restart_title">Tour de funciones</string>
+    <string name="onboarding_restart_desc">Realiza un tour guiado de las funciones clave de Morphe.</string>
 </resources>

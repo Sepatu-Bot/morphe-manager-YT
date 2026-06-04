@@ -735,9 +735,10 @@ Kích thước hình ảnh yêu cầu:
     <string name="retry">Thử lại</string>
     <string name="add">Thêm</string>
     <string name="close">Đóng</string>
-    <string name="back">Thôi</string>
+    <string name="back">Trước</string>
     <string name="next">Tiếp</string>
-    <string name="skip">Bỏ qua</string>
+    <string name="done">Xong</string>
+    <string name="skip">Thôi</string>
     <string name="clear">Dọn dẹp</string>
     <string name="delete">Xoá</string>
     <string name="remove">Xóa</string>
@@ -818,6 +819,27 @@ Kích thước hình ảnh yêu cầu:
     <string name="download_update_confirmation">Tải bản cập nhật?</string>
     <!-- Onboarding coach marks -->
     <!-- %1$d = current step number, %2$d = total number of steps (e.g. "3 of 13") -->
+    <string name="onboarding_step_of">%1$d / %2$d</string>
+    <string name="onboarding_sources_desc">Quản lý các nguồn vá. Mỗi nguồn cung cấp các bản vá có thể được áp dụng cho ứng dụng của bạn</string>
+    <string name="onboarding_swipe_title">Cử chỉ vuốt</string>
+    <string name="onboarding_swipe_desc">Vuốt phải để xem bản vá. Vuốt trái để ẩn thẻ khỏi màn hình chính</string>
+    <string name="onboarding_settings_desc">Tùy chỉnh Morphe: giao diện, tùy chọn nâng cao và công cụ hệ thống</string>
+    <string name="onboarding_sources_patches_desc">Bấm để xem tất cả các bản vá từ nguồn</string>
+    <string name="onboarding_sources_version_desc">Bấm vào phiên bản để xem chi tiết lịch sử cập nhật của nguồn</string>
+    <string name="onboarding_sources_prerelease_desc">Bật cái này để nhận bản vá được phát hành trước từ nguồn</string>
+    <string name="onboarding_appearance_tab_desc">Tùy chỉnh giao diện của ứng dụng: chủ đề, màu nổi bật và nền</string>
+    <string name="onboarding_appearance_theme_desc">Chọn chủ đề sáng, tối hoặc theo cài đặt hệ thống. Ngoài ra, bạn cũng có thể tùy chỉnh màu nổi bật hoặc bật Dynamic Color</string>
+    <string name="onboarding_expert_mode_desc">Bật chế độ Chuyên gia để mở khóa tính năng tự chọn bản vá, tùy chỉnh bản vá và nhiều tính năng khác</string>
     <!-- Translate "System" the same way as the System settings tab -->
+    <string name="onboarding_system_tab_title">Tab hệ thống</string>
+    <string name="onboarding_system_tab_desc">Quản lý kho khóa, công cụ nhập xuất và thông tin ứng dụng</string>
+    <string name="onboarding_system_installer_desc">Chọn phương thức cài đặt cho ứng dụng đã vá: tiêu chuẩn, gắn kết root hoặc Shizuku</string>
+    <string name="onboarding_system_process_runtime_desc">Chạy trình vá trong tiến trình riêng để cải thiện độ ổn định và quản lý bộ nhớ hiệu quả hơn. Nên dùng với các ứng dụng có kích thước lớn</string>
+    <string name="onboarding_system_file_picker_desc">Bật để sử dụng trình duyệt tệp tích hợp thay vì trình chọn hệ thống khi chọn APK hoặc kho khóa</string>
     <!-- Tour prompt dialog shown after first successful patch install -->
+    <string name="tour_prompt_title">Khám phá nhanh</string>
+    <string name="tour_prompt_desc">Bạn muốn xem qua các tính năng nổi bật của Morphe không? Nhanh thôi</string>
+    <string name="tour_prompt_confirm">Cho tôi xem</string>
+    <string name="onboarding_restart_title">Khám phá tính năng</string>
+    <string name="onboarding_restart_desc">Xem hướng dẫn nhanh về các tính năng nổi bật của Morphe</string>
 </resources>
