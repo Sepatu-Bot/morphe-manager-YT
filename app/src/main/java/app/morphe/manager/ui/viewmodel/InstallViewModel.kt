@@ -20,6 +20,7 @@ import app.morphe.manager.util.PM
 import app.morphe.manager.util.sha256OrNull
 import app.morphe.manager.util.simpleMessage
 import app.morphe.manager.util.toast
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -394,10 +395,7 @@ class InstallViewModel : ViewModel(), KoinComponent {
                 onPersistApp(targetPackageName, InstallType.DEFAULT)
                 handleInstallSuccess(targetPackageName)
             }
-            is InstallResult.Conflict -> {
-                Log.i(TAG, "Signature conflict for $targetPackageName")
-                installState = InstallState.Conflict(targetPackageName)
-            }
+            is InstallResult.Conflict -> handleConflict(targetPackageName, result.message)
             is InstallResult.Failure -> handleInstallError(
                 app.getString(R.string.install_app_fail, result.message ?: "Unknown error")
             )
@@ -448,10 +446,7 @@ class InstallViewModel : ViewModel(), KoinComponent {
                 installState = InstallState.Installed(targetPackageName)
                 app.toast(app.getString(R.string.install_app_success))
             }
-            is InstallResult.Conflict -> {
-                Log.i(TAG, "Signature conflict for $targetPackageName")
-                installState = InstallState.Conflict(targetPackageName)
-            }
+            is InstallResult.Conflict -> handleConflict(targetPackageName, result.message)
             is InstallResult.Failure -> handleInstallError(
                 app.getString(R.string.install_app_fail, result.message ?: "Unknown error")
             )
@@ -531,8 +526,8 @@ class InstallViewModel : ViewModel(), KoinComponent {
         externalInstallStartTime = System.currentTimeMillis()
 
         // Use a lightweight sentinel so handleExternalInstallSuccess can match the package
-        // without a full External plan — we repurpose pendingExternalInstall's expectedPackage
-        // by creating a minimal sentinel object just for the package name check.
+        // without a full External plan - we repurpose pendingExternalInstall's expectedPackage
+        // by creating a minimal sentinel object just for the package name check
         pendingIntentFallbackPackage = targetPackageName
 
         sessionInstaller.launchIntentInstall(outputFile)
@@ -943,9 +938,19 @@ class InstallViewModel : ViewModel(), KoinComponent {
         installState = InstallState.Error(message)
     }
 
+    private fun handleConflict(targetPackageName: String, conflictMessage: String?) {
+        Log.i(TAG, "Signature conflict for $targetPackageName")
+        if (pm.getPackageInfo(targetPackageName) != null) {
+            installState = InstallState.Conflict(targetPackageName)
+        } else {
+            // Target not installed - not a real signature conflict (e.g. renamed package)
+            handleInstallError(app.getString(R.string.install_app_fail, conflictMessage ?: "Unknown error"))
+        }
+    }
+
     companion object {
         private const val TAG = "Morphe Install"
         private const val EXTERNAL_INSTALL_TIMEOUT_MS = 60_000L
-        private const val INSTALL_MONITOR_POLL_MS = 1000L
+        private val INSTALL_MONITOR_POLL_MS = 1.seconds
     }
 }
