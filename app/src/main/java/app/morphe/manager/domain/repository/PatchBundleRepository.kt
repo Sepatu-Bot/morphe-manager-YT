@@ -43,6 +43,7 @@ import java.nio.ByteOrder
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 import java.util.Locale
+import kotlin.time.Duration.Companion.seconds
 import app.morphe.manager.data.room.bundles.Source as SourceInfo
 
 class PatchBundleRepository(
@@ -82,12 +83,9 @@ class PatchBundleRepository(
             .map { BundleAppMetadata.buildFrom(it) }
             .stateIn(scope, SharingStarted.Eagerly, emptyMap())
 
-    fun scopedBundleInfoFlow(packageName: String, version: String?) = enabledBundlesInfoFlow.map {
+    fun scopedBundleInfoFlow(packageName: String, version: String?, versionCode: Long? = null) = enabledBundlesInfoFlow.map {
         it.map { (_, bundleInfo) ->
-            bundleInfo.forPackage(
-                packageName,
-                version
-            )
+            bundleInfo.forPackage(packageName, version, versionCode)
         }
     }
 
@@ -140,7 +138,7 @@ class PatchBundleRepository(
         if (!isDone) return
 
         bundleImportAutoClearJob = scope.launch {
-            delay(8_000)
+            delay(8.seconds)
             val current = bundleImportProgressFlow.value ?: return@launch
             val currentDownloadComplete = current.bytesTotal?.takeIf { it > 0L }?.let { total ->
                 current.bytesRead >= total
@@ -1535,7 +1533,7 @@ class PatchBundleRepository(
                 bundleUpdateProgressFlow.value = noInternetProgress
 
                 scope.launch {
-                    delay(3500)
+                    delay(3.5.seconds)
                     if (bundleUpdateProgressFlow.value == noInternetProgress) {
                         bundleUpdateProgressFlow.value = null
                     }
@@ -1554,7 +1552,7 @@ class PatchBundleRepository(
                 )
                 bundleUpdateProgressFlow.value = skippedProgress
                 scope.launch {
-                    delay(3500)
+                    delay(3.5.seconds)
                     if (bundleUpdateProgressFlow.value == skippedProgress) {
                         bundleUpdateProgressFlow.value = null
                     }
@@ -1676,7 +1674,7 @@ class PatchBundleRepository(
                 bundleUpdateProgressFlow.value = errorProgress
 
                 scope.launch {
-                    delay(3500)
+                    delay(3.5.seconds)
                     if (bundleUpdateProgressFlow.value == errorProgress) {
                         bundleUpdateProgressFlow.value = null
                     }
@@ -1699,7 +1697,7 @@ class PatchBundleRepository(
                 bundleUpdateProgressFlow.value = noUpdatesProgress
 
                 scope.launch {
-                    delay(3500)
+                    delay(3.5.seconds)
                     if (bundleUpdateProgressFlow.value == noUpdatesProgress) {
                         bundleUpdateProgressFlow.value = null
                     }
@@ -1743,7 +1741,7 @@ class PatchBundleRepository(
             bundleUpdateProgressFlow.value = successProgress
 
             scope.launch {
-                delay(3500)
+                delay(3.5.seconds)
                 if (bundleUpdateProgressFlow.value == successProgress) {
                     bundleUpdateProgressFlow.value = null
                 }
