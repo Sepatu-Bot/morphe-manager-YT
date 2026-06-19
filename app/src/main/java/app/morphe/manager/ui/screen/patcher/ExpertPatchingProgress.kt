@@ -61,6 +61,7 @@ import app.morphe.manager.ui.screen.patcher.game.MiniGameState
 import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.ui.viewmodel.PatcherViewModel
 import kotlinx.coroutines.delay
+import kotlin.time.Duration.Companion.milliseconds
 
 /** Brand blue — start of the progress gradient. */
 private val PatcherProgressBlueColor = Color(0xFF1E5AA8)
@@ -268,7 +269,7 @@ fun ExpertPatchingInProgress(
         if (rawLogs.isNotEmpty()) {
             // Small delay so AnimatedVisibility places the new item in layout
             // before we scroll to it - otherwise the item stays off-screen.
-            delay(50)
+            delay(50.milliseconds)
             listState.animateScrollToItem(rawLogs.size - 1)
         }
     }
@@ -279,7 +280,7 @@ fun ExpertPatchingInProgress(
             .navigationBarsPadding()
     ) {
         // Content area
-        if (windowSize.useTwoColumnLayout) {
+        if (isLandscape()) {
             // Landscape: header + action bar left, log right
             Row(
                 modifier = Modifier
@@ -365,7 +366,7 @@ fun ExpertPatchingInProgress(
         }
 
         // Portrait-only: action bar below content
-        if (!windowSize.useTwoColumnLayout) {
+        if (!isLandscape()) {
             Spacer(Modifier.height(12.dp))
 
             PatcherBottomActionBar(

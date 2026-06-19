@@ -12,6 +12,7 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.*
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
@@ -37,6 +38,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
@@ -188,7 +190,7 @@ fun SectionsLayout(
             }
 
             // Section 5: Bottom action bar - тільки для одноколонкового (portrait) режиму
-            if (!windowSize.useTwoColumnLayout) {
+            if (!isLandscape()) {
                 HomeBottomActionBar(
                     onBundlesClick = onBundlesClick,
                     onSettingsClick = onSettingsClick,
@@ -202,7 +204,8 @@ fun SectionsLayout(
             }
         }
 
-        // Section 1: Notifications overlay
+        // Section 1: Notifications overlay - matches maxCardWidth in AdaptiveContent
+        val maxCardWidth = if (isLandscape()) 700.dp else 560.dp
         NotificationsOverlay(
             hasManagerUpdate = hasManagerUpdate,
             onShowUpdateDetails = onShowUpdateDetails,
@@ -210,7 +213,7 @@ fun SectionsLayout(
             snackbarStatus = snackbarStatus,
             bundleUpdateProgress = bundleUpdateProgress,
             modifier = Modifier
-                .fillMaxWidth()
+                .widthIn(max = maxCardWidth)
                 .align(Alignment.TopCenter)
                 .statusBarsPadding()
         )
@@ -250,93 +253,87 @@ private fun AdaptiveContent(
 ) {
     val contentPadding = windowSize.contentPadding
     val itemSpacing = windowSize.itemSpacing
-    val useTwoColumns = windowSize.useTwoColumnLayout
+    val useTwoColumns = isLandscape()
+    val maxCardWidth = if (useTwoColumns) 700.dp else 560.dp
 
     // True empty state: loaded and no items from any bundle: all disabled or no sources
     val isAppsEmpty by remember(homeAppItems, installedAppsLoading) {
         derivedStateOf { !installedAppsLoading && homeAppItems.isEmpty() }
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(itemSpacing)
-    ) {
+    Column(modifier = Modifier.fillMaxSize()) {
         if (useTwoColumns) {
-            // Two-column layout for medium/expanded windows (landscape)
+            // Sidebar layout for landscape
             Row(
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
-                    .padding(horizontal = contentPadding),
-                horizontalArrangement = Arrangement.spacedBy(itemSpacing * 2),
+                    .statusBarsPadding(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Left column: Greeting + Bottom action bar
+                HomeSidebarPanel(
+                    showSearchButton = showSearchButton && !isAppsEmpty,
+                    searchActive = searchVisible,
+                    isExpertModeEnabled = isExpertModeEnabled,
+                    onSearchClick = onSearchToggle,
+                    onBundlesClick = onBundlesClick,
+                    onSettingsClick = onSettingsClick,
+                    onSourcesPositioned = onboardingState?.let { s -> { b -> s.sourcesButtonBounds = b } },
+                    onSettingsPositioned = onboardingState?.let { s -> { b -> s.settingsButtonBounds = b } }
+                )
+                VerticalDivider()
                 Column(
                     modifier = Modifier
-                        .weight(0.5f)
-                        .fillMaxHeight(),
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .padding(horizontal = contentPadding),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
-                        GreetingSection(message = greetingMessage)
+                    if (!greetingMessage.isNullOrEmpty()) {
+                        GreetingSection(
+                            message = greetingMessage,
+                            modifier = Modifier.widthIn(max = maxCardWidth).fillMaxWidth()
+                        )
+                        Spacer(modifier = Modifier.height(itemSpacing))
                     }
-
-                    // Section 5: Bottom action bar
-                    HomeBottomActionBar(
-                        onBundlesClick = onBundlesClick,
-                        onSettingsClick = onSettingsClick,
-                        isExpertModeEnabled = isExpertModeEnabled,
-                        showSearchButton = showSearchButton && !isAppsEmpty,
-                        searchActive = searchVisible,
-                        onSearchClick = onSearchToggle,
-                        onSourcesPositioned = onboardingState?.let { s -> { b -> s.sourcesButtonBounds = b } },
-                        onSettingsPositioned = onboardingState?.let { s -> { b -> s.settingsButtonBounds = b } },
-                        modifier = Modifier.padding(bottom = 8.dp)
-                    )
-                }
-
-                // Right column: App buttons + Other apps
-                Column(
-                    modifier = Modifier
-                        .weight(0.5f)
-                        .fillMaxHeight(),
-                    verticalArrangement = Arrangement.spacedBy(itemSpacing)
-                ) {
-                    MainAppsSection(
-                        homeAppItems = homeAppItems,
-                        itemSpacing = itemSpacing,
-                        onAppClick = onAppClick,
-                        onHideApp = onHideApp,
-                        onHideMultiple = onHideMultiple,
-                        onUnhideApp = onUnhideApp,
-                        onShowPatches = onShowPatches,
-                        showGestureHint = showGestureHint,
-                        onGestureHintShown = onGestureHintShown,
-                        hiddenAppItems = hiddenAppItems,
-                        installedAppsLoading = installedAppsLoading,
-                        searchVisible = searchVisible,
-                        searchQuery = searchQuery,
-                        onSearchQueryChange = onSearchQueryChange,
-                        onBundlesClick = onBundlesClick,
-                        onboardingState = onboardingState,
-                        showFadeOverlay = false,
-                        onSaveOrder = onSaveOrder,
-                        onResetOrder = onResetOrder,
-                        modifier = Modifier.weight(1f)
-                    )
-
-                    // Section 4: Other apps - hidden when no apps available or bundles loading
+                    Box(modifier = Modifier.weight(1f, fill = false)) {
+                        MainAppsSection(
+                            homeAppItems = homeAppItems,
+                            itemSpacing = itemSpacing,
+                            maxCardWidth = maxCardWidth,
+                            onAppClick = onAppClick,
+                            onHideApp = onHideApp,
+                            onHideMultiple = onHideMultiple,
+                            onUnhideApp = onUnhideApp,
+                            onShowPatches = onShowPatches,
+                            showGestureHint = showGestureHint,
+                            onGestureHintShown = onGestureHintShown,
+                            hiddenAppItems = hiddenAppItems,
+                            installedAppsLoading = installedAppsLoading,
+                            searchVisible = searchVisible,
+                            searchQuery = searchQuery,
+                            onSearchQueryChange = onSearchQueryChange,
+                            onBundlesClick = onBundlesClick,
+                            onboardingState = onboardingState,
+                            showFadeOverlay = false,
+                            onSaveOrder = onSaveOrder,
+                            onResetOrder = onResetOrder,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
                     AnimatedVisibility(
                         visible = !isAppsEmpty && showOtherAppsButton,
                         enter = MorpheAnimations.expandFadeEnter,
                         exit = MorpheAnimations.shrinkFadeExit
                     ) {
-                        OtherAppsSection(
-                            onClick = onOtherAppsClick,
-                            modifier = Modifier.fillMaxWidth()
-                        )
+                        Column {
+                            Spacer(modifier = Modifier.height(itemSpacing))
+                            OtherAppsSection(
+                                onClick = onOtherAppsClick,
+                                modifier = Modifier.widthIn(max = maxCardWidth).fillMaxWidth()
+                            )
+                        }
                     }
                 }
             }
@@ -364,6 +361,7 @@ private fun AdaptiveContent(
                         homeAppItems = homeAppItems,
                         itemSpacing = itemSpacing,
                         horizontalPadding = contentPadding,
+                        maxCardWidth = maxCardWidth,
                         onAppClick = onAppClick,
                         onHideApp = onHideApp,
                         onHideMultiple = onHideMultiple,
@@ -392,12 +390,19 @@ private fun AdaptiveContent(
                 ) {
                     Column {
                         Spacer(modifier = Modifier.height(itemSpacing))
-                        OtherAppsSection(
-                            onClick = onOtherAppsClick,
+                        Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = contentPadding)
-                        )
+                                .padding(horizontal = contentPadding),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            OtherAppsSection(
+                                onClick = onOtherAppsClick,
+                                modifier = Modifier
+                                    .widthIn(max = maxCardWidth - contentPadding * 2)
+                                    .fillMaxWidth()
+                            )
+                        }
                     }
                 }
             }
@@ -418,22 +423,12 @@ fun NotificationsOverlay(
     bundleUpdateProgress: PatchBundleRepository.BundleUpdateProgress?,
     modifier: Modifier = Modifier
 ) {
-    val windowSize = rememberWindowSize()
-    val useTwoColumns = windowSize.useTwoColumnLayout
-
     Box(
         modifier = modifier,
-        contentAlignment = if (useTwoColumns) Alignment.TopStart else Alignment.TopCenter
+        contentAlignment = Alignment.TopCenter
     ) {
         Column(
-            modifier = Modifier
-                .then(
-                    if (useTwoColumns) {
-                        Modifier.fillMaxWidth(0.5f) // 50% width in landscape
-                    } else {
-                        Modifier.fillMaxWidth() // Full width in portrait
-                    }
-                ),
+            modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             // Manager update snackbar
@@ -768,6 +763,7 @@ fun MainAppsSection(
     homeAppItems: List<HomeAppItem>,
     itemSpacing: Dp = 16.dp,
     horizontalPadding: Dp = 0.dp,
+    maxCardWidth: Dp = 500.dp,
     onAppClick: (HomeAppItem) -> Unit,
     onHideApp: (String) -> Unit,
     onHideMultiple: (Set<String>) -> Unit = {},
@@ -940,7 +936,7 @@ fun MainAppsSection(
             } else {
                 Box(
                     modifier = Modifier
-                        .widthIn(max = 500.dp)
+                        .widthIn(max = maxCardWidth)
                         .fillMaxWidth()
                 ) {
                     Column(modifier = Modifier.fillMaxWidth()) {
@@ -1690,6 +1686,8 @@ private fun MultiSelectBar(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
+                        val landscape = isLandscape()
+
                         AnimatedContent(
                             targetState = selectedCount,
                             transitionSpec = MorpheAnimations.compactCounterTransitionSpec,
@@ -1702,45 +1700,57 @@ private fun MultiSelectBar(
                             )
                         }
 
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(12.dp)
-                        ) {
-                            ActionPillButton(
-                                onClick = withToast(selectAllDone, onSelectAll),
-                                icon = Icons.Outlined.DoneAll,
-                                contentDescription = selectAllLabel,
-                                tooltip = selectAllLabel,
-                                enabled = selectedCount < totalCount,
-                                modifier = Modifier.weight(1f)
-                            )
-                            ActionPillButton(
-                                onClick = withToast(deselectAllDone, onDeselectAll),
-                                icon = Icons.Outlined.RemoveDone,
-                                contentDescription = deselectAllLabel,
-                                tooltip = deselectAllLabel,
-                                enabled = selectedCount > 0,
-                                modifier = Modifier.weight(1f)
-                            )
-                            ActionPillButton(
-                                onClick = onCancel,
-                                icon = Icons.Outlined.Close,
-                                contentDescription = cancelLabel,
-                                tooltip = cancelLabel,
-                                modifier = Modifier.weight(1f)
-                            )
-                            ActionPillButton(
-                                onClick = withToast(actionDoneMessage, onAction),
-                                icon = actionIcon,
-                                contentDescription = actionContentDescription,
-                                tooltip = actionContentDescription,
-                                enabled = selectedCount > 0,
-                                colors = actionColors,
-                                modifier = Modifier.weight(1f)
-                            )
+                        BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+                            val btnCount = if (showReorderButton && landscape) 5 else 4
+                            val btnWidth = (maxWidth - 12.dp * (btnCount - 1)) / btnCount
+                            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                                ActionPillButton(
+                                    onClick = withToast(selectAllDone, onSelectAll),
+                                    icon = Icons.Outlined.DoneAll,
+                                    contentDescription = selectAllLabel,
+                                    tooltip = selectAllLabel,
+                                    enabled = selectedCount < totalCount,
+                                    modifier = Modifier.width(btnWidth)
+                                )
+                                ActionPillButton(
+                                    onClick = withToast(deselectAllDone, onDeselectAll),
+                                    icon = Icons.Outlined.RemoveDone,
+                                    contentDescription = deselectAllLabel,
+                                    tooltip = deselectAllLabel,
+                                    enabled = selectedCount > 0,
+                                    modifier = Modifier.width(btnWidth)
+                                )
+                                ActionPillButton(
+                                    onClick = onCancel,
+                                    icon = Icons.Outlined.Close,
+                                    contentDescription = cancelLabel,
+                                    tooltip = cancelLabel,
+                                    modifier = Modifier.width(btnWidth)
+                                )
+                                ActionPillButton(
+                                    onClick = withToast(actionDoneMessage, onAction),
+                                    icon = actionIcon,
+                                    contentDescription = actionContentDescription,
+                                    tooltip = actionContentDescription,
+                                    enabled = selectedCount > 0,
+                                    colors = actionColors,
+                                    modifier = Modifier.width(btnWidth)
+                                )
+                                // In landscape, reorder fits as 5th button in the same row
+                                if (showReorderButton && landscape) {
+                                    ActionPillButton(
+                                        onClick = onEnterReorder,
+                                        icon = Icons.Outlined.Reorder,
+                                        contentDescription = reorderListLabel,
+                                        tooltip = reorderListLabel,
+                                        modifier = Modifier.width(btnWidth)
+                                    )
+                                }
+                            }
                         }
 
-                        if (showReorderButton) {
+                        // Portrait: reorder stays below as a full-width button with label
+                        if (showReorderButton && !landscape) {
                             ActionPillButton(
                                 onClick = onEnterReorder,
                                 icon = Icons.Outlined.Reorder,
@@ -3335,6 +3345,116 @@ fun AppLoadingCard(
                     baseColor = Color.White.copy(alpha = 0.15f)
                 )
             }
+        }
+    }
+}
+
+/**
+ * Landscape sidebar panel: nav items (Search / Sources / Settings) centered vertically.
+ */
+@Composable
+private fun HomeSidebarPanel(
+    showSearchButton: Boolean,
+    searchActive: Boolean,
+    isExpertModeEnabled: Boolean,
+    onSearchClick: () -> Unit,
+    onBundlesClick: () -> Unit,
+    onSettingsClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    onSourcesPositioned: ((Rect) -> Unit)? = null,
+    onSettingsPositioned: ((Rect) -> Unit)? = null
+) {
+    Column(
+        modifier = modifier
+            .width(220.dp)
+            .fillMaxHeight()
+            .navigationBarsPadding()
+            .padding(horizontal = 12.dp, vertical = 24.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterVertically)
+    ) {
+        if (showSearchButton) {
+            HomeSidebarNavItem(
+                icon = if (searchActive) Icons.Outlined.SearchOff else Icons.Outlined.Search,
+                label = stringResource(R.string.home_search_apps),
+                isSelected = searchActive,
+                onClick = onSearchClick
+            )
+        }
+        HomeSidebarNavItem(
+            icon = Icons.Outlined.Source,
+            label = stringResource(R.string.sources),
+            isSelected = false,
+            onClick = onBundlesClick,
+            modifier = Modifier.then(
+                if (onSourcesPositioned != null) Modifier.onGloballyPositioned { coords ->
+                    onSourcesPositioned(coords.boundsInWindow())
+                } else Modifier
+            )
+        )
+        HomeSidebarNavItem(
+            icon = if (isExpertModeEnabled) Icons.Outlined.Engineering else Icons.Outlined.Settings,
+            label = stringResource(R.string.settings),
+            isSelected = false,
+            onClick = onSettingsClick,
+            modifier = Modifier.then(
+                if (onSettingsPositioned != null) Modifier.onGloballyPositioned { coords ->
+                    onSettingsPositioned(coords.boundsInWindow())
+                } else Modifier
+            )
+        )
+    }
+}
+
+/**
+ * Single sidebar nav item: 52dp tall, 16dp rounded corners, animated colors.
+ */
+@Composable
+private fun HomeSidebarNavItem(
+    icon: ImageVector,
+    label: String,
+    isSelected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val containerColor by animateColorAsState(
+        targetValue = if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent,
+        label = "sidebarNavItemBg"
+    )
+    val contentColor by animateColorAsState(
+        targetValue = if (isSelected) MaterialTheme.colorScheme.onPrimaryContainer
+        else MaterialTheme.colorScheme.onSurfaceVariant,
+        label = "sidebarNavItemFg"
+    )
+    Surface(
+        onClick = onClick,
+        modifier = modifier
+            .fillMaxWidth()
+            .height(52.dp)
+            .semantics { role = Role.Button; selected = isSelected },
+        color = containerColor,
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = contentColor,
+                modifier = Modifier.size(22.dp)
+            )
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                color = contentColor,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
         }
     }
 }

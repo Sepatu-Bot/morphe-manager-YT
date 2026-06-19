@@ -25,9 +25,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
 import app.morphe.manager.ui.screen.home.BottomActionButton
-import app.morphe.manager.ui.screen.shared.isLandscape
-import app.morphe.manager.ui.screen.shared.rememberWindowSize
-import app.morphe.manager.ui.screen.shared.useTwoColumnLayout
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
@@ -64,14 +61,12 @@ fun PatcherBottomActionBar(
     // Tracks the brief "Copied!" feedback state on the copy button
     val copied = remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    val windowSize = rememberWindowSize()
-    val buttonSpacing = if (windowSize.useTwoColumnLayout && !isLandscape()) 12.dp else 32.dp
     Row(
         modifier = modifier
             .fillMaxWidth()
             .padding(bottom = 8.dp)
             .padding(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(buttonSpacing),
+        horizontalArrangement = Arrangement.spacedBy(32.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Left: Install / Cancel / Logs button

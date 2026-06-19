@@ -46,6 +46,8 @@ object MorpheDefaults {
     val SectionCornerRadius = 18.dp
     val IconSize = 24.dp
     val ContentPadding = 16.dp
+    val ContentPaddingMedium = 24.dp
+    val ContentPaddingExpanded = 32.dp
     val ItemSpacing = 12.dp
 
     // Gradient colors for GradientCircleIcon
