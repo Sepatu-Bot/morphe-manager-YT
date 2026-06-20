@@ -9,8 +9,8 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -52,12 +52,12 @@ import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.ui.viewmodel.*
 import app.morphe.manager.util.*
 import app.morphe.patcher.patch.AppTarget
-import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 import java.net.URI
+import kotlin.time.Duration.Companion.milliseconds
 
 /**
  * Container for all MorpheHomeScreen dialogs.
@@ -927,8 +927,8 @@ private fun FilePickerPromptDialog(
             }
         ),
         footer = {
-            if (isOtherApps && onUseInstalledApp != null) {
-                MorpheDialogButtonColumn {
+            MorpheDialogButtonColumn {
+                if (isOtherApps && onUseInstalledApp != null) {
                     MorpheDialogButton(
                         text = stringResource(R.string.home_use_installed_app),
                         onClick = onUseInstalledApp,
@@ -942,12 +942,17 @@ private fun FilePickerPromptDialog(
                         icon = Icons.Outlined.FolderOpen,
                         modifier = Modifier.fillMaxWidth()
                     )
+                } else {
+                    MorpheDialogButton(
+                        text = stringResource(R.string.home_file_picker_prompt_open_apk),
+                        onClick = onOpenFilePicker,
+                        icon = Icons.Outlined.FolderOpen,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
-            } else {
-                MorpheDialogButton(
-                    text = stringResource(R.string.home_file_picker_prompt_open_apk),
-                    onClick = onOpenFilePicker,
-                    icon = Icons.Outlined.FolderOpen,
+                MorpheDialogOutlinedButton(
+                    text = stringResource(android.R.string.cancel),
+                    onClick = onDismiss,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
