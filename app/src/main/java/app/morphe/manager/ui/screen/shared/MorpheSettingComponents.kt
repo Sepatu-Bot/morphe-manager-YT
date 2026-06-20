@@ -128,7 +128,7 @@ object MorpheAnimations {
     ) { it } + fadeIn(defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION))
     val pushExit = slideOutVertically(
         animationSpec = defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION, FastOutSlowInEasing)
-    ) { it } + fadeOut(defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION))
+    ) { it } + fadeOut(tween(MorpheDefaults.SCREEN_ENTER_DURATION, easing = LinearEasing))
 
     // Spring & Custom Transitions
     val springSlideUpEnter = slideInVertically(
