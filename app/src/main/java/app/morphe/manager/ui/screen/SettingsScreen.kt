@@ -21,7 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.Palette
-import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.PhoneAndroid
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -64,7 +64,7 @@ private enum class SettingsTab(
 ) {
     APPEARANCE(R.string.appearance, Icons.Outlined.Palette),
     ADVANCED(R.string.advanced, Icons.Outlined.Tune),
-    SYSTEM(R.string.system, Icons.Outlined.Settings)
+    SYSTEM(R.string.system, Icons.Outlined.PhoneAndroid)
 }
 
 /**
