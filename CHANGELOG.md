@@ -1,3 +1,14 @@
+# [1.22.0-dev.5](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.4...v1.22.0-dev.5) (2026-06-20)
+
+
+### Bug Fixes
+
+* Accessibility improvements for bottom sheet ([40b98cb](https://github.com/MorpheApp/morphe-manager/commit/40b98cbf9af0dacd2f559d6f91f64612f7c893d2))
+* Add Cancel button to Select APK dialog ([4b06e2e](https://github.com/MorpheApp/morphe-manager/commit/4b06e2e31b257e88df24b867c0acdf279d872746))
+* Add invisible TalkBack back button in settings ([00ffc62](https://github.com/MorpheApp/morphe-manager/commit/00ffc6283b52a16fd3659e749006ebbdc16990cc))
+* Animate `Close` button entrance in `InstalledAppInfoDialog` ([665e360](https://github.com/MorpheApp/morphe-manager/commit/665e36059755cb82e45b8c22a92791dcc815eeda))
+* Unify vertical divider insets across home, settings and app info dialog ([681982f](https://github.com/MorpheApp/morphe-manager/commit/681982f6eacc0d7060388e2f0813d8fd649beed8))
+
 # [1.22.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.3...v1.22.0-dev.4) (2026-06-20)
 
 
