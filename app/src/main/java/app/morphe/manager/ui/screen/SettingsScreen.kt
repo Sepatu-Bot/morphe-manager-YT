@@ -300,18 +300,6 @@ fun SettingsScreen(
     val backLabel = stringResource(R.string.back)
 
     Box(modifier = Modifier.fillMaxSize()) {
-        // Portrait only: invisible back button for TalkBack (landscape has a visible Back in the sidebar)
-        if (!landscape) {
-            Box(
-                modifier = Modifier
-                    .size(1.dp)
-                    .semantics {
-                        contentDescription = backLabel
-                        onClick(action = { backPressedDispatcher?.onBackPressed(); true })
-                    }
-            )
-        }
-
         if (landscape) {
             // Landscape: sidebar navigation + content panel
             Row(
@@ -342,6 +330,16 @@ fun SettingsScreen(
                     .fillMaxSize()
                     .statusBarsPadding()
             ) {
+                // Invisible back button for TalkBack - must be first in column so it's announced first
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(1.dp)
+                        .semantics {
+                            contentDescription = backLabel
+                            onClick(action = { backPressedDispatcher?.onBackPressed(); true })
+                        }
+                )
                 HorizontalPager(
                     state = pagerState,
                     modifier = Modifier
@@ -407,7 +405,7 @@ private fun LandscapeNavPanel(
             icon = Icons.AutoMirrored.Outlined.ArrowBack,
             label = stringResource(R.string.back),
             onClick = onBack,
-            modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter)
+            modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter).semantics { traversalIndex = -1f }
         )
     }
 }
