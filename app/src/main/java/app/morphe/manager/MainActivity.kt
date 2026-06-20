@@ -56,6 +56,8 @@ import kotlinx.coroutines.withTimeoutOrNull
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.seconds
 import org.koin.androidx.viewmodel.ext.android.getViewModel as getActivityViewModel
 
 private enum class OnboardingPhase { HOME, SHEET, SETTINGS, DONE }
@@ -252,8 +254,10 @@ private fun MorpheManager(vm: MainViewModel) {
                     scope.launch {
                         navController.navigate(Settings) { launchSingleTop = true }
                         // Wait for SettingsScreen to compose and register callbacks (skipped if already there)
-                        withTimeoutOrNull(2000L) {
-                            while (globalOnboardingState.onNavigateToAppearanceTab == null) { delay(16) }
+                        withTimeoutOrNull(2.seconds) {
+                            while (globalOnboardingState.onNavigateToAppearanceTab == null) {
+                                delay(16.milliseconds)
+                            }
                         }
                         globalOnboardingState.onNavigateToAppearanceTab?.invoke()
                     }
@@ -432,7 +436,10 @@ private fun MorpheManager(vm: MainViewModel) {
                 )
             }
 
-            composable<Settings> {
+            composable<Settings>(
+                enterTransition = { MorpheAnimations.pushEnter },
+                popExitTransition = { MorpheAnimations.pushExit }
+            ) {
                 SettingsScreen(
                     homeViewModel = homeViewModel,
                     globalOnboardingState = if (showOnboarding) globalOnboardingState else null,
@@ -472,8 +479,10 @@ private fun MorpheManager(vm: MainViewModel) {
                             homeViewModel.showBundleManagementSheet = true
                             globalOnboardingState.sheetOnboardingActive = true
                             scope.launch {
-                                withTimeoutOrNull(3000L) {
-                                    while (globalOnboardingState.sourcesPatchesBounds == null) { delay(16) }
+                                withTimeoutOrNull(3.seconds) {
+                                    while (globalOnboardingState.sourcesPatchesBounds == null) {
+                                        delay(16.milliseconds)
+                                    }
                                 }
                                 onboardingPhase = OnboardingPhase.SHEET
                             }
@@ -501,7 +510,7 @@ private fun MorpheManager(vm: MainViewModel) {
                                 showOnboardingOverlay = false
                                 globalOnboardingState.sheetOnboardingActive = false
                                 homeViewModel.showBundleManagementSheet = false
-                                delay(300)
+                                delay(300.milliseconds)
                                 phaseInitialStep = homeSteps.size - 1
                                 onboardingPhase = OnboardingPhase.HOME
                                 showOnboardingOverlay = true
@@ -513,12 +522,14 @@ private fun MorpheManager(vm: MainViewModel) {
                             scope.launch {
                                 showOnboardingOverlay = false
                                 navController.popBackStack(HomeScreen, false)
-                                delay(300)
+                                delay(300.milliseconds)
                                 globalOnboardingState.sourcesPatchesBounds = null
                                 homeViewModel.showBundleManagementSheet = true
                                 globalOnboardingState.sheetOnboardingActive = true
-                                withTimeoutOrNull(3000L) {
-                                    while (globalOnboardingState.sourcesPatchesBounds == null) { delay(16) }
+                                withTimeoutOrNull(3.seconds) {
+                                    while (globalOnboardingState.sourcesPatchesBounds == null) {
+                                        delay(16.milliseconds)
+                                    }
                                 }
                                 phaseInitialStep = sheetSteps.size - 1
                                 onboardingPhase = OnboardingPhase.SHEET

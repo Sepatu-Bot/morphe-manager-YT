@@ -122,6 +122,14 @@ object MorpheAnimations {
     val slideUpFadeEnter = slideInVertically(defaultTween()) { -it } + fadeIn
     val slideUpFadeExit = slideOutVertically(defaultTween()) { -it } + fadeOut
 
+    // Push Transitions (Settings screen slides up over home, returns by sliding down)
+    val pushEnter = slideInVertically(
+        animationSpec = defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION, FastOutSlowInEasing)
+    ) { it } + fadeIn(defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION))
+    val pushExit = slideOutVertically(
+        animationSpec = defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION, FastOutSlowInEasing)
+    ) { it } + fadeOut(defaultTween(MorpheDefaults.SCREEN_ENTER_DURATION))
+
     // Spring & Custom Transitions
     val springSlideUpEnter = slideInVertically(
         animationSpec = spring(Spring.DampingRatioMediumBouncy, Spring.StiffnessMedium),
