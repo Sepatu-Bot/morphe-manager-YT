@@ -599,17 +599,7 @@ fun BundlePatchesDialog(
         scrollable = false
     ) {
         if (isLoading) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 48.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                CircularProgressIndicator(
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(48.dp)
-                )
-            }
+            PulsingLogoIndicator()
         } else {
             LazyColumn(
                 modifier = Modifier.fillMaxWidth(),

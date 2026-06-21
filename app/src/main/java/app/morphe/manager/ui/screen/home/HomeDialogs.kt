@@ -76,14 +76,8 @@ fun HomeDialogs(
     val context = LocalContext.current
 
     // APK selection processing overlay - blocks interaction while APK is loaded/validated in background
-    AnimatedVisibility(
-        visible = homeViewModel.processingApkSelection,
-        enter = MorpheAnimations.overlayEnter,
-        exit = MorpheAnimations.overlayExit
-    ) {
-        MorpheDialog(onDismissRequest = {}) {
-            CircularProgressIndicator()
-        }
+    MorpheOverlay(visible = homeViewModel.processingApkSelection) {
+        PulsingLogoIndicator()
     }
 
     // Dialog 1: APK availability
