@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -468,7 +469,6 @@ private fun HeaderCreatorGuideSection(title: String, body: String) {
 /**
  * Preview component for header with transform gestures.
  */
-@SuppressLint("LocalContextResourcesRead")
 @Composable
 private fun HeaderPreview(
     headerBitmap: Bitmap?,
@@ -479,11 +479,7 @@ private fun HeaderPreview(
     onScaleChange: (Float) -> Unit,
     onOffsetChange: (Float, Float) -> Unit
 ) {
-    val context = LocalContext.current
-
-    // Get current device density and determine target size
-    val displayMetrics = context.resources.displayMetrics
-    val density = displayMetrics.densityDpi
+    val density = LocalConfiguration.current.densityDpi
 
     // Determine which size to use based on density
     val (_, targetSize) = HeaderConfig.DENSITY_CONFIGS

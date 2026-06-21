@@ -5,7 +5,6 @@
 
 package app.morphe.manager.ui.screen.home
 
-import android.annotation.SuppressLint
 import android.os.Build
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -33,6 +32,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -2371,14 +2371,12 @@ data class SimpleBundleCandidate(
  * Dialog shown in Simple mode when 2+ patch sources have patches for the selected app.
  * Lets the user pick exactly one source to apply.
  */
-@SuppressLint("LocalContextResourcesRead")
 @Composable
 fun SimpleBundleSelectDialog(
     candidates: List<SimpleBundleCandidate>,
     onSelect: (uid: Int) -> Unit,
     onDismiss: () -> Unit
 ) {
-    val context = LocalContext.current
     val selected = remember { mutableStateOf(candidates.firstOrNull()?.uid) }
 
     MorpheDialog(
@@ -2404,6 +2402,11 @@ fun SimpleBundleSelectDialog(
             candidates.forEach { candidate ->
                 val isSelected = selected.value == candidate.uid
                 val selectedLabel = stringResource(R.string.selected)
+                val patchCountText = pluralStringResource(
+                    R.plurals.patch_count,
+                    candidate.patchCount,
+                    candidate.patchCount
+                )
                 val borderColor = if (isSelected)
                     MaterialTheme.colorScheme.primary
                 else
@@ -2467,11 +2470,7 @@ fun SimpleBundleSelectDialog(
                                 overflow = TextOverflow.Ellipsis
                             )
                             val subtitle = buildString {
-                                append(context.resources.getQuantityString(
-                                    R.plurals.patch_count,
-                                    candidate.patchCount,
-                                    candidate.patchCount
-                                ))
+                                append(patchCountText)
                                 if (candidate.recommendedVersion != null) {
                                     append(" · v${candidate.recommendedVersion}")
                                 }

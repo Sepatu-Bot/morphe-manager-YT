@@ -5,7 +5,6 @@
 
 package app.morphe.manager.ui.screen.home
 
-import android.annotation.SuppressLint
 import android.content.pm.PackageInfo
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts.CreateDocument
@@ -16,8 +15,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Launch
 import androidx.compose.material.icons.automirrored.outlined.List
@@ -72,7 +71,6 @@ data class AppliedPatchBundleUi(
 /**
  * Dialog for installed app info and actions.
  */
-@SuppressLint("LocalContextGetResourceValueCheck")
 @Composable
 fun InstalledAppInfoDialog(
     packageName: String,
