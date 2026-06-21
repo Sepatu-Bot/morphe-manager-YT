@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-06-21T12:38:28",
-  "description": "# [1.22.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.6...v1.22.0-dev.7) (2026-06-21)\n\n\n### Bug Fixes\n\n* Block UI during APK selection processing ([36b0a92](https://github.com/MorpheApp/morphe-manager/commit/36b0a923bf308cfcd3bc4724469bf4985bbe7088))\n\n\n### Features\n\n* Add pulsing logo indicator ([52733f8](https://github.com/MorpheApp/morphe-manager/commit/52733f8ecd0d1f2792ec801b652139aacd8cf867))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.22.0-dev.7/morphe-manager-1.22.0-dev.7.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.22.0-dev.7/morphe-manager-1.22.0-dev.7.apk.asc",
-  "version": "1.22.0-dev.7"
+  "created_at": "2026-06-21T15:53:22",
+  "description": "# [1.22.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.7...v1.22.0-dev.8) (2026-06-21)\n\n\n### Bug Fixes\n\n* Center `PulsingLogoIndicator` in `BundlePatchesDialog` and replace `LoadingIndicator` ([5bc796b](https://github.com/MorpheApp/morphe-manager/commit/5bc796be434d3254b906d68f00712212e0d4e3d0))\n* Replace `context.getString()` with `stringResource()` in composables ([c173344](https://github.com/MorpheApp/morphe-manager/commit/c1733448c6131eadcddf34ee25be2e8ca5bd5d4c))\n* Replace context resource calls with Compose APIs and clean up stale suppressions ([9cb9132](https://github.com/MorpheApp/morphe-manager/commit/9cb9132c1f79835ba11297d27401bb2ee32bda1f))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.22.0-dev.8/morphe-manager-1.22.0-dev.8.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.22.0-dev.8/morphe-manager-1.22.0-dev.8.apk.asc",
+  "version": "1.22.0-dev.8"
 }
