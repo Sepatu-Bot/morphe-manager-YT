@@ -165,11 +165,7 @@ fun BundleManagementSheet(
         }
     }
 
-    MorpheBottomSheet(
-        onDismissRequest = onDismissRequest,
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-        containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
-    ) {
+    MorpheBottomSheet(onDismissRequest = onDismissRequest) {
         val context = LocalContext.current
         val uriHandler = LocalUriHandler.current
         val failedToOpenUrlText = stringResource(R.string.sources_management_failed_to_open_url)

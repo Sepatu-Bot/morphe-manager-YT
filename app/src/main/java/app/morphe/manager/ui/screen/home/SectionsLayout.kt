@@ -2137,7 +2137,6 @@ fun AppPatchesDialog(
     val searchQuery = remember { mutableStateOf("") }
     val selectedBundle = remember { mutableStateOf<Int?>(null) }
     val showFilterSheet = remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     val filteredPatches = remember(allPatches, searchQuery.value, selectedBundle.value) {
         allPatches.filter { (uid, patch) ->
@@ -2457,9 +2456,7 @@ fun AppPatchesDialog(
     // Bundle filter bottom sheet (multi-bundle only)
     if (showFilterSheet.value && isMultiBundle) {
         MorpheBottomSheet(
-            onDismissRequest = { showFilterSheet.value = false },
-            sheetState = sheetState,
-            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
+            onDismissRequest = { showFilterSheet.value = false }
         ) {
             Column(
                 modifier = Modifier

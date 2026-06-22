@@ -538,7 +538,6 @@ fun BundlePatchesDialog(
     var searchQuery by remember { mutableStateOf("") }
     var selectedPackages by remember { mutableStateOf(emptySet<String>()) }
     val showFilterSheet = remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     val isLoading = patches.isEmpty()
 
@@ -835,9 +834,7 @@ fun BundlePatchesDialog(
     // App filter bottom sheet
     if (showFilterSheet.value) {
         MorpheBottomSheet(
-            onDismissRequest = { showFilterSheet.value = false },
-            sheetState = sheetState,
-            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
+            onDismissRequest = { showFilterSheet.value = false }
         ) {
             Column(
                 modifier = Modifier
