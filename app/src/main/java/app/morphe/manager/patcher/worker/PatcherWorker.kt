@@ -73,18 +73,20 @@ class PatcherWorker(
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE else 0
         )
 
+    private fun mainActivityPendingIntent(): PendingIntent {
+        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        }
+        return PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+    }
+
     @SuppressLint("WrongConstant")
     private fun createNotification(
         stepName: String? = null,
         patchProgress: Pair<Int, Int>? = null,  // completed to total patches
         contentText: String? = null,
     ): Notification {
-        val notificationIntent = Intent(applicationContext, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
-        }
-        val pendingIntent = PendingIntent.getActivity(
-            applicationContext, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE
-        )
+        val pendingIntent = mainActivityPendingIntent()
         val channel = NotificationChannel(
             "morphe-patcher-patching",
             applicationContext.getString(R.string.notification_channel_patcher),
@@ -125,6 +127,22 @@ class PatcherWorker(
         // ID unless we first post a brief non-indeterminate update. Post the real notification
         // directly - the determinate bar replaces the spinning one cleanly this way
         notificationManager.notify(NOTIFICATION_ID, createNotification(stepName, patchProgress, contentText))
+    }
+
+    private fun showCompletionNotification(succeeded: Boolean) {
+        val notification = Notification.Builder(applicationContext, "morphe-patcher-patching")
+            .setContentTitle(
+                applicationContext.getString(
+                    if (succeeded) R.string.patcher_complete_title else R.string.patcher_failed_title
+                )
+            )
+            .setContentText(applicationContext.getText(R.string.patcher_notification_text))
+            .setSmallIcon(Icon.createWithResource(applicationContext, R.drawable.ic_notification))
+            .setContentIntent(mainActivityPendingIntent())
+            .setAutoCancel(true)
+            .build()
+        applicationContext.getSystemService(NotificationManager::class.java)
+            .notify(COMPLETION_NOTIFICATION_ID, notification)
     }
 
     override suspend fun doWork(): Result {
@@ -215,6 +233,7 @@ class PatcherWorker(
         }
 
         val patchedApk = fs.tempDir.resolve("patched.apk")
+        var succeeded = false
 
         return try {
             val startTime = System.currentTimeMillis()
@@ -355,6 +374,7 @@ class PatcherWorker(
             )
 
             Log.i(tag, "Patching succeeded".logFmt())
+            succeeded = true
             Result.success()
         } catch (e: ProcessRuntime.ProcessExitException) {
             Log.e(
@@ -394,6 +414,7 @@ class PatcherWorker(
             if (!patchedApk.delete() && patchedApk.exists()) {
                 Log.w(tag, "Failed to delete temporary patched APK: ${patchedApk.absolutePath}".logFmt())
             }
+            showCompletionNotification(succeeded)
         }
     }
 
@@ -410,6 +431,7 @@ class PatcherWorker(
         private fun String.logFmt() = "$LOG_PREFIX $this"
 
         const val NOTIFICATION_ID = 1
+        const val COMPLETION_NOTIFICATION_ID = 2
 
         const val PROCESS_EXIT_CODE_KEY = "process_exit_code"
         const val PROCESS_PREVIOUS_LIMIT_KEY = "process_previous_limit"
