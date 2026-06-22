@@ -1,3 +1,10 @@
+# [1.22.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.9...v1.22.0-dev.10) (2026-06-22)
+
+
+### Features
+
+* Show completion notification after patching finishes ([cd2da25](https://github.com/MorpheApp/morphe-manager/commit/cd2da2587fc8f2967dba61ac8ba74e36fdbfc54d))
+
 # [1.22.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.8...v1.22.0-dev.9) (2026-06-22)
 
 
