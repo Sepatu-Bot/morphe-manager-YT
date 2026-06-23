@@ -2950,7 +2950,10 @@ fun InstalledAppCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
+                    modifier = Modifier.weight(1f, fill = false),
                     text = version,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodyMedium.copy(
                         shadow = Shadow(
                             color = Color.Black.copy(alpha = 0.4f),
