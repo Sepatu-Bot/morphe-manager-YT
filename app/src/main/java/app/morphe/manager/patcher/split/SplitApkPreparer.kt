@@ -14,6 +14,13 @@ import java.nio.file.Files
 import java.util.Locale
 import java.util.zip.ZipFile
 
+sealed class SplitPreparationEvent {
+    data object Extracting : SplitPreparationEvent()
+    data class Merging(val apkName: String) : SplitPreparationEvent()
+    data object Writing : SplitPreparationEvent()
+    data object Finalizing : SplitPreparationEvent()
+}
+
 /**
  * Prepares split APK bundles (APKS/APKM/XAPK and plain ZIPs with embedded APKs) for patching
  * by extracting and merging all constituent modules into a single monolithic APK.
@@ -21,7 +28,6 @@ import java.util.zip.ZipFile
 object SplitApkPreparer {
     // Recognized split archive container extensions
     private val SUPPORTED_EXTENSIONS = setOf("apks", "apkm", "xapk")
-    private const val SKIPPED_STEP_PREFIX = "[skipped]"
 
     // All known ABI identifiers as they appear in split module names, pre-computed once
     private val KNOWN_ABIS = setOf("armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64", "riscv64")
@@ -53,8 +59,7 @@ object SplitApkPreparer {
         workspace: File,
         logger: Logger = DefaultLogger,
         skipUnneededSplits: Boolean = false,
-        onProgress: ((String) -> Unit)? = null,
-        onSubSteps: ((List<String>) -> Unit)? = null,
+        onEvent: ((SplitPreparationEvent) -> Unit)? = null,
         sortMergedApkEntries: Boolean = false
     ): PreparationResult {
         if (!isSplitArchive(source)) {
@@ -69,7 +74,7 @@ object SplitApkPreparer {
         return try {
             val sourceSize = source.length()
             logger.info("Preparing split APK bundle from ${source.name} (size=${sourceSize} bytes)")
-            val entries = extractSplitEntries(source, modulesDir, onProgress)
+            val entries = extractSplitEntries(source, modulesDir, onEvent)
             logger.info("Found ${entries.size} split modules: ${entries.joinToString { it.name }}")
             logger.info("Module sizes: ${entries.joinToString { "${it.name}=${it.file.length()} bytes" }}")
             val mergeOrder = Merger.listMergeOrder(modulesDir.toPath())
@@ -91,17 +96,15 @@ object SplitApkPreparer {
                     )
                 }
             }
-            onSubSteps?.invoke(buildSplitSubSteps(mergeOrder, skippedModules))
-
             Merger.merge(
                 apkDir = modulesDir.toPath(),
                 outputApk = mergedApk,
                 skipModules = skippedModules,
-                onProgress = onProgress,
+                onEvent = onEvent,
                 sortApkEntries = sortMergedApkEntries
             )
 
-            onProgress?.invoke("Finalizing merged APK")
+            onEvent?.invoke(SplitPreparationEvent.Finalizing)
 
             logger.info(
                 "Split APK merged to ${mergedApk.absolutePath} " +
@@ -134,25 +137,6 @@ object SplitApkPreparer {
         }.getOrDefault(false)
 
     private data class ExtractedModule(val name: String, val file: File)
-
-    private fun buildSplitSubSteps(
-        mergeOrder: List<String>,
-        skippedModules: Set<String>
-    ): List<String> {
-        val steps = mutableListOf<String>()
-        steps.add("Extracting split APKs")
-        val skippedLookup = skippedModules
-            .map { it.lowercase(Locale.ROOT) }
-            .toSet()
-        val (skipped, remaining) = mergeOrder.partition {
-            skippedLookup.contains(it.lowercase(Locale.ROOT))
-        }
-        skipped.forEach { steps.add("$SKIPPED_STEP_PREFIX Merging $it") }
-        remaining.forEach { steps.add("Merging $it") }
-        steps.add("Writing merged APK")
-        steps.add("Finalizing merged APK")
-        return steps
-    }
 
     // Returns the set of name tokens for the device's primary ABI (the first entry in
     // Build.SUPPORTED_ABIS, which is always the most preferred one).
@@ -330,7 +314,7 @@ object SplitApkPreparer {
     private suspend fun extractSplitEntries(
         source: File,
         targetDir: File,
-        onProgress: ((String) -> Unit)? = null
+        onEvent: ((SplitPreparationEvent) -> Unit)? = null
     ): List<ExtractedModule> =
         runInterruptible(Dispatchers.IO) {
             val extracted = mutableListOf<ExtractedModule>()
@@ -344,7 +328,7 @@ object SplitApkPreparer {
                     throw IOException("Split archive does not contain any APK entries.")
                 }
 
-                onProgress?.invoke("Extracting split APKs")
+                onEvent?.invoke(SplitPreparationEvent.Extracting)
                 apkEntries.forEach { entry ->
                     val entryName = entry.name.substringAfterLast('/')
                     val destination = targetDir.resolve(entryName)

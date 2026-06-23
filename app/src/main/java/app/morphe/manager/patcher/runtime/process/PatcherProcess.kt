@@ -15,6 +15,7 @@ import app.morphe.manager.patcher.logger.Logger
 import app.morphe.manager.patcher.patch.PatchBundle
 import app.morphe.manager.patcher.runtime.MemoryMonitor
 import app.morphe.manager.patcher.runtime.ProcessRuntime
+import app.morphe.manager.patcher.runtime.toLocalizedString
 import app.morphe.manager.patcher.split.SplitApkPreparer
 import app.morphe.manager.ui.model.State
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -86,7 +87,8 @@ class PatcherProcess(private val context: Context) : IPatcherProcess.Stub() {
                 workspace = File(parameters.cacheDir),
                 logger = logger,
                 skipUnneededSplits = parameters.skipUnneededSplits,
-                onProgress = { message ->
+                onEvent = { event ->
+                    val message = event.toLocalizedString(context)
                     logger.info(message)
                     events.progress(message, State.RUNNING.name, null)
                 }
