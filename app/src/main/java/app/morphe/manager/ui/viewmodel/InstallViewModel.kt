@@ -186,13 +186,14 @@ class InstallViewModel : ViewModel(), KoinComponent {
             installState = InstallState.Installing
 
             try {
-                val packageInfo = pm.getPackageInfo(outputFile)
-                    ?: throw Exception("Failed to load application info")
+                // APK metadata reads parse the archive on disk; keep them off the main thread
+                val (packageInfo, existingInfo) = withContext(Dispatchers.IO) {
+                    val pi = pm.getPackageInfo(outputFile)
+                        ?: throw Exception("Failed to load application info")
+                    pi to pm.getPackageInfo(pi.packageName)
+                }
 
                 val targetPackageName = packageInfo.packageName
-
-                // Check if app is already installed
-                val existingInfo = pm.getPackageInfo(targetPackageName)
 
                 if (existingInfo != null) {
                     // Check version - can't downgrade
@@ -203,64 +204,59 @@ class InstallViewModel : ViewModel(), KoinComponent {
                     }
                     // Check signature mismatch before launching the installer - avoids
                     // INSTALL_FAILED_UPDATE_INCOMPATIBLE from the system PackageInstaller
-                    if (pm.hasSignatureMismatch(targetPackageName, outputFile)) {
+                    val mismatch = withContext(Dispatchers.IO) {
+                        pm.hasSignatureMismatch(targetPackageName, outputFile)
+                    }
+                    if (mismatch) {
                         Log.i(TAG, "Signature mismatch detected for $targetPackageName - showing conflict")
                         installState = InstallState.Conflict(targetPackageName)
                         return@launch
                     }
                 }
 
-                // Resolve installation plan - use one-time token if available
-                val resolved = if (oneTimeInstallerToken != null) {
-                    // Use one-time installer token for this install
-                    val token = oneTimeInstallerToken!!
-                    selectedInstallerToken = token
-                    oneTimeInstallerToken = null
+                // Plan resolution probes installer availability on disk; keep off main
+                val resolved = withContext(Dispatchers.IO) {
+                    if (oneTimeInstallerToken != null) {
+                        val token = oneTimeInstallerToken!!
+                        selectedInstallerToken = token
+                        oneTimeInstallerToken = null
 
-                    // Check if selected installer is available
-                    val entry = installerManager.describeEntry(token, InstallerManager.InstallTarget.PATCHER)
+                        val entry = installerManager.describeEntry(token, InstallerManager.InstallTarget.PATCHER)
 
-                    if (entry != null && entry.availability.available) {
-                        // Selected installer is available - temporarily change primary
-                        val originalPrimary = installerManager.getPrimaryToken()
-
-                        // Set selected token as primary
-                        installerManager.updatePrimaryToken(token)
-
-                        // Resolve with selected token
-                        val result = installerManager.resolvePlanWithStatus(
-                            InstallerManager.InstallTarget.PATCHER,
-                            outputFile,
-                            targetPackageName,
-                            null
-                        )
-
-                        // Restore original primary
-                        installerManager.updatePrimaryToken(originalPrimary)
-
-                        result
+                        if (entry != null && entry.availability.available) {
+                            val originalPrimary = installerManager.getPrimaryToken()
+                            installerManager.updatePrimaryToken(token)
+                            val result = installerManager.resolvePlanWithStatus(
+                                InstallerManager.InstallTarget.PATCHER,
+                                outputFile,
+                                targetPackageName,
+                                null
+                            )
+                            installerManager.updatePrimaryToken(originalPrimary)
+                            result
+                        } else {
+                            // Even if the installer is unavailable, try resolve with it
+                            // to get the correct primaryToken and unavailabilityReason
+                            val originalPrimary = installerManager.getPrimaryToken()
+                            installerManager.updatePrimaryToken(token)
+                            val result = installerManager.resolvePlanWithStatus(
+                                InstallerManager.InstallTarget.PATCHER,
+                                outputFile,
+                                targetPackageName,
+                                null
+                            )
+                            installerManager.updatePrimaryToken(originalPrimary)
+                            result
+                        }
                     } else {
-                        // Even if the installer is unavailable, try resolve with it
-                        // to get the correct primaryToken and unavailabilityReason
-                        val originalPrimary = installerManager.getPrimaryToken()
-                        installerManager.updatePrimaryToken(token)
-                        val result = installerManager.resolvePlanWithStatus(
+                        selectedInstallerToken = null
+                        installerManager.resolvePlanWithStatus(
                             InstallerManager.InstallTarget.PATCHER,
                             outputFile,
                             targetPackageName,
                             null
                         )
-                        installerManager.updatePrimaryToken(originalPrimary)
-                        result
                     }
-                } else {
-                    selectedInstallerToken = null
-                    installerManager.resolvePlanWithStatus(
-                        InstallerManager.InstallTarget.PATCHER,
-                        outputFile,
-                        targetPackageName,
-                        null
-                    )
                 }
 
                 Log.d(TAG, "Resolved plan: ${resolved.plan::class.java.simpleName}")
@@ -365,13 +361,17 @@ class InstallViewModel : ViewModel(), KoinComponent {
         originalPackageName: String,
         onPersistApp: suspend (String, InstallType) -> Boolean
     ) {
-        val packageInfo = pm.getPackageInfo(outputFile)
-            ?: throw Exception("Failed to load application info")
+        val packageInfo = withContext(Dispatchers.IO) {
+            pm.getPackageInfo(outputFile)
+                ?: throw Exception("Failed to load application info")
+        }
         val targetPackageName = packageInfo.packageName
 
         // Unmount if mounted as root
-        if (rootInstaller.hasRootAccess() && rootInstaller.isAppMounted(originalPackageName)) {
-            rootInstaller.unmount(originalPackageName)
+        withContext(Dispatchers.IO) {
+            if (rootInstaller.hasRootAccess() && rootInstaller.isAppMounted(originalPackageName)) {
+                rootInstaller.unmount(originalPackageName)
+            }
         }
 
         val result = try {
@@ -422,12 +422,16 @@ class InstallViewModel : ViewModel(), KoinComponent {
         outputFile: File,
         onPersistApp: suspend (String, InstallType) -> Boolean
     ) {
-        val packageInfo = pm.getPackageInfo(outputFile)
-            ?: throw Exception("Failed to load application info")
+        val packageInfo = withContext(Dispatchers.IO) {
+            pm.getPackageInfo(outputFile)
+                ?: throw Exception("Failed to load application info")
+        }
         val targetPackageName = packageInfo.packageName
 
-        if (rootInstaller.hasRootAccess() && rootInstaller.isAppMounted(targetPackageName)) {
-            rootInstaller.unmount(targetPackageName)
+        withContext(Dispatchers.IO) {
+            if (rootInstaller.hasRootAccess() && rootInstaller.isAppMounted(targetPackageName)) {
+                rootInstaller.unmount(targetPackageName)
+            }
         }
 
         Log.d(TAG, "Starting Shizuku install for $targetPackageName")
@@ -488,7 +492,7 @@ class InstallViewModel : ViewModel(), KoinComponent {
             while (true) {
                 if (pendingExternalInstall != plan) return@launch
 
-                val info = pm.getPackageInfo(plan.expectedPackage)
+                val info = withContext(Dispatchers.IO) { pm.getPackageInfo(plan.expectedPackage) }
                 if (info != null && isUpdatedSinceBaseline(info)) {
                     handleExternalInstallSuccess(plan.expectedPackage)
                     return@launch
@@ -537,7 +541,7 @@ class InstallViewModel : ViewModel(), KoinComponent {
             val timeoutAt = System.currentTimeMillis() + EXTERNAL_INSTALL_TIMEOUT_MS
             while (true) {
                 if (pendingIntentFallbackPackage == null) return@launch
-                val info = pm.getPackageInfo(targetPackageName)
+                val info = withContext(Dispatchers.IO) { pm.getPackageInfo(targetPackageName) }
                 if (info != null && isUpdatedSinceBaseline(info)) {
                     handleIntentFallbackSuccess(targetPackageName)
                     return@launch
@@ -636,14 +640,16 @@ class InstallViewModel : ViewModel(), KoinComponent {
             installState = InstallState.Installing
 
             try {
-                val packageInfo = pm.getPackageInfo(outputFile)
-                    ?: throw Exception("Failed to load application info")
+                val (packageInfo, stockInfo) = withContext(Dispatchers.IO) {
+                    val pi = pm.getPackageInfo(outputFile)
+                        ?: throw Exception("Failed to load application info")
+                    pi to pm.getPackageInfo(packageName)
+                }
 
                 val label = with(pm) { packageInfo.label() }
                 val patchedVersion = packageInfo.versionName ?: ""
 
                 // Check version mismatch for mount
-                val stockInfo = pm.getPackageInfo(packageName)
                 val stockVersion = stockInfo?.versionName
                 if (stockVersion != null && stockVersion != patchedVersion) {
                     handleInstallError(
