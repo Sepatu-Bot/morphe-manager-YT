@@ -1,3 +1,14 @@
+# [1.22.0-dev.12](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.11...v1.22.0-dev.12) (2026-06-24)
+
+
+### Bug Fixes
+
+* Decouple app DB and filesystem writes from ViewModel lifecycle ([b8776a0](https://github.com/MorpheApp/morphe-manager/commit/b8776a04cab7c1677a20ebb26f82b0041263e10d))
+* Handle incoming intents from any screen, not just HomeScreen ([d004c21](https://github.com/MorpheApp/morphe-manager/commit/d004c21f5198a5020274ef9b18488fdfd5712ee1))
+* Offload APK parsing and installer plan resolution off the main thread ([8c9125b](https://github.com/MorpheApp/morphe-manager/commit/8c9125bb6744fee382fcc48cfef2d3d7b7e0ada7))
+* Persist installed app version reliably after patching ([089cc7e](https://github.com/MorpheApp/morphe-manager/commit/089cc7e87a10322a4d19eb22bf35531e10db1728))
+* Suppress patching complete notification when app is in foreground or auto-install is pending ([45d78a1](https://github.com/MorpheApp/morphe-manager/commit/45d78a17b0379bdb5f2c4030df6db42a0efec41b))
+
 # [1.22.0-dev.11](https://github.com/MorpheApp/morphe-manager/compare/v1.22.0-dev.10...v1.22.0-dev.11) (2026-06-23)
 
 
