@@ -206,6 +206,33 @@ private fun MorpheManager(vm: MainViewModel) {
         viewModelStoreOwner = LocalActivity.current as ComponentActivity
     )
 
+    // Handle deep link source
+    LaunchedEffect(vm.pendingDeepLinkSource) {
+        vm.pendingDeepLinkSource?.let { bundle ->
+            navController.popBackStack(HomeScreen, false)
+            homeViewModel.handleDeepLinkAddSource(bundle.url, bundle.name)
+            vm.pendingDeepLinkSource = null
+        }
+    }
+
+    // Handle .mpp file opened from file manager
+    LaunchedEffect(vm.pendingMppUri) {
+        vm.pendingMppUri?.let { uri ->
+            navController.popBackStack(HomeScreen, false)
+            homeViewModel.setPendingMpp(uri)
+            vm.pendingMppUri = null
+        }
+    }
+
+    // Handle .apk file shared via share sheet
+    LaunchedEffect(vm.pendingExternalApkUri) {
+        vm.pendingExternalApkUri?.let { uri ->
+            navController.popBackStack(HomeScreen, false)
+            vm.pendingExternalApkUri = null
+            homeViewModel.handleExternalApkUri(uri)
+        }
+    }
+
     // Shared state between HomeScreen and PatcherScreen for mount install mode.
     // Set by HomeViewModel.resolvePrePatchInstallerChoice()
     val usingMountInstallState = remember { mutableStateOf(false) }
@@ -359,30 +386,6 @@ private fun MorpheManager(vm: MainViewModel) {
                         homeViewModel.patchBundleRepository.updateCheck()
                         homeViewModel.checkForManagerUpdates()
                         vm.pendingUpdateCheck = false
-                    }
-                }
-
-                // Handle deep link source
-                LaunchedEffect(vm.pendingDeepLinkSource) {
-                    vm.pendingDeepLinkSource?.let { bundle ->
-                        homeViewModel.handleDeepLinkAddSource(bundle.url, bundle.name)
-                        vm.pendingDeepLinkSource = null
-                    }
-                }
-
-                // Handle .mpp file opened from file manager
-                LaunchedEffect(vm.pendingMppUri) {
-                    vm.pendingMppUri?.let { uri ->
-                        homeViewModel.setPendingMpp(uri)
-                        vm.pendingMppUri = null
-                    }
-                }
-
-                // Handle .apk file shared via share sheet
-                LaunchedEffect(vm.pendingExternalApkUri) {
-                    vm.pendingExternalApkUri?.let { uri ->
-                        vm.pendingExternalApkUri = null
-                        homeViewModel.handleExternalApkUri(uri)
                     }
                 }
 
