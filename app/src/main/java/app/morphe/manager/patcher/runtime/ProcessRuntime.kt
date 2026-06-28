@@ -24,6 +24,7 @@ import com.github.pgreze.process.process
 import kotlinx.coroutines.*
 import org.koin.core.component.inject
 import java.io.File
+import java.util.concurrent.atomic.AtomicReference
 import kotlin.math.max
 import kotlin.time.Duration.Companion.seconds
 
@@ -211,10 +212,12 @@ class ProcessRuntime(
 
         val patching = CompletableDeferred<Unit>()
         val scope = this
+        // Held outside the launch so cancel() can tell app_process to exit and release its wakelock
+        val binderRef = AtomicReference<IPatcherProcess?>()
 
         launch(Dispatchers.IO) {
             val binder = awaitBinderConnection()
-//            binderRef.set(binder)
+            binderRef.set(binder)
 
             // Android Studio's fast deployment feature causes an issue where the other process will be running older code compared to the main process.
             // The patcher process is running outdated code if the randomly generated BUILD_ID numbers don't match.
@@ -287,6 +290,9 @@ class ProcessRuntime(
                 onMergedApkReady?.invoke(mergedFile)
             }
         } finally {
+            // Tell app_process to exit on cancellation. After normal completion finished()
+            // already called exit(), so runCatching swallows the DeadObjectException
+            runCatching { binderRef.get()?.exit() }
             // Always clean up the temporary merged file regardless of success or failure
             mergedFile?.takeIf { it.exists() }?.delete()
         }
