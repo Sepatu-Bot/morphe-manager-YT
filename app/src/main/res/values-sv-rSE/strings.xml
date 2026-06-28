@@ -769,7 +769,6 @@ Bildernas mått ska vara följande:
     <string name="changelog">Visa ändringsloggar</string>
     <string name="changelog_description">Kolla in de senaste ändringarna i den här uppdateringen</string>
     <string name="changelog_download_fail">Det gick inte att ladda ned ändringsloggen: %s</string>
-    <string name="changelog_retry">Försök igen</string>
     <string name="changelog_empty">Ingen ändringslogg är tillgänglig</string>
     <string name="no_network_toast">Ingen internetanslutning är tillgänglig</string>
     <string name="update_available">En uppdatering är tillgänglig</string>

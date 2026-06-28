@@ -837,7 +837,6 @@ Wymagane są następujące wymiary obrazów:
     <string name="changelog">Przeglądaj historię zmian</string>
     <string name="changelog_description">Sprawdź ostatnie zmiany w tej aktualizacji</string>
     <string name="changelog_download_fail">Nie udało się pobrać historii zmian: %s</string>
-    <string name="changelog_retry">Spróbuj ponownie</string>
     <string name="changelog_empty">Brak dostępnej historii zmian</string>
     <string name="no_network_toast">Brak połączenia z internetem</string>
     <string name="update_available">Dostępna jest aktualizacja</string>

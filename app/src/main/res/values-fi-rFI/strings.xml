@@ -833,7 +833,6 @@ Kuvien mittojen on oltava seuraavat:
     <string name="changelog">Näytä muutoslokit</string>
     <string name="changelog_description">Katso tämän päivityksen uusimmat muutokset</string>
     <string name="changelog_download_fail">Muutoslokin lataaminen epäonnistui: %s</string>
-    <string name="changelog_retry">Yritä uudelleen</string>
     <string name="changelog_empty">Muutoslokia ei ole saatavilla</string>
     <string name="no_network_toast">Ei internetyhteyttä</string>
     <string name="update_available">Päivitys on saatavilla</string>

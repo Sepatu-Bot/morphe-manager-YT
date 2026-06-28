@@ -808,7 +808,6 @@ morphe_header_custom_dark.png
     <string name="changelog">Преглед на промените</string>
     <string name="changelog_description">Проверете ги најновите промени во оваа верзија</string>
     <string name="changelog_download_fail">Не успеа да се преземе историја на промени: %s</string>
-    <string name="changelog_retry">Обиди повторно</string>
     <string name="changelog_empty">Нема достапен дневник на промени</string>
     <string name="no_network_toast">Нема достапна интернет врска</string>
     <string name="update_available">Достапна е ажурирање</string>

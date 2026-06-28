@@ -833,7 +833,6 @@ Dimenzije slike morajo biti naslednje:
     <string name="changelog">Poglejte dnevnike sprememb</string>
     <string name="changelog_description">Oglejte si najnovejše spremembe v tej posodobitvi</string>
     <string name="changelog_download_fail">Ni mogoče prenesti dnevnika sprememb: %s</string>
-    <string name="changelog_retry">Poskusite znova</string>
     <string name="changelog_empty">Ni na voljo dnevnika sprememb</string>
     <string name="no_network_toast">Internetna povezava ni na voljo</string>
     <string name="update_available">Na voljo je posodobitev</string>

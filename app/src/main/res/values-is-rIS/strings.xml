@@ -828,7 +828,6 @@ Myndastærðin verður að vera sem hér segir:
     <string name="changelog">Skoða breytingaskrá</string>
     <string name="changelog_description">Skoða nýjustu breytingarnar í þessari uppfærslu</string>
     <string name="changelog_download_fail">Ekki tókst að sækja breytingaskrá: %s</string>
-    <string name="changelog_retry">Reyna aftur</string>
     <string name="changelog_empty">Engin breytingaskrá í boði</string>
     <string name="no_network_toast">Engin nettenging í boði</string>
     <string name="update_available">Uppfærsla er til staðar</string>

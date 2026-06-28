@@ -833,7 +833,6 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="changelog">Tingnan ang mga changelog</string>
     <string name="changelog_description">Tingnan ang mga pinakabagong pagbabago sa update na ito</string>
     <string name="changelog_download_fail">Nabigong mag-download ang changelog: %s</string>
-    <string name="changelog_retry">Subukan muli</string>
     <string name="changelog_empty">Walang magagamit na changelog</string>
     <string name="no_network_toast">Walang magagamit na koneksyon sa internet</string>
     <string name="update_available">Magagamit ang isang update</string>

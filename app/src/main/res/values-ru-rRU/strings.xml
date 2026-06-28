@@ -833,7 +833,6 @@ morphe_header_custom_dark.png
     <string name="changelog">Просмотр истории изменений</string>
     <string name="changelog_description">Просмотрите последние изменения в этом обновлении</string>
     <string name="changelog_download_fail">Не удалось загрузить историю изменений: %s</string>
-    <string name="changelog_retry">Повторить попытку</string>
     <string name="changelog_empty">Нет доступных изменений</string>
     <string name="no_network_toast">Нет подключения к Интернету</string>
     <string name="update_available">Доступно обновление</string>

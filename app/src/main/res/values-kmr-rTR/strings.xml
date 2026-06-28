@@ -831,7 +831,6 @@ Qasîyên wêneyan divê wiha bin:
     <string name="changelog">Bixweyne guhezgarîyan</string>
     <string name="changelog_description">Guherînên dawî ti vê nûvekirinê binêrin</string>
     <string name="changelog_download_fail">Degerandina guhezgarîyan ji destûr ve çû: %s</string>
-    <string name="changelog_retry">Paqij bike</string>
     <string name="changelog_empty">Nê ji ber ku wê bigihîne</string>
     <string name="no_network_toast">Girêdayî pêşbaziyê nîne</string>
     <string name="update_available">Nûvekirin heye</string>

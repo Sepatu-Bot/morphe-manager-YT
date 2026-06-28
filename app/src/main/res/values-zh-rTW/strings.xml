@@ -833,7 +833,6 @@ morphe_header_custom_dark.png
     <string name="changelog">檢視變更紀錄</string>
     <string name="changelog_description">查看此更新中的最新變更</string>
     <string name="changelog_download_fail">無法下載變更紀錄：%s</string>
-    <string name="changelog_retry">重試</string>
     <string name="changelog_empty">沒有可用的變更紀錄</string>
     <string name="no_network_toast">沒有可用的網際網路連線</string>
     <string name="update_available">有可用的更新</string>

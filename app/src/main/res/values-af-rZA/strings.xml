@@ -833,7 +833,6 @@ Die beeld afmetings moet soos volg wees:
     <string name="changelog">Beskou veranderingslogboeke</string>
     <string name="changelog_description">Kyk na die nuutste veranderinge in hierdie opdatering</string>
     <string name="changelog_download_fail">Kon nie veranderingslogboek aflaai nie: %s</string>
-    <string name="changelog_retry">Probeer weer</string>
     <string name="changelog_empty">Geen wysiging beskikbaar nie</string>
     <string name="no_network_toast">Geen internet verbinding beskikbaar nie</string>
     <string name="update_available">\'n Opdatering is beskikbaar</string>

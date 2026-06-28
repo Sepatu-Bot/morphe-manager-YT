@@ -316,6 +316,10 @@
     <string name="patcher_failed_subtitle">تحقق من تفاصيل الخطأ أدناه</string>
     <string name="patcher_failed_dialog_title">فشل التعديل</string>
     <string name="patcher_unknown_error">حدث خطأ غير معروف</string>
+    <string name="patcher_split_step_extracting">استخراج ملفات APK المقسمة</string>
+    <string name="patcher_split_step_merging">دمج %s</string>
+    <string name="patcher_split_step_writing">كتابة ملف APK المدمج</string>
+    <string name="patcher_split_step_finalizing">تتم المعالجة النهائية لملف APK المدمج</string>
     <string name="patcher_conflict_title">تعارض الحزمة</string>
     <string name="patcher_conflict_subtitle">تحتاج إلى إلغاء تثبيت الإصدار الحالي</string>
     <string name="patcher_conflict_hint">يستخدم التطبيق الذي تم تعديله شهادة مختلفة عن الإصدار المثبت. سيؤدي إلغاء التثبيت إلى محو جميع بيانات التطبيق.</string>
@@ -834,7 +838,6 @@ morphe_adaptive_monochrome_custom.xml
     <string name="changelog">عرض سجل التغييرات</string>
     <string name="changelog_description">اطّلع على آخر التغييرات في هذا التحديث</string>
     <string name="changelog_download_fail">فشل تنزيل سجل التغييرات: %s</string>
-    <string name="changelog_retry">إعادة المحاولة</string>
     <string name="changelog_empty">لا يتوفر سجل تغييرات</string>
     <string name="no_network_toast">لا يوجد اتصال بالإنترنت متاح</string>
     <string name="update_available">يتوفر تحديث</string>

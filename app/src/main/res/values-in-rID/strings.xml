@@ -838,7 +838,6 @@ Dimensi gambar harus sebagai berikut:
     <string name="changelog">Lihat catatan perubahan</string>
     <string name="changelog_description">Lihat perubahan terbaru dalam pembaruan ini</string>
     <string name="changelog_download_fail">Gagal mengunduh catatan perubahan: %s</string>
-    <string name="changelog_retry">Coba lagi</string>
     <string name="changelog_empty">Tidak ada catatan perubahan tersedia</string>
     <string name="no_network_toast">Tidak ada sambungan internet yang tersedia</string>
     <string name="update_available">Pembaruan tersedia</string>

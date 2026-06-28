@@ -833,7 +833,6 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="changelog">Visualizza registri delle modifiche</string>
     <string name="changelog_description">Scopri le ultime modifiche in questo aggiornamento</string>
     <string name="changelog_download_fail">Download del registro delle modifiche non riuscito: %s</string>
-    <string name="changelog_retry">Riprova</string>
     <string name="changelog_empty">Nessun registro delle modifiche disponibile</string>
     <string name="no_network_toast">Connessione internet non disponibile</string>
     <string name="update_available">È disponibile un aggiornamento</string>

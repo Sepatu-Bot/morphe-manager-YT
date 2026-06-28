@@ -833,7 +833,6 @@ morphe_header_custom_dark.png
     <string name="changelog">Вижте дневниците на промените</string>
     <string name="changelog_description">Погледете последното обновяване</string>
     <string name="changelog_download_fail">Неуспешно сваляне на дневника на промените: %s</string>
-    <string name="changelog_retry">Повторно опитване</string>
     <string name="changelog_empty">Няма налични промени</string>
     <string name="no_network_toast">Няма достъп до интернет</string>
     <string name="update_available">Налично е актуализиране</string>

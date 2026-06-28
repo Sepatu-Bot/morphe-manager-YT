@@ -833,7 +833,6 @@ Rozmery obrázka musia byť nasledovné:
     <string name="changelog">Zobraziť zoznam zmien</string>
     <string name="changelog_description">Pozrite si najnovšie zmeny v tejto aktualizácii</string>
     <string name="changelog_download_fail">Nepodarilo sa stiahnuť zoznam zmien: %s</string>
-    <string name="changelog_retry">Znova</string>
     <string name="changelog_empty">Zoznam zmien nie je k dispozícii</string>
     <string name="no_network_toast">Žiadne internetové pripojenie</string>
     <string name="update_available">Je dostupná aktualizácia</string>

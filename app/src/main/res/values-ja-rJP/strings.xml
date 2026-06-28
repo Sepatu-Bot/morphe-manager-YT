@@ -833,7 +833,6 @@ morphe_header_custom_dark.png
     <string name="changelog">変更履歴を表示</string>
     <string name="changelog_description">最新のアップデートでの変更点を確認します</string>
     <string name="changelog_download_fail">変更履歴のダウンロードに失敗しました: %s</string>
-    <string name="changelog_retry">再試行</string>
     <string name="changelog_empty">利用可能な更新はありません</string>
     <string name="no_network_toast">インターネットに接続されていません</string>
     <string name="update_available">アップデートが利用可能です</string>

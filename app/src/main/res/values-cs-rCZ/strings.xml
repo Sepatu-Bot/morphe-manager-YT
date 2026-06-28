@@ -833,7 +833,6 @@ Rozměry obrázků musí být následující:
     <string name="changelog">Zobrazit poznámky k vydání</string>
     <string name="changelog_description">Zjistěte nejaktuálnější změny v této aktualizaci</string>
     <string name="changelog_download_fail">Selhání stažení poznámek k vydání: %s</string>
-    <string name="changelog_retry">Zkuste znovu</string>
     <string name="changelog_empty">Nejsou dostupné žádné záznamy změn</string>
     <string name="no_network_toast">Žádné připojení k internetu</string>
     <string name="update_available">Je k dispozici aktualizace</string>

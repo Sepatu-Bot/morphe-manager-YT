@@ -835,7 +835,6 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="changelog">Féach ar logaí athruithe</string>
     <string name="changelog_description">Féach ar na hathruithe is déanaí sa nuashonrú seo</string>
     <string name="changelog_download_fail">Theip ar an logála hathruithe a íoslódáil: %s</string>
-    <string name="changelog_retry">Déan iarracht arís</string>
     <string name="changelog_empty">Níl aon loga athraithe ar fáil</string>
     <string name="no_network_toast">Níl aon nasc idirlín ar fáil</string>
     <string name="update_available">Tá nuashonrú ar fáil</string>

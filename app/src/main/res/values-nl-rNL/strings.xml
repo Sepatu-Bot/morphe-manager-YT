@@ -830,7 +830,6 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="changelog">Wijzigingslogboeken bekijken</string>
     <string name="changelog_description">Bekijk de laatste wijzigingen in deze update</string>
     <string name="changelog_download_fail">Fout bij het downloaden van de wijzigingslogboek: %s</string>
-    <string name="changelog_retry">Opnieuw proberen</string>
     <string name="changelog_empty">Geen changelog beschikbaar</string>
     <string name="no_network_toast">Geen internetverbinding beschikbaar</string>
     <string name="update_available">Een update is beschikbaar</string>

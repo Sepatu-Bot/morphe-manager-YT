@@ -833,7 +833,6 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="changelog">Vizualizează jurnalele modificărilor</string>
     <string name="changelog_description">Explorează ultimele schimbări din această actualizare</string>
     <string name="changelog_download_fail">Nu s-a putut descărca jurnalul de modificări: %s</string>
-    <string name="changelog_retry">Reîncearcă</string>
     <string name="changelog_empty">Nu există jurnale disponibile</string>
     <string name="no_network_toast">Nu există conexiune la internet</string>
     <string name="update_available">Este disponibilă o actualizare</string>

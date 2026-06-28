@@ -833,7 +833,6 @@ morphe_header_custom_dark.png
     <string name="changelog">चंगेलॉग्स देखें</string>
     <string name="changelog_description">इस अपडेट में नवीनतम बदलाव देखें</string>
     <string name="changelog_download_fail">परिवर्तन लॉग डाउनलोड करने में विफल: %s</string>
-    <string name="changelog_retry">पुनः प्रयास करें</string>
     <string name="changelog_empty">कोई चेंजलॉग उपलब्ध नहीं है</string>
     <string name="no_network_toast">इंटरनेट कनेक्शन उपलब्ध नहीं है</string>
     <string name="update_available">An update is available</string>

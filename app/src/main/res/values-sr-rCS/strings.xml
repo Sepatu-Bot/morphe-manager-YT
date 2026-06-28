@@ -817,7 +817,6 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="changelog">Prikaži zapise o promenama</string>
     <string name="changelog_description">Pogledaj najnovije promene u ovom ažuriranju</string>
     <string name="changelog_download_fail">Preuzimanje zapisa o promenama nije uspelo: %s</string>
-    <string name="changelog_retry">Ponovo pokreni</string>
     <string name="changelog_empty">Nema dostupne verzije promjene</string>
     <string name="no_network_toast">Nema dostupne mrežne veze</string>
     <string name="update_available">Dostupno je ažuriranje</string>

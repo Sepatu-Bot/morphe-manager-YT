@@ -836,8 +836,9 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="changelog">Dəyişiklik jurnallarına bax</string>
     <string name="changelog_description">Bu yeniləmədəki ən son dəyişikliklərə nəzər sal</string>
     <string name="changelog_download_fail">Dəyişiklik jurnalın yükləmək olmadı: %s</string>
-    <string name="changelog_retry">Təkrar yoxla</string>
     <string name="changelog_empty">Dəyişiklik jurnalı mövcud deyil</string>
+    <string name="changelog_show_older">Daha köhnə buraxılışları göstər</string>
+    <string name="changelog_older_empty">Göstəriləcək daha köhnə buraxılışlar yoxdur</string>
     <string name="no_network_toast">İnternet bağlantısı əlçatan deyil</string>
     <string name="update_available">Yenilənmə mövcuddur</string>
     <string name="ready_to_install_update">Yenilənmə quraşdırılmağa hazırdır</string>
