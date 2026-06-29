@@ -574,10 +574,7 @@ private fun BundlePatchControls(
     val resetDone = stringResource(R.string.expert_mode_reset_to_default_done)
     val restoredDone = stringResource(R.string.expert_mode_restore_saved_done)
 
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally)
-    ) {
+    ActionPillRow(modifier = modifier) {
         ActionPillButton(
             onClick = withToast(enabledDone, onSelectAll),
             icon = Icons.Outlined.DoneAll,

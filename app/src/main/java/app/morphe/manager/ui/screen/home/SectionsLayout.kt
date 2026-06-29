@@ -841,6 +841,9 @@ fun MainAppsSection(
     var localOrder by remember { mutableStateOf(homeAppItems.map { it.packageName }) }
     val haptic = LocalHapticFeedback.current
 
+    // True when the multibar (select or reorder action bar) is visible
+    val isMultibarVisible = isMultiSelectMode.value || isReorderMode.value
+
     // Back gesture/button cancels multi-select instead of navigating back
     BackHandler(enabled = isMultiSelectMode.value) {
         isMultiSelectMode.value = false
@@ -1018,13 +1021,9 @@ fun MainAppsSection(
                                     start = horizontalPadding,
                                     end = horizontalPadding,
                                     // Extra bottom padding so cards aren't hidden behind the action bar
-                                    // MultiSelectBar surface heights (144dp / 100dp) minus bar's own
+                                    // MultiSelectBar surface height (100dp) minus bar's own
                                     // 8dp top padding, plus itemSpacing for consistent card gap
-                                    bottom = when {
-                                        isMultiSelectMode.value -> 136.dp + itemSpacing
-                                        isReorderMode.value -> 92.dp + itemSpacing
-                                        else -> 0.dp
-                                    }
+                                    bottom = if (isMultibarVisible) 92.dp + itemSpacing else 0.dp
                                 )
                             ) {
                                 // Cold start: homeAppItems still empty - show placeholder shimmer cards
@@ -1240,7 +1239,7 @@ fun MainAppsSection(
                     MultiSelectBar(
                         selectedCount = selectedPackages.value.size,
                         totalCount = homeAppItems.size,
-                        visible = isMultiSelectMode.value || isReorderMode.value,
+                        visible = isMultibarVisible,
                         isReorderMode = isReorderMode.value,
                         onSelectAll = {
                             selectedPackages.value = homeAppItems.map { it.packageName }.toSet()
@@ -1712,7 +1711,7 @@ private fun MultiSelectBar(
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
-                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        ActionPillRow {
                             ActionPillButton(
                                 onClick = withToast(resetOrderDone, onResetOrder),
                                 icon = Icons.Outlined.Restore,
@@ -1741,8 +1740,6 @@ private fun MultiSelectBar(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        val landscape = isLandscape()
-
                         AnimatedContent(
                             targetState = selectedCount,
                             transitionSpec = MorpheAnimations.compactCounterTransitionSpec,
@@ -1755,65 +1752,43 @@ private fun MultiSelectBar(
                             )
                         }
 
-                        BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
-                            val btnCount = if (showReorderButton && landscape) 5 else 4
-                            val btnWidth = (maxWidth - 12.dp * (btnCount - 1)) / btnCount
-                            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                                ActionPillButton(
-                                    onClick = withToast(selectAllDone, onSelectAll),
-                                    icon = Icons.Outlined.DoneAll,
-                                    contentDescription = selectAllLabel,
-                                    tooltip = selectAllLabel,
-                                    enabled = selectedCount < totalCount,
-                                    modifier = Modifier.width(btnWidth)
-                                )
-                                ActionPillButton(
-                                    onClick = withToast(deselectAllDone, onDeselectAll),
-                                    icon = Icons.Outlined.RemoveDone,
-                                    contentDescription = deselectAllLabel,
-                                    tooltip = deselectAllLabel,
-                                    enabled = selectedCount > 0,
-                                    modifier = Modifier.width(btnWidth)
-                                )
-                                ActionPillButton(
-                                    onClick = onCancel,
-                                    icon = Icons.Outlined.Close,
-                                    contentDescription = cancelLabel,
-                                    tooltip = cancelLabel,
-                                    modifier = Modifier.width(btnWidth)
-                                )
-                                ActionPillButton(
-                                    onClick = withToast(actionDoneMessage, onAction),
-                                    icon = actionIcon,
-                                    contentDescription = actionContentDescription,
-                                    tooltip = actionContentDescription,
-                                    enabled = selectedCount > 0,
-                                    colors = actionColors,
-                                    modifier = Modifier.width(btnWidth)
-                                )
-                                // In landscape, reorder fits as 5th button in the same row
-                                if (showReorderButton && landscape) {
-                                    ActionPillButton(
-                                        onClick = onEnterReorder,
-                                        icon = Icons.Outlined.Reorder,
-                                        contentDescription = reorderListLabel,
-                                        tooltip = reorderListLabel,
-                                        modifier = Modifier.width(btnWidth)
-                                    )
-                                }
-                            }
-                        }
-
-                        // Portrait: reorder stays below as a full-width button with label
-                        if (showReorderButton && !landscape) {
+                        ActionPillRow {
                             ActionPillButton(
-                                onClick = onEnterReorder,
-                                icon = Icons.Outlined.Reorder,
-                                contentDescription = reorderListLabel,
-                                tooltip = reorderListLabel,
-                                label = reorderListLabel,
-                                modifier = Modifier.fillMaxWidth()
+                                onClick = withToast(selectAllDone, onSelectAll),
+                                icon = Icons.Outlined.DoneAll,
+                                contentDescription = selectAllLabel,
+                                tooltip = selectAllLabel,
+                                enabled = selectedCount < totalCount
                             )
+                            ActionPillButton(
+                                onClick = withToast(deselectAllDone, onDeselectAll),
+                                icon = Icons.Outlined.RemoveDone,
+                                contentDescription = deselectAllLabel,
+                                tooltip = deselectAllLabel,
+                                enabled = selectedCount > 0
+                            )
+                            ActionPillButton(
+                                onClick = onCancel,
+                                icon = Icons.Outlined.Close,
+                                contentDescription = cancelLabel,
+                                tooltip = cancelLabel
+                            )
+                            ActionPillButton(
+                                onClick = withToast(actionDoneMessage, onAction),
+                                icon = actionIcon,
+                                contentDescription = actionContentDescription,
+                                tooltip = actionContentDescription,
+                                enabled = selectedCount > 0,
+                                colors = actionColors
+                            )
+                            if (showReorderButton) {
+                                ActionPillButton(
+                                    onClick = onEnterReorder,
+                                    icon = Icons.Outlined.Reorder,
+                                    contentDescription = reorderListLabel,
+                                    tooltip = reorderListLabel
+                                )
+                            }
                         }
                     }
                 }

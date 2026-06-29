@@ -670,77 +670,73 @@ private fun BundleManagementCard(
                     }
 
                     // Action bar
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                            if (!forceExpanded) {
-                                val disableEnableDesc = if (bundle.enabled) {
-                                    stringResource(R.string.disable) + " " + bundle.displayTitle
-                                } else {
-                                    stringResource(R.string.enable) + " " + bundle.displayTitle
-                                }
-                                val disableToast = stringResource(
-                                    if (bundle.enabled) R.string.sources_management_source_disabled
-                                    else R.string.sources_management_source_enabled
-                                )
+                    ActionPillRow {
+                        if (!forceExpanded) {
+                            val disableEnableVerb = stringResource(
+                                if (bundle.enabled) R.string.disable else R.string.enable
+                            )
+                            val disableEnableDesc = disableEnableVerb + " " + bundle.displayTitle
+                            val disableToast = stringResource(
+                                if (bundle.enabled) R.string.sources_management_source_disabled
+                                else R.string.sources_management_source_enabled
+                            )
 
-                                val disableIcon = if (bundle.enabled)
-                                    Icons.Outlined.Block
-                                else
-                                    Icons.Outlined.CheckCircle
+                            val disableIcon = if (bundle.enabled)
+                                Icons.Outlined.Block
+                            else
+                                Icons.Outlined.CheckCircle
 
-                                Crossfade(
-                                    targetState = disableIcon,
-                                    label = "disable_icon"
-                                ) { icon ->
-                                    // Disable button
-                                    ActionPillButton(
-                                        onClick = withToast(disableToast, onDisable),
-                                        icon = icon,
-                                        contentDescription = disableEnableDesc,
-                                        tooltip = disableEnableDesc
-                                    )
-                                }
-                            }
-
-                            if (bundle is RemotePatchBundle) {
-                                val updateDesc = stringResource(R.string.update) + " " + bundle.displayTitle
-                                val updateToast = stringResource(R.string.sources_management_source_updating)
-                                // Update button
+                            Crossfade(
+                                targetState = disableIcon,
+                                label = "disable_icon"
+                            ) { icon ->
+                                // Disable button
                                 ActionPillButton(
-                                    onClick = withToast(updateToast, onUpdate),
-                                    icon = Icons.Outlined.Refresh,
-                                    contentDescription = updateDesc,
-                                    tooltip = updateDesc
+                                    onClick = withToast(disableToast, onDisable),
+                                    icon = icon,
+                                    contentDescription = disableEnableDesc,
+                                    tooltip = disableEnableVerb
                                 )
                             }
+                        }
 
-                            if (!bundle.isDefault) {
-                                val renameDesc = stringResource(R.string.rename) + " " + bundle.displayTitle
-                                val deleteDesc = stringResource(R.string.delete) + " " + bundle.displayTitle
-                                // Rename button
-                                ActionPillButton(
-                                    onClick = onRename,
-                                    icon = Icons.Outlined.Edit,
-                                    contentDescription = renameDesc,
-                                    tooltip = renameDesc
-                                )
+                        if (bundle is RemotePatchBundle) {
+                            val updateVerb = stringResource(R.string.update)
+                            val updateDesc = updateVerb + " " + bundle.displayTitle
+                            val updateToast = stringResource(R.string.sources_management_source_updating)
+                            // Update button
+                            ActionPillButton(
+                                onClick = withToast(updateToast, onUpdate),
+                                icon = Icons.Outlined.Refresh,
+                                contentDescription = updateDesc,
+                                tooltip = updateVerb
+                            )
+                        }
 
-                                // Delete button
-                                ActionPillButton(
-                                    onClick = onDelete,
-                                    icon = Icons.Outlined.Delete,
-                                    contentDescription = deleteDesc,
-                                    tooltip = deleteDesc,
-                                    colors = IconButtonDefaults.filledTonalIconButtonColors(
-                                        containerColor = MaterialTheme.colorScheme.errorContainer,
-                                        contentColor = MaterialTheme.colorScheme.onErrorContainer
-                                    )
+                        if (!bundle.isDefault) {
+                            val renameVerb = stringResource(R.string.rename)
+                            val deleteVerb = stringResource(R.string.delete)
+                            val renameDesc = renameVerb + " " + bundle.displayTitle
+                            val deleteDesc = deleteVerb + " " + bundle.displayTitle
+                            // Rename button
+                            ActionPillButton(
+                                onClick = onRename,
+                                icon = Icons.Outlined.Edit,
+                                contentDescription = renameDesc,
+                                tooltip = renameVerb
+                            )
+
+                            // Delete button
+                            ActionPillButton(
+                                onClick = onDelete,
+                                icon = Icons.Outlined.Delete,
+                                contentDescription = deleteDesc,
+                                tooltip = deleteVerb,
+                                colors = IconButtonDefaults.filledTonalIconButtonColors(
+                                    containerColor = MaterialTheme.colorScheme.errorContainer,
+                                    contentColor = MaterialTheme.colorScheme.onErrorContainer
                                 )
-                            }
+                            )
                         }
                     }
                 }

@@ -533,13 +533,10 @@ private fun BundleSelectionItem(
         }
 
         // Action buttons row
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally)
-        ) {
-            val exportLabel = stringResource(R.string.export)
-            val resetLabel = stringResource(R.string.reset)
+        val exportLabel = stringResource(R.string.export)
+        val resetLabel = stringResource(R.string.reset)
 
+        ActionPillRow {
             // Export button
             ActionPillButton(
                 onClick = {
