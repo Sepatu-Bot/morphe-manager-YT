@@ -1,3 +1,10 @@
+# [1.23.0-dev.4](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.3...v1.23.0-dev.4) (2026-07-01)
+
+
+### Features
+
+* Add Replace/Merge choice dialog on settings and selections import ([#683](https://github.com/MorpheApp/morphe-manager/issues/683)) ([fc9c892](https://github.com/MorpheApp/morphe-manager/commit/fc9c892ddbc28c89136d09c1caabe4fdae50804b))
+
 # [1.23.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.2...v1.23.0-dev.3) (2026-07-01)
 
 
