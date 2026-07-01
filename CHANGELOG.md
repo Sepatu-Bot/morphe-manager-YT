@@ -1,3 +1,15 @@
+# [1.23.0-dev.3](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.2...v1.23.0-dev.3) (2026-07-01)
+
+
+### Bug Fixes
+
+* Resolve TalkBack accessibility issues ([#676](https://github.com/MorpheApp/morphe-manager/issues/676)) ([1b9c246](https://github.com/MorpheApp/morphe-manager/commit/1b9c2467670b02861e9a8c42a182f02fca4df099))
+
+
+### Features
+
+* Adaptive `ActionPillRow` with compress-to-fit ([9554fb3](https://github.com/MorpheApp/morphe-manager/commit/9554fb3f8adb67dcfa09814c37a40d6120da0b82))
+
 # [1.23.0-dev.2](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.1...v1.23.0-dev.2) (2026-06-29)
 
 
