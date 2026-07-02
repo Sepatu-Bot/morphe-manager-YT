@@ -109,6 +109,9 @@ class PreferencesManager(
     val lastFilePickerPath = stringPreference("last_file_picker_path", "")
     val filePickerSortMode = stringPreference("file_picker_sort_mode", "NAME_ASC")
 
+    // "MANUAL" (drag-drop order) or "LAST_UPDATED" (descending by updatedAt ?: createdAt)
+    val sourceBundleSortMode = stringPreference("source_bundle_sort_mode", "MANUAL")
+
     /** Tracks whether the user has explicitly toggled the custom file picker preference. */
     val customFilePickerUserConfigured = booleanPreference("custom_file_picker_user_configured", false)
 
@@ -203,7 +206,8 @@ class PreferencesManager(
         val bytecodeModePreference: BytecodeMode? = null,
         val filePickerSortMode: String? = null,
         val useCustomFilePicker: Boolean? = null,
-        val customFilePickerUserConfigured: Boolean? = null
+        val customFilePickerUserConfigured: Boolean? = null,
+        val sourceBundleSortMode: String? = null
     )
 
     suspend fun exportSettings() = SettingsSnapshot(
@@ -240,7 +244,8 @@ class PreferencesManager(
         bytecodeModePreference = bytecodeModePreference.get(),
         filePickerSortMode = filePickerSortMode.get(),
         useCustomFilePicker = useCustomFilePicker.get(),
-        customFilePickerUserConfigured = customFilePickerUserConfigured.get()
+        customFilePickerUserConfigured = customFilePickerUserConfigured.get(),
+        sourceBundleSortMode = sourceBundleSortMode.get()
     )
 
     suspend fun importSettings(snapshot: SettingsSnapshot) = edit {
@@ -278,6 +283,7 @@ class PreferencesManager(
         snapshot.filePickerSortMode?.let { filePickerSortMode.value = it }
         snapshot.useCustomFilePicker?.let { useCustomFilePicker.value = it }
         snapshot.customFilePickerUserConfigured?.let { customFilePickerUserConfigured.value = it }
+        snapshot.sourceBundleSortMode?.let { sourceBundleSortMode.value = it }
     }
 
     companion object {

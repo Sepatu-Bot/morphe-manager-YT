@@ -17,15 +17,16 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
+import androidx.compose.material.icons.automirrored.outlined.Sort
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
@@ -132,8 +133,14 @@ fun BundleManagementSheet(
         val merged = existing + added
         if (merged != localOrder) localOrder = merged
     }
-    val orderedSources = remember(localOrder, sources) {
-        localOrder.mapNotNull { uid -> sources.find { it.uid == uid } }
+    val sortMode by prefs.sourceBundleSortMode.getAsState()
+    val isLastUpdatedSort = sortMode == "LAST_UPDATED"
+    val orderedSources = remember(localOrder, sources, sortMode) {
+        if (sortMode == "LAST_UPDATED") {
+            sources.sortedByDescending { it.updatedAt ?: it.createdAt ?: 0L }
+        } else {
+            localOrder.mapNotNull { uid -> sources.find { it.uid == uid } }
+        }
     }
     val haptic = LocalHapticFeedback.current
     val reorderableState = rememberReorderableLazyListState(listState) { from, to ->
@@ -199,16 +206,47 @@ fun BundleManagementSheet(
                             )
                         }
 
-                        FilledIconButton(
-                            onClick = onAddSource,
-                            colors = IconButtonDefaults.filledIconButtonColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer
-                            )
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.Add,
-                                contentDescription = stringResource(R.string.add)
-                            )
+                            val manualLabel = stringResource(R.string.sources_sort_manual)
+                            val manualHint = stringResource(R.string.sources_sort_manual_hint)
+                            val lastUpdatedLabel = stringResource(R.string.sources_sort_last_updated)
+                            val activeLabel = if (isLastUpdatedSort) lastUpdatedLabel else manualLabel
+                            FilledIconButton(
+                                onClick = {
+                                    val next = if (isLastUpdatedSort) "MANUAL" else "LAST_UPDATED"
+                                    scope.launch { prefs.sourceBundleSortMode.update(next) }
+                                    context.toast(
+                                        if (next == "LAST_UPDATED") lastUpdatedLabel
+                                        else "$manualLabel. $manualHint"
+                                    )
+                                },
+                                modifier = Modifier.semantics {
+                                    role = Role.Button
+                                    stateDescription = activeLabel
+                                },
+                                colors = IconButtonDefaults.filledIconButtonColors(
+                                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                                )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Outlined.Sort,
+                                    contentDescription = stringResource(R.string.sort)
+                                )
+                            }
+                            FilledIconButton(
+                                onClick = onAddSource,
+                                colors = IconButtonDefaults.filledIconButtonColors(
+                                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                                )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Add,
+                                    contentDescription = stringResource(R.string.add)
+                                )
+                            }
                         }
                     }
 
@@ -310,16 +348,20 @@ fun BundleManagementSheet(
                                 },
                                 forceExpanded = isSingleDefaultBundle,
                                 isDragging = itemIsDragging,
-                                longPressModifier = Modifier.longPressDraggableHandle(
-                                    onDragStarted = {
-                                        isDragging = true
-                                        haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                                    },
-                                    onDragStopped = {
-                                        isDragging = false
-                                        onReorder(localOrder)
-                                    }
-                                ),
+                                longPressModifier = if (isLastUpdatedSort) {
+                                    Modifier
+                                } else {
+                                    Modifier.longPressDraggableHandle(
+                                        onDragStarted = {
+                                            isDragging = true
+                                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                        },
+                                        onDragStopped = {
+                                            isDragging = false
+                                            onReorder(localOrder)
+                                        }
+                                    )
+                                },
                                 onPatchesBtnPositioned = if (isFirstCard) { b -> globalOnboardingState?.sourcesPatchesBounds = b } else null,
                                 onVersionPositioned = if (isFirstCard) { b -> globalOnboardingState?.sourcesVersionBounds = b } else null,
                                 onPrereleaseBtnPositioned = if (isFirstCard) { b -> globalOnboardingState?.sourcesPrereleaseBounds = b } else null,
