@@ -1151,57 +1151,48 @@ private fun ActionsSection(
         )
     }
 
-    // Show install/reinstall from saved copy when:
-    // - installType is SAVED (normal saved app flow), or
-    // - app was deleted from device but a saved patched APK still exists
-    val showInstallFromSaved = viewModel.hasSavedCopy &&
-            (installedApp.installType == InstallType.SAVED || viewModel.isAppDeleted)
-
-    when {
-        showInstallFromSaved -> {
-            val installText = if (viewModel.isInstalledOnDevice) {
-                stringResource(R.string.reinstall)
-            } else {
-                stringResource(R.string.install)
-            }
-            secondaryActions.add(
-                ActionItem(
-                    text = installText,
-                    icon = Icons.Outlined.InstallMobile,
-                    onClick = {
-                        val savedFile = viewModel.savedApkFile()
-                        if (savedFile != null) {
-                            val installAction = {
-                                installViewModel.install(
-                                    outputFile = savedFile,
-                                    originalPackageName = installedApp.originalPackageName,
-                                    onPersistApp = { _, _ ->
-                                        // Callback will be called after successful installation
-                                        // The LaunchedEffect handler will update the installation type
-                                        true
-                                    }
-                                )
-                            }
-
-                            // Check if mount warning is needed
-                            if (viewModel.primaryInstallerIsMount && installedApp.installType != InstallType.MOUNT) {
-                                // Show mount warning dialog
-                                onShowMountWarning(installAction)
-                            } else if (!viewModel.primaryInstallerIsMount && installedApp.installType == InstallType.MOUNT) {
-                                // Show mount mismatch warning
-                                onShowMountWarning(installAction)
-                            } else {
-                                // No warning needed, install directly
-                                installAction()
-                            }
-                        }
-                    },
-                    isLoading = isInstalling
-                )
-            )
+    // Show install/reinstall from saved copy whenever the patched APK is available
+    if (viewModel.hasSavedCopy) {
+        val installText = if (viewModel.isInstalledOnDevice) {
+            stringResource(R.string.reinstall)
+        } else {
+            stringResource(R.string.install)
         }
-        installedApp.installType == InstallType.SAVED -> Unit // hasSavedCopy is false, nothing to show
-        else -> Unit
+        secondaryActions.add(
+            ActionItem(
+                text = installText,
+                icon = Icons.Outlined.InstallMobile,
+                onClick = {
+                    val savedFile = viewModel.savedApkFile()
+                    if (savedFile != null) {
+                        val installAction = {
+                            installViewModel.install(
+                                outputFile = savedFile,
+                                originalPackageName = installedApp.originalPackageName,
+                                onPersistApp = { _, _ ->
+                                    // Callback will be called after successful installation
+                                    // The LaunchedEffect handler will update the installation type
+                                    true
+                                }
+                            )
+                        }
+
+                        // Check if mount warning is needed
+                        if (viewModel.primaryInstallerIsMount && installedApp.installType != InstallType.MOUNT) {
+                            // Show mount warning dialog
+                            onShowMountWarning(installAction)
+                        } else if (!viewModel.primaryInstallerIsMount && installedApp.installType == InstallType.MOUNT) {
+                            // Show mount mismatch warning
+                            onShowMountWarning(installAction)
+                        } else {
+                            // No warning needed, install directly
+                            installAction()
+                        }
+                    }
+                },
+                isLoading = isInstalling
+            )
+        )
     }
 
     when (installedApp.installType) {
