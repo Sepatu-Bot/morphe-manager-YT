@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Natlig og produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchkilder</string>
+    <string name="sources_sort_manual">Manuel orden</string>
+    <string name="sources_sort_manual_hint">Tryk og hold på en kilde for at ændre rækkefølgen</string>
+    <string name="sources_sort_last_updated">Sidst opdateret</string>
     <string name="sources_management_open_in_browser">Åbn links i browser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åbne URL</string>
     <string name="sources_management_prerelease_toggle">Pre-release patches</string>
@@ -285,6 +288,9 @@ Ydre zone (stiplet): Kan blive beskåret af launcher-masken – hold vigtige det
     <string name="home_app_info_patch_source_used">Patchkilde brugt</string>
     <string name="home_app_info_install_type_custom_installer">Brugerdefineret installer</string>
     <string name="home_app_info_install_type_system_installer">Systeminstaller</string>
+    <string name="home_app_info_install_type_play_store">Installer fra Play Butik</string>
+    <string name="home_app_info_install_type_root_play_store">Root-installation fra Play Butik</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Butik-installation</string>
     <string name="home_app_info_patch_update_available">Patchopdatering tilgængelig</string>
     <string name="home_app_info_patch_update_available_description">En nyere version af patches er tilgængelig. Repatch din app for at få de seneste forbedringer og rettelser</string>
     <string name="home_app_info_app_deleted_warning">Appen blev fjernet</string>
@@ -609,9 +615,12 @@ Størrelsesformatet skal være som følger:
     <string name="installer">Installer</string>
     <string name="installer_title">Vælg installer</string>
     <string name="installer_internal_description">Bruger Android-pakkeinstallationsprogrammet</string>
+    <string name="installer_play_store_description">Bruger systeminstallationsprogrammet og angiver Google Play Butik som installationskilde</string>
+    <string name="installer_root_play_store_description">Installeres lydløst med root og sætter Google Play Butik som installationskilde</string>
     <string name="installer_auto_saved_name">Root monteringsinstallationsprogram</string>
     <string name="installer_auto_saved_description">Monterer den patchede APK over den installerede app</string>
     <string name="installer_shizuku_description">Installer lydløst med Shizuku eller Sui</string>
+    <string name="installer_shizuku_play_store_description">Installeres lydløst via Shizuku eller Sui og sætter Google Play Butik som installationskilde</string>
     <string name="installer_option_none">Ingen fallback</string>
     <string name="installer_none_description">Ingen fallback-installationsprogram er konfigureret</string>
     <string name="installer_status_requires_root">Kræver root-adgang</string>
@@ -632,6 +641,10 @@ Størrelsesformatet skal være som følger:
     <string name="installer_unavailable_message">Din foretrukne installer (%s) er i øjeblikket utilgængelig. Du kan løse problemet og prøve igen, eller bruge standardinstalleren i stedet</string>
     <string name="installer_unavailable_shizuku_hint">Sørg for at Shizuku kører og at tilladelse er givet til denne app</string>
     <string name="installer_use_standard">Brug standard</string>
+    <string name="installer_play_store_warning_title">Installer som Play Butik?</string>
+    <string name="installer_play_store_warning_message">Den patched app vil blive registreret som installeret fra Google Play Butik. Dette lader tjenester som Android Auto genkende den som en Play Butik app</string>
+    <string name="installer_play_store_warning_risk">Play Butik kan tilbyde opdateringer til den patched app. Installation af den opdatering vil overskrive den patched APK med den originale version og fjerne patches. Hvis du bliver bedt om at opdatere, skal du trykke på menuen med tre prikker på appens Play Butik-side og vælge \"Slå opdateringer fra\"</string>
+    <string name="installer_play_store_warning_continue">Jeg forstår, fortsæt</string>
     <string name="settings_prompt_installer_on_install">Installatørvalgsmeddelelse</string>
     <string name="settings_prompt_installer_on_install_description">Vis installer-valgdialog hver gang du installerer en patchet app</string>
     <string name="settings_auto_install_with_shizuku">Automatisk installation efter patching</string>

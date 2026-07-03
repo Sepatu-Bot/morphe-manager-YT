@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">রাতও জাগছেন, আবার কাজের কাজও করে ফেলছেন</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">প্যাচ সোর্সগুলো</string>
+    <string name="sources_sort_manual">ম্যানুয়াল অর্ডার</string>
+    <string name="sources_sort_manual_hint">পুনরায় সাজানোর জন্য একটি উৎসের উপর দীর্ঘক্ষণ চাপুন</string>
+    <string name="sources_sort_last_updated">সর্বশেষ আপডেট করা হয়েছে</string>
     <string name="sources_management_open_in_browser">ব্রাউজারে ওপেন করুন</string>
     <string name="sources_management_failed_to_open_url">URL খুলতে ব্যর্থ হয়েছে</string>
     <string name="sources_management_prerelease_toggle">প্রি-রিলিজ প্যাচ</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">প্যাচের উৎস ব্যবহৃত হয়েছে</string>
     <string name="home_app_info_install_type_custom_installer">কাস্টম ইনস্টলার</string>
     <string name="home_app_info_install_type_system_installer">সিস্টেম ইনস্টলার</string>
+    <string name="home_app_info_install_type_play_store">Play Store-এ ইনস্টল করুন</string>
+    <string name="home_app_info_install_type_root_play_store">রুট প্লে স্টোর ইনস্টল করুন</string>
+    <string name="home_app_info_install_type_shizuku_play_store">শিজুউকু প্লে স্টোর ইনস্টল করুন</string>
     <string name="home_app_info_patch_update_available">প্যাচ আপডেট উপলব্ধ আছে</string>
     <string name="home_app_info_patch_update_available_description">প্যাচের নতুন ভার্সন উপলব্ধ। আপনার অ্যাপকে পুনরায় প্যাচ করুন সর্বশেষ উন্নতির জন্য</string>
     <string name="home_app_info_app_deleted_warning">অ্যাপটি বের করা হয়েছে</string>
@@ -599,9 +605,12 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer">పరిష్కరణ</string>
     <string name="installer_title">ইনস্টলার নির্বাচন করুন</string>
     <string name="installer_internal_description">অ্যান্ড্রয়েড প্যাকেজ ইনস্টলার ব্যবহার করে।</string>
+    <string name="installer_play_store_description">সিস্টেম ইনস্টলার ব্যবহার করে এবং Google Play Store-কে ইনস্টল উৎস হিসাবে সেট করে</string>
+    <string name="installer_root_play_store_description">রুট ব্যবহার করে নিঃশব্দে ইনস্টল করে এবং গুগল প্লে স্টোরকে ইনস্টল উৎস হিসেবে সেট করে</string>
     <string name="installer_auto_saved_name">রুট করা মাউন্ট ইনস্টলার</string>
     <string name="installer_auto_saved_description">এপিকে (APK) প্যাচ করা ইনস্টল করা অ্যাপের উপরে স্থাপন করা হয়</string>
     <string name="installer_shizuku_description">Shizuku বা Sui ব্যবহার করে নিঃশব্দে ইনস্টল করে।</string>
+    <string name="installer_shizuku_play_store_description">শিজুকু অথবা সুই এর মাধ্যমে নিঃশব্দে ইনস্টল করে এবং গুগল প্লে স্টোরকে ইনস্টল উৎস হিসেবে সেট করে</string>
     <string name="installer_option_none">কোন ফলব্যাক নেই</string>
     <string name="installer_none_description">কোনও ফলব্যাক ইনস্টলার কনফিগার করা নেই</string>
     <string name="installer_status_requires_root">রুট অ্যাক্সেস প্রয়োজন</string>
@@ -622,6 +631,10 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer_unavailable_message">তোমার পছন্দের ইনস্টলার (%s) বর্তমানে অ্যাক্সেসযোগ্য নয়. সমস্যা সমাধান কর এবং আবার চেষ্টা করুন, বা স্ট্যান্ডার্ড ইনস্টলার ব্যবহার করুন</string>
     <string name="installer_unavailable_shizuku_hint">শিজুকু চালু আছে এবং এই অ্যাপের অনুমতি দেওয়া হয়েছে</string>
     <string name="installer_use_standard">স্ট্যান্ডার্ড ব্যবহার করুন</string>
+    <string name="installer_play_store_warning_title">প্লে স্টোর হিসাবে ইনস্টল করবেন?</string>
+    <string name="installer_play_store_warning_message">প্যাচ করা অ্যাপটি গুগল প্লে স্টোর থেকে ইনস্টল করা হয়েছে হিসেবে রেকর্ড করা হবে। এটি অ্যান্ড্রয়েড অটো-র মতো পরিষেবাগুলিকে প্লে স্টোর অ্যাপ হিসেবে চিনতে দেয়।</string>
+    <string name="installer_play_store_warning_risk">প্লে স্টোর প্যাচ করা অ্যাপের জন্য আপডেট দিতে পারে। সেই আপডেট ইনস্টল করলে, এটি আসল সংস্করণ দিয়ে প্যাচ করা APK প্রতিস্থাপন করবে এবং প্যাচগুলি সরিয়ে দেবে। আপডেট করার জন্য অনুরোধ করা হলে, অ্যাপের প্লে স্টোর পৃষ্ঠায় তিনটি ডট মেনুতে আলতো চাপুন এবং \"আপডেট বন্ধ করুন\" নির্বাচন করুন।</string>
+    <string name="installer_play_store_warning_continue">আমি বুঝতে পেরেছি, চালিয়ে যান</string>
     <string name="settings_prompt_installer_on_install">ইনস্টলার নির্বাচন প্রম্পট।</string>
     <string name="settings_prompt_installer_on_install_description">প্যাচ করা অ্যাপ ইনস্টল করার সময়마다 ইনস্টলার নির্বাচন ডায়ালগ দেখায়।</string>
     <string name="settings_auto_install_with_shizuku">প্যাচিং করার পরে স্বয়ংক্রিয়ভাবে ইনস্টল করুন</string>

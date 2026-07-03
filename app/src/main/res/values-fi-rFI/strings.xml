@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Yökyykkymäinen ja tuottelias</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Lisäosien lähteet</string>
+    <string name="sources_sort_manual">Manuaalinen järjestys</string>
+    <string name="sources_sort_manual_hint">Paina ja pidä lähdettä uudelleenjärjestämistä varten</string>
+    <string name="sources_sort_last_updated">Viimeksi päivitetty</string>
     <string name="sources_management_open_in_browser">Avaa selaimessa</string>
     <string name="sources_management_failed_to_open_url">URL-osoitteen avaaminen epäonnistui</string>
     <string name="sources_management_prerelease_toggle">Ennakkojulkaisupäivitykset</string>
@@ -285,6 +288,9 @@ Ulkopuolinen alue (katkoviiva): käynnistimen maski saattaa leikata osia siitä 
     <string name="home_app_info_patch_source_used">Käytetty lisäosien lähde</string>
     <string name="home_app_info_install_type_custom_installer">Oma asennusohjelma</string>
     <string name="home_app_info_install_type_system_installer">Järjestelmän asennusohjelma</string>
+    <string name="home_app_info_install_type_play_store">Play Kaupan asennus</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Kaupan asennus</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Kaupan asennus</string>
     <string name="home_app_info_patch_update_available">Lisäosien päivitys saatavilla</string>
     <string name="home_app_info_patch_update_available_description">Uudempi lisäosien versio on saatavilla. Muokkaa sovellusta uudestaan saadaksesi uusimmat parannukset ja korjaukset</string>
     <string name="home_app_info_app_deleted_warning">Sovellus poistettiin</string>
@@ -605,9 +611,12 @@ Kuvien mittojen on oltava seuraavat:
     <string name="installer">Asennusohjelma</string>
     <string name="installer_title">Valitse asennusohjelma</string>
     <string name="installer_internal_description">Käytä Androidin pakettien asennusohjelmaa</string>
+    <string name="installer_play_store_description">Käyttää järjestelmän asennusohjelmaa ja asettaa Google Play Kaupan asennuslähteeksi</string>
+    <string name="installer_root_play_store_description">Asennetaan äänettömästi juurikäyttäjällä ja asetetaan Google Play Kauppa asennuslähteeksi</string>
     <string name="installer_auto_saved_name">Root-liitosasennusohjelma</string>
     <string name="installer_auto_saved_description">Asentaa korjattua APK:tä asennetun sovelluksen päälle</string>
     <string name="installer_shizuku_description">Asenna hiljaisesti Shizuku- tai Sui-ohjelmalla</string>
+    <string name="installer_shizuku_play_store_description">Asennetaan äänettömästi Shizukun tai Suin kautta ja asetetaan Google Play Kauppa asennuslähteeksi</string>
     <string name="installer_option_none">Ei varajärjestelmää</string>
     <string name="installer_none_description">Varajärjestelmää ei ole määritetty</string>
     <string name="installer_status_requires_root">Vaatii pääkäyttäjän käyttöoikeudet</string>
@@ -628,6 +637,10 @@ Kuvien mittojen on oltava seuraavat:
     <string name="installer_unavailable_message">Edullisin asennuksesi (%s) on tällä hetkellä käytöstä poissa. Voit korjata ongelman ja yrittää uudelleen tai käyttää standardiasennusta.</string>
     <string name="installer_unavailable_shizuku_hint">Tarkista, että Shizuku on käynnissä ja lupa on myönnetty tälle sovellukselle.</string>
     <string name="installer_use_standard">Käytä oletusta</string>
+    <string name="installer_play_store_warning_title">Asenna Play Kauppana?</string>
+    <string name="installer_play_store_warning_message">Korjattu sovellus rekisteröidään asennetuksi Google Play Kaupasta. Tämä antaa palveluille, kuten Android Autolle, tunnistaa sen Play Kauppa -sovelluksena</string>
+    <string name="installer_play_store_warning_risk">Play Kauppa saattaa tarjota päivityksiä korjatulle sovellukselle. Päivityksen asentaminen korvaa korjatun APK:n alkuperäisellä versiolla ja poistaa korjaukset. Jos sinua pyydetään päivittämään, napauta sovelluksen Play Kauppa -sivulla olevaa kolmen pisteen valikkoa ja valitse \"Poista päivitykset käytöstä\"</string>
+    <string name="installer_play_store_warning_continue">Ymmärrän, jatka</string>
     <string name="settings_prompt_installer_on_install">Asennusohjelman valintakehote</string>
     <string name="settings_prompt_installer_on_install_description">Näytä asennusohjelman valintaikkuna aina, kun asennat paikatun sovelluksen.</string>
     <string name="settings_auto_install_with_shizuku">Asenna automaattisesti korjauksen jälkeen</string>

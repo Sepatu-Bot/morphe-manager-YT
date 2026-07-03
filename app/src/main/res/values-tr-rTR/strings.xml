@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Gececi ve üretken</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
+    <string name="sources_sort_manual">Elle ile sipariş</string>
+    <string name="sources_sort_manual_hint">Sıralamayı değiştirmek için bir kaynağa uzun süre dokunun</string>
+    <string name="sources_sort_last_updated">Son güncelleme</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
     <string name="sources_management_failed_to_open_url">URL açılamadı</string>
     <string name="sources_management_prerelease_toggle">Ön sürüm yamalar</string>
@@ -285,6 +288,9 @@ Dış bölge (kesikli): launcher maskesi tarafından kırpılabilir - önemli ay
     <string name="home_app_info_patch_source_used">Kullanılan yama kaynağı</string>
     <string name="home_app_info_install_type_custom_installer">Özel yükleyici</string>
     <string name="home_app_info_install_type_system_installer">Sistem yükleyicisi</string>
+    <string name="home_app_info_install_type_play_store">Play Store yükle</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store yükle</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Store yükle</string>
     <string name="home_app_info_patch_update_available">Yama paketi güncellemesi mevcut</string>
     <string name="home_app_info_patch_update_available_description">Daha yeni sürüm yamalar mevcut. En son iyileştirmeleri ve düzeltmeleri almak için uygulamayı yeniden yamalayın</string>
     <string name="home_app_info_app_deleted_warning">Uygulama kaldırıldı</string>
@@ -609,9 +615,12 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer">Yükleyici</string>
     <string name="installer_title">Yükleyici seçin</string>
     <string name="installer_internal_description">Android paket yükleyicisini kullanır</string>
+    <string name="installer_play_store_description">Sistem yükleyicisini kullanır ve Google Play Store\'u yükleme kaynağı olarak ayarlar</string>
+    <string name="installer_root_play_store_description">Root erişimiyle sessizce yükler ve Google Play Store\'u kurulum kaynağı olarak ayarlar</string>
     <string name="installer_auto_saved_name">Rootlu bağlama yükleyicisi</string>
     <string name="installer_auto_saved_description">Yamalanmış APK\'yi yüklü uygulamaya bağlar</string>
     <string name="installer_shizuku_description">Shizuku veya Sui kullanılarak sessiz modda yüklenir</string>
+    <string name="installer_shizuku_play_store_description">Shizuku veya Sui aracılığıyla sessizce yükler ve Google Play Store\'u kurulum kaynağı olarak ayarlar</string>
     <string name="installer_option_none">Yedek yok</string>
     <string name="installer_none_description">Yedek yükleyici yapılandırılmamış</string>
     <string name="installer_status_requires_root">Root erişimi gerektirir</string>
@@ -632,6 +641,10 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_unavailable_message">Tercih ettiğiniz yükleyici (%s) şu anda kullanılamıyor. Sorunu çözüp tekrar deneyebilir veya standart yükleyiciyi kullanabilirsiniz</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku\'nun çalıştığından ve ve bu uygulama için izin verildiğinden emin olun</string>
     <string name="installer_use_standard">Standardı kullan</string>
+    <string name="installer_play_store_warning_title">Play Store olarak yükle?</string>
+    <string name="installer_play_store_warning_message">Değiştirilmiş uygulama Google Play Store\'dan yüklenmiş olarak kaydedilecektir. Bu, Android Auto gibi hizmetlerin uygulamayı bir Play Store uygulaması olarak tanımasını sağlar</string>
+    <string name="installer_play_store_warning_risk">Play Store, değiştirilmiş uygulama için güncelleme sunabilir. Bu güncellemeyi yüklemek, değiştirilmiş APK\'yı orijinal sürümüyle değiştirir ve değişiklikleri kaldırır. Güncelleme yapmanız istenirse, uygulamanın Play Store sayfasındaki üç nokta menüsüne dokunun ve \"Güncellemeleri kapat\" seçeneğini seçin</string>
+    <string name="installer_play_store_warning_continue">Anladım, devam et</string>
     <string name="settings_prompt_installer_on_install">Yükleyici seçimi istemi</string>
     <string name="settings_prompt_installer_on_install_description">Yamalanmış bir uygulama her yüklendiğinde yükleyici seçim penceresini gösterir</string>
     <string name="settings_auto_install_with_shizuku">Yamalama sonrası otomatik yükle</string>
@@ -801,7 +814,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="reset_order_done">Sıra sıfırlandı</string>
     <string name="accessibility_move_up">Yukarı taşı</string>
     <string name="accessibility_move_down">Aşağı taşı</string>
-    <string name="accessibility_app_moved_announcement">%1$s %3$d öğesinin %2$d konumuna taşındı</string>
+    <string name="accessibility_app_moved_announcement">%1$s, %3$d\'nin %2$d konumuna taşındı</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="import_">İçe aktar</string>
     <string name="export">Dışa aktar</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nattaktiv og produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchkilder</string>
+    <string name="sources_sort_manual">Manuell rekkefølge</string>
+    <string name="sources_sort_manual_hint">Trykk og hold nede en kilde for å endre rekkefølgen</string>
+    <string name="sources_sort_last_updated">Sist oppdatert</string>
     <string name="sources_management_open_in_browser">Åpne i nettleser</string>
     <string name="sources_management_failed_to_open_url">Kunne ikke åpne URL</string>
     <string name="sources_management_prerelease_toggle">Forhåndsutgitte oppdateringer</string>
@@ -285,6 +288,9 @@ Ytre sone (stiplet): kan bli beskåret av launcher-masken – hold viktig inform
     <string name="home_app_info_patch_source_used">Patch-kilde brukt</string>
     <string name="home_app_info_install_type_custom_installer">Tilpasset installasjonsprogram</string>
     <string name="home_app_info_install_type_system_installer">Systeminstallasjonsprogram</string>
+    <string name="home_app_info_install_type_play_store">Installer fra Play Butikk</string>
+    <string name="home_app_info_install_type_root_play_store">Root-installasjon fra Play Butikk</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Butikk-installasjon</string>
     <string name="home_app_info_patch_update_available">Patch-oppdatering tilgjengelig</string>
     <string name="home_app_info_patch_update_available_description">En nyere versjon av patcher er tilgjengelig. Patch appen din på nytt for å få de nyeste forbedringene og reparasjonene</string>
     <string name="home_app_info_app_deleted_warning">Appen ble avinstallert</string>
@@ -609,9 +615,12 @@ morphe_header_custom_dark.png
     <string name="installer">Installasjonsprogram</string>
     <string name="installer_title">Velg installasjonsprogram</string>
     <string name="installer_internal_description">Bruker Android-pakkeinstallasjonsprogrammet</string>
+    <string name="installer_play_store_description">Bruker systeminstallatøren og angir Google Play Butikk som installasjonskilde</string>
+    <string name="installer_root_play_store_description">Installeres stille med root og angir Google Play Store som installasjonskilde</string>
     <string name="installer_auto_saved_name">Root-montert installasjonsprogram</string>
     <string name="installer_auto_saved_description">Monter den patched APK-filen over den installerte appen</string>
     <string name="installer_shizuku_description">Installerer lydløst ved hjelp av Shizuku eller Sui</string>
+    <string name="installer_shizuku_play_store_description">Installeres stille via Shizuku eller Sui og angir Google Play Store som installasjonskilde</string>
     <string name="installer_option_none">Ingen fallback</string>
     <string name="installer_none_description">Ingen fallback-installasjonsprogram er konfigurert</string>
     <string name="installer_status_requires_root">Krever rottilgang</string>
@@ -632,6 +641,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">Din foretrukne installasjonsprogram (%s) er for øyeblikket ikke tilgjengelig. Du kan fikse problemet og prøve igjen, eller bruke standardinstallasjonsprogrammet i stedet</string>
     <string name="installer_unavailable_shizuku_hint">Sørg for at Shizuku kjører og tillatelse er gitt til denne appen</string>
     <string name="installer_use_standard">Bruk standard</string>
+    <string name="installer_play_store_warning_title">Installer som Play Store?</string>
+    <string name="installer_play_store_warning_message">Den patchede appen vil bli registrert som installert fra Google Play Store. Dette lar tjenester som Android Auto gjenkjenne den som en Play Store-app</string>
+    <string name="installer_play_store_warning_risk">Play Store kan tilby oppdateringer for den patchede appen. Hvis du installerer den oppdateringen, vil den overskrive den patchede APK-filen med den originale versjonen og fjerne patchene. Hvis du blir bedt om å oppdatere, trykker du på menyen med tre prikker på appens Play Store-side og velger \"Slå av oppdateringer\"</string>
+    <string name="installer_play_store_warning_continue">Jeg forstår, fortsett</string>
     <string name="settings_prompt_installer_on_install">Installeringsvalg-melding</string>
     <string name="settings_prompt_installer_on_install_description">Viser installasjonsvalgdialogen hver gang en oppdatert app installeres</string>
     <string name="settings_auto_install_with_shizuku">Automatisk installasjon etter patching</string>

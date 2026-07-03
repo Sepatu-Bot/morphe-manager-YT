@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nachtaktiv und produktiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patch-Quellen</string>
+    <string name="sources_sort_manual">Manuelle Reihenfolge</string>
+    <string name="sources_sort_manual_hint">Halten Sie eine Quelle gedrückt, um sie neu anzuordnen</string>
+    <string name="sources_sort_last_updated">Zuletzt aktualisiert</string>
     <string name="sources_management_open_in_browser">Im Browser öffnen</string>
     <string name="sources_management_failed_to_open_url">Öffnen der URL fehlgeschlagen</string>
     <string name="sources_management_prerelease_toggle">Vorab-Patches</string>
@@ -285,6 +288,9 @@ Für optimale Ergebnisse empfiehlt diese App eine &lt;b&gt;vollständige APK&lt;
     <string name="home_app_info_patch_source_used">Verwendete Patch-Quelle</string>
     <string name="home_app_info_install_type_custom_installer">Benutzerdefinierter Installer</string>
     <string name="home_app_info_install_type_system_installer">System-Installer</string>
+    <string name="home_app_info_install_type_play_store">Play Store installieren</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store installieren</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Store installieren</string>
     <string name="home_app_info_patch_update_available">Patch-Update verfügbar</string>
     <string name="home_app_info_patch_update_available_description">Eine neuere Version von Patches ist verfügbar. Repatchen Sie Ihre App, um die neuesten Verbesserungen und Fehlerbehebungen zu erhalten</string>
     <string name="home_app_info_app_deleted_warning">App wurde deinstalliert</string>
@@ -609,9 +615,12 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="installer">Installer</string>
     <string name="installer_title">Installer auswählen</string>
     <string name="installer_internal_description">Verwendet den Android-Paketinstaller</string>
+    <string name="installer_play_store_description">Verwendet den Systeminstaller und setzt den Google Play Store als Installationsquelle</string>
+    <string name="installer_root_play_store_description">Installiert stumm mit Root-Rechten und setzt den Google Play Store als Installationsquelle fest</string>
     <string name="installer_auto_saved_name">Root-Mount-Installer</string>
     <string name="installer_auto_saved_description">Die gepatchte APK über die installierte App mounten</string>
     <string name="installer_shizuku_description">Installiert stillschweigend mit Shizuku oder Sui</string>
+    <string name="installer_shizuku_play_store_description">Installiert stumm über Shizuku oder Sui und setzt den Google Play Store als Installationsquelle fest</string>
     <string name="installer_option_none">Kein Fallback</string>
     <string name="installer_none_description">Es ist kein Fallback-Installer konfiguriert</string>
     <string name="installer_status_requires_root">Benötigt Root-Zugriff</string>
@@ -632,6 +641,10 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="installer_unavailable_message">Ihr bevorzugter Installer (%s) ist momentan nicht verfügbar. Sie können das Problem beheben und es erneut versuchen oder stattdessen den Standard-Installer verwenden</string>
     <string name="installer_unavailable_shizuku_hint">Stellen Sie sicher, dass Shizuku ausgeführt wird und die Erlaubnis für diese App erteilt wurde</string>
     <string name="installer_use_standard">Standard verwenden</string>
+    <string name="installer_play_store_warning_title">Als Play Store installieren?</string>
+    <string name="installer_play_store_warning_message">Die gepatchte App wird als von Google Play Store installiert protokolliert. Dies ermöglicht es Diensten wie Android Auto, sie als Play Store App zu erkennen.</string>
+    <string name="installer_play_store_warning_risk">Der Play Store kann Updates für die gepatchte App anbieten. Die Installation dieses Updates überschreibt die gepatchte APK mit der Originalversion und entfernt die Patches. Wenn Sie zur Aktualisierung aufgefordert werden, tippen Sie auf das Menü mit den drei Punkten auf der Play Store-Seite der App und wählen Sie \"Updates deaktivieren\".</string>
+    <string name="installer_play_store_warning_continue">Ich verstehe, fortfahren</string>
     <string name="settings_prompt_installer_on_install">Auswahlaufforderung für den Installer</string>
     <string name="settings_prompt_installer_on_install_description">Zeigt jedes Mal ein Dialogfenster zur Installerauswahl an, wenn eine gepatchte App installiert wird</string>
     <string name="settings_auto_install_with_shizuku">Automatische Installation nach dem Patchen</string>

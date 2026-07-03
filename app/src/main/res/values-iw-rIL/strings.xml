@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">ליליים ופרודוקטיביים</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">מקורות תיקונים</string>
+    <string name="sources_sort_manual">הזמנה ידנית</string>
+    <string name="sources_sort_manual_hint">לחץ לחיצה ארוכה על מקור כדי לשנות את הסדר</string>
+    <string name="sources_sort_last_updated">עודכן לאחרונה</string>
     <string name="sources_management_open_in_browser">פתח בדפדפן</string>
     <string name="sources_management_failed_to_open_url">כישלון בפתיחת כתובת אינטרנט</string>
     <string name="sources_management_prerelease_toggle">תיקונים לפני הפצה</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">החבילה הועברה</string>
     <string name="home_app_info_install_type_custom_installer">פיצ\'ח מותאם</string>
     <string name="home_app_info_install_type_system_installer">פיצ\'ח מותאם</string>
+    <string name="home_app_info_install_type_play_store">התקנה דרך חנות Play</string>
+    <string name="home_app_info_install_type_root_play_store">התקנה דרך Root של חנות Play</string>
+    <string name="home_app_info_install_type_shizuku_play_store">התקנה דרך Shizuku של חנות Play</string>
     <string name="home_app_info_patch_update_available">עדכון פיצ\'ה זמין זמין</string>
     <string name="home_app_info_patch_update_available_description">גרסה חדשה של תיקונים זמינה. תיקן את האפליקציה שלך כדי לקבל את התיקונים וההערות החדשים</string>
     <string name="home_app_info_app_deleted_warning">האפליקציה הוסרה</string>
@@ -593,9 +599,12 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer">Установщик</string>
     <string name="installer_title">בחר התקן</string>
     <string name="installer_internal_description">משתמש במתקין החבילות של Android</string>
+    <string name="installer_play_store_description">משתמש במתקין המערכת ומגדיר את חנות Google Play כמקור ההתקנה</string>
+    <string name="installer_root_play_store_description">מתקין בשקט עם הרשאות רוט ומגדיר את חנות Google Play כמקור ההתקנה</string>
     <string name="installer_auto_saved_name">מתקין מאונטר עם רוט</string>
     <string name="installer_auto_saved_description">העלה את APK המותקן על האפליקציה המותקנת</string>
     <string name="installer_shizuku_description">מתקין בשקט באמצעות Shizuku או Sui</string>
+    <string name="installer_shizuku_play_store_description">מתקין בשקט דרך Shizuku או Sui ומגדיר את חנות Google Play כמקור ההתקנה</string>
     <string name="installer_option_none">אין חלופה</string>
     <string name="installer_none_description">לא הוגדר מתקין חלופי</string>
     <string name="installer_status_requires_root">דורש גישת root</string>
@@ -616,6 +625,10 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer_unavailable_message">התקן המועדף שלך (%s) אינו זמין כעת. תוכל לתקן את הבעיה ולתחל שוב, או להשתמש בהתקן סטנדרטי במקום זאת</string>
     <string name="installer_unavailable_shizuku_hint">אשר שיזוקה רץ ורשאות מובנות לאפליקציה זו</string>
     <string name="installer_use_standard">השתמש בסטנדרטי</string>
+    <string name="installer_play_store_warning_title">להתקין כ-Play Store?</string>
+    <string name="installer_play_store_warning_message">האפליקציה שעברה תיקון תירשם כמותקנת מחנות Google Play Store. זה מאפשר לשירותים כמו Android Auto לזהות אותה כאפליקציית Play Store</string>
+    <string name="installer_play_store_warning_risk">ל-Play Store עשויות להיות עדכונים עבור האפליקציה שעברה תיקון. התקנת עדכון זה תדרוס את קובץ ה-APK המתוקן עם הגרסה המקורית ותסיר את התיקונים. אם תתבקש לעדכן, הקש על תפריט שלוש הנקודות בדף של האפליקציה בחנות Play Store ובחר \"כבוי עדכונים\"</string>
+    <string name="installer_play_store_warning_continue">אני מבין, המשך</string>
     <string name="settings_prompt_installer_on_install">בקשת בחירת מתקין</string>
     <string name="settings_prompt_installer_on_install_description">מציג תיבת דו-שיח לבחירת המתקין בכל פעם שאפליקציה מתוקנת מותקנת</string>
     <string name="settings_auto_install_with_shizuku">התקנה אוטומטית לאחר תיקון</string>

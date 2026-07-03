@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nachtelijk en productief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Patchbronnen</string>
+    <string name="sources_sort_manual">Handmatige volgorde</string>
+    <string name="sources_sort_manual_hint">Houd een bron ingedrukt om de volgorde te wijzigen</string>
+    <string name="sources_sort_last_updated">Laatst bijgewerkt</string>
     <string name="sources_management_open_in_browser">Openen in browser</string>
     <string name="sources_management_failed_to_open_url">Kan URL niet openen</string>
     <string name="sources_management_prerelease_toggle">Patches van vóór de release</string>
@@ -285,6 +288,9 @@ Buitenste zone (gestippeld): kan worden afgesneden door het launcher-masker - ho
     <string name="home_app_info_patch_source_used">Gebruikte bronpatch</string>
     <string name="home_app_info_install_type_custom_installer">Aangepaste installer</string>
     <string name="home_app_info_install_type_system_installer">Systeeminstaller</string>
+    <string name="home_app_info_install_type_play_store">Play Store installeren</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store installeren</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Store installeren</string>
     <string name="home_app_info_patch_update_available">Patchupdate beschikbaar</string>
     <string name="home_app_info_patch_update_available_description">Er is een nieuwere versie van patches beschikbaar. Repatch uw app om de laatste verbeteringen en correcties te krijgen</string>
     <string name="home_app_info_app_deleted_warning">App was verwijderd</string>
@@ -609,9 +615,12 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="installer">Installer</string>
     <string name="installer_title">Installatieprogramma selecteren</string>
     <string name="installer_internal_description">Gebruikt de Android-pakketinstaller</string>
+    <string name="installer_play_store_description">Gebruikt de systeeminstaller en stelt de Google Play Store in als de installatiebron</string>
+    <string name="installer_root_play_store_description">Installeert in stilte met root en stelt Google Play Store in als de installatiebron</string>
     <string name="installer_auto_saved_name">Geroot geïnstalleerde versie</string>
     <string name="installer_auto_saved_description">Installeert het gepatchte APK over de ge├»nstalleerde app</string>
     <string name="installer_shizuku_description">Installeert stil via Shizuku of Sui</string>
+    <string name="installer_shizuku_play_store_description">Installeert in stilte via Shizuku of Sui en stelt Google Play Store in als de installatiebron</string>
     <string name="installer_option_none">Geen fallback</string>
     <string name="installer_none_description">Er is geen fallback-installer geconfigureerd</string>
     <string name="installer_status_requires_root">Vereist root-toegang</string>
@@ -632,6 +641,10 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="installer_unavailable_message">Uw voorkeursinstallatieprogramma (%s) is momenteel niet beschikbaar. U kunt het probleem oplossen en opnieuw proberen of het standaardinstallatieprogramma gebruiken</string>
     <string name="installer_unavailable_shizuku_hint">Zorg ervoor dat Shizuku draait en dat toestemming is gegeven aan deze app</string>
     <string name="installer_use_standard">Standaard gebruiken</string>
+    <string name="installer_play_store_warning_title">Installeren als Play Store?</string>
+    <string name="installer_play_store_warning_message">De gepatchte app wordt geregistreerd als geïnstalleerd vanuit Google Play Store. Hierdoor kunnen services zoals Android Auto het herkennen als een Play Store app.</string>
+    <string name="installer_play_store_warning_risk">De Play Store kan updates aanbieden voor de gepatchte app. Het installeren van die update zal de gepatchte APK overschrijven met de originele versie en de patches verwijderen. Als u wordt gevraagd om te updaten, tik op het menu met de drie puntjes op de Play Store-pagina van de app en kies \"Updates uitschakelen\".</string>
+    <string name="installer_play_store_warning_continue">Ik begrijp het, ga verder</string>
     <string name="settings_prompt_installer_on_install">Keuze van installer</string>
     <string name="settings_prompt_installer_on_install_description">Toont het dialoogvenster voor het selecteren van de installer bij elke geïnstalleerde gepatchte app</string>
     <string name="settings_auto_install_with_shizuku">Automatisch installeren na patchen</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nocturno y productivo</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Fuentes de parches</string>
+    <string name="sources_sort_manual">Orden manual</string>
+    <string name="sources_sort_manual_hint">Mantén pulsada una fuente para cambiar el orden</string>
+    <string name="sources_sort_last_updated">Última actualización</string>
     <string name="sources_management_open_in_browser">Abrir en el navegador</string>
     <string name="sources_management_failed_to_open_url">No se pudo abrir la URL</string>
     <string name="sources_management_prerelease_toggle">Parches preliminares</string>
@@ -285,6 +288,9 @@ Zona exterior (discontinua): puede quedar recortada por la máscara del launcher
     <string name="home_app_info_patch_source_used">Fuente de parches utilizada</string>
     <string name="home_app_info_install_type_custom_installer">Instalador personalizado</string>
     <string name="home_app_info_install_type_system_installer">Instalador del sistema</string>
+    <string name="home_app_info_install_type_play_store">Instalar desde Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Instalar desde Play Store con acceso root</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Instalar desde Play Store con Shizuku</string>
     <string name="home_app_info_patch_update_available">Actualización de parches disponible</string>
     <string name="home_app_info_patch_update_available_description">Hay disponible una versión más reciente de los parches. Vuelve a parchear tu aplicación para obtener las últimas mejoras y correcciones</string>
     <string name="home_app_info_app_deleted_warning">La app fue desinstalada</string>
@@ -609,9 +615,12 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="installer">Instalador</string>
     <string name="installer_title">Seleccionar instalador.</string>
     <string name="installer_internal_description">Utiliza el instalador de paquetes de Android</string>
+    <string name="installer_play_store_description">Utiliza el instalador del sistema y establece Google Play Store como fuente de instalación</string>
+    <string name="installer_root_play_store_description">Instala silenciosamente con root y establece Google Play Store como fuente de instalación</string>
     <string name="installer_auto_saved_name">Instalador de montaje con root</string>
     <string name="installer_auto_saved_description">Monta el APK parcheado sobre la app instalada</string>
     <string name="installer_shizuku_description">Se instala silenciosamente utilizando Shizuku o Sui</string>
+    <string name="installer_shizuku_play_store_description">Instala silenciosamente a través de Shizuku o Sui y establece Google Play Store como fuente de instalación</string>
     <string name="installer_option_none">Sin opción de recuperación</string>
     <string name="installer_none_description">No hay instalador de recuperación configurado</string>
     <string name="installer_status_requires_root">Requiere acceso root</string>
@@ -632,6 +641,10 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="installer_unavailable_message">Tu instalador preferido (%s) actualmente no está disponible. Puedes solucionar el problema y volver a intentarlo o usar el instalador estándar en su lugar.</string>
     <string name="installer_unavailable_shizuku_hint">Asegúrate de que Shizuku esté en ejecución y se haya concedido el permiso a esta aplicación.</string>
     <string name="installer_use_standard">Usar estándar</string>
+    <string name="installer_play_store_warning_title">¿Instalar como Play Store?</string>
+    <string name="installer_play_store_warning_message">La aplicación modificada se registrará como instalada desde Google Play Store. Esto permite que servicios como Android Auto la reconozcan como una aplicación de Play Store</string>
+    <string name="installer_play_store_warning_risk">Play Store puede ofrecer actualizaciones para la aplicación modificada. Instalar esa actualización sobrescribirá el APK modificado con la versión original y eliminará los parches. Si se le solicita que actualice, toque el menú de los tres puntos en la página de Play Store de la aplicación y elija \"Desactivar actualizaciones\"</string>
+    <string name="installer_play_store_warning_continue">Entiendo, continuar</string>
     <string name="settings_prompt_installer_on_install">Solicitud de selección del instalador</string>
     <string name="settings_prompt_installer_on_install_description">Muestra el diálogo de selección del instalador cada vez que se instala una aplicación parcheada</string>
     <string name="settings_auto_install_with_shizuku">Instalación automática después del parcheo</string>

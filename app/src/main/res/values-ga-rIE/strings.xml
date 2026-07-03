@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Oícheanta agus táirgiúil</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Foinsí paiste</string>
+    <string name="sources_sort_manual">Ordú lámhach</string>
+    <string name="sources_sort_manual_hint">Coinnigh síos ar fhoinse chun a athordú</string>
+    <string name="sources_sort_last_updated">Nuashonraithe go déanach</string>
     <string name="sources_management_open_in_browser">Oscail sa bhrabhsálaí</string>
     <string name="sources_management_failed_to_open_url">Teip ar URL a oscailt</string>
     <string name="sources_management_prerelease_toggle">Paistí réamh-eisiúna</string>
@@ -285,6 +288,9 @@ Crios seachtrach (daite): féadfaidh masc an lainseálaí é a bhearradh - coinn
     <string name="home_app_info_patch_source_used">Foinse paiste a úsáideadh</string>
     <string name="home_app_info_install_type_custom_installer">Suiteálaí saincheaptha</string>
     <string name="home_app_info_install_type_system_installer">Suiteálaí córais</string>
+    <string name="home_app_info_install_type_play_store">Suiteáil ón Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Suiteáil ón Play Store le roinnt faisnéis</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Suiteáil ón Play Store le Shizuku</string>
     <string name="home_app_info_patch_update_available">Nuashonrú paiste ar fáil</string>
     <string name="home_app_info_patch_update_available_description">Tá leagan níos nuaí de na paistí ar fáil. Déan paiste nua ar d\'aip chun na feabhsuithe agus na socruithe is déanaí a fháil.</string>
     <string name="home_app_info_app_deleted_warning">Díshuiteáladh an aip</string>
@@ -607,9 +613,12 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="installer">Suiteálaí</string>
     <string name="installer_title">Roghnaigh suiteálaí</string>
     <string name="installer_internal_description">Úsáideann sé suiteálaí an phacáiste Android</string>
+    <string name="installer_play_store_description">Úsáideann an suiteoir córais agus socraíonn Google Play Store mar fhoinse suiteála</string>
+    <string name="installer_root_play_store_description">Suiteáil go ciúin le céim agus socraigh Stór Play mar fhoinse suiteála</string>
     <string name="installer_auto_saved_name">Suiteálaí gléasta fréamhaithe</string>
     <string name="installer_auto_saved_description">Suiteálann sé an APK paisteáilte thar an aip suiteáilte</string>
     <string name="installer_shizuku_description">Suiteáiltear go ciúin ag baint úsáide as Shizuku nó Sui</string>
+    <string name="installer_shizuku_play_store_description">Suiteáil go ciúin trí Shizuku nó Sui agus socraigh Stór Play mar fhoinse suiteála</string>
     <string name="installer_option_none">Gan aon chúltaca</string>
     <string name="installer_none_description">Níl aon suiteálaí taca cumraithe</string>
     <string name="installer_status_requires_root">Éilíonn rochtain fréimhe</string>
@@ -630,6 +639,10 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="installer_unavailable_message">Níl an suiteálaí is fearr leat (%s) ar fáil faoi láthair. Is féidir leat an fhadhb a réiteach agus iarracht eile a dhéanamh, nó an suiteálaí caighdeánach a úsáid ina ionad</string>
     <string name="installer_unavailable_shizuku_hint">Cinntigh go bhfuil Shizuku ag rith agus go bhfuil cead tugtha don aip seo</string>
     <string name="installer_use_standard">Úsáid caighdeánach</string>
+    <string name="installer_play_store_warning_title">Suiteáil mar Stór Play?</string>
+    <string name="installer_play_store_warning_message">Beidh an app patched taifeadta mar suiteáil ó Stór Google Play. Ligeann sé seo seirbhísí mar Android Auto a aisghairm mar app Stóir Play é</string>
+    <string name="installer_play_store_warning_risk">D’fhéadfadh Stór Play nuashonruithe a thairgadh don app patched. Beidh an APK patched forghníomhaithe ón mbunleagan agus beidh na patches bainte as trí nuashonrú a suiteáil. Má iarrtar ort nuashonrú, tapaigh ar an roghchláir trí phunkt (menu) ar leathanach Stór Play an app agus roghnaigh \"Diúscair nuashonruithe\"</string>
+    <string name="installer_play_store_warning_continue">Tuigim, lean ort</string>
     <string name="settings_prompt_installer_on_install">Leid roghnúcháin suiteálaí</string>
     <string name="settings_prompt_installer_on_install_description">Taispeánann sé dialóg roghnúcháin suiteálaí gach uair a shuiteáiltear aip phaisteáilte</string>
     <string name="settings_auto_install_with_shizuku">Suiteáil uathoibríoch tar éis paisteála</string>
@@ -671,13 +684,13 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_import_manager_settings_fail">Theip ar shocruithe Morphe a iompórtáil: %s</string>
     <string name="settings_system_import_manager_settings_success">Socruithe Morphe allmhairithe</string>
     <string name="settings_system_import_manager_settings_mode_title">Iompórtáil socruithe Morphe</string>
-    <string name="settings_system_import_manager_settings_mode_description">Roghnaigh conas a dhéanfar socruithe agus foinsí allmhairithe a chur i bhfeidhm</string>
+    <string name="settings_system_import_manager_settings_mode_description">Roghnaigh conas ba chóir na socruithe agus na foinsí allmhairithe a chur i bhfeidhm</string>
     <string name="settings_system_import_selections_mode_title">Iompórtáil roghanna paiste</string>
-    <string name="settings_system_import_selections_mode_description">Roghnaigh conas ba cheart na roghanna allmhairithe agus na roghanna páirce a chur i bhfeidhm</string>
-    <string name="import_mode_replace_title">Athraigh an ceann atá ann cheana</string>
-    <string name="import_mode_replace_description">Comhthacaigh go cruinn leis an gcóip bhreise. Bainfear na míreanna atá ar iarraidh ón gcóip bhreise</string>
-    <string name="import_mode_merge_title">Comhthacaigh le ceann atá ann cheana</string>
-    <string name="import_mode_merge_description">Cuir na míreanna atá ar iarraidh ón gcóip bhreise. Déantar na míreanna atá ann cheana a choinneáil gan athrú</string>
+    <string name="settings_system_import_selections_mode_description">Roghnaigh conas ba chóir na roghanna allmhairithe agus na roghanna paiste a chur i bhfeidhm</string>
+    <string name="import_mode_replace_title">Cuir in ionad atá ann cheana</string>
+    <string name="import_mode_replace_description">Meaitseáil an cúltaca go díreach. Bainfear míreanna atá ar iarraidh ón gcúltaca.</string>
+    <string name="import_mode_merge_title">Cumaisc le cinn atá ann cheana féin</string>
+    <string name="import_mode_merge_description">Cuir míreanna atá ar iarraidh ón gcúltaca leis. Coinnítear míreanna atá ann cheana gan athrú.</string>
     <string name="settings_system_export_manager_settings_fail">Theip ar shocruithe Morphe a easpórtáil: %s</string>
     <string name="settings_system_export_manager_settings_success">Socruithe Morphe onnmhairithe</string>
     <string name="settings_system_debug">Dífhabhtú</string>
@@ -797,9 +810,9 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="reorder_done">Ordú sábháilte</string>
     <string name="reset_order">Athshocraigh an t-ordú</string>
     <string name="reset_order_done">Athshocrú ordaithe</string>
-    <string name="accessibility_move_up">Bogadh suas</string>
-    <string name="accessibility_move_down">Bogadh síos</string>
-    <string name="accessibility_app_moved_announcement">%1$s aistríodh go dtí an t-ionad %2$d de %3$d</string>
+    <string name="accessibility_move_up">Bog suas</string>
+    <string name="accessibility_move_down">Bog síos</string>
+    <string name="accessibility_app_moved_announcement">%1$s bogtha go suíomh %2$d de %3$d</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>

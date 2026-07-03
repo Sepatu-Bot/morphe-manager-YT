@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">ตื่นตอนกลางคืนและยังทำงานได้</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">จัดการแหล่งที่มา</string>
+    <string name="sources_sort_manual">คำสั่งซื้อด้วยตนเอง</string>
+    <string name="sources_sort_manual_hint">แตะค้างที่แหล่งข้อมูลเพื่อจัดเรียงใหม่</string>
+    <string name="sources_sort_last_updated">ปรับปรุงล่าสุด</string>
     <string name="sources_management_open_in_browser">เปิดในเบราว์เซอร์</string>
     <string name="sources_management_failed_to_open_url">ไม่สามารถเปิด URL ได้</string>
     <string name="sources_management_prerelease_toggle">แพตช์ก่อนเปิดตัว</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">ใช้ซอร์สปัทช์</string>
     <string name="home_app_info_install_type_custom_installer">ตัวกรองติดตั้งเอง</string>
     <string name="home_app_info_install_type_system_installer">ตัวกรองติดตั้งระบบ</string>
+    <string name="home_app_info_install_type_play_store">ติดตั้งจาก Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">ติดตั้งจาก Play Store (Root)</string>
+    <string name="home_app_info_install_type_shizuku_play_store">ติดตั้งจาก Play Store (Shizuku)</string>
     <string name="home_app_info_patch_update_available">มีอัพเดทแพตซ์ใหม่ให้ใช้งานแล้ว</string>
     <string name="home_app_info_patch_update_available_description">มีแพตซ์เวอร์ชันใหม่พร้อมใช้งานแล้ว ให้แพตซ์อีกครั้งเพื่อรับการปรับปรุงและการแก้ไขสำหรับเวอร์ชันล่าสุด</string>
     <string name="home_app_info_app_deleted_warning">แอปถูกลบออก</string>
@@ -609,9 +615,12 @@ morphe_header_custom_dark.png
     <string name="installer">การติดตั้ง</string>
     <string name="installer_title">เลือกตัวติดตั้ง</string>
     <string name="installer_internal_description">ใช้ตัวติดตั้งแพ็คเกจ Android</string>
+    <string name="installer_play_store_description">ใช้ตัวติดตั้งของระบบและตั้งค่า Google Play Store เป็นแหล่งติดตั้ง</string>
+    <string name="installer_root_play_store_description">ติดตั้งโดยอัตโนมัติด้วยสิทธิ์รูท และตั้งค่า Google Play Store เป็นแหล่งติดตั้ง</string>
     <string name="installer_auto_saved_name">ตัวติดตั้งแบบ Rooted mount</string>
     <string name="installer_auto_saved_description">ติดตั้ง APK ที่ถูกแก้ไขทับแทนแอปที่ถูกติดตั้งอยู่</string>
     <string name="installer_shizuku_description">ติดตั้งอย่างเงียบๆ โดยใช้ Shizuku หรือ Sui</string>
+    <string name="installer_shizuku_play_store_description">ติดตั้งโดยอัตโนมัติผ่าน Shizuku หรือ Sui และตั้งค่า Google Play Store เป็นแหล่งติดตั้ง</string>
     <string name="installer_option_none">ไม่มีตัวติดตั้งสำรอง</string>
     <string name="installer_none_description">ไม่ได้กำหนดค่าตัวติดตั้งสำรอง</string>
     <string name="installer_status_requires_root">ต้องได้รับสิทธิ์ root</string>
@@ -632,6 +641,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">ตัวติดตั้งที่คุณชอบ (%s) ไม่พร้อมใช้งานในขณะนี้. คุณสามารถแก้ไขปัญหาและลองอีกครั้งหรือใช้ตัวติดตั้งมาตรฐานแทน</string>
     <string name="installer_unavailable_shizuku_hint">ให้แน่ใจว่า Shizuku กำลังทำงานและให้สิทธิ์แก่แอปนี้</string>
     <string name="installer_use_standard">ใช้มาตรฐาน</string>
+    <string name="installer_play_store_warning_title">ติดตั้งเป็น Play Store หรือไม่?</string>
+    <string name="installer_play_store_warning_message">แอปที่ปรับแก้แล้วจะถูกบันทึกว่าติดตั้งจาก Google Play Store ซึ่งจะช่วยให้บริการต่างๆ เช่น Android Auto ตรวจจับว่าเป็นแอปจาก Play Store</string>
+    <string name="installer_play_store_warning_risk">Play Store อาจมีอัปเดตสำหรับแอปที่ปรับแก้แล้ว การติดตั้งอัปเดตนั้นจะเขียนทับ APK ที่ปรับแก้แล้วด้วยเวอร์ชันเดิม และลบการปรับแก้ หากได้รับการแจ้งให้อัปเดต ให้แตะเมนูจุดสามจุดบนหน้าแอป Play Store แล้วเลือก \"ปิดการอัปเดตโดยอัตโนมัติ\"</string>
+    <string name="installer_play_store_warning_continue">ฉันเข้าใจแล้ว ดำเนินการต่อ</string>
     <string name="settings_prompt_installer_on_install">แจ้งเตือนการเลือกตัวติดตั้ง</string>
     <string name="settings_prompt_installer_on_install_description">แสดงกล่องโต้ตอบการเลือกตัวติดตั้งทุกครั้งที่มีการติดตั้งแอปที่แพตช์แล้ว</string>
     <string name="settings_auto_install_with_shizuku">ติดตั้งอัตโนมัติหลังจากการแพตช์</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nočni in produktivni</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Popravi vire</string>
+    <string name="sources_sort_manual">Ročno urejanje</string>
+    <string name="sources_sort_manual_hint">Dolgo pritisnite vir, da ga ponovno uredite</string>
+    <string name="sources_sort_last_updated">Zadnja posodobitev</string>
     <string name="sources_management_open_in_browser">Odpri v brskalniku</string>
     <string name="sources_management_failed_to_open_url">Ni mogoče odpreti URL</string>
     <string name="sources_management_prerelease_toggle">Pred-popravki</string>
@@ -285,6 +288,9 @@ Zunanje območje (črtkano): maska zaganjalnika ga lahko obreže – pomembne po
     <string name="home_app_info_patch_source_used">Uporabljen vir popravka</string>
     <string name="home_app_info_install_type_custom_installer">Prilagojena namestitev</string>
     <string name="home_app_info_install_type_system_installer">Sistemska namestitev</string>
+    <string name="home_app_info_install_type_play_store">Namestitev prek Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Namestitev prek Play Store z root pravicami</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Namestitev prek Shizuku in Play Store</string>
     <string name="home_app_info_patch_update_available">Na voljo je posodobitev popravkov</string>
     <string name="home_app_info_patch_update_available_description">Na voljo je novejša različica popravkov. Popravite svojo aplikacijo, da pridobite najnovejše izboljšave in popravke.</string>
     <string name="home_app_info_app_deleted_warning">Aplikacija je bila odstranjena</string>
@@ -609,9 +615,12 @@ Dimenzije slike morajo biti naslednje:
     <string name="installer">Namestitveni program</string>
     <string name="installer_title">Izberi namestitveni program</string>
     <string name="installer_internal_description">Uporablja namestitveni program Android</string>
+    <string name="installer_play_store_description">Uporablja sistemski namestitveni program in nastavi Google Play Store kot vir namestitve</string>
+    <string name="installer_root_play_store_description">Tiho namesti z dostopom root in nastavi Google Play Store kot vir namestitve</string>
     <string name="installer_auto_saved_name">Namestitveni program z root dostopom</string>
     <string name="installer_auto_saved_description">Namesti popravljen APK prek nameščene aplikacije</string>
     <string name="installer_shizuku_description">Namesti tiho s pomočjo Shizuku ali Sui</string>
+    <string name="installer_shizuku_play_store_description">Tiho namesti prek Shizuku ali Sui in nastavi Google Play Store kot vir namestitve</string>
     <string name="installer_option_none">Brez nadomestitve</string>
     <string name="installer_none_description">Ni konfiguriranega namestitvenega programa brez nadomestitve</string>
     <string name="installer_status_requires_root">Potrebujete dostop prek root-a</string>
@@ -632,6 +641,10 @@ Dimenzije slike morajo biti naslednje:
     <string name="installer_unavailable_message">Vaš preferirani namestitveni program (%s) je trenutno nedostopen. Popravite težavo in poskusite znova ali uporabite standardni namestitveni program.</string>
     <string name="installer_unavailable_shizuku_hint">Prepričajte se, da Shizuku deluje in da je tej aplikaciji dodeljeno dovoljenje.</string>
     <string name="installer_use_standard">Uporabite standardno</string>
+    <string name="installer_play_store_warning_title">Namestitev kot Play Store?</string>
+    <string name="installer_play_store_warning_message">Popravljena aplikacija bo zabeležena kot nameščena iz Google Play Store. To omogoča storitvam, kot je Android Auto, da jo prepoznajo kot aplikacijo Play Store.</string>
+    <string name="installer_play_store_warning_risk">Play Store lahko ponudi posodobitve za popravljeno aplikacijo. Namestitev te posodobitve bo prepisala popravljeno datoteko APK z izvirno različico in odstranila popravke. Če vas pozove k posodobitvi, tapnite meni s tremi pikami na strani aplikacije Play Store in izberite »Onemogoči posodobitve«.</string>
+    <string name="installer_play_store_warning_continue">Razumem, nadaljuj</string>
     <string name="settings_prompt_installer_on_install">Poziv izbire namestitvenega programa</string>
     <string name="settings_prompt_installer_on_install_description">Prikaže pogovorno okno za izbiro namestitvenega programa vsakokrat, ko je nameščena popravljena aplikacija</string>
     <string name="settings_auto_install_with_shizuku">Samodejna namestitev po popravku</string>

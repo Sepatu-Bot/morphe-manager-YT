@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nagtelike en produktief</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Verandering oorspronge</string>
+    <string name="sources_sort_manual">Handmatige volgorde</string>
+    <string name="sources_sort_manual_hint">Druk lank op \'n bron om te herschik</string>
+    <string name="sources_sort_last_updated">Laaste opgedateer</string>
     <string name="sources_management_open_in_browser">Maak oop in blaaier</string>
     <string name="sources_management_failed_to_open_url">Mislukking om URL oop te maak</string>
     <string name="sources_management_prerelease_toggle">Voorvrystellings-veranderinge</string>
@@ -285,6 +288,9 @@ Outerlike sone (gestippel): kan deur die lanseerder masker afgesny word - hou be
     <string name="home_app_info_patch_source_used">Patch bron gebruik</string>
     <string name="home_app_info_install_type_custom_installer">Pasgemaakte installer</string>
     <string name="home_app_info_install_type_system_installer">Stelsel installer</string>
+    <string name="home_app_info_install_type_play_store">Play Winkel installering</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Winkel installering</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Winkel installering</string>
     <string name="home_app_info_patch_update_available">Patch opdatering beskikbaar</string>
     <string name="home_app_info_patch_update_available_description">\'n Nuwer weergawe van patches is beskikbaar. Herpatch jou app om die nuutste verbeterings en regstellings te kry</string>
     <string name="home_app_info_app_deleted_warning">App is verwyder</string>
@@ -609,9 +615,12 @@ Die beeld afmetings moet soos volg wees:
     <string name="installer">Installer</string>
     <string name="installer_title">Kies installer</string>
     <string name="installer_internal_description">Gebruik die Android pakketinstalleerder</string>
+    <string name="installer_play_store_description">Gebruik die stelsel se installeerder en stel Google Play Winkel as die installasiefontein in</string>
+    <string name="installer_root_play_store_description">Installeer stilweg met wortelregte en stel Google Play Winkel as die installasiebron in</string>
     <string name="installer_auto_saved_name">Gewortelde monteer installer</string>
     <string name="installer_auto_saved_description">Monteer die gepleisterde APK oor die geïnstalleerde app</string>
     <string name="installer_shizuku_description">Installeer stilweg met behulp van Shizuku of Sui</string>
+    <string name="installer_shizuku_play_store_description">Installeer stilweg deur Shizuku of Sui en stel Google Play Winkel as die installasiebron in</string>
     <string name="installer_option_none">Geen terugval</string>
     <string name="installer_none_description">Geen terugval installer is gekonfigureer</string>
     <string name="installer_status_requires_root">Vereis worteltoegang</string>
@@ -632,6 +641,10 @@ Die beeld afmetings moet soos volg wees:
     <string name="installer_unavailable_message">Jou voorkeurs installer (%s) is tans nie beskikbaar nie. Jy kan die probleem regstel en weer probeer, of die standaard installer gebruik</string>
     <string name="installer_unavailable_shizuku_hint">Maak seker Shizuku loop en toestemming is aan hierdie app gegee</string>
     <string name="installer_use_standard">Gebruik standaard</string>
+    <string name="installer_play_store_warning_title">As Play Winkel installeer?</string>
+    <string name="installer_play_store_warning_message">Die gewysigde app sal as geïnstalleer vanaf Google Play Winkel aangeteken word. Dit laat dienste soos Android Auto dit herken as \'n Play Winkel app</string>
+    <string name="installer_play_store_warning_risk">Play Winkel kan opdaterings aanbied vir die gewysigde app. Die installering van daardie opdatering sal die gewysigde APK vervang met die oorspronklike weergawe en die wysigings verwyder. As u gevra word om op te dateer, tik op die drie-punt-menu op die app se Play Winkel-bladsy en kies \"Deaktiveer opdaterings\"</string>
+    <string name="installer_play_store_warning_continue">Ek verstaan, gaan voort</string>
     <string name="settings_prompt_installer_on_install">Installeerder seleksie prompt</string>
     <string name="settings_prompt_installer_on_install_description">Wys die installeerder seleksie dialoog elke keer as \'n gepatchte toepassing geïnstalleer word</string>
     <string name="settings_auto_install_with_shizuku">Outomatiese installering na patstelling</string>

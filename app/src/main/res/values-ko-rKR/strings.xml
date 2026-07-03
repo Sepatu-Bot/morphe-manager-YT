@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">야행성이면서 생산적이네요</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">패치 소스</string>
+    <string name="sources_sort_manual">수동 정렬</string>
+    <string name="sources_sort_manual_hint">소스를 길게 탭하여 순서를 변경하세요</string>
+    <string name="sources_sort_last_updated">최근 업데이트</string>
     <string name="sources_management_open_in_browser">브라우저에서 열기</string>
     <string name="sources_management_failed_to_open_url">URL을 열 수 없습니다</string>
     <string name="sources_management_prerelease_toggle">Pre-release 패치</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">사용된 패치 소스</string>
     <string name="home_app_info_install_type_custom_installer">커스텀 설치 프로그램</string>
     <string name="home_app_info_install_type_system_installer">시스템 설치 프로그램</string>
+    <string name="home_app_info_install_type_play_store">Play 스토어 설치</string>
+    <string name="home_app_info_install_type_root_play_store">루트 Play 스토어 설치</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play 스토어 설치</string>
     <string name="home_app_info_patch_update_available">패치 업데이트 사용 가능</string>
     <string name="home_app_info_patch_update_available_description">새 버전의 패치가 있습니다. 최신 개선 사항 및 수정 사항을 적용하려면 앱을 다시 패치하세요</string>
     <string name="home_app_info_app_deleted_warning">앱이 제거되었습니다</string>
@@ -610,9 +616,12 @@ morphe_header_custom_dark.png
     <string name="installer">설치 프로그램</string>
     <string name="installer_title">설치 프로그램 선택</string>
     <string name="installer_internal_description">Android 패키지 설치 프로그램을 사용합니다</string>
+    <string name="installer_play_store_description">시스템 설치 관리자를 사용하고 Google Play 스토어를 설치 출처로 설정합니다</string>
+    <string name="installer_root_play_store_description">루트 권한으로 자듕으로 설치하고 Google Play 스토어를 설치 출처로 설정합니다</string>
     <string name="installer_auto_saved_name">루팅된 마운트 설치 프로그램</string>
     <string name="installer_auto_saved_description">설치된 앱 위에 패치된 APK를 마운트합니다</string>
     <string name="installer_shizuku_description">Shizuku 또는 Sui를 사용하여 자동으로 설치합니다</string>
+    <string name="installer_shizuku_play_store_description">Shizuku 또는 Sui를 통해 자동으로 설치하고 Google Play 스토어를 설치 출처로 설정합니다</string>
     <string name="installer_option_none">대체 없음</string>
     <string name="installer_none_description">설정된 대체 설치 프로그램이 없습니다</string>
     <string name="installer_status_requires_root">루트 접근 권한이 필요합니다</string>
@@ -633,6 +642,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">선택된 설치 프로그램(%s)을 현재 사용할 수 없습니다. 문제를 해결하고 다시 시도하거나 표준 설치 프로그램을 사용해 보세요</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku가 실행 중이고, 이 앱에 권한이 부여되었는지 확인하세요</string>
     <string name="installer_use_standard">표준을 사용합니다</string>
+    <string name="installer_play_store_warning_title">Play 스토어로 설치하시겠습니까?</string>
+    <string name="installer_play_store_warning_message">패치된 앱은 Google Play 스토어에서 설치된 것으로 기록됩니다. 이를 통해 Android Auto와 같은 서비스가 Play 스토어 앱으로 인식할 수 있습니다</string>
+    <string name="installer_play_store_warning_risk">Play 스토어에서 패치된 앱의 업데이트를 제공할 수 있습니다. 해당 업데이트를 설치하면 패치된 APK가 원래 버전으로 덮어쓰여지고 패치가 제거됩니다. 업데이트하라는 메시지가 표시되면 앱의 Play 스토어 페이지에서 점 3개 메뉴를 탭한 후 \'자동 업데이트 사용\'을 선택 해제하세요</string>
+    <string name="installer_play_store_warning_continue">알겠습니다. 계속하겠습니다</string>
     <string name="settings_prompt_installer_on_install">설치 프로그램 선택 프롬프트</string>
     <string name="settings_prompt_installer_on_install_description">패치된 앱을 설치할 때마다 설치 프로그램 선택 다이얼로그를 표시합니다</string>
     <string name="settings_auto_install_with_shizuku">패치 후 자동 설치</string>
@@ -674,9 +687,9 @@ morphe_header_custom_dark.png
     <string name="settings_system_import_manager_settings_fail">Morphe 설정을 가져올 수 없습니다: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe 설정을 가져왔습니다</string>
     <string name="settings_system_import_manager_settings_mode_title">Morphe 설정 가져오기</string>
-    <string name="settings_system_import_manager_settings_mode_description">가져온 설정 및 소스가 적용되는 방식을 선택하세요</string>
+    <string name="settings_system_import_manager_settings_mode_description">가져온 설정 및 소스를 적용하는 방식을 선택하세요</string>
     <string name="settings_system_import_selections_mode_title">패치 선택 목록 가져오기</string>
-    <string name="settings_system_import_selections_mode_description">가져온 선택 항목 및 패치 옵션을 적용하는 방법을 선택하세요</string>
+    <string name="settings_system_import_selections_mode_description">가져온 선택 목록 및 패치 옵션을 적용하는 방법을 선택하세요</string>
     <string name="import_mode_replace_title">기존 항목 바꾸기</string>
     <string name="import_mode_replace_description">백업과 정확히 일치합니다. 백업에 없는 항목은 제거됩니다</string>
     <string name="import_mode_merge_title">기존 항목과 병합</string>

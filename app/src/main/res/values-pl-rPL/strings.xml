@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nocny, ale produktywny</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Źródła modyfikacji</string>
+    <string name="sources_sort_manual">Ręczna kolejność</string>
+    <string name="sources_sort_manual_hint">Przytrzymaj źródło, aby zmienić kolejność</string>
+    <string name="sources_sort_last_updated">Ostatnia aktualizacja</string>
     <string name="sources_management_open_in_browser">Otwórz w przeglądarce</string>
     <string name="sources_management_failed_to_open_url">Nie udało się otworzyć strony</string>
     <string name="sources_management_prerelease_toggle">Przedpremierowe modyfikacje</string>
@@ -285,6 +288,9 @@ Strefa zewnętrzna (linia przerywana): może zostać przycięta - najważniejsze
     <string name="home_app_info_patch_source_used">Użyte źródło modyfikacji</string>
     <string name="home_app_info_install_type_custom_installer">Niestandardowy instalator</string>
     <string name="home_app_info_install_type_system_installer">Instalator systemowy</string>
+    <string name="home_app_info_install_type_play_store">Instalacja ze Sklepu Play</string>
+    <string name="home_app_info_install_type_root_play_store">Instalacja root ze Sklepu Play</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Instalacja Shizuku ze Sklepu Play</string>
     <string name="home_app_info_patch_update_available">Dostępna aktualizacja modyfikacji</string>
     <string name="home_app_info_patch_update_available_description">Dostępna jest nowsza wersja modyfikacji. Zmodyfikuj aplikację ponownie, aby otrzymać najnowsze ulepszenia i poprawki</string>
     <string name="home_app_info_app_deleted_warning">Aplikacja została odinstalowana</string>
@@ -609,9 +615,12 @@ Wymagane są następujące wymiary obrazów:
     <string name="installer">Instalator</string>
     <string name="installer_title">Wybierz instalator</string>
     <string name="installer_internal_description">Używa instalatora pakietów Androida</string>
+    <string name="installer_play_store_description">Używa instalatora systemowego i ustawia Sklep Play jako źródło instalacji</string>
+    <string name="installer_root_play_store_description">Instaluje w tle z użyciem roota i ustawia Sklep Play jako źródło instalacji</string>
     <string name="installer_auto_saved_name">Instalator z montowaniem roota</string>
     <string name="installer_auto_saved_description">Montuje zmodyfikowany plik APK nad zainstalowaną aplikacją</string>
     <string name="installer_shizuku_description">Instaluje w tle za pomocą Shizuku lub Sui</string>
+    <string name="installer_shizuku_play_store_description">Instaluje w tle przez Shizuku lub Sui i ustawia Sklep Play jako źródło instalacji</string>
     <string name="installer_option_none">Brak instalatora zapasowego</string>
     <string name="installer_none_description">Nie skonfigurowano instalatora zapasowego</string>
     <string name="installer_status_requires_root">Wymaga uprawnień roota</string>
@@ -632,6 +641,10 @@ Wymagane są następujące wymiary obrazów:
     <string name="installer_unavailable_message">Twój preferowany instalator (%s) jest obecnie niedostępny. Możesz naprawić problem i spróbować ponownie lub po prostu użyć standardowego instalatora</string>
     <string name="installer_unavailable_shizuku_hint">Upewnij się, że Shizuku jest uruchomione, a tej aplikacji przyznano odpowiednie uprawnienia</string>
     <string name="installer_use_standard">Użyj standardowego</string>
+    <string name="installer_play_store_warning_title">Oznaczyć jako instalację ze Sklepu Play?</string>
+    <string name="installer_play_store_warning_message">Zmodyfikowana aplikacja zostanie zarejestrowana jako zainstalowana ze Sklepu Play. Dzięki temu usługi takie jak Android Auto rozpoznają ją jako oficjalną aplikację ze sklepu</string>
+    <string name="installer_play_store_warning_risk">Sklep Play może oferować aktualizacje dla zmodyfikowanej aplikacji. Zainstalowanie takiej aktualizacji nadpisze zmodyfikowany plik APK oryginalną wersją i usunie wszelkie modyfikacje. Jeśli pojawi się prośba o aktualizację, dotknij menu z trzema kropkami na stronie aplikacji w Sklepie Play i odznacz opcję \"Autoaktualizacje\"</string>
+    <string name="installer_play_store_warning_continue">Rozumiem, kontynuuj</string>
     <string name="settings_prompt_installer_on_install">Monit o wybór instalatora</string>
     <string name="settings_prompt_installer_on_install_description">Wyświetla okno wyboru instalatora przy każdej instalacji zmodyfikowanej aplikacji</string>
     <string name="settings_auto_install_with_shizuku">Autoinstalacja po modyfikacji</string>
@@ -674,11 +687,11 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_import_manager_settings_success">Zaimportowano ustawienia Morphe</string>
     <string name="settings_system_import_manager_settings_mode_title">Importuj ustawienia Morphe</string>
     <string name="settings_system_import_manager_settings_mode_description">Wybierz sposób zastosowania zaimportowanych ustawień i źródeł</string>
-    <string name="settings_system_import_selections_mode_title">Zaimportuj wybór modyfikacji</string>
-    <string name="settings_system_import_selections_mode_description">Wybierz, w jaki sposób zaimportowane zaznaczenia i opcje łatki mają zostać zastosowane</string>
+    <string name="settings_system_import_selections_mode_title">Importuj wybrane modyfikacje</string>
+    <string name="settings_system_import_selections_mode_description">Wybierz sposób zastosowania zaimportowanych modyfikacji i ich opcji</string>
     <string name="import_mode_replace_title">Zastąp istniejące</string>
-    <string name="import_mode_replace_description">Dokładnie dopasuj kopię zapasową. Elementy brakujące w kopii zapasowej zostaną usunięte</string>
-    <string name="import_mode_merge_title">Połącz z istniejącymi</string>
+    <string name="import_mode_replace_description">Odtwórz dokładnie z kopii zapasowej. Elementy brakujące w kopii zostaną usunięte</string>
+    <string name="import_mode_merge_title">Scal z istniejącymi</string>
     <string name="import_mode_merge_description">Dodaj brakujące elementy z kopii zapasowej. Istniejące elementy pozostaną bez zmian</string>
     <string name="settings_system_export_manager_settings_fail">Nie udało się wyeksportować ustawień Morphe: %s</string>
     <string name="settings_system_export_manager_settings_success">Wyeksportowano ustawienia Morphe</string>

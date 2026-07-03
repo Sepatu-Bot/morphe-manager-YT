@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Νυχτερινός και παραγωγικός</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Πηγές τροποποιήσεων</string>
+    <string name="sources_sort_manual">Χειροκίνητη ταξινόμηση</string>
+    <string name="sources_sort_manual_hint">Πατήστε παρατεταμένα μια πηγή για να την αναδιατάξετε</string>
+    <string name="sources_sort_last_updated">Τελευταία ενημέρωση</string>
     <string name="sources_management_open_in_browser">Άνοιγμα σε πρόγραμμα περιήγησης</string>
     <string name="sources_management_failed_to_open_url">Απέτυχε το άνοιγμα της διεύθυνσης URL</string>
     <string name="sources_management_prerelease_toggle">Ενημερώσεις πριν την κυκλοφορία</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">Χρησιμοποιούμενη πηγή τροποποίησης</string>
     <string name="home_app_info_install_type_custom_installer">Προσαρμοσμένος εγκαταστάτης</string>
     <string name="home_app_info_install_type_system_installer">Εγκαταστάτης συστήματος</string>
+    <string name="home_app_info_install_type_play_store">Εγκατάσταση από το Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Εγκατάσταση από το Play Store με δικαιώματα root</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Εγκατάσταση από το Play Store μέσω Shizuku</string>
     <string name="home_app_info_patch_update_available">Διαθέσιμη ενημέρωση τροποποιήσεων</string>
     <string name="home_app_info_patch_update_available_description">Μια καινούρια έκδοση τροποποιήσεων είναι διαθέσιμη. Τροποποιήσετε ξανά την εφαρμογή για να λάβετε τις τελευταίες βελτιώσεις και διορθώσεις</string>
     <string name="home_app_info_app_deleted_warning">Η εφαρμογή έχει απεγκατασταθεί</string>
@@ -609,9 +615,12 @@ morphe_header_custom_dark.png
     <string name="installer">Εγκαταστάτης</string>
     <string name="installer_title">Επιλέξτε εγκαταστάτη</string>
     <string name="installer_internal_description">Χρησιμοποιεί τον ενσωματωμένο εγκαταστάτη πακέτων Android</string>
+    <string name="installer_play_store_description">Χρησιμοποιεί το συστημικό πρόγραμμα εγκατάστασης και ορίζει το Google Play Store ως πηγή εγκατάστασης</string>
+    <string name="installer_root_play_store_description">Εγκαθιστά αθόρυβα με δικαιώματα root και ορίζει το Google Play Store ως πηγή εγκατάστασης</string>
     <string name="installer_auto_saved_name">Εγκαταστάτης προσάρτησης με root</string>
     <string name="installer_auto_saved_description">Προσαρτά την τροποποιημένη APK πάνω από την εγκατεστημένη εφαρμογή</string>
     <string name="installer_shizuku_description">Εγκαθίσταται αθόρυβα χρησιμοποιώντας Shizuku ή Sui</string>
+    <string name="installer_shizuku_play_store_description">Εγκαθιστά αθόρυβα μέσω Shizuku ή Sui και ορίζει το Google Play Store ως πηγή εγκατάστασης</string>
     <string name="installer_option_none">Χωρίς εφεδρεία</string>
     <string name="installer_none_description">Δεν έχει ρυθμιστεί εφεδρικός εγκαταστάτης</string>
     <string name="installer_status_requires_root">Απαιτείται πρόσβαση root</string>
@@ -632,6 +641,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">Ο προτιμώμενος εγκαταστάτης σας (%s) είναι αυτή τη στιγμή μη διαθέσιμος. Μπορείτε να διορθώσετε αυτό το πρόβλημα και να προσπαθήσετε ξανά, ή να χρησιμοποιήσετε τον καθιερωμένο εγκαταστάτη</string>
     <string name="installer_unavailable_shizuku_hint">Βεβαιωθείτε ότι το Shizuku τρέχει και ότι η άδεια έχει δοθεί σε αυτή την εφαρμογή.</string>
     <string name="installer_use_standard">Χρησιμοποιήστε τον καθορισμένο</string>
+    <string name="installer_play_store_warning_title">Εγκατάσταση ως Play Store;</string>
+    <string name="installer_play_store_warning_message">Η τροποποιημένη εφαρμογή θα καταγραφεί ως εγκατεστημένη από το Google Play Store. Αυτό επιτρέπει σε υπηρεσίες όπως το Android Auto να την αναγνωρίσουν ως εφαρμογή Play Store.</string>
+    <string name="installer_play_store_warning_risk">Το Play Store ενδέχεται να προσφέρει ενημερώσεις για την τροποποιημένη εφαρμογή. Η εγκατάσταση αυτής της ενημέρωσης θα αντικαταστήσει το τροποποιημένο APK με την αρχική έκδοση και θα αφαιρέσει τις τροποποιήσεις. Εάν σας ζητηθεί να ενημερώσετε, πατήστε το μενού με τις τρεις τελείες στην σελίδα της εφαρμογής στο Play Store και επιλέξτε \"Απενεργοποίηση ενημερώσεων\".</string>
+    <string name="installer_play_store_warning_continue">Κατανοώ, συνέχισε</string>
     <string name="settings_prompt_installer_on_install">Εμφάνιση προτροπής επιλογής εγκαταστάτη</string>
     <string name="settings_prompt_installer_on_install_description">Εμφανίζει το διάλογο επιλογής εγκαταστάτη κάθε φορά που εγκαταστήσετε μια τροποποιημένη εφαρμογή</string>
     <string name="settings_auto_install_with_shizuku">Αυτόματη εγκατάσταση μετά την επιδιόρθωση</string>

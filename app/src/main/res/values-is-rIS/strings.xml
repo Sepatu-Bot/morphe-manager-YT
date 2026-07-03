@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Næturhægur og afkastamikill</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Heimildir breytistillinga</string>
+    <string name="sources_sort_manual">Handvirkuð pöntun</string>
+    <string name="sources_sort_manual_hint">Halðu lengi á uppspretta til að raða á ný</string>
+    <string name="sources_sort_last_updated">Síðast uppfært</string>
     <string name="sources_management_open_in_browser">Opna í vafra</string>
     <string name="sources_management_failed_to_open_url">Ekki tókst að opna vefslóð</string>
     <string name="sources_management_prerelease_toggle">For úgáfur</string>
@@ -283,6 +286,9 @@ Fyrir bestu niðurstöður mælt er með því að breyta &lt;b&gt;fullu APK&lt;
     <string name="home_app_info_patch_source_used">Heimild breytinga</string>
     <string name="home_app_info_install_type_custom_installer">Sérstakur uppsetjari</string>
     <string name="home_app_info_install_type_system_installer">Kerfisuppsetjari</string>
+    <string name="home_app_info_install_type_play_store">Play Store uppsetning</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store uppsetning</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Store uppsetning</string>
     <string name="home_app_info_patch_update_available">Breytistilling er til staðar</string>
     <string name="home_app_info_patch_update_available_description">Nýrri útgáfa af patta er í boði. Endurpakkalaðu þitt app til að fá nýjustu endurbætur og lagfæringar</string>
     <string name="home_app_info_app_deleted_warning">App var afhent</string>
@@ -604,9 +610,12 @@ Myndastærðin verður að vera sem hér segir:
     <string name="installer">Uppsetjari</string>
     <string name="installer_title">Velji uppsetjara</string>
     <string name="installer_internal_description">Installerar hljóðlega með Shizuku eða Sui</string>
+    <string name="installer_play_store_description">Notar kerfiuppsetninguna og stillir Google Play Store sem uppsprettu</string>
+    <string name="installer_root_play_store_description">Uppsetja með rótaraðgangi og stillir Google Play Store sem uppsetningartöku</string>
     <string name="installer_auto_saved_name">Rooted festa uppsetjari</string>
     <string name="installer_auto_saved_description">Uppsetta pattaða APK yfir uppsett app</string>
     <string name="installer_shizuku_description">Installar biðjaðrun</string>
+    <string name="installer_shizuku_play_store_description">Uppsetja þögnrænlega í gegnum Shizuku eða Sui og stillir Google Play Store sem uppsetningartöku</string>
     <string name="installer_option_none">Engin varabreyting</string>
     <string name="installer_none_description">Enginn varabreytingaruppsetjari er stilltur</string>
     <string name="installer_status_requires_root">Krefst root aðgangs</string>
@@ -627,6 +636,10 @@ Myndastærðin verður að vera sem hér segir:
     <string name="installer_unavailable_message">Þín preferred uppsetningaraðferð (%s) er í augnablikinu óstarfbær. Þú getur lagað vandamálið og reyndu aftur, eða notað venjulega uppsetjara stað þess</string>
     <string name="installer_unavailable_shizuku_hint">Gakktu úr skugga um að Shizuku er að ganga og leyfis er veitt þessu app</string>
     <string name="installer_use_standard">Nota staðal</string>
+    <string name="installer_play_store_warning_title">Uppsetja sem Play Store?</string>
+    <string name="installer_play_store_warning_message">Breytta appið verður skráð sem uppsett frá Google Play Store. Þetta gerir þjónustum eins og Android Auto kleift að þekkja það sem Play Store app</string>
+    <string name="installer_play_store_warning_risk">Play Store gæti boðið uppfærslur fyrir breytta appið. Það að setja upp þá uppfærslu mun yfirskrifa breytta APK skrána með upprunalegu útgáfuna og fjarlægja breytingarnar. Ef þú ert beðinn um að uppfæra skaltu banka á þriggja-punkta valmyndina á Play Store síðu appsins og velja \"Slökktu á uppfærslum\"</string>
+    <string name="installer_play_store_warning_continue">Ég skil, halda áfram</string>
     <string name="settings_prompt_installer_on_install">Bestaður heimildurum í hverjum breyttu app installu</string>
     <string name="settings_prompt_installer_on_install_description">Mælt er með því að nota heimildir sem þú treystir</string>
     <string name="settings_auto_install_with_shizuku">Sjálfvirkt uppsetning eftir breytingar</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">夜间且高效</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">补丁源</string>
+    <string name="sources_sort_manual">手动排序</string>
+    <string name="sources_sort_manual_hint">长按源以重新排序</string>
+    <string name="sources_sort_last_updated">上次更新</string>
     <string name="sources_management_open_in_browser">在浏览器中打开链接</string>
     <string name="sources_management_failed_to_open_url">无法打开URL</string>
     <string name="sources_management_prerelease_toggle">预发布补丁</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">使用的补丁源</string>
     <string name="home_app_info_install_type_custom_installer">自定义安装程序</string>
     <string name="home_app_info_install_type_system_installer">系统安装程序</string>
+    <string name="home_app_info_install_type_play_store">Play商店安装</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play商店安装</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play商店安装</string>
     <string name="home_app_info_patch_update_available">有可用的补丁更新</string>
     <string name="home_app_info_patch_update_available_description">有新的修补版本可用。重新修补您的应用以获取最新改进和修复</string>
     <string name="home_app_info_app_deleted_warning">应用已卸载</string>
@@ -609,9 +615,12 @@ morphe_header_custom_dark.png
     <string name="installer">安装程序</string>
     <string name="installer_title">选择安装程序</string>
     <string name="installer_internal_description">使用 Android 包安装程序</string>
+    <string name="installer_play_store_description">使用系统安装程序，并将Google Play商店设置为安装来源</string>
+    <string name="installer_root_play_store_description">以 root 权限静默安装，并将 Google Play Store 设置为安装来源</string>
     <string name="installer_auto_saved_name">Rooted 挂载安装器</string>
     <string name="installer_auto_saved_description">将修补后的 APK 安装在已安装的应用程序上</string>
     <string name="installer_shizuku_description">使用 Shizuku 或 Sui 静默安装。</string>
+    <string name="installer_shizuku_play_store_description">通过 Shizuku 或 Sui 静默安装，并将 Google Play Store 设置为安装来源</string>
     <string name="installer_option_none">无备用</string>
     <string name="installer_none_description">未配置备用安装程序</string>
     <string name="installer_status_requires_root">需要 root 权限</string>
@@ -632,6 +641,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">您的首选安装程序（%s）当前不可用。您可以修复问题并重试，或使用标准安装程序</string>
     <string name="installer_unavailable_shizuku_hint">确保 Shizuku 正在运行并已授予此应用权限</string>
     <string name="installer_use_standard">使用标准</string>
+    <string name="installer_play_store_warning_title">作为 Play Store 安装？</string>
+    <string name="installer_play_store_warning_message">补丁应用将被记录为从 Google Play Store 安装。这可以让 Android Auto 等服务将其识别为 Play Store 应用</string>
+    <string name="installer_play_store_warning_risk">Play Store 可能会为补丁应用提供更新。安装该更新将用原始版本覆盖补丁 APK 并移除补丁。如果提示更新，请点击应用在 Play Store 页面上的三点菜单，然后选择“关闭更新”</string>
+    <string name="installer_play_store_warning_continue">我知道了，继续</string>
     <string name="settings_prompt_installer_on_install">安装程序选择提示</string>
     <string name="settings_prompt_installer_on_install_description">每次安装已修补的应用时，都会显示安装程序选择对话框</string>
     <string name="settings_auto_install_with_shizuku">补丁应用后自动安装</string>

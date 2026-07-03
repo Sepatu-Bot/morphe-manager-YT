@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nocturn și productiv</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Surse de patch-uri</string>
+    <string name="sources_sort_manual">Comandă manuală</string>
+    <string name="sources_sort_manual_hint">Țineți apăsat pe o sursă pentru a reordona</string>
+    <string name="sources_sort_last_updated">Ultima actualizare</string>
     <string name="sources_management_open_in_browser">Deschide în browser</string>
     <string name="sources_management_failed_to_open_url">Eroarea la deschiderea URL-ului</string>
     <string name="sources_management_prerelease_toggle">Patch-uri pre-lansare</string>
@@ -285,6 +288,9 @@ Zona exterioară (întreruptă): poate fi decupată de masca lansatorului - păs
     <string name="home_app_info_patch_source_used">Sursă de actualizare utilizată</string>
     <string name="home_app_info_install_type_custom_installer">Instalator personalizat</string>
     <string name="home_app_info_install_type_system_installer">Instalator sistem</string>
+    <string name="home_app_info_install_type_play_store">Instalare de pe Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Instalare de pe Play Store cu root</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Instalare Play Store prin Shizuku</string>
     <string name="home_app_info_patch_update_available">Actualizare patach disponibilă</string>
     <string name="home_app_info_patch_update_available_description">O versiune mai nouă a modificărilor este disponibilă. Repătați aplicația pentru a obține ultimele îmbunătățiri și corectări</string>
     <string name="home_app_info_app_deleted_warning">Aplicația a fost dezinstalată</string>
@@ -609,9 +615,12 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="installer">Instalator</string>
     <string name="installer_title">Selectați instalatorul</string>
     <string name="installer_internal_description">Utilizează installerul de pachete Android</string>
+    <string name="installer_play_store_description">Utilizează installer-ul sistem și setează Google Play Store ca sursă de instalare</string>
+    <string name="installer_root_play_store_description">Instalează silențios cu acces root și setează Google Play Store ca sursă de instalare</string>
     <string name="installer_auto_saved_name">Instalator de montare root</string>
     <string name="installer_auto_saved_description">Instalează APK-ul patcheat peste aplicația instalată</string>
     <string name="installer_shizuku_description">Instalează silențios folosind Shizuku sau Sui</string>
+    <string name="installer_shizuku_play_store_description">Instalează silențios prin Shizuku sau Sui și setează Google Play Store ca sursă de instalare</string>
     <string name="installer_option_none">Fără opțiuni de rezervă</string>
     <string name="installer_none_description">Nu este configurat niciun instalator de rezervă</string>
     <string name="installer_status_requires_root">Necesită acces root</string>
@@ -632,6 +641,10 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="installer_unavailable_message">Instalatorul preferat (%s) este curent indisponibil. Poți fixa problema și reinstalare, sau folosi instalatorul standard în schimb</string>
     <string name="installer_unavailable_shizuku_hint">Aseară că Shizuku rulează și permisiunea este acordată acestei aplicații</string>
     <string name="installer_use_standard">Folosește standard</string>
+    <string name="installer_play_store_warning_title">Instalează ca Play Store?</string>
+    <string name="installer_play_store_warning_message">Aplicația modificată va fi înregistrată ca fiind instalată din Google Play Store. Acest lucru permite serviciilor precum Android Auto să o recunoască drept o aplicație Play Store</string>
+    <string name="installer_play_store_warning_risk">Play Store poate oferi actualizări pentru aplicația modificată. Instalarea acelei actualizări va suprascrie APK-ul modificat cu versiunea originală și va elimina modificările. Dacă ți se solicită să actualizezi, atinge meniul cu trei puncte pe pagina Play Store a aplicației și alege \"Dezactivează actualizările\"</string>
+    <string name="installer_play_store_warning_continue">Am înțeles, continuă</string>
     <string name="settings_prompt_installer_on_install">Solicitare de selecție a installerului</string>
     <string name="settings_prompt_installer_on_install_description">Afișează dialogul de selecție a installerului de fiecare dată când o aplicație patch-uită este instalată</string>
     <string name="settings_auto_install_with_shizuku">Instalare automată după patch-uire</string>

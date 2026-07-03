@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">ليلي ومنتج</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">مصادر التعديل</string>
+    <string name="sources_sort_manual">ترتيب يدوي</string>
+    <string name="sources_sort_manual_hint">اضغط مطولًا على مصدر لإعادة الترتيب</string>
+    <string name="sources_sort_last_updated">آخر تحديث</string>
     <string name="sources_management_open_in_browser">فتح في المتصفح</string>
     <string name="sources_management_failed_to_open_url">فشل في فتح الرابط</string>
     <string name="sources_management_prerelease_toggle">إصدارات ما قبل الإطلاق</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">مصدر التعديل المستخدم</string>
     <string name="home_app_info_install_type_custom_installer">أداة تثبيت مخصصة</string>
     <string name="home_app_info_install_type_system_installer">أداة تثبيت النظام</string>
+    <string name="home_app_info_install_type_play_store">تثبيت من متجر Play</string>
+    <string name="home_app_info_install_type_root_play_store">تثبيت من متجر Play مع صلاحيات Root</string>
+    <string name="home_app_info_install_type_shizuku_play_store">تثبيت من متجر Play عبر Shizuku</string>
     <string name="home_app_info_patch_update_available">تحديث تعديل متاح</string>
     <string name="home_app_info_patch_update_available_description">إصدار أحدث من التعديلات متاح. اعد تعديل التطبيق للحصول على آخر التحسينات و الإصلاحات</string>
     <string name="home_app_info_app_deleted_warning">التطبيق غير مثبت</string>
@@ -610,9 +616,12 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer">أداة التثبيت</string>
     <string name="installer_title">اختر أداة التثبيت</string>
     <string name="installer_internal_description">يستخدم أداة تثبيت حزم Android</string>
+    <string name="installer_play_store_description">يستخدم أداة تثبيت النظام ويحدد متجر Google Play كمصدر للتثبيت</string>
+    <string name="installer_root_play_store_description">يقوم بالتثبيت تلقائيًا باستخدام صلاحيات Root ويضبط متجر Google Play كمصدر للتثبيت</string>
     <string name="installer_auto_saved_name">أداة تثبيت تركيب Rooted</string>
     <string name="installer_auto_saved_description">يقوم بتركيب ملف APK المعدل فوق التطبيق المثبت</string>
     <string name="installer_shizuku_description">يُثبّت بصمت باستخدام Shizuku أو Sui</string>
+    <string name="installer_shizuku_play_store_description">يقوم بالتثبيت تلقائيًا من خلال Shizuku أو Sui ويضبط متجر Google Play كمصدر للتثبيت</string>
     <string name="installer_option_none">لا بديل</string>
     <string name="installer_none_description">لم يتم تكوين أي أداة تثبيت بديلة</string>
     <string name="installer_status_requires_root">يتطلب صلاحيات Root</string>
@@ -633,6 +642,11 @@ morphe_adaptive_monochrome_custom.xml
     <string name="installer_unavailable_message">أداة التثبيت المفضلة لديك (%s) غير متوفرة حاليًا. يمكنك إصلاح المشكلة وإعادة المحاولة، أو استخدام أداة التثبيت القياسية بدلًا من ذلك</string>
     <string name="installer_unavailable_shizuku_hint">تأكد من تشغيل Shizuku ومنح الإذن لهذا التطبيق</string>
     <string name="installer_use_standard">استخدام القياسي</string>
+    <string name="installer_play_store_warning_title">التثبيت كمتجر Play؟</string>
+    <string name="installer_play_store_warning_message">سيتم تسجيل التطبيق الذي تم تعديله على أنه مثبت من متجر Google Play. يتيح ذلك لخدمات مثل Android Auto التعرف عليه كتطبيق من متجر Play</string>
+    <string name="installer_play_store_warning_risk">قد يقدم متجر Play تحديثات للتطبيق الذي تم تعديله.
+سيؤدي تثبيت هذا التحديث إلى استبدال ملف APK الذي تم تعديله بالإصدار الأصلي وإزالة التعديلات. إذا طُلب منك التحديث، فانقر على القائمة ثلاثية النقاط في صفحة التطبيق على متجر Play وعطّل \"تفعيل التحديث التلقائي\"</string>
+    <string name="installer_play_store_warning_continue">أفهم، متابعة</string>
     <string name="settings_prompt_installer_on_install">نافذة اختيار أداة التثبيت</string>
     <string name="settings_prompt_installer_on_install_description">يعرض نافذة اختيار أداة التثبيت في كل مرة تقوم فيها بتثبيت تطبيق معدل</string>
     <string name="settings_auto_install_with_shizuku">التثبيت التلقائي بعد التعديل</string>
@@ -675,8 +689,8 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_import_manager_settings_success">تم استيراد إعدادات Morphe</string>
     <string name="settings_system_import_manager_settings_mode_title">استيراد إعدادات Morphe</string>
     <string name="settings_system_import_manager_settings_mode_description">اختر كيفية تطبيق الإعدادات والمصادر المستوردة</string>
-    <string name="settings_system_import_selections_mode_title">استيراد تحديدات التعديل</string>
-    <string name="settings_system_import_selections_mode_description">اختر كيفية تطبيق التحديدات والخيارات الملحقة المستوردة</string>
+    <string name="settings_system_import_selections_mode_title">استيراد التعديلات المحددة</string>
+    <string name="settings_system_import_selections_mode_description">اختر كيفية تطبيق التعديلات المحددة وخيارات التعديل المستوردة</string>
     <string name="import_mode_replace_title">استبدال الموجود</string>
     <string name="import_mode_replace_description">مطابقة النسخة الاحتياطية تمامًا. سيتم حذف العناصر المفقودة من النسخة الاحتياطية</string>
     <string name="import_mode_merge_title">الدمج مع الموجود</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Gecəcil və səmərəli</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yamaq mənbələri</string>
+    <string name="sources_sort_manual">Əl ilə sıralama</string>
+    <string name="sources_sort_manual_hint">Təkrar sıralamaq üçün mənbəyə uzun bas</string>
+    <string name="sources_sort_last_updated">Axırıncı dəfə yeniləndi</string>
     <string name="sources_management_open_in_browser">Brauzerdə açın</string>
     <string name="sources_management_failed_to_open_url">URL açmaq uğursuzdu</string>
     <string name="sources_management_prerelease_toggle">İlkin-buraxılış yamaqları</string>
@@ -285,6 +288,9 @@ Xarici sahə (ştrixli): başladıcı örtüyündən kəsilə bilər - mühüm h
     <string name="home_app_info_patch_source_used">İşlədilən yamaq mənbəsi</string>
     <string name="home_app_info_install_type_custom_installer">Xüsusi quraşdırıcı</string>
     <string name="home_app_info_install_type_system_installer">Sistem quraşdırıcısı</string>
+    <string name="home_app_info_install_type_play_store">Play Store quraşdırması</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store quraşdırması</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku, Play Store quraşdırması</string>
     <string name="home_app_info_patch_update_available">Yamaq yenilənməsi var</string>
     <string name="home_app_info_patch_update_available_description">Yamaqların daha yeni versiyası var. Ən son təkmilləşdirmələr və düzəlişlər üçün tətbiqinizi təkrar yamaqlayın</string>
     <string name="home_app_info_app_deleted_warning">Tətbiq quraşdırması silindi</string>
@@ -608,9 +614,12 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="installer">Quraşdırıcı</string>
     <string name="installer_title">Quraşdırıcını seç</string>
     <string name="installer_internal_description">Android paket quraşdırıcısı istifadə edilir</string>
+    <string name="installer_play_store_description">Sistem quraşdırıcısın istifadə edir və Google Play Store-u quraşdırma mənbəyi kimi təyin edir</string>
+    <string name="installer_root_play_store_description">Səssizcə root ilə quraşdırır və Google Play Store-u quraşdırma mənbəyi kimi təyin edir</string>
     <string name="installer_auto_saved_name">Root-lu montajlama quraşdırıcısı</string>
     <string name="installer_auto_saved_description">Yamaqlanan APK-nı quraşdırılan tətbiq üzərinə montajlayır</string>
     <string name="installer_shizuku_description">Shizuku və ya Sui istifadə edərək səssizcə quraşdırır</string>
+    <string name="installer_shizuku_play_store_description">Shizuku yaxud Sui vasitəsilə səssizcə quraşdırır və Google Play Store-u quraşdırma mənbəyi kimi təyin edir</string>
     <string name="installer_option_none">Ehtiyat yoxdur</string>
     <string name="installer_none_description">Ehtiyat quraşdırıcı qurulan deyil</string>
     <string name="installer_status_requires_root">Root girişi ehtiyacı var</string>
@@ -631,6 +640,10 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="installer_unavailable_message">Üstünlük verdiyiniz quraşdırıcı (%s) hazırda əlçatan deyil. Problemi təyin edə və təkrar sınaya yaxud əvəzinə standart quraşdırıcı istifadə edə bilərsiniz</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku-nun işlədiyinə və bu tətbiqə icazə verildiyinə əmin olun</string>
     <string name="installer_use_standard">İlkin olanı istifadə et</string>
+    <string name="installer_play_store_warning_title">Play Store mənbəli quraşdırılsın?</string>
+    <string name="installer_play_store_warning_message">Yamaqlanmış tətbiq Google Play Store-dan quraşdırılmış kimi qeyd olunacaq. Bu, Android Auto kimi xidmətlərin onu Play Store tətbiqi kimi tanımasına imkan verir</string>
+    <string name="installer_play_store_warning_risk">Play Store yamaqlanmış tətbiq üçün yeniləmələr təklif edə bilər. Həmin yeniləməni quraşdırma yamaqlanmış APK-nı orijinal versiya ilə əvəzləyəcək və yamaqlar silinəcək. Yenilənməyə sövq edildikdə, tətbiqin Play Store səhifəsindəki üç nöqtəli menyuya toxunun və \"Yenilənmələri qapa\" seçimini edin</string>
+    <string name="installer_play_store_warning_continue">Başa düşdüm, davam et</string>
     <string name="settings_prompt_installer_on_install">Quraşdırıcı seçimi müraciəti</string>
     <string name="settings_prompt_installer_on_install_description">Yamaqlanan tətbiqi quraşdırdığınız hər vaxt quraşdırıcı seçimi dialoqunu göstərir</string>
     <string name="settings_auto_install_with_shizuku">Yamaqlamadan sonra birbaşa quraşdır</string>
@@ -671,6 +684,14 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_import_manager_settings_description">Morphe tənzimləmələrinizi nüsxələyir və bərpa edir</string>
     <string name="settings_system_import_manager_settings_fail">Morphe tənzimləmələrin idxal etmək olmadı: %s</string>
     <string name="settings_system_import_manager_settings_success">Morphe tənzimləmələri idxal edildi</string>
+    <string name="settings_system_import_manager_settings_mode_title">Morphe tənzimləmələrin idxal et</string>
+    <string name="settings_system_import_manager_settings_mode_description">İdxal olunmuş tənzimləmələrin və mənbələrin necə tətbiq olunacağını seç</string>
+    <string name="settings_system_import_selections_mode_title">Yamaq seçimlərini idxal et</string>
+    <string name="settings_system_import_selections_mode_description">İdxal olunmuş seçimlərin və yamaq üstünlüklərinin necə tətbiq olunacağını seç</string>
+    <string name="import_mode_replace_title">Mövcud olanı əvəzlə</string>
+    <string name="import_mode_replace_description">Nüsxələməni tam olaraq uyğunlaşdır. Nüsxələmədən çatışmayan elementlər silinəcək</string>
+    <string name="import_mode_merge_title">Mövcud olanla birləşdir</string>
+    <string name="import_mode_merge_description">Nüsxələmədən çatışmayan elementləri əlavə et. Mövcud elementlər dəyişməz saxlanılır</string>
     <string name="settings_system_export_manager_settings_fail">Morphe tənzimləmələrin ixrac etmək olmadı: %s</string>
     <string name="settings_system_export_manager_settings_success">Morphe tənzimləmələri ixrac olundu</string>
     <string name="settings_system_debug">Yaxşılaşdırma</string>

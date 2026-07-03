@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Noćni i produktivan</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Izvori zakrpe</string>
+    <string name="sources_sort_manual">Ručna postavka</string>
+    <string name="sources_sort_manual_hint">Pritisnite i zadržite izvor da biste ga preuredili</string>
+    <string name="sources_sort_last_updated">Zadnje ažuriranje</string>
     <string name="sources_management_open_in_browser">Otvori u pregledaču</string>
     <string name="sources_management_failed_to_open_url">Otvaranje URL-a nije uspelo</string>
     <string name="sources_management_prerelease_toggle">Zakrpe u predprodukciji</string>
@@ -285,6 +288,9 @@ Spoljna zona (isprekidana): može biti isečena maskom pokretača – držite va
     <string name="home_app_info_patch_source_used">Korišten je patch izvora</string>
     <string name="home_app_info_install_type_custom_installer">Prilagođeni instalater</string>
     <string name="home_app_info_install_type_system_installer">Sistemski instalater</string>
+    <string name="home_app_info_install_type_play_store">Instalacija preko Play Store-a</string>
+    <string name="home_app_info_install_type_root_play_store">Instalacija preko Root i Play Store-a</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Instalacija preko Shizuku i Play Store-a</string>
     <string name="home_app_info_patch_update_available">Dostupno je nova verzija patchova</string>
     <string name="home_app_info_patch_update_available_description">Nova verzija patchova je dostupna. Ponovno patchirajte svoju aplikaciju da bi dobili najnovije poboljšanja i ispravke</string>
     <string name="home_app_info_app_deleted_warning">Aplikacija je deinstalirana</string>
@@ -593,9 +599,12 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="installer">Instalator</string>
     <string name="installer_title">Odaberite instalera</string>
     <string name="installer_internal_description">Koristi Android paketni instalator</string>
+    <string name="installer_play_store_description">Koristi sistemski instalator i postavlja Google Play Store kao izvor instalacije</string>
+    <string name="installer_root_play_store_description">Tiha instalacija sa root pristupom i postavljanje Google Play Store-a kao izvora instalacije</string>
     <string name="installer_auto_saved_name">Instalator za montažu sa root-om</string>
     <string name="installer_auto_saved_description">Instalira nadinstaliranu APK na postojeću aplikaciju</string>
     <string name="installer_shizuku_description">Instalira se tiho koristeći Shizuku ili Sui</string>
+    <string name="installer_shizuku_play_store_description">Tiha instalacija putem Shizuku ili Sui i postavljanje Google Play Store-a kao izvora instalacije</string>
     <string name="installer_option_none">Bez rezervnog rešenja</string>
     <string name="installer_none_description">Nije konfigurisano nijedno rezervno instalaciono rešenje</string>
     <string name="installer_status_requires_root">Zahteva root pristup</string>
@@ -616,6 +625,10 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="installer_unavailable_message">Vaš preferirani instalera (%s) je trenutno nedostupan. Moguće je ispraviti problem i pokušati ponovo ili koristiti standardni instalera</string>
     <string name="installer_unavailable_shizuku_hint">Uvjerite se da je Shizuku pokrenut i da je dozvola dodijeljena ovoj aplikaciji</string>
     <string name="installer_use_standard">Koristi standard</string>
+    <string name="installer_play_store_warning_title">Instalirati kao Play Store?</string>
+    <string name="installer_play_store_warning_message">Aplikacija će biti zabeležena kao instalirana iz Google Play Store-a. Ovo omogućava servisima kao što je Android Auto da je prepoznaju kao Play Store aplikaciju</string>
+    <string name="installer_play_store_warning_risk">Play Store može da ponudi ažuriranja za aplikaciju. Instaliranje tog ažuriranja će prepisati patčovani APK originalnom verzijom i ukloniti patčove. Ako budete pozvani da ažurirate, dodirnite meni sa tri tačke na stranici aplikacije u Play Store-u i odaberite „Isključite ažuriranja“</string>
+    <string name="installer_play_store_warning_continue">Razumem, nastavi</string>
     <string name="settings_prompt_installer_on_install">Prompt za izbor instalera</string>
     <string name="settings_prompt_installer_on_install_description">Prikazuje dijalog za izbor instalera svaki put kada se instalira patchovana aplikacija</string>
     <string name="settings_auto_install_with_shizuku">Automatska instalacija nakon zakrpljivanja</string>

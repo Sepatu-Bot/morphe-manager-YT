@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Şevparêz û berdêl</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Kanalan saz bike</string>
+    <string name="sources_sort_manual">Fermanê destî</string>
+    <string name="sources_sort_manual_hint">Çavdêriyeke dirêj li ser çavkaniyê bike da ku rêzê guhezîne</string>
+    <string name="sources_sort_last_updated">Daxwazkirina herî dawî</string>
     <string name="sources_management_open_in_browser">Di ragirinê de vebêje</string>
     <string name="sources_management_failed_to_open_url">Serokê URL nefirote</string>
     <string name="sources_management_prerelease_toggle">Patch-ên pêş-bernameyê</string>
@@ -283,6 +286,9 @@ Herêma derveyî (qutkirî): dikare ji aliyê maskeya launcher'ê ve were qutkir
     <string name="home_app_info_patch_source_used">Kanîyeka veşartin serê re hatiye sererastkirin</string>
     <string name="home_app_info_install_type_custom_installer">Danerê xwezî</string>
     <string name="home_app_info_install_type_system_installer">Danerê sistemê</string>
+    <string name="home_app_info_install_type_play_store">Saetkirina Google Playê</string>
+    <string name="home_app_info_install_type_root_play_store">Saetkirina Google Playê bi rootê</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Saetkirina Google Playê bi Shizuku</string>
     <string name="home_app_info_patch_update_available">Nûvekirina paqijkirinê peyda bûye</string>
     <string name="home_app_info_patch_update_available_description">Versîyonê nû ya qelvaton ava bûye. Bo cîgirtinê sepanê bi qelbûna herî dawî, pêşbirîyên nûîn kirin û çareseriyê bibin</string>
     <string name="home_app_info_app_deleted_warning">App hate laşkirin</string>
@@ -607,9 +613,12 @@ Qasîyên wêneyan divê wiha bin:
     <string name="installer">Saçik</string>
     <string name="installer_title">Sazkerê hilbijêre</string>
     <string name="installer_internal_description">Sazkera pakketa Android’ê bikar bîne</string>
+    <string name="installer_play_store_description">Seta pêşnişazê sîstemê bikar tîne û Google Play Store wekî çavkaniya saetkirinê destnîşîn dike</string>
+    <string name="installer_root_play_store_description">Bi rihên root ve bêdeng sazkirin û çavkaniya sazkirinê wekî Google Play Store destnîşan bike</string>
     <string name="installer_auto_saved_name">Ferqendera ku bi rûsyê ve çêkiriye</string>
     <string name="installer_auto_saved_description">APK-ya dirûtîkirî ser navberê serdana sepanê ava dike</string>
     <string name="installer_shizuku_description">Sazkirina bêdeng bi Shizuku an Sui’yê</string>
+    <string name="installer_shizuku_play_store_description">Bi rihên Shizuku an Sui ve bêdeng sazkirin û çavkaniya sazkirinê wekî Google Play Store destnîşan bike</string>
     <string name="installer_option_none">Tu vegirtin</string>
     <string name="installer_none_description">Tu ferqender vegtinê pêşbînî nekiriye</string>
     <string name="installer_status_requires_root">Rûsyê tê pêwist</string>
@@ -630,6 +639,10 @@ Qasîyên wêneyan divê wiha bin:
     <string name="installer_unavailable_message">Îstalatorek wezîr (%s) niha ne berê. Probleme bejirin û dîsa bejnê, an ji îstalatorek standart bejnê</string>
     <string name="installer_unavailable_shizuku_hint">Ew bigihine Şizuku xela, be ew ragihina ito sepanê dest pê ke</string>
     <string name="installer_use_standard">Standard bikarîne</string>
+    <string name="installer_play_store_warning_title">Sa zkirin wekî Play Store?</string>
+    <string name="installer_play_store_warning_message">Aplikasyona guhertoyî wekî ku ji Google Play Store hatî sazkirin tomarkirin dê were. Ewîde karûbarên mîna Android Auto wê wekî aplikasyonek Play Store nas dikin</string>
+    <string name="installer_play_store_warning_risk">Dibe ku Play Store nûvekirinên ji bo aplikasyona guhertoyî pêşkêş bike. Sa zkirina wê nûvekirinê dê APK-ya guhertoyî bi guhertoya orjînal ferz bike û guhertoyînan rake. Ger ji we re nûvekirin were pirsîn, li ser menuya sê nuqtan li ser rûpelê yê Play Store ya aplikasyonê bikirin û \"Veberhêrkirina nûvekirinan\" hilbijêrin</string>
+    <string name="installer_play_store_warning_continue">Min fêhm kir, bidomînin</string>
     <string name="settings_prompt_installer_on_install">Dîyaloga hilbijartina sazkirî</string>
     <string name="settings_prompt_installer_on_install_description">Hîşyarî her carî dema ku app’a girêtî hatî sazkirin, dîyaloga hilbijartina sazkirî nîşan bide</string>
     <string name="settings_auto_install_with_shizuku">Têxînekî otomatîkî piştî paqijkirinê</string>

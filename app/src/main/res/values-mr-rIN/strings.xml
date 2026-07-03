@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">रात्रीचे आणि productive</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">सुधारणांची मुळे</string>
+    <string name="sources_sort_manual">मॅन्युअल ऑर्डर</string>
+    <string name="sources_sort_manual_hint">पुन्हा क्रमवारी लावण्यासाठी स्रोतावर दाबून ठेवा</string>
+    <string name="sources_sort_last_updated">शेवटची अपडेट</string>
     <string name="sources_management_open_in_browser">लिंक बाहेर नेटवर उघडा</string>
     <string name="sources_management_failed_to_open_url">लिंक उघडता आली नाही</string>
     <string name="sources_management_prerelease_toggle">प्री-रिलीझ पॅचेस</string>
@@ -284,6 +287,9 @@
     <string name="home_app_info_patch_source_used">पॅच स्रोत वापरला</string>
     <string name="home_app_info_install_type_custom_installer">कस्टम इंस्टॉलर</string>
     <string name="home_app_info_install_type_system_installer">सिस्टम इंस्टॉलर</string>
+    <string name="home_app_info_install_type_play_store">Play Store वर स्थापित करा</string>
+    <string name="home_app_info_install_type_root_play_store">Root Play Store वर स्थापित करा</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku Play Store वर स्थापित करा</string>
     <string name="home_app_info_patch_update_available">पॅच अपडेट उपलब्ध आहे</string>
     <string name="home_app_info_patch_update_available_description">पॅचची नवीन आवृत्ती उपलब्ध आहे. नवीनतम सुधारणा आणि निराकरणे मिळवण्यासाठी तुमचे ॲप पुन्हा पॅच करा</string>
     <string name="home_app_info_app_deleted_warning">ॲप अनइंस्टॉल केले होते</string>
@@ -608,9 +614,12 @@ morphe_header_custom_dark.png
     <string name="installer">इंस्टॉलर</string>
     <string name="installer_title">इंस्टॉलर निवडा</string>
     <string name="installer_internal_description">Android पॅकेज इंस्टॉलर वापरतो</string>
+    <string name="installer_play_store_description">सिस्टम इंस्टॉलर वापरतो आणि Google Play Store ला इंस्टॉलेशन स्रोत म्हणून सेट करतो</string>
+    <string name="installer_root_play_store_description">रूटसह शांतपणे स्थापित करते आणि Google Play Store ला इंस्टॉलेशन स्त्रोत म्हणून सेट करते</string>
     <string name="installer_auto_saved_name">रूटेड माउंट इंस्टॉलर</string>
     <string name="installer_auto_saved_description">पॅच केलेले APK स्थापित ॲपवर माउंट करते</string>
     <string name="installer_shizuku_description">Shizuku किंवा Sui वापरून शांतपणे इंस्टॉल करते</string>
+    <string name="installer_shizuku_play_store_description">शिझुकू किंवा सुईद्वारे शांतपणे स्थापित करते आणि Google Play Store ला इंस्टॉलेशन स्त्रोत म्हणून सेट करते</string>
     <string name="installer_option_none">कोणताही पर्याय नाही</string>
     <string name="installer_none_description">कोणताही पर्याय कॉन्फिगर केलेला नाही</string>
     <string name="installer_status_requires_root">रूट ॲक्सेस आवश्यक आहे</string>
@@ -631,6 +640,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">तुमचा प्राधान्य इंस्टॉलर (%s) सध्या अनुपलब्ध आहे. तुम्ही समस्येचे निराकरण करू शकता आणि पुन्हा प्रयत्न करू शकता किंवा त्याऐवजी मानक इंस्टॉलर वापरू शकता</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku चालू आहे आणि या ॲपला परवानगी दिली आहे याची खात्री करा</string>
     <string name="installer_use_standard">मानक वापरा</string>
+    <string name="installer_play_store_warning_title">प्ले स्टोअर म्हणून स्थापित करा?</string>
+    <string name="installer_play_store_warning_message">पॅच केलेले ॲप Google Play Store मधून स्थापित केलेले म्हणून नोंदवले जाईल. यामुळे Android Auto सारख्या सेवांना ते प्ले स्टोअर ॲप म्हणून ओळखता येते</string>
+    <string name="installer_play_store_warning_risk">प्ले स्टोअर पॅच केलेल्या ॲपसाठी अपडेट देऊ शकते. ते अपडेट स्थापित केल्यास पॅच केलेले APK मूळ आवृत्तीने बदलले जाईल आणि पॅच काढले जातील. अपडेट करण्यास सांगितले গেলে, ॲपच्या प्ले स्टोअर पृष्ठावरील तीन-डॉट मेनूवर टॅप करा आणि \"अपडेट बंद करा\" निवडा</string>
+    <string name="installer_play_store_warning_continue">मला समजले, पुढे जा</string>
     <string name="settings_prompt_installer_on_install">इंस्टॉलर निवड प्रॉम्प्ट</string>
     <string name="settings_prompt_installer_on_install_description">पॅच केलेले ॲप इंस्टॉल करताना प्रत्येक वेळी इंस्टॉलर निवड संवाद दर्शवितो</string>
     <string name="settings_auto_install_with_shizuku">पॅचिंग केल्यानंतर स्वयंचलितपणे स्थापित करा</string>

@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nocny i produktywny</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Zdroje záplat</string>
+    <string name="sources_sort_manual">Ruční řazení</string>
+    <string name="sources_sort_manual_hint">Dlouhým stisknutím zdroje jej můžete přerazit</string>
+    <string name="sources_sort_last_updated">Naposledy aktualizováno</string>
     <string name="sources_management_open_in_browser">Otevřít v prohlížeči</string>
     <string name="sources_management_failed_to_open_url">Nepodařilo se otevřít URL</string>
     <string name="sources_management_prerelease_toggle">Předběžné záplaty</string>
@@ -285,6 +288,9 @@ Vnějní zóna (přerušovaná): může být ořezaná maskou spouštěčé - ud
     <string name="home_app_info_patch_source_used">Zdroje záplat</string>
     <string name="home_app_info_install_type_custom_installer">Vlastní instalátor</string>
     <string name="home_app_info_install_type_system_installer">Systémový instalátor</string>
+    <string name="home_app_info_install_type_play_store">Instalace z Obchodu Play</string>
+    <string name="home_app_info_install_type_root_play_store">Instalace z Obchodu Play s root přístupem</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Instalace z Obchodu Play přes Shizuku</string>
     <string name="home_app_info_patch_update_available">Je k dispozici novější verze záplat.</string>
     <string name="home_app_info_patch_update_available_description">Je k dispozici novější verze záplaty. Repatchujte svou aplikaci, abyste získali nejnovější vylepšení a opravy.</string>
     <string name="home_app_info_app_deleted_warning">Aplikace byla odinstalována</string>
@@ -609,9 +615,12 @@ Rozměry obrázků musí být následující:
     <string name="installer">Instalátor</string>
     <string name="installer_title">Vyberte instalátor</string>
     <string name="installer_internal_description">Používá vestavěný správce balíčků Androidu</string>
+    <string name="installer_play_store_description">Používá systémový instalátor a nastaví Obchod Play jako zdroj instalace</string>
+    <string name="installer_root_play_store_description">Instaluje se potichu s root přístupy a nastavuje Google Play Store jako zdroj instalace</string>
     <string name="installer_auto_saved_name">Instalátor s kořenovým připojením</string>
     <string name="installer_auto_saved_description">Nainstaluje upravený APK nad instalovanou aplikací</string>
     <string name="installer_shizuku_description">Instaluje potichu pomocí Shizuku nebo Sui</string>
+    <string name="installer_shizuku_play_store_description">Instaluje se potichu přes Shizuku nebo Sui a nastavuje Google Play Store jako zdroj instalace</string>
     <string name="installer_option_none">Žádný záložní</string>
     <string name="installer_none_description">Není nakonfigurován žádný záložní instalátor</string>
     <string name="installer_status_requires_root">Vyžaduje přístup root</string>
@@ -632,6 +641,10 @@ Rozměry obrázků musí být následující:
     <string name="installer_unavailable_message">Váš preferovaný instalátor (%s) je momentálně nedostupný. Můžete vyřešit problém a zkuste to znovu, nebo použijte standardní instalátor</string>
     <string name="installer_unavailable_shizuku_hint">Ujistěte se, že je Shizuku spuštěn a povoleno pro tuto aplikaci</string>
     <string name="installer_use_standard">Použít standard</string>
+    <string name="installer_play_store_warning_title">Instalovat jako Play Store?</string>
+    <string name="installer_play_store_warning_message">Opravená aplikace bude zaznamenána jako nainstalovaná z Google Play Store. To umožní službám, jako je Android Auto, ji rozpoznat jako aplikaci z Play Store.</string>
+    <string name="installer_play_store_warning_risk">Play Store může nabízet aktualizace pro opravenou aplikaci. Instalace této aktualizace přepíše opravený APK s původní verzí a odstraní opravy. Pokud budete vyzváni k aktualizaci, klepněte na nabídku se třemi tečkami na stránce aplikace v Play Store a zvolte \"Vypnout aktualizace\".</string>
+    <string name="installer_play_store_warning_continue">Rozumím, pokračovat</string>
     <string name="settings_prompt_installer_on_install">Výběr instalátoru</string>
     <string name="settings_prompt_installer_on_install_description">Zobrazí dialog pro výběr instalátoru pokaždé, když se nainstaluje záplatovaná aplikace</string>
     <string name="settings_auto_install_with_shizuku">Automatická instalace po opravení</string>

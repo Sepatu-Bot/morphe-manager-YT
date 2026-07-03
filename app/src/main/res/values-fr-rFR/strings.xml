@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">Nocturne et productif</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Sources de patchs</string>
+    <string name="sources_sort_manual">Ordre manuel</string>
+    <string name="sources_sort_manual_hint">Appuyez longuement sur une source pour la réorganiser</string>
+    <string name="sources_sort_last_updated">Dernière mise à jour</string>
     <string name="sources_management_open_in_browser">Ouvrir dans le navigateur</string>
     <string name="sources_management_failed_to_open_url">Échec de l\'ouverture de l\'URL</string>
     <string name="sources_management_prerelease_toggle">Préversion de patchs</string>
@@ -284,6 +287,9 @@ Zone extérieure (pointillée) : peut être rognée par le masque du lanceur - g
     <string name="home_app_info_patch_source_used">Source de patchs utilisée</string>
     <string name="home_app_info_install_type_custom_installer">Installateur personnalisé</string>
     <string name="home_app_info_install_type_system_installer">Installateur système</string>
+    <string name="home_app_info_install_type_play_store">Installation depuis le Play Store</string>
+    <string name="home_app_info_install_type_root_play_store">Installation root depuis le Play Store</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Installation via Shizuku depuis le Play Store</string>
     <string name="home_app_info_patch_update_available">Mise à jour de patch disponible</string>
     <string name="home_app_info_patch_update_available_description">Une version plus récente des patchs est disponible. Repatchez votre application pour bénéficier des dernières améliorations et corrections</string>
     <string name="home_app_info_app_deleted_warning">L\'application a été désinstallée</string>
@@ -610,9 +616,12 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="installer">Installateur</string>
     <string name="installer_title">Sélectionner l\'installateur</string>
     <string name="installer_internal_description">Utilise l\'installateur de paquets Android</string>
+    <string name="installer_play_store_description">Utilise l\'installateur système et définit le Google Play Store comme source d\'installation</string>
+    <string name="installer_root_play_store_description">Installe silencieusement avec les droits root et définit le Google Play Store comme source d\'installation</string>
     <string name="installer_auto_saved_name">Installateur par montage root</string>
     <string name="installer_auto_saved_description">Monte l\'APK patché par-dessus l\'application installée</string>
     <string name="installer_shizuku_description">Installe silencieusement via Shizuku ou Sui</string>
+    <string name="installer_shizuku_play_store_description">Installe silencieusement via Shizuku ou Sui et définit le Google Play Store comme source d\'installation</string>
     <string name="installer_option_none">Aucun installateur de secours</string>
     <string name="installer_none_description">Aucun installateur de secours configuré</string>
     <string name="installer_status_requires_root">Nécessite l\'accès root</string>
@@ -633,6 +642,10 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="installer_unavailable_message">Votre installateur préféré (%s) est actuellement indisponible. Vous pouvez résoudre le problème et réessayer, ou utiliser l\'installateur standard à la place</string>
     <string name="installer_unavailable_shizuku_hint">Assurez-vous que Shizuku est en cours d\'exécution et que l\'autorisation a été accordée à cette application</string>
     <string name="installer_use_standard">Utiliser l\'installateur standard</string>
+    <string name="installer_play_store_warning_title">Installer en tant qu\'application du Play Store ?</string>
+    <string name="installer_play_store_warning_message">L\'application patchée sera enregistrée comme ayant été installée depuis le Google Play Store. Cela permet à des services comme Android Auto de la reconnaître comme une application provenant du Play Store.</string>
+    <string name="installer_play_store_warning_risk">Le Play Store peut proposer des mises à jour pour l\'application patchée. L\'installation de cette mise à jour remplacera l\'APK patché par la version d\'origine et supprimera les patchs. Si une mise à jour vous est proposée, appuyez sur le menu à trois points sur la page de l\'application dans le Play Store et choisissez \"Désactiver les mises à jour\"</string>
+    <string name="installer_play_store_warning_continue">J\'ai compris, continuer</string>
     <string name="settings_prompt_installer_on_install">Invite de sélection de l\'installateur</string>
     <string name="settings_prompt_installer_on_install_description">Affiche la boîte de dialogue de sélection de l\'installateur à chaque installation d’une application patchée</string>
     <string name="settings_auto_install_with_shizuku">Installer automatiquement après le patchage</string>
@@ -676,11 +689,11 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_import_manager_settings_mode_title">Importer les paramètres de Morphe</string>
     <string name="settings_system_import_manager_settings_mode_description">Choisissez comment les paramètres et les sources importés doivent être appliqués</string>
     <string name="settings_system_import_selections_mode_title">Importer les sélections de patch</string>
-    <string name="settings_system_import_selections_mode_description">Choisissez comment les sélections importées et les options de patch doivent être appliquées</string>
+    <string name="settings_system_import_selections_mode_description">Choisissez comment les sélections et les options de patch importées doivent être appliquées</string>
     <string name="import_mode_replace_title">Remplacer l\'existant</string>
-    <string name="import_mode_replace_description">Correspondre exactement à la sauvegarde. Les éléments manquants dans la sauvegarde seront supprimés</string>
+    <string name="import_mode_replace_description">Faire correspondre exactement à la sauvegarde. Les éléments absents de la sauvegarde seront supprimés</string>
     <string name="import_mode_merge_title">Fusionner avec l\'existant</string>
-    <string name="import_mode_merge_description">Ajouter les éléments manquants de la sauvegarde. Les éléments existants restent inchangés</string>
+    <string name="import_mode_merge_description">Ajoute les éléments manquants à partir de la sauvegarde. Les éléments existants restent inchangés</string>
     <string name="settings_system_export_manager_settings_fail">Échec de l\'exportation des paramètres de Morphe : %s</string>
     <string name="settings_system_export_manager_settings_success">Paramètres de Morphe exportés</string>
     <string name="settings_system_debug">Débogage</string>

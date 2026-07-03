@@ -76,6 +76,9 @@
     <string name="home_greeting_super_late_5">夜行性で生産的</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">パッチソース</string>
+    <string name="sources_sort_manual">手動の並び替え</string>
+    <string name="sources_sort_manual_hint">ソースを長押しして並び替えます</string>
+    <string name="sources_sort_last_updated">最終更新日</string>
     <string name="sources_management_open_in_browser">ブラウザで開く</string>
     <string name="sources_management_failed_to_open_url">URL を開けませんでした</string>
     <string name="sources_management_prerelease_toggle">プレリリース版のパッチを使用</string>
@@ -285,6 +288,9 @@
     <string name="home_app_info_patch_source_used">使用したパッチソース</string>
     <string name="home_app_info_install_type_custom_installer">カスタムインストーラー</string>
     <string name="home_app_info_install_type_system_installer">システムのインストーラー</string>
+    <string name="home_app_info_install_type_play_store">Play ストアからインストール</string>
+    <string name="home_app_info_install_type_root_play_store">Root化されたPlay ストアからインストール</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Shizuku を使用した Play ストアからインストール</string>
     <string name="home_app_info_patch_update_available">パッチの更新が利用可能です</string>
     <string name="home_app_info_patch_update_available_description">新しいバージョンのパッチが利用可能です。最新の変更を反映するには、アプリを再パッチしてください</string>
     <string name="home_app_info_app_deleted_warning">アプリがアンインストールされました</string>
@@ -609,9 +615,12 @@ morphe_header_custom_dark.png
     <string name="installer">インストーラー</string>
     <string name="installer_title">インストーラーを選択</string>
     <string name="installer_internal_description">Android パッケージインストーラーを使用します</string>
+    <string name="installer_play_store_description">システムインストーラーを使用し、Google Play ストアをインストールソースに設定します</string>
+    <string name="installer_root_play_store_description">ルート権限でサイレントインストールを実行し、Google Playストアをインストール元に設定します</string>
     <string name="installer_auto_saved_name">root 権限マウント式インストーラー</string>
     <string name="installer_auto_saved_description">パッチ適用済み APK をインストール済みアプリの上にマウントします</string>
     <string name="installer_shizuku_description">Shizuku または Sui を使用して自動インストールします</string>
+    <string name="installer_shizuku_play_store_description">ShizukuまたはSuiを通じてサイレントインストールを実行し、Google Playストアをインストール元に設定します</string>
     <string name="installer_option_none">代替なし</string>
     <string name="installer_none_description">代替インストーラーは未設定です</string>
     <string name="installer_status_requires_root">root 権限が必要です</string>
@@ -632,6 +641,10 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_message">選択中のインストーラー (%s) は現在使用できません。問題を修正して再試行するか、標準のインストーラーを使用してください</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku が起動中であること、およびこのアプリに権限が付与されていることを確認してください</string>
     <string name="installer_use_standard">標準を使用</string>
+    <string name="installer_play_store_warning_title">Playストアとしてインストールしますか？</string>
+    <string name="installer_play_store_warning_message">パッチを適用したアプリは、Google Playストアからインストールされたものとして記録されます。これにより、Android AutoなどのサービスがPlayストアアプリとして認識できるようになります</string>
+    <string name="installer_play_store_warning_risk">Playストアは、パッチを適用したアプリのアップデートを提供する場合があります。そのアップデートをインストールすると、パッチが適用されたAPKが元のバージョンで上書きされ、パッチが削除されます。アップデートを促された場合は、アプリのPlayストアページで3点メニューをタップし、「アップデートをオフにする」を選択してください</string>
+    <string name="installer_play_store_warning_continue">了解しました。続行します</string>
     <string name="settings_prompt_installer_on_install">インストーラー選択ダイアログ</string>
     <string name="settings_prompt_installer_on_install_description">パッチ適用済みアプリをインストールする際に、毎回インストーラー選択ダイアログを表示します</string>
     <string name="settings_auto_install_with_shizuku">パッチ適用後の自動インストール</string>
