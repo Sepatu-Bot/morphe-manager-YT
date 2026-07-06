@@ -703,6 +703,12 @@ Dimenzije slike morajo biti naslednje:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Datoteke in pomnilnik</string>
     <string name="settings_system_apks_size">Skupna velikost: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">To bo trajno izbrisalo shranjene datoteke APK, ki so prikazane tukaj</string>
+    <string name="settings_system_apks_delete_selected_title">Izbrisati izbrane datoteke APK?</string>
+    <string name="settings_system_apks_delete_selected_confirm">To bo trajno izbrisalo izbrane datoteke APK</string>
+    <string name="settings_system_apks_deleted_all">Datoteke APK so bile uspešno izbrisane</string>
+    <string name="settings_system_apks_export_zip_success">Izbrane datoteke APK so bile izvožene</string>
+    <string name="settings_system_apks_export_zip_failed">Izvoz izbranih datotek APK je spodletel</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Popravljeni APK-ji</string>
     <string name="settings_system_patched_apks_description">Upravlja shranjene datoteke popravljenih aplikacij</string>
@@ -710,6 +716,7 @@ Dimenzije slike morajo biti naslednje:
     <string name="settings_system_patched_apks_delete_title">Izbrišite popravljeni APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Ali želite izbrisati shranjeno popravljeno APK za %s?</string>
     <string name="settings_system_patched_apks_deleted">Uspešno izbrisan popravljen APK</string>
+    <string name="settings_system_patched_apks_delete_all_title">Izbrisati vse popravljene datoteke APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Izvirni APK-ji</string>
     <string name="settings_system_original_apks_description">Shranjeno za ponovno popravljanje. Ohranja se ena različica na aplikacijo</string>
@@ -717,11 +724,13 @@ Dimenzije slike morajo biti naslednje:
     <string name="settings_system_original_apks_deleted">Uspešno izbrisan izvirni APK</string>
     <string name="settings_system_original_apks_delete_title">Izbriši izvirni APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Izbriši izvirno datoteko APK za %s? Aplikacije ne boste mogli več popraviti brez zagotovitve nove datoteke APK.</string>
+    <string name="settings_system_original_apks_delete_all_title">Izbrisati vse originalne datoteke APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Izbira popravkov</string>
     <string name="settings_system_patch_selections_description">Shranjene izbire popravkov, ohranjene po odstranitvi</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Ponastavi vse izbire?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Ponastavi izbire paketov?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Ponastaviti izbrane pakete?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Ponastavi izbiro virov?</string>
     <string name="settings_system_patch_selection_no_saved">Ni shranjenih izbir popravkov</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s od %2$s</string>
@@ -789,10 +798,15 @@ Dimenzije slike morajo biti naslednje:
     <string name="skip">Preskoči</string>
     <string name="clear">Počisti</string>
     <string name="delete">Izbriši</string>
+    <string name="delete_all">Izbrisati vse</string>
     <string name="remove">Odstrani</string>
     <string name="disable">Onemogoči</string>
     <string name="enable">Omogoči</string>
     <string name="loading">Nalaganje…</string>
+    <string name="loading_older_releases">Nalagam starejše različice…</string>
+    <string name="creating">Ustvarjam…</string>
+    <string name="processing_apk">Obdelujem datoteko APK…</string>
+    <string name="exporting_apks">Izvažam datoteke APK…</string>
     <string name="not_installed">Ni nameščeno</string>
     <string name="view">Poglej</string>
     <string name="search">Poišči</string>

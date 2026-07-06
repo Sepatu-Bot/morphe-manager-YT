@@ -76,9 +76,9 @@
     <string name="home_greeting_super_late_5">Oícheanta agus táirgiúil</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Foinsí paiste</string>
-    <string name="sources_sort_manual">Ordú lámhach</string>
-    <string name="sources_sort_manual_hint">Coinnigh síos ar fhoinse chun a athordú</string>
-    <string name="sources_sort_last_updated">Nuashonraithe go déanach</string>
+    <string name="sources_sort_manual">Ordú láimhe</string>
+    <string name="sources_sort_manual_hint">Brúigh suas le foinse le hathordú</string>
+    <string name="sources_sort_last_updated">Nuashonraithe is déanaí</string>
     <string name="sources_management_open_in_browser">Oscail sa bhrabhsálaí</string>
     <string name="sources_management_failed_to_open_url">Teip ar URL a oscailt</string>
     <string name="sources_management_prerelease_toggle">Paistí réamh-eisiúna</string>
@@ -289,7 +289,7 @@ Crios seachtrach (daite): féadfaidh masc an lainseálaí é a bhearradh - coinn
     <string name="home_app_info_install_type_custom_installer">Suiteálaí saincheaptha</string>
     <string name="home_app_info_install_type_system_installer">Suiteálaí córais</string>
     <string name="home_app_info_install_type_play_store">Suiteáil ón Play Store</string>
-    <string name="home_app_info_install_type_root_play_store">Suiteáil ón Play Store le roinnt faisnéis</string>
+    <string name="home_app_info_install_type_root_play_store">Suiteáil ón Play Store le fréamh</string>
     <string name="home_app_info_install_type_shizuku_play_store">Suiteáil ón Play Store le Shizuku</string>
     <string name="home_app_info_patch_update_available">Nuashonrú paiste ar fáil</string>
     <string name="home_app_info_patch_update_available_description">Tá leagan níos nuaí de na paistí ar fáil. Déan paiste nua ar d\'aip chun na feabhsuithe agus na socruithe is déanaí a fháil.</string>
@@ -613,12 +613,12 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="installer">Suiteálaí</string>
     <string name="installer_title">Roghnaigh suiteálaí</string>
     <string name="installer_internal_description">Úsáideann sé suiteálaí an phacáiste Android</string>
-    <string name="installer_play_store_description">Úsáideann an suiteoir córais agus socraíonn Google Play Store mar fhoinse suiteála</string>
-    <string name="installer_root_play_store_description">Suiteáil go ciúin le céim agus socraigh Stór Play mar fhoinse suiteála</string>
+    <string name="installer_play_store_description">Úsáideann sé suiteálaí an chórais agus socraíonn sé Google Play Store mar fhoinse suiteála</string>
+    <string name="installer_root_play_store_description">Suiteáil sé go ciúin le fréamh agus socraíonn sé Google Play Store mar an fhoinse suiteála</string>
     <string name="installer_auto_saved_name">Suiteálaí gléasta fréamhaithe</string>
     <string name="installer_auto_saved_description">Suiteálann sé an APK paisteáilte thar an aip suiteáilte</string>
     <string name="installer_shizuku_description">Suiteáiltear go ciúin ag baint úsáide as Shizuku nó Sui</string>
-    <string name="installer_shizuku_play_store_description">Suiteáil go ciúin trí Shizuku nó Sui agus socraigh Stór Play mar fhoinse suiteála</string>
+    <string name="installer_shizuku_play_store_description">Suiteáil sé go ciúin trí Shizuku nó Sui agus socraíonn sé Google Play Store mar fhoinse suiteála</string>
     <string name="installer_option_none">Gan aon chúltaca</string>
     <string name="installer_none_description">Níl aon suiteálaí taca cumraithe</string>
     <string name="installer_status_requires_root">Éilíonn rochtain fréimhe</string>
@@ -639,10 +639,10 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="installer_unavailable_message">Níl an suiteálaí is fearr leat (%s) ar fáil faoi láthair. Is féidir leat an fhadhb a réiteach agus iarracht eile a dhéanamh, nó an suiteálaí caighdeánach a úsáid ina ionad</string>
     <string name="installer_unavailable_shizuku_hint">Cinntigh go bhfuil Shizuku ag rith agus go bhfuil cead tugtha don aip seo</string>
     <string name="installer_use_standard">Úsáid caighdeánach</string>
-    <string name="installer_play_store_warning_title">Suiteáil mar Stór Play?</string>
-    <string name="installer_play_store_warning_message">Beidh an app patched taifeadta mar suiteáil ó Stór Google Play. Ligeann sé seo seirbhísí mar Android Auto a aisghairm mar app Stóir Play é</string>
-    <string name="installer_play_store_warning_risk">D’fhéadfadh Stór Play nuashonruithe a thairgadh don app patched. Beidh an APK patched forghníomhaithe ón mbunleagan agus beidh na patches bainte as trí nuashonrú a suiteáil. Má iarrtar ort nuashonrú, tapaigh ar an roghchláir trí phunkt (menu) ar leathanach Stór Play an app agus roghnaigh \"Diúscair nuashonruithe\"</string>
-    <string name="installer_play_store_warning_continue">Tuigim, lean ort</string>
+    <string name="installer_play_store_warning_title">Suiteáil mar Play Store?</string>
+    <string name="installer_play_store_warning_message">Déanfar an app paiste a thaifeadadh mar atá suiteáilte ó Google Play Store. Ligeann sé seo do sheirbhísí cosúil le Android Auto é a aithint mar aip Play Store</string>
+    <string name="installer_play_store_warning_risk">Féadfaidh Play Store nuashonruithe a thairiscint don aip bhreacach. Má shuiteáiltear an nuashonrú sin, déanfar an APK paiste a fhorscríobh leis an mbunleagan agus bainfidh sé na paistí. Má iarrtar ort nuashonrú a dhéanamh, tapáil an roghchlár trí phonc ar leathanach Play Store na haipe agus roghnaigh \"Múch nuashonruithe\"</string>
+    <string name="installer_play_store_warning_continue">Tuigim, lean ar aghaidh</string>
     <string name="settings_prompt_installer_on_install">Leid roghnúcháin suiteálaí</string>
     <string name="settings_prompt_installer_on_install_description">Taispeánann sé dialóg roghnúcháin suiteálaí gach uair a shuiteáiltear aip phaisteáilte</string>
     <string name="settings_auto_install_with_shizuku">Suiteáil uathoibríoch tar éis paisteála</string>
@@ -701,6 +701,12 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Comhaid &amp; stóras</string>
     <string name="settings_system_apks_size">Méid iomlán: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Scriosfaidh sé seo go buan na comhaid APK sábháilte a thaispeántar anseo</string>
+    <string name="settings_system_apks_delete_selected_title">Scrios APKanna roghnaithe?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Scriosfaidh sé seo go buan na comhaid APK roghnaithe</string>
+    <string name="settings_system_apks_deleted_all">Scriosadh APKanna go rathúil</string>
+    <string name="settings_system_apks_export_zip_success">APKanna roghnaithe onnmhaithe</string>
+    <string name="settings_system_apks_export_zip_failed">Theip ar APKanna roghnaithe a onnmháil</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKanna paisteáilte</string>
     <string name="settings_system_patched_apks_description">Bainistíonn comhaid iarratais phaisteáilte sábháilte</string>
@@ -708,6 +714,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_patched_apks_delete_title">APK paisteáilte a scriosadh?</string>
     <string name="settings_system_patched_apks_delete_confirm">An bhfuil tú cinnte gur mian leat an APK paisteáilte sábháilte do %s a scriosadh?</string>
     <string name="settings_system_patched_apks_deleted">Scriosadh an APK paisteáilte go rathúil</string>
+    <string name="settings_system_patched_apks_delete_all_title">Scrios gach APK paisteáilte?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APKanna Bunaidh</string>
     <string name="settings_system_original_apks_description">Sábháilte le haghaidh athphaisteála. Coinnítear leagan amháin in aghaidh an aip.</string>
@@ -715,11 +722,13 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="settings_system_original_apks_deleted">Scriosadh an APK bunaidh go rathúil</string>
     <string name="settings_system_original_apks_delete_title">Scrios an APK bunaidh?</string>
     <string name="settings_system_original_apks_delete_confirm">Scrios an APK bunaidh le haghaidh %s? Ní bheidh tú in ann athphaisteáil gan APK nua a sholáthar.</string>
+    <string name="settings_system_original_apks_delete_all_title">Scrios gach APK bunaidh?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Roghanna paiste</string>
     <string name="settings_system_patch_selections_description">Sábháil roghanna paisteála, coimeádta tar éis díchómhdaigh</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Athshocraigh gach rogha?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Athshocraigh roghanna pacáiste?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Atosaigh pacáistí roghnaithe?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Athshocraigh an rogha foinse?</string>
     <string name="settings_system_patch_selection_no_saved">Gan aon roghanna paiste sábháilte</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s trasna %2$s</string>
@@ -787,10 +796,15 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="skip">Scipeáil</string>
     <string name="clear">Glan</string>
     <string name="delete">Scrios</string>
+    <string name="delete_all">Scrios gach rud</string>
     <string name="remove">Bain</string>
     <string name="disable">Díchumasaigh</string>
     <string name="enable">Os comhad</string>
     <string name="loading">Ag lódáil…</string>
+    <string name="loading_older_releases">Eisiúintí níos sine á luchtú…</string>
+    <string name="creating">Cruthaithe…</string>
+    <string name="processing_apk">Próiseáil APK…</string>
+    <string name="exporting_apks">APKanna á onnmháil…</string>
     <string name="not_installed">Gan suiteáil</string>
     <string name="view">Amharc</string>
     <string name="search">Cuardaigh</string>

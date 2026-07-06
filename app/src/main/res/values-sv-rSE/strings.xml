@@ -55,13 +55,13 @@
     <string name="home_greeting_10">Drivs av koffein och bra tillägg</string>
     <!-- Morning greetings (5:00–11:59) -->
     <string name="home_greeting_morning_1">Upp och modifiera</string>
-    <string name="home_greeting_morning_2">God morgon! Appar modifierar ju inte sig själva</string>
+    <string name="home_greeting_morning_2">God morgon! Apparna modifierar ju inte sig själva</string>
     <!-- Afternoon greetings (12:00–16:59) -->
     <string name="home_greeting_afternoon_1">Eftermiddagssvacka? Modifiera något</string>
-    <string name="home_greeting_afternoon_2">Njut av lite modifiering efter lunchen</string>
-    <string name="home_greeting_afternoon_3">Eftermiddagsskiftet: modifieringens stund</string>
+    <string name="home_greeting_afternoon_2">Modifiering på eftermiddagen känns annorlunda</string>
+    <string name="home_greeting_afternoon_3">Eftermiddagsskiftet: modifieringsversionen</string>
     <!-- Evening greetings (17:00–21:59) -->
-    <string name="home_greeting_evening_1">God kväll! Njut av lite kvällsmodifiering</string>
+    <string name="home_greeting_evening_1">God kväll! Modifiering på kvällen känns annorlunda</string>
     <string name="home_greeting_evening_2">Varvar du ned? Modifiera en app först</string>
     <string name="home_greeting_evening_3">Stämplar du ut? Modifiera något först</string>
     <!-- Late night greetings (22:00–23:59) -->
@@ -69,7 +69,7 @@
     <string name="home_greeting_late_night_2">Modifierar du sent på kvällen? Respekt</string>
     <string name="home_greeting_late_night_3">Nattuggleläge: aktiverat</string>
     <!-- Super late night greetings (0:00–4:59) -->
-    <string name="home_greeting_super_late_1">Den bästa tiden att modifiera på … sägs det</string>
+    <string name="home_greeting_super_late_1">Den bästa tiden för modifiering … sägs det</string>
     <string name="home_greeting_super_late_2">Kan du inte sova? Modifiera något</string>
     <string name="home_greeting_super_late_3">Vid det här laget, håll dig bara vaken och modifiera</string>
     <string name="home_greeting_super_late_4">Du och servrarna – båda är vakna</string>
@@ -412,8 +412,8 @@ Yttre zonen (streckad): kan beskäras av startprogrammets mask – håll viktiga
     <string name="mini_game_try_again">Försök igen</string>
     <string name="mini_game_paused">Pausat</string>
     <string name="mini_game_resume">Fortsätt</string>
-    <string name="mini_game_2048_picker_subtitle">Flytta brickorna för att slå ihop dem</string>
-    <string name="mini_game_flappy_picker_subtitle">Tryck för att flyga mellan rör</string>
+    <string name="mini_game_2048_picker_subtitle">Flytta brickorna och slå ihop dem</string>
+    <string name="mini_game_flappy_picker_subtitle">Tryck för att flyga mellan rören</string>
     <string name="mini_game_flappy_tap_to_start">Tryck för att flyga</string>
     <string name="mini_game_snake_picker_subtitle">Ät mat och träffa inte dig själv</string>
     <string name="mini_game_snake_swipe_to_start">Svep för att starta</string>
@@ -887,5 +887,5 @@ Vill du fortsätta ändå?"</string>
     <string name="tour_prompt_desc">Vill du få en snabb genomgång av Morphes grundläggande funktioner?</string>
     <string name="tour_prompt_confirm">Visa mig runt</string>
     <string name="onboarding_restart_title">Funktionsgenomgång</string>
-    <string name="onboarding_restart_desc">Få en guidad visning av Morphes grundläggande funktioner</string>
+    <string name="onboarding_restart_desc">Få en guidad genomgång av Morphes grundläggande funktioner</string>
 </resources>

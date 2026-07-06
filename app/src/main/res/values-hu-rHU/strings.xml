@@ -703,6 +703,12 @@ A képek méreteinek a következőknek kell lennie:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Fájlok és tárhely</string>
     <string name="settings_system_apks_size">Teljes méret: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Ez véglegesen törli a megjelenített APK fájlokat.</string>
+    <string name="settings_system_apks_delete_selected_title">Kiválasztott APK-k törlése?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Ez véglegesen törli a kiválasztott APK fájlokat.</string>
+    <string name="settings_system_apks_deleted_all">Az APK-k sikeresen törölve lettek.</string>
+    <string name="settings_system_apks_export_zip_success">A kiválasztott APK-k exportálva</string>
+    <string name="settings_system_apks_export_zip_failed">A kiválasztott APK-k exportálása sikertelen</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Módosított APK-k</string>
     <string name="settings_system_patched_apks_description">Mentett módosított alkalmazásfájlok kezelése</string>
@@ -710,6 +716,7 @@ A képek méreteinek a következőknek kell lennie:
     <string name="settings_system_patched_apks_delete_title">Törlöd a módosított APK-t?</string>
     <string name="settings_system_patched_apks_delete_confirm">Biztosan törölni szeretnéd a mentett, módosított APK-t: %s?</string>
     <string name="settings_system_patched_apks_deleted">A módosított APK sikeresen törölve</string>
+    <string name="settings_system_patched_apks_delete_all_title">Törlöm az összes módosított APK-t?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Eredeti APK-k</string>
     <string name="settings_system_original_apks_description">Mentve a újra-módosításra. Az egyes alkalmazásokhoz csak egy verzió kerül tárolásra</string>
@@ -717,11 +724,13 @@ A képek méreteinek a következőknek kell lennie:
     <string name="settings_system_original_apks_deleted">Az eredeti APK sikeresen törölve</string>
     <string name="settings_system_original_apks_delete_title">Törlöd az eredeti APK-t?</string>
     <string name="settings_system_original_apks_delete_confirm">Törlöd az eredeti %s APK-t? Új APK nélkül nem fogod tudni újra elvégezni a módosítást.</string>
+    <string name="settings_system_original_apks_delete_all_title">Törlöm az összes eredeti APK-t?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Módosítás kiválasztások</string>
     <string name="settings_system_patch_selections_description">Mentett módosítási kiválasztások, amelyek az eltávolítás után is megmaradnak.</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Visszaállítasz minden kiválasztást?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Visszaállítod a csomag kiválasztásait?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">A kiválasztott csomagok visszaállítása?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Visszaállítod a forráskiválasztást?</string>
     <string name="settings_system_patch_selection_no_saved">Nincsenek mentett módosítások</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s – %2$s</string>
@@ -790,10 +799,15 @@ Forrás: #%2$s</string>
     <string name="skip">Kihagyás</string>
     <string name="clear">Törlés</string>
     <string name="delete">Törlés</string>
+    <string name="delete_all">Mindent töröl?</string>
     <string name="remove">Eltávolítás</string>
     <string name="disable">Letiltás</string>
     <string name="enable">Engedélyezés</string>
     <string name="loading">Betöltés…</string>
+    <string name="loading_older_releases">Régebbi verziók betöltése…</string>
+    <string name="creating">Létrehozás…</string>
+    <string name="processing_apk">APK feldolgozása…</string>
+    <string name="exporting_apks">APK-k exportálása…</string>
     <string name="not_installed">Nincs telepítve</string>
     <string name="view">Megtekintés</string>
     <string name="search">Keresés</string>

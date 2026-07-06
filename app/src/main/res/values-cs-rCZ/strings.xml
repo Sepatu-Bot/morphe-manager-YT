@@ -703,6 +703,12 @@ Rozměry obrázků musí být následující:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Soubory a úložiště</string>
     <string name="settings_system_apks_size">Celková velikost: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Toto trvale smaže uložené APK soubory zobrazené zde</string>
+    <string name="settings_system_apks_delete_selected_title">Smazat vybrané soubory APK?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Toto trvale smaže vybrané APK soubory</string>
+    <string name="settings_system_apks_deleted_all">Soubory APK byly úspěšně smazány</string>
+    <string name="settings_system_apks_export_zip_success">Exportované APK soubory</string>
+    <string name="settings_system_apks_export_zip_failed">Nepodařilo se exportovat vybrané APK soubory</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Záplatované soubory APK</string>
     <string name="settings_system_patched_apks_description">Spravuje uložené záplatované soubory aplikací</string>
@@ -710,6 +716,7 @@ Rozměry obrázků musí být následující:
     <string name="settings_system_patched_apks_delete_title">Smazat záplatovaný soubor APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Opravdu chcete smazat uložený záplatovaný soubor APK pro %s?</string>
     <string name="settings_system_patched_apks_deleted">Záplatovaný soubor APK úspěšně smazán</string>
+    <string name="settings_system_patched_apks_delete_all_title">Smazat všechny záplatované APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Původní APK</string>
     <string name="settings_system_original_apks_description">Uloženo pro opětovné záplatování. Udržuje se jedna verze na aplikaci</string>
@@ -717,11 +724,13 @@ Rozměry obrázků musí být následující:
     <string name="settings_system_original_apks_deleted">Originální soubor APK úspěšně smazán</string>
     <string name="settings_system_original_apks_delete_title">Smazat původní APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Smazat originální soubor APK pro %s? Bez poskytnutí nového souboru APK nebude možné aplikaci opětovně záplatovat</string>
+    <string name="settings_system_original_apks_delete_all_title">Smazat všechny původní APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Výběry záplat</string>
     <string name="settings_system_patch_selections_description">Uloženy výběry záplat, zachovány i po odinstalaci</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Resetovat všechny výběry?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Resetovat výběry balíčku?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Resetovat vybrané balíčky?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Resetovat výběr zdroje?</string>
     <string name="settings_system_patch_selection_no_saved">Žádné uložené výběry záplaty</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s z %2$s</string>
@@ -789,10 +798,15 @@ Rozměry obrázků musí být následující:
     <string name="skip">Přeskočit</string>
     <string name="clear">Vyčistit</string>
     <string name="delete">Smazat</string>
+    <string name="delete_all">Smazat vše</string>
     <string name="remove">Odebrat</string>
     <string name="disable">Zakázat</string>
     <string name="enable">Povolit</string>
     <string name="loading">Načítání…</string>
+    <string name="loading_older_releases">Načítají se starší verze…</string>
+    <string name="creating">Vytvářím…</string>
+    <string name="processing_apk">Zpracovávám APK…</string>
+    <string name="exporting_apks">Exportuji APK…</string>
     <string name="not_installed">Nenainstalováno</string>
     <string name="view">Zobrazit</string>
     <string name="search">Hledat</string>

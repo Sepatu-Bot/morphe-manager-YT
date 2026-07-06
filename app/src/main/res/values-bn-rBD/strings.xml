@@ -695,6 +695,12 @@ morphe_adaptive_monochrome_custom.xml
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">ফাইল ও স্টোরেজ</string>
     <string name="settings_system_apks_size">মোট আকার: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">এটি এখানে দেখানো সংরক্ষিত APK ফাইলগুলি স্থায়ীভাবে মুছে ফেলবে।</string>
+    <string name="settings_system_apks_delete_selected_title">নির্বাচিত APK ফাইলগুলি মুছবেন?</string>
+    <string name="settings_system_apks_delete_selected_confirm">এটি নির্বাচিত APK ফাইলগুলি স্থায়ীভাবে মুছে ফেলবে।</string>
+    <string name="settings_system_apks_deleted_all">APK ফাইলগুলি সফলভাবে মুছে ফেলা হয়েছে।</string>
+    <string name="settings_system_apks_export_zip_success">নির্বাচিত APK রপ্তানি করা হয়েছে</string>
+    <string name="settings_system_apks_export_zip_failed">নির্বাচিত APK রপ্তানি করতে ব্যর্থ</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">প্যাচ করা APK সমূহ</string>
     <string name="settings_system_patched_apks_description">সংরক্ষিত প্যাচ করা অ্যাপ্লিকেশন ফাইলগুলি পরিচালনা করে।</string>
@@ -702,6 +708,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_patched_apks_delete_title">প্যাচড APK মুছে ফেলতে চানেন? </string>
     <string name="settings_system_patched_apks_delete_confirm">আপনি কি সংরক্ষিত প্যাচড APK-কে মুছে ফেলতে চানেন? %s-এর জন্য? </string>
     <string name="settings_system_patched_apks_deleted">প্যাচড APK মুছে ফেল হয়েছে</string>
+    <string name="settings_system_patched_apks_delete_all_title">সমস্ত প্যাচ করা APK মুছে ফেলতে চান?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">মূল APK সমূহ</string>
     <string name="settings_system_original_apks_description">পুনরায় প্যাচিংয়ের জন্য সংরক্ষিত। প্রতিটি অ্যাপের জন্য একটি সংস্করণ রাখা হয়।</string>
@@ -709,11 +716,13 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_original_apks_deleted">মূল APK মুছে ফেল হয়েছে</string>
     <string name="settings_system_original_apks_delete_title">মূল APK মুছে ফেলতে চানেন? </string>
     <string name="settings_system_original_apks_delete_confirm">%s এর জন্য অরিজিনাল APK মুছে ফেলতে চান? নতুন APK প্রদান না করলে পুনরায় প্যাচ করতে পারবেন না</string>
+    <string name="settings_system_original_apks_delete_all_title">সমস্ত আসল APK মুছে ফেলতে চান?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">প্যাচ নির্বাচন</string>
     <string name="settings_system_patch_selections_description">সংরক্ষিত প্যাচ নির্বাচন, আনইনস্টল করার পরেও ধরে রাখা হয়।</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">সবগুলো নির্বাচন পুনরায় সেট করব?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">প্যাকেজ নির্বাচন পুনরায় সেট করব?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">নির্বাচিত প্যাকেজ রিসেট করতে চান?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">উৎস নির্বাচন পুনরায় সেট করব?</string>
     <string name="settings_system_patch_selection_no_saved">কোনো সংরক্ষিত প্যাচ নির্বাচন নেই</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s থেকে %2$s</string>
@@ -781,10 +790,15 @@ morphe_adaptive_monochrome_custom.xml
     <string name="skip">এড়িয়ে যান</string>
     <string name="clear">পরিষ্কার করুন</string>
     <string name="delete">মুছুন</string>
+    <string name="delete_all">সবকিছু মুছে ফেলুন</string>
     <string name="remove">সরান</string>
     <string name="disable">নিষ্ক্রিয় করুন</string>
     <string name="enable">有効にする</string>
     <string name="loading">লোড হচ্ছে…</string>
+    <string name="loading_older_releases">পুরানো রিলিজ লোড করা হচ্ছে…</string>
+    <string name="creating">তৈরি করা হচ্ছে…</string>
+    <string name="processing_apk">APK প্রক্রিয়া করা হচ্ছে…</string>
+    <string name="exporting_apks">APK রপ্তানি করা হচ্ছে…</string>
     <string name="not_installed">ইনস্টল করা নেই</string>
     <string name="view">দেখুন</string>
     <string name="search">অনুসন্ধান</string>

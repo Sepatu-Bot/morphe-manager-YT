@@ -704,6 +704,12 @@ Dimensi gambar harus sebagai berikut:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Berkas &amp; penyimpanan</string>
     <string name="settings_system_apks_size">Ukuran total: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Ini akan menghapus secara permanen berkas APK yang disimpan yang ditampilkan di sini</string>
+    <string name="settings_system_apks_delete_selected_title">Hapus APK yang dipilih?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Ini akan menghapus secara permanen berkas APK yang dipilih</string>
+    <string name="settings_system_apks_deleted_all">APK berhasil dihapus</string>
+    <string name="settings_system_apks_export_zip_success">APK yang dipilih telah diekspor</string>
+    <string name="settings_system_apks_export_zip_failed">Gagal mengekspor APK yang dipilih</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK yang ditambal</string>
     <string name="settings_system_patched_apks_description">Mengelola berkas aplikasi yang ditambal dan disimpan</string>
@@ -711,6 +717,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_patched_apks_delete_title">Hapus APK yang ditambal?</string>
     <string name="settings_system_patched_apks_delete_confirm">Apakah Anda yakin ingin menghapus APK ditambal yang disimpan untuk %s?</string>
     <string name="settings_system_patched_apks_deleted">APK yang ditambal berhasil dihapus</string>
+    <string name="settings_system_patched_apks_delete_all_title">Hapus semua APK yang ditambal?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK asli</string>
     <string name="settings_system_original_apks_description">Disimpan untuk penambalan ulang. Satu versi per aplikasi disimpan</string>
@@ -718,11 +725,13 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_original_apks_deleted">APK asli berhasil dihapus</string>
     <string name="settings_system_original_apks_delete_title">Hapus APK asli?</string>
     <string name="settings_system_original_apks_delete_confirm">Hapus APK asli untuk %s? Anda tidak akan dapat menambal ulang tanpa menyediakan APK baru</string>
+    <string name="settings_system_original_apks_delete_all_title">Hapus semua APK asli?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Pilihan tambalan</string>
     <string name="settings_system_patch_selections_description">Menyimpan pilihan tambalan, dipertahankan setelah mencopot aplikasinya</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Atur ulang semua pemilihan?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Atur ulang pemilihan paket?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Reset paket yang dipilih?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Atur ulang pemilihan sumber?</string>
     <string name="settings_system_patch_selection_no_saved">Tidak ada pemilihan tambalan yang disimpan</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s diantara %2$s</string>
@@ -790,10 +799,15 @@ Dimensi gambar harus sebagai berikut:
     <string name="skip">Lewati</string>
     <string name="clear">Bersihkan</string>
     <string name="delete">Hapus</string>
+    <string name="delete_all">Hapus semua</string>
     <string name="remove">Hapus</string>
     <string name="disable">Nonaktifkan</string>
     <string name="enable">Aktifkan</string>
     <string name="loading">Memuat…</string>
+    <string name="loading_older_releases">Memuat rilis yang lebih lama…</string>
+    <string name="creating">Membuat…</string>
+    <string name="processing_apk">Memproses APK…</string>
+    <string name="exporting_apks">Mengekspor APK…</string>
     <string name="not_installed">Tidak terpasang</string>
     <string name="view">Lihat</string>
     <string name="search">Pencarian</string>

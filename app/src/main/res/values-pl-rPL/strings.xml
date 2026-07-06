@@ -606,11 +606,11 @@ Wymagane są następujące wymiary obrazów:
 - drawable-xxhdpi: 387x144 px
 - drawable-xxxhdpi: 512x192 px"</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
-    <string name="settings_advanced_patch_options_hide_shorts_features">Ukryj funkcje Shortsów</string>
-    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut">Ukryj skrót do Shortsów</string>
-    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Usuwa Shortsy z menu długiego naciśnięcia w launcherze</string>
-    <string name="settings_advanced_patch_options_hide_shorts_widget">Ukryj widżet z Shortsami</string>
-    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Usuwa przycisk Shortsów z widżetu launchera</string>
+    <string name="settings_advanced_patch_options_hide_shorts_features">Ukryj funkcje Shorts</string>
+    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut">Ukryj skrót Shorts</string>
+    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Usuwa Shorts z menu długiego naciśnięcia w launcherze</string>
+    <string name="settings_advanced_patch_options_hide_shorts_widget">Ukryj widżet Shorts</string>
+    <string name="settings_advanced_patch_options_hide_shorts_widget_description">Usuwa przycisk Shorts z widżetu launchera</string>
     <!-- Settings - System Tab - Installer Section -->
     <string name="installer">Instalator</string>
     <string name="installer_title">Wybierz instalator</string>
@@ -703,6 +703,12 @@ Wymagane są następujące wymiary obrazów:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Pliki i pamięć</string>
     <string name="settings_system_apks_size">Całkowity rozmiar: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Spowoduje to trwałe usunięcie zapisanych plików APK.</string>
+    <string name="settings_system_apks_delete_selected_title">Usunąć wybrane pliki APK?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Spowoduje to trwałe usunięcie wybranych plików APK.</string>
+    <string name="settings_system_apks_deleted_all">Pliki APK zostały pomyślnie usunięte.</string>
+    <string name="settings_system_apks_export_zip_success">Wyeksportowano wybrane pliki APK</string>
+    <string name="settings_system_apks_export_zip_failed">Nie udało się wyeksportować wybranych plików APK</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Zmodyfikowane pliki APK</string>
     <string name="settings_system_patched_apks_description">Zarządza zapisanymi plikami zmodyfikowanych aplikacji</string>
@@ -710,6 +716,7 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_patched_apks_delete_title">Usunąć zmodyfikowany plik APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Czy na pewno chcesz usunąć zapisany zmodyfikowany plik APK aplikacji %s?</string>
     <string name="settings_system_patched_apks_deleted">Zmodyfikowany plik APK usunięty pomyślnie</string>
+    <string name="settings_system_patched_apks_delete_all_title">Usunąć wszystkie zmodyfikowane pliki APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Oryginalne pliki APK</string>
     <string name="settings_system_original_apks_description">Zapisane do ponownego modyfikowania. Przechowywana jest jedna wersja na aplikację</string>
@@ -717,11 +724,13 @@ Wymagane są następujące wymiary obrazów:
     <string name="settings_system_original_apks_deleted">Oryginalny plik APK usunięty pomyślnie</string>
     <string name="settings_system_original_apks_delete_title">Usunąć oryginalny plik APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Usunąć oryginalny plik APK dla aplikacji %s? Nie będzie można ponownie modyfikować aplikacji bez wybrania nowego pliku APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Usunąć wszystkie oryginalne pliki APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Wybrane modyfikacje</string>
     <string name="settings_system_patch_selections_description">Zapisane wybory modyfikacji, zachowywane po odinstalowaniu</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Zresetować wszystkie wybory?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Zresetować wybory pakietu?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Zresetować wybrane pakiety?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Zresetować wybór źródła?</string>
     <string name="settings_system_patch_selection_no_saved">Brak zapisanych wyborów modyfikacji</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s przez %2$s</string>
@@ -789,10 +798,15 @@ Wymagane są następujące wymiary obrazów:
     <string name="skip">Pomiń</string>
     <string name="clear">Wyczyść</string>
     <string name="delete">Usuń</string>
+    <string name="delete_all">Usuń wszystko</string>
     <string name="remove">Usuń</string>
     <string name="disable">Wyłącz</string>
     <string name="enable">Włącz</string>
     <string name="loading">Wczytywanie…</string>
+    <string name="loading_older_releases">Ładowanie starszych wersji…</string>
+    <string name="creating">Tworzenie…</string>
+    <string name="processing_apk">Przetwarzanie pliku APK…</string>
+    <string name="exporting_apks">Eksportowanie plików APK…</string>
     <string name="not_installed">Nie zainstalowano</string>
     <string name="view">Wyświetl</string>
     <string name="search">Szukaj</string>

@@ -687,6 +687,12 @@ morphe_adaptive_monochrome_custom.xml
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">קבצים ואחסון</string>
     <string name="settings_system_apks_size">גודל: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">זה ימחק לצמיתות את קבצי ה-APK השמורים המוצגים כאן</string>
+    <string name="settings_system_apks_delete_selected_title">למחוק קבצי APK שנבחרו?</string>
+    <string name="settings_system_apks_delete_selected_confirm">זה ימחק לצמיתות את קבצי ה-APK שנבחרו</string>
+    <string name="settings_system_apks_deleted_all">קבצי APK נמחקו בהצלחה</string>
+    <string name="settings_system_apks_export_zip_success">אפקים נבחרים יוצאים</string>
+    <string name="settings_system_apks_export_zip_failed">נכשל ייצוא אפקים נבחרים</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">פיצ\'ים מותאמים</string>
     <string name="settings_system_patched_apks_description">מנהל קבצי אפליקציות מתוקנים שמורים</string>
@@ -694,6 +700,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_patched_apks_delete_title">האם אתה בטוח שברצונך למחוק את הפיצ\'ה מותאם של %s? </string>
     <string name="settings_system_patched_apks_delete_confirm">פיצ\'ה מותאמה נמחק</string>
     <string name="settings_system_patched_apks_deleted">פיצ\'ה מותאמה נמחק בהצלחה</string>
+    <string name="settings_system_patched_apks_delete_all_title">למחוק את כל האפקים שעברו תיקון?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">פיצ\'ים מקוריים</string>
     <string name="settings_system_original_apks_description">שמור לתיקון מחדש. נשמרת גרסה אחת לכל אפליקציה</string>
@@ -701,11 +708,13 @@ morphe_adaptive_monochrome_custom.xml
     <string name="settings_system_original_apks_deleted">פיצ\'ה מקורית נמחק בהצלחה</string>
     <string name="settings_system_original_apks_delete_title">האם אתה בטוח שברצונך למחוק את הפיצ\'ה המקורית של %s? </string>
     <string name="settings_system_original_apks_delete_confirm">למחוק את הקובץ APK המקורי של %s? לא תוכל לתקן מחדש ללא סיפוק APK חדש</string>
+    <string name="settings_system_original_apks_delete_all_title">למחוק את כל האפקים המקוריים?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">ניהול בחירות תיקון</string>
     <string name="settings_system_patch_selections_description">שומר בחירות תיקון, נשמר לאחר הסרה</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">להחזיר את כל הבחירות?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">להחזיר את בחירת החבילה?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">לאפס את האפקים הנבחרים?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">להחזיר את בחירת מקור?</string>
     <string name="settings_system_patch_selection_no_saved">אין בחירות שמורות</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s על %2$s</string>
@@ -773,10 +782,15 @@ morphe_adaptive_monochrome_custom.xml
     <string name="skip">דילוג</string>
     <string name="clear">נקה</string>
     <string name="delete">מחק</string>
+    <string name="delete_all">למחוק הכל</string>
     <string name="remove">הסר</string>
     <string name="disable">השבת</string>
     <string name="enable">Включить</string>
     <string name="loading">טוען…</string>
+    <string name="loading_older_releases">טוען גרסאות ישנות…</string>
+    <string name="creating">יוצר…</string>
+    <string name="processing_apk">מעבד APK…</string>
+    <string name="exporting_apks">מייצא APK…</string>
     <string name="not_installed">לא מותקן</string>
     <string name="view">צפה</string>
     <string name="search">חיפוש</string>

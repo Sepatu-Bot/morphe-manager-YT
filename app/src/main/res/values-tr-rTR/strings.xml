@@ -76,8 +76,8 @@
     <string name="home_greeting_super_late_5">Gececi ve üretken</string>
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Yama kaynakları</string>
-    <string name="sources_sort_manual">Elle ile sipariş</string>
-    <string name="sources_sort_manual_hint">Sıralamayı değiştirmek için bir kaynağa uzun süre dokunun</string>
+    <string name="sources_sort_manual">Manuel sıra</string>
+    <string name="sources_sort_manual_hint">Yeniden sıralamak için bir kaynağa uzun basın</string>
     <string name="sources_sort_last_updated">Son güncelleme</string>
     <string name="sources_management_open_in_browser">Tarayıcıda aç</string>
     <string name="sources_management_failed_to_open_url">URL açılamadı</string>
@@ -616,11 +616,11 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_title">Yükleyici seçin</string>
     <string name="installer_internal_description">Android paket yükleyicisini kullanır</string>
     <string name="installer_play_store_description">Sistem yükleyicisini kullanır ve Google Play Store\'u yükleme kaynağı olarak ayarlar</string>
-    <string name="installer_root_play_store_description">Root erişimiyle sessizce yükler ve Google Play Store\'u kurulum kaynağı olarak ayarlar</string>
+    <string name="installer_root_play_store_description">Root erişimiyle sessizce yükler ve Google Play Store\'u yükleme kaynağı olarak ayarlar</string>
     <string name="installer_auto_saved_name">Rootlu bağlama yükleyicisi</string>
     <string name="installer_auto_saved_description">Yamalanmış APK\'yi yüklü uygulamaya bağlar</string>
     <string name="installer_shizuku_description">Shizuku veya Sui kullanılarak sessiz modda yüklenir</string>
-    <string name="installer_shizuku_play_store_description">Shizuku veya Sui aracılığıyla sessizce yükler ve Google Play Store\'u kurulum kaynağı olarak ayarlar</string>
+    <string name="installer_shizuku_play_store_description">Shizuku veya Sui aracılığıyla sessizce yükler ve Google Play Store\'u yükleme kaynağı olarak ayarlar</string>
     <string name="installer_option_none">Yedek yok</string>
     <string name="installer_none_description">Yedek yükleyici yapılandırılmamış</string>
     <string name="installer_status_requires_root">Root erişimi gerektirir</string>
@@ -641,7 +641,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="installer_unavailable_message">Tercih ettiğiniz yükleyici (%s) şu anda kullanılamıyor. Sorunu çözüp tekrar deneyebilir veya standart yükleyiciyi kullanabilirsiniz</string>
     <string name="installer_unavailable_shizuku_hint">Shizuku\'nun çalıştığından ve ve bu uygulama için izin verildiğinden emin olun</string>
     <string name="installer_use_standard">Standardı kullan</string>
-    <string name="installer_play_store_warning_title">Play Store olarak yükle?</string>
+    <string name="installer_play_store_warning_title">Play Store olarak mı yüklensin?</string>
     <string name="installer_play_store_warning_message">Değiştirilmiş uygulama Google Play Store\'dan yüklenmiş olarak kaydedilecektir. Bu, Android Auto gibi hizmetlerin uygulamayı bir Play Store uygulaması olarak tanımasını sağlar</string>
     <string name="installer_play_store_warning_risk">Play Store, değiştirilmiş uygulama için güncelleme sunabilir. Bu güncellemeyi yüklemek, değiştirilmiş APK\'yı orijinal sürümüyle değiştirir ve değişiklikleri kaldırır. Güncelleme yapmanız istenirse, uygulamanın Play Store sayfasındaki üç nokta menüsüne dokunun ve \"Güncellemeleri kapat\" seçeneğini seçin</string>
     <string name="installer_play_store_warning_continue">Anladım, devam et</string>
@@ -703,6 +703,12 @@ Resim boyutları şu şekilde olmalıdır:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Dosyalar &amp; depolama</string>
     <string name="settings_system_apks_size">Toplam boyut: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Bu, burada gösterilen kaydedilmiş APK dosyalarını kalıcı olarak silecektir</string>
+    <string name="settings_system_apks_delete_selected_title">Seçili APK\'lar silinsin mi?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Bu, seçili APK dosyalarını kalıcı olarak silecektir</string>
+    <string name="settings_system_apks_deleted_all">APK\'lar başarıyla silindi</string>
+    <string name="settings_system_apks_export_zip_success">Seçili APK\'lar dışa aktarıldı</string>
+    <string name="settings_system_apks_export_zip_failed">Seçili APK\'ların dışa aktarılması başarısız oldu</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamalanmış APK\'ler</string>
     <string name="settings_system_patched_apks_description">Kayıtlı yamalanmış uygulama dosyalarını yönetir</string>
@@ -710,6 +716,7 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_patched_apks_delete_title">Yamalanmış APK silinsin mi?</string>
     <string name="settings_system_patched_apks_delete_confirm">%s için kaydedilen yamalanmış APK\'yi silmek istediğinizden emin misiniz?</string>
     <string name="settings_system_patched_apks_deleted">Yamalanmış APK başarıyla silindi</string>
+    <string name="settings_system_patched_apks_delete_all_title">Yamalanmış tüm APK\'lar silinsin mi?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Orijinal APK\'ler</string>
     <string name="settings_system_original_apks_description">Yeniden yamalamak için kaydedildi. Her uygulama için bir sürüm tutulur</string>
@@ -717,11 +724,13 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="settings_system_original_apks_deleted">Orijinal APK başarıyla silindi</string>
     <string name="settings_system_original_apks_delete_title">Orijinal APK silinsin mi?</string>
     <string name="settings_system_original_apks_delete_confirm">%s için orijinal APK silinsin mi? Yeni bir APK sağlamadan yeniden yama yapamazsınız</string>
+    <string name="settings_system_original_apks_delete_all_title">Orijinal tüm APK\'lar silinsin mi?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Yama seçenekleri</string>
     <string name="settings_system_patch_selections_description">Kayıtlı yama seçimleri, kaldırıldıktan sonra saklanır</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Tüm seçimler sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Paket seçimleri sıfırlansın mı?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Seçili paketler sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Kaynak seçimi sıfırlansın mı?</string>
     <string name="settings_system_patch_selection_no_saved">Kaydedilmiş yama seçimi yok</string>
     <string name="settings_system_patch_selection_total_summary_format">%2$sten %1$s</string>
@@ -789,10 +798,15 @@ Resim boyutları şu şekilde olmalıdır:
     <string name="skip">Atla</string>
     <string name="clear">Temizle</string>
     <string name="delete">Sil</string>
+    <string name="delete_all">Tümünü sil</string>
     <string name="remove">Kaldır</string>
     <string name="disable">Devre dışı bırak</string>
     <string name="enable">Etkinleştir</string>
     <string name="loading">Yükleniyor…</string>
+    <string name="loading_older_releases">Daha eski sürümler yükleniyor…</string>
+    <string name="creating">Oluşturuluyor…</string>
+    <string name="processing_apk">APK işleniyor…</string>
+    <string name="exporting_apks">APK\'lar dışa aktarılıyor…</string>
     <string name="not_installed">Yüklü değil</string>
     <string name="view">Görüntüle</string>
     <string name="search">Ara</string>

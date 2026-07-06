@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">फ़ाइलें और संग्रहण</string>
     <string name="settings_system_apks_size">कुल आकार: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">यह सहेजी गई APK फ़ाइलों को यहाँ दिखाए गए अनुसार स्थायी रूप से हटा देगा</string>
+    <string name="settings_system_apks_delete_selected_title">चयनित APK हटाएं?</string>
+    <string name="settings_system_apks_delete_selected_confirm">यह चयनित APK फ़ाइलों को स्थायी रूप से हटा देगा</string>
+    <string name="settings_system_apks_deleted_all">APK सफलतापूर्वक हटाए गए</string>
+    <string name="settings_system_apks_export_zip_success">निर्यात किए गए APK</string>
+    <string name="settings_system_apks_export_zip_failed">चयनित APK निर्यात करने में विफल।</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">पैच किए गए एपीके</string>
     <string name="settings_system_patched_apks_description">संरक्षित पैच किए गए एप्लिकेशन फ़ाइलों का प्रबंधन करता है।</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">सहेजे गए पैच किए गए एपीके को हटाएं?</string>
     <string name="settings_system_patched_apks_delete_confirm">%s के लिए सहेजे गए पैच किए गए एपीके को हटाना चाहते हैं?</string>
     <string name="settings_system_patched_apks_deleted">%s के लिए सहेजे गए पैच किए गए एपीके सफलतापूर्वक हटाए गए</string>
+    <string name="settings_system_patched_apks_delete_all_title">क्या आप सभी पैच किए गए APK हटाना चाहते हैं?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">अरिजनल एपीके</string>
     <string name="settings_system_original_apks_description">फिर से पैच करने के लिए सहेजा गया। प्रति ऐप एक संस्करण रखा जाता है।</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">%s के लिए अरिजनल एपीके सफलतापूर्वक हटाए गए</string>
     <string name="settings_system_original_apks_delete_title">अरिजनल एपीके को हटाएं?</string>
     <string name="settings_system_original_apks_delete_confirm">%s के लिए मूल APK मिटाएं? बिना नई APK प्रदान किए पुनः पथच करना संभव नहीं होगा।</string>
+    <string name="settings_system_original_apks_delete_all_title">क्या आप सभी मूल APK हटाना चाहते हैं?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">पथच चयन</string>
     <string name="settings_system_patch_selections_description">सहेजे गए पैच चयन, अनइंस्टॉल करने के बाद भी बरकरार रहते हैं।</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">सभी चयन रीसेट करें?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">पैकेज चयन रीसेट करें?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">चयनित पैकेजों को रीसेट करें?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">स्रोत चयन रीसेट करें?</string>
     <string name="settings_system_patch_selection_no_saved">कोई सहेजा गया पटच चयन नहीं</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s Across %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">छोड़ें</string>
     <string name="clear">खाली करें</string>
     <string name="delete">हटाएं</string>
+    <string name="delete_all">सभी हटाएं</string>
     <string name="remove">निकालें</string>
     <string name="disable">Disable</string>
     <string name="enable">Enable</string>
     <string name="loading">Loading…</string>
+    <string name="loading_older_releases">पुराने रिलीज़ लोड हो रहे हैं…</string>
+    <string name="creating">बनाया जा रहा है…</string>
+    <string name="processing_apk">APK संसाधित किया जा रहा है…</string>
+    <string name="exporting_apks">APK निर्यात किए जा रहे हैं…</string>
     <string name="not_installed">Not installed</string>
     <string name="view">दृश्य</string>
     <string name="search">खोज</string>

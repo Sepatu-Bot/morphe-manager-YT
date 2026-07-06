@@ -2,7 +2,7 @@
 <resources>
     <!-- Home Screen -->
     <string name="home_other_apps">Outros apps</string>
-    <string name="home_not_patched_yet">Ainda não corrigido</string>
+    <string name="home_not_patched_yet">Ainda não patcheado </string>
     <string name="home_no_patches_available">Não há patches disponíveis</string>
     <string name="home_app_hide_title">Ocultar esse app?</string>
     <string name="home_app_hide_message">Este app será oculto da tela inicial. Você pode restaurá-lo mais tarde usando o botão na parte inferior da lista</string>
@@ -703,6 +703,12 @@ As dimensões das imagens devem ser as seguintes:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Arquivos e armazenamento</string>
     <string name="settings_system_apks_size">Tamanho total: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Isso apagará permanentemente os arquivos APK salvos mostrados aqui</string>
+    <string name="settings_system_apks_delete_selected_title">Excluir APKs selecionados?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Isso apagará permanentemente os arquivos APK selecionados</string>
+    <string name="settings_system_apks_deleted_all">APKs excluídos com sucesso</string>
+    <string name="settings_system_apks_export_zip_success">APKs selecionados exportados</string>
+    <string name="settings_system_apks_export_zip_failed">Falha ao exportar os APKs selecionados</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKs patcheados</string>
     <string name="settings_system_patched_apks_description">Gerencia arquivos de aplicativos patcheados salvos</string>
@@ -710,6 +716,7 @@ As dimensões das imagens devem ser as seguintes:
     <string name="settings_system_patched_apks_delete_title">Excluir APK patcheado?</string>
     <string name="settings_system_patched_apks_delete_confirm">Tem certeza que quer excluir o APK patcheado salvo de %s?</string>
     <string name="settings_system_patched_apks_deleted">APK patcheado excluído com sucesso</string>
+    <string name="settings_system_patched_apks_delete_all_title">Excluir todos os APKs modificados?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APKs originais</string>
     <string name="settings_system_original_apks_description">Salvo para repatching. Uma versão por app é mantida</string>
@@ -717,11 +724,13 @@ As dimensões das imagens devem ser as seguintes:
     <string name="settings_system_original_apks_deleted">APK original excluído com sucesso</string>
     <string name="settings_system_original_apks_delete_title">Excluir APK original?</string>
     <string name="settings_system_original_apks_delete_confirm">Excluir o APK original para %s? Você não poderá repatchear sem fornecer um novo APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Excluir todos os APKs originais?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Seleções de patches</string>
     <string name="settings_system_patch_selections_description">Salva seleções de patch, mantidas após a desinstalação</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Resetar todas as seleções?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Resetar seleções de pacote?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Redefinir pacotes selecionados?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Resetar seleção de fonte?</string>
     <string name="settings_system_patch_selection_no_saved">Não há seleções de patch salvas</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s em %2$s</string>
@@ -789,10 +798,15 @@ As dimensões das imagens devem ser as seguintes:
     <string name="skip">Pular</string>
     <string name="clear">Limpar</string>
     <string name="delete">Excluir</string>
+    <string name="delete_all">Excluir tudo</string>
     <string name="remove">Remover</string>
     <string name="disable">Desativar</string>
     <string name="enable">Ativar</string>
     <string name="loading">Carregando…</string>
+    <string name="loading_older_releases">Carregando versões mais antigas…</string>
+    <string name="creating">Criando…</string>
+    <string name="processing_apk">Processando APK…</string>
+    <string name="exporting_apks">Exportando APKs…</string>
     <string name="not_installed">Não instalado</string>
     <string name="view">Visualizar</string>
     <string name="search">Procurar</string>

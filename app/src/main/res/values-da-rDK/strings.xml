@@ -703,6 +703,12 @@ Størrelsesformatet skal være som følger:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Filer &amp; lagerplads</string>
     <string name="settings_system_apks_size">Samlet størrelse: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Dette vil permanent slette de gemte APK-filer, der vises her</string>
+    <string name="settings_system_apks_delete_selected_title">Slet valgte APK\'er?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Dette vil permanent slette de valgte APK-filer</string>
+    <string name="settings_system_apks_deleted_all">APK\'er slettet korrekt</string>
+    <string name="settings_system_apks_export_zip_success">Valgte APK\'er eksporteret</string>
+    <string name="settings_system_apks_export_zip_failed">Eksportering af valgte APK\'er mislykkedes</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchet APK\'er</string>
     <string name="settings_system_patched_apks_description">Håndter gemte patchet APK filer</string>
@@ -710,6 +716,7 @@ Størrelsesformatet skal være som følger:
     <string name="settings_system_patched_apks_delete_title">Slet patchet APK? </string>
     <string name="settings_system_patched_apks_delete_confirm">Er du sikker på at du vil slette appen %s? </string>
     <string name="settings_system_patched_apks_deleted">App slettet</string>
+    <string name="settings_system_patched_apks_delete_all_title">Slet alle rettede APK\'er?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Originale APK-er</string>
     <string name="settings_system_original_apks_description">Gemt til repatching. Én version pr. app er bevaret</string>
@@ -717,11 +724,13 @@ Størrelsesformatet skal være som følger:
     <string name="settings_system_original_apks_deleted">Original APK slettet</string>
     <string name="settings_system_original_apks_delete_title">Slet original APK? </string>
     <string name="settings_system_original_apks_delete_confirm">Slet original APK for %s? Du vil ikke kunne repatche uden at tilbyde en ny APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Slet alle originale APK\'er?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Patchvalg</string>
     <string name="settings_system_patch_selections_description">Gemte patch-valg, bevares efter afinstallation</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Nulstil alle valg?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Nulstil pakkevalg?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Nulstil valgte pakker?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Nulstil kildevalg?</string>
     <string name="settings_system_patch_selection_no_saved">Ingen gemte patchvalg</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s over %2$s</string>
@@ -789,10 +798,15 @@ Størrelsesformatet skal være som følger:
     <string name="skip">Spring over</string>
     <string name="clear">Ryd</string>
     <string name="delete">Slet</string>
+    <string name="delete_all">Slet alle</string>
     <string name="remove">Fjern</string>
     <string name="disable">Deaktivér</string>
     <string name="enable">Aktiver</string>
     <string name="loading">Indlæser…</string>
+    <string name="loading_older_releases">Indlæser ældre udgivelser…</string>
+    <string name="creating">Opretter…</string>
+    <string name="processing_apk">Behandler APK…</string>
+    <string name="exporting_apks">Eksporterer APK\'er…</string>
     <string name="not_installed">Ikke installeret</string>
     <string name="view">Vis</string>
     <string name="search">Søg</string>

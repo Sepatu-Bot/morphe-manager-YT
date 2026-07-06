@@ -703,6 +703,12 @@ Le dimensioni delle immagini devono essere le seguenti:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">File e spazio di archiviazione</string>
     <string name="settings_system_apks_size">Dimensione totale: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Questo cancellerà permanentemente i file APK salvati mostrati qui</string>
+    <string name="settings_system_apks_delete_selected_title">Cancellare gli APK selezionati?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Questo cancellerà permanentemente i file APK selezionati</string>
+    <string name="settings_system_apks_deleted_all">APK eliminati correttamente</string>
+    <string name="settings_system_apks_export_zip_success">APK esportati con successo</string>
+    <string name="settings_system_apks_export_zip_failed">Esportazione degli APK selezionati non riuscita</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK patchati</string>
     <string name="settings_system_patched_apks_description">Gestione dei file delle applicazioni patchate</string>
@@ -710,6 +716,7 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="settings_system_patched_apks_delete_title">Cancellare l\'APK patchato?</string>
     <string name="settings_system_patched_apks_delete_confirm">Sei sicuro di voler eliminare l\'APK patchato per %s?</string>
     <string name="settings_system_patched_apks_deleted">L\'APK patchato è stato eliminato correttamente </string>
+    <string name="settings_system_patched_apks_delete_all_title">Eliminare tutti gli APK modificati?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK originali</string>
     <string name="settings_system_original_apks_description">Salvato per il ri-patching. Viene mantenuta una versione per app</string>
@@ -717,11 +724,13 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="settings_system_original_apks_deleted">L\'APK originale è stato eliminato correttamente </string>
     <string name="settings_system_original_apks_delete_title">Eliminare APK originale?</string>
     <string name="settings_system_original_apks_delete_confirm">Eliminare l\'APK originale per %s? Non potrai ripatchare senza fornire un nuovo APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Eliminare tutti gli APK originali?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Selezioni delle patch</string>
     <string name="settings_system_patch_selections_description">Selezione patch salvata, conservata dopo la disinstallazione</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Ripristinare tutte le selezioni?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Ripristinare le selezioni del pacchetto?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Ripristinare i pacchetti selezionati?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Ripristinare la selezione della fonte?</string>
     <string name="settings_system_patch_selection_no_saved">Nessuna selezione delle patch salvata</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s su %2$s</string>
@@ -789,10 +798,15 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="skip">Salta</string>
     <string name="clear">Cancella</string>
     <string name="delete">Elimina</string>
+    <string name="delete_all">Elimina tutto</string>
     <string name="remove">Rimuovi</string>
     <string name="disable">Disabilita</string>
     <string name="enable">Attiva</string>
     <string name="loading">Caricamento in corso…</string>
+    <string name="loading_older_releases">Caricamento versioni precedenti…</string>
+    <string name="creating">Creazione…</string>
+    <string name="processing_apk">Elaborazione APK…</string>
+    <string name="exporting_apks">Esportazione APK in corso…</string>
     <string name="not_installed">Non installata</string>
     <string name="view">Visualizza</string>
     <string name="search">Cerca</string>

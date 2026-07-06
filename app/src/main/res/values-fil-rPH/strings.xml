@@ -699,6 +699,12 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Mga File at imbakan</string>
     <string name="settings_system_apks_size">Buong sukat: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Permanenteng buburahin nito ang mga naka-save na APK file na ipinapakita dito</string>
+    <string name="settings_system_apks_delete_selected_title">Burahin ang mga napiling APK?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Permanenteng buburahin nito ang mga napiling APK file</string>
+    <string name="settings_system_apks_deleted_all">Matagumpay na nabura ang mga APK</string>
+    <string name="settings_system_apks_export_zip_success">Na-export ang mga napiling APK</string>
+    <string name="settings_system_apks_export_zip_failed">Nabigo ang pag-export ng mga napiling APK</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Na-patch na mga APK</string>
     <string name="settings_system_patched_apks_description">Pamahalaan ang mga nakaimbak na naka-patch na mga file ng aplikasyon</string>
@@ -706,6 +712,7 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="settings_system_patched_apks_delete_title">Burahin ang naka-patch na APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Nais mo bang burahin ang nakaimbak na naka-patch na APK para sa %s?</string>
     <string name="settings_system_patched_apks_deleted">Matagumpay na nabura ang naka-patch na APK</string>
+    <string name="settings_system_patched_apks_delete_all_title">Burahin ang lahat ng naka-patch na APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Mga orihinal na APK</string>
     <string name="settings_system_original_apks_description">Nai-save para sa muling pag-patch. Isang bersyon bawat app ang pinapanatili</string>
@@ -713,11 +720,13 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="settings_system_original_apks_deleted">Matagumpay na nabura ang orihinal na APK</string>
     <string name="settings_system_original_apks_delete_title">Burahin ang orihinal na APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Burahin ang orihinal na APK para sa %s? Hindi ka makakapag-repatch nang hindi nagbibigay ng bagong APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Burahin ang lahat ng orihinal na APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Mga pagpipilian ng patch</string>
     <string name="settings_system_patch_selections_description">Nai-save na mga pagpili ng patch, napanatili pagkatapos ng pag-uninstall</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Ipawalang-bisa ang lahat ng mga pagpipilian?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Ipawalang-bisa ang lahat ng mga pagpipilian ng pakete?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">I-reset ang mga napiling pakete?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Ipawalang-bisa ang pagpipilian ng mapagkukunan?</string>
     <string name="settings_system_patch_selection_no_saved">Walang naka-save na mga pagpipiliang patch</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s sa %2$s</string>
@@ -785,10 +794,15 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="skip">Laktawan</string>
     <string name="clear">Alisin</string>
     <string name="delete">Burahin</string>
+    <string name="delete_all">Burahin lahat</string>
     <string name="remove">Alisin</string>
     <string name="disable">Patayin</string>
     <string name="enable">Paganahin</string>
     <string name="loading">Naglo-load…</string>
+    <string name="loading_older_releases">Naglo-load ng mga mas lumang release…</string>
+    <string name="creating">Ginagawa…</string>
+    <string name="processing_apk">Pinoproseso ang APK…</string>
+    <string name="exporting_apks">Iniluluwas ang mga APK…</string>
     <string name="not_installed">Hindi naka-install</string>
     <string name="view">Tingnan</string>
     <string name="search">Hanapin</string>

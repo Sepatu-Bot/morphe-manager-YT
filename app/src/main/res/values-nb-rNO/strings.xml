@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Filer og lagringsplass</string>
     <string name="settings_system_apks_size">Total størrelse: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Dette vil slette de lagrede APK-filene som vises her permanent.</string>
+    <string name="settings_system_apks_delete_selected_title">Slette valgte APK-er?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Dette vil slette de valgte APK-filene permanent.</string>
+    <string name="settings_system_apks_deleted_all">APK-er slettet.</string>
+    <string name="settings_system_apks_export_zip_success">Valgte APK-er eksportert</string>
+    <string name="settings_system_apks_export_zip_failed">Kunne ikke eksportere valgte APK-er</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patchede APK-er</string>
     <string name="settings_system_patched_apks_description">Administrerer lagrede oppdaterte applikasjonsfiler</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">Slett patched APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Er du sikker på at du vil slette den lagrede patchede APK-en for %s?</string>
     <string name="settings_system_patched_apks_deleted">Patchet APK slettet</string>
+    <string name="settings_system_patched_apks_delete_all_title">Slette alle patchede APK-er?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Originale APK-er</string>
     <string name="settings_system_original_apks_description">Lagret for oppdatering på nytt. Én versjon per app holdes</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">Original APK slettet</string>
     <string name="settings_system_original_apks_delete_title">Slett original APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Slett original APK for %s? Du kan ikke patche på nytt uten å levere en ny APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Slette alle originale APK-er?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Patch-valg</string>
     <string name="settings_system_patch_selections_description">Lagrede oppdateringsvalg, beholdes etter avinstallasjon</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Tilbakestill alle valg?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Tilbakestill pakkevalg?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Tilbakestille valgte pakker?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Tilbakestill kildevalg?</string>
     <string name="settings_system_patch_selection_no_saved">Ingen lagrede patch-valg</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s på tvers av %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">Hopp over</string>
     <string name="clear">Fjern</string>
     <string name="delete">Slett</string>
+    <string name="delete_all">Slette alt</string>
     <string name="remove">Fjern</string>
     <string name="disable">Deaktiver</string>
     <string name="enable">Aktiver</string>
     <string name="loading">Laster…</string>
+    <string name="loading_older_releases">Laster inn eldre versjoner…</string>
+    <string name="creating">Opprettes…</string>
+    <string name="processing_apk">Behandler APK…</string>
+    <string name="exporting_apks">Eksporterer APK-er…</string>
     <string name="not_installed">Ikke installert</string>
     <string name="view">Vis</string>
     <string name="search">Søk</string>

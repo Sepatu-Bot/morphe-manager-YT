@@ -701,6 +701,12 @@ Qasîyên wêneyan divê wiha bin:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Pelên &amp; hilanîn</string>
     <string name="settings_system_apks_size">Mezinahiya giyan: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Ev dê pelên APK-yê yên ku li vir têne nîşandan bi qeîdî terikîne.</string>
+    <string name="settings_system_apks_delete_selected_title">APK-yên hilbijartî terikîn?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Ev dê pelên APK-yê yên hilbijartî bi qeîdî terikîne.</string>
+    <string name="settings_system_apks_deleted_all">APK-yê bi serketî têne terikîn.</string>
+    <string name="settings_system_apks_export_zip_success">APK-yê hilbijartî derxîne</string>
+    <string name="settings_system_apks_export_zip_failed">Derxistina APK-yên hilbijartî têk çû</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK\'yên veşartin</string>
     <string name="settings_system_patched_apks_description">Pelên programa girêtî yên tomarî birêve bibe</string>
@@ -708,6 +714,7 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_patched_apks_delete_title">APK\'yên veşartin bibe serwerast bike?</string>
     <string name="settings_system_patched_apks_delete_confirm">Ma tu pir başî ku APK\'yên veşartin ên serwerastin ji bo %s bibe serwerast bike?</string>
     <string name="settings_system_patched_apks_deleted">APK\'yên veşartin bi serketinê serwerastin</string>
+    <string name="settings_system_patched_apks_delete_all_title">Hemû APK-yên hatine guhertin sîl kirin?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK\'yên orjînal</string>
     <string name="settings_system_original_apks_description">Mîhenga pêşîn ji bo qeyik kirina dîsa vekirin bên parastin. Tenê yek guhertoyek ji bo her app\'ê tê parastin</string>
@@ -715,11 +722,13 @@ Qasîyên wêneyan divê wiha bin:
     <string name="settings_system_original_apks_deleted">APK\'yên orjînal bi serketinê serwerastin</string>
     <string name="settings_system_original_apks_delete_title">APK\'yên orjînal bibe serwerast bike?</string>
     <string name="settings_system_original_apks_delete_confirm">APK orîjînal ji bo %s difilîn? Hûn dê bêyî pejdanîns pek APKa nû nesazîtin, nikaribin vê sepanê biqewmê</string>
+    <string name="settings_system_original_apks_delete_all_title">Hemû APK-yên orjînal sîl kirin?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Bijartinê qelvaton</string>
     <string name="settings_system_patch_selections_description">Hilbijartinên qeyik kirinê parastî, paş de hatine veqetandin</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Hemû bejna vebejin?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Bejnê pakêtên vebejin?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Pakêtên hilbijartî dîsa vegerînin?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Bejna seyarê vebejin?</string>
     <string name="settings_system_patch_selection_no_saved">Bejna sifira ne heye</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s hera %2$s</string>
@@ -787,10 +796,15 @@ Qasîyên wêneyan divê wiha bin:
     <string name="skip">Derbaz bike</string>
     <string name="clear">Paqij bike</string>
     <string name="delete">Firotin</string>
+    <string name="delete_all">Hemûyan sîl kirin</string>
     <string name="remove">Damezere</string>
     <string name="disable">Neçêbigîne</string>
     <string name="enable">Çêbigîne</string>
     <string name="loading">Bar kirin…</string>
+    <string name="loading_older_releases">Verasyonên kevnertir tê barkirin…</string>
+    <string name="creating">Çêkirin…</string>
+    <string name="processing_apk">APK-ê pêş de çêdike…</string>
+    <string name="exporting_apks">APK-yê derxîne…</string>
     <string name="not_installed">Ne ferqandî</string>
     <string name="view">Dîtin</string>
     <string name="search">Lêwî</string>

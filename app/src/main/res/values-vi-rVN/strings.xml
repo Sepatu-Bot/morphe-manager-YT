@@ -77,8 +77,8 @@
     <!-- Home Screen - Sources Management -->
     <string name="sources_management_title">Nguồn vá</string>
     <string name="sources_sort_manual">Sắp xếp thủ công</string>
-    <string name="sources_sort_manual_hint">Nhấn giữ một nguồn để sắp xếp lại</string>
-    <string name="sources_sort_last_updated">Đã cập nhật lần cuối</string>
+    <string name="sources_sort_manual_hint">Bấm giữ một nguồn để sắp xếp lại</string>
+    <string name="sources_sort_last_updated">Cập nhật lần cuối</string>
     <string name="sources_management_open_in_browser">Mở trong trình duyệt</string>
     <string name="sources_management_failed_to_open_url">Không thể mở URL</string>
     <string name="sources_management_prerelease_toggle">Bản vá phát hành trước</string>
@@ -288,7 +288,9 @@ Vùng ngoài (nét đứt): có thể bị cắt theo hình dạng biểu tượ
     <string name="home_app_info_patch_source_used">Nguồn vá đã dùng</string>
     <string name="home_app_info_install_type_custom_installer">Trình cài đặt tùy chỉnh</string>
     <string name="home_app_info_install_type_system_installer">Trình cài đặt hệ thống</string>
-    <string name="home_app_info_install_type_play_store">Cài đặt từ Play Store</string>
+    <string name="home_app_info_install_type_play_store">Cài đặt từ Cửa hàng Play</string>
+    <string name="home_app_info_install_type_root_play_store">Cài đặt từ Cửa hàng Play (Root)</string>
+    <string name="home_app_info_install_type_shizuku_play_store">Cài đặt từ Cửa hàng Play (Shizuku)</string>
     <string name="home_app_info_patch_update_available"> Đã có bản vá mới</string>
     <string name="home_app_info_patch_update_available_description">Đã có bản vá mới. Hãy vá lại ứng dụng để áp dụng các cải tiến và bản sửa lỗi mới nhất</string>
     <string name="home_app_info_app_deleted_warning">Ứng dụng đã bị gỡ cài đặt</string>
@@ -614,12 +616,12 @@ Kích thước hình ảnh yêu cầu:
     <string name="installer">Trình cài đặt</string>
     <string name="installer_title">Trình cài đặt</string>
     <string name="installer_internal_description">Dùng trình cài đặt gói của Android</string>
-    <string name="installer_play_store_description">Sử dụng trình cài đặt hệ thống và đặt Google Play Store làm nguồn cài đặt</string>
-    <string name="installer_root_play_store_description">Cài đặt một cách âm thầm với quyền root và đặt Google Play Store làm nguồn cài đặt</string>
+    <string name="installer_play_store_description">Sử dụng trình cài đặt hệ thống và đặt Cửa hàng Play làm nguồn cài đặt</string>
+    <string name="installer_root_play_store_description">Cài đặt bằng root mà không cần xác nhận, đồng thời đặt Google Play Store làm nguồn cài đặt</string>
     <string name="installer_auto_saved_name">Trình cài đặt gắn kết đã root</string>
     <string name="installer_auto_saved_description">Gắn APK đã vá lên ứng dụng đã được cài đặt</string>
     <string name="installer_shizuku_description">Cài ẩn bằng Shizuku hoặc Sui</string>
-    <string name="installer_shizuku_play_store_description">Cài đặt một cách âm thầm thông qua Shizuku hoặc Sui và đặt Google Play Store làm nguồn cài đặt</string>
+    <string name="installer_shizuku_play_store_description">Cài đặt thông qua Shizuku mà không cần xác nhận, đồng thời đặt Google Play Store làm nguồn cài đặt</string>
     <string name="installer_option_none">Không có</string>
     <string name="installer_none_description">Chưa cấu hình trình cài đặt dự phòng</string>
     <string name="installer_status_requires_root">Yêu cầu quyền root</string>
@@ -640,10 +642,10 @@ Kích thước hình ảnh yêu cầu:
     <string name="installer_unavailable_message">Trình cài đặt mà bạn ưu tiên (%s) hiện đang không khả dụng. Hãy thử lại sau khi sửa lỗi hoặc chuyển sang dùng trình cài đặt tiêu chuẩn</string>
     <string name="installer_unavailable_shizuku_hint">Hãy đảm bảo rằng Shizuku đang chạy và bạn đã cấp quyền cho ứng dụng này</string>
     <string name="installer_use_standard">Trình cài đặt tiêu chuẩn</string>
-    <string name="installer_play_store_warning_title">Cài đặt dưới dạng Play Store?</string>
-    <string name="installer_play_store_warning_message">Ứng dụng đã vá sẽ được ghi lại là cài đặt từ Google Play Store. Điều này cho phép các dịch vụ như Android Auto nhận ra nó là một ứng dụng Play Store.</string>
-    <string name="installer_play_store_warning_risk">Play Store có thể cung cấp các bản cập nhật cho ứng dụng đã vá. Việc cài đặt bản cập nhật đó sẽ ghi đè lên tệp APK đã vá bằng phiên bản gốc và loại bỏ các bản vá. Nếu được nhắc cập nhật, hãy chạm vào menu ba chấm trên trang Play Store của ứng dụng và chọn \"Tắt cập nhật\".</string>
-    <string name="installer_play_store_warning_continue">Tôi hiểu, tiếp tục</string>
+    <string name="installer_play_store_warning_title">Cài đặt như được tải từ Cửa hàng Play?</string>
+    <string name="installer_play_store_warning_message">Ứng dụng đã vá sẽ được coi như tải và cài đặt từ Cửa hàng Play của Google. Nhờ đó, các dịch vụ như Android Auto có thể nhận diện ứng dụng này</string>
+    <string name="installer_play_store_warning_risk">Google Play Store có thể hiển thị bản cập nhật cho ứng dụng đã vá. Nếu bạn bấm cập nhật, APK đã vá sẽ bị ghi đè bởi phiên bản gốc và mọi bản vá cũng bị gỡ bỏ. Để tránh điều đó, hãy chọn dấu ba chấm trên cùng bên phải trong trang ứng dụng của Cửa hàng Play và tắt \"Bật tự động cập nhật\"</string>
+    <string name="installer_play_store_warning_continue">Tôi hiểu, tiếp đi</string>
     <string name="settings_prompt_installer_on_install">Hỏi chọn trình cài đặt</string>
     <string name="settings_prompt_installer_on_install_description">Luôn hiện hộp thoại chọn trình cài đặt khi cài ứng dụng đã vá</string>
     <string name="settings_auto_install_with_shizuku">Tự động cài đặt sau khi vá</string>
@@ -702,6 +704,12 @@ Kích thước hình ảnh yêu cầu:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Tệp &amp; bộ nhớ</string>
     <string name="settings_system_apks_size">Tổng kích thước: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Thao tác này sẽ xóa vĩnh viễn các tệp APK đã lưu được hiển thị ở đây</string>
+    <string name="settings_system_apks_delete_selected_title">Xóa các tệp APK đã chọn?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Thao tác này sẽ xóa vĩnh viễn các tệp APK đã chọn</string>
+    <string name="settings_system_apks_deleted_all">Đã xóa các tệp APK thành công</string>
+    <string name="settings_system_apks_export_zip_success">Đã xuất APK đã chọn</string>
+    <string name="settings_system_apks_export_zip_failed">Không thể xuất các APK đã chọn</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK đã vá</string>
     <string name="settings_system_patched_apks_description">Quản lý tệp ứng dụng đã vá</string>
@@ -709,6 +717,7 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_patched_apks_delete_title">Xóa APK đã vá?</string>
     <string name="settings_system_patched_apks_delete_confirm">Bạn có chắc muốn xóa tệp APK đã vá cho %s không?</string>
     <string name="settings_system_patched_apks_deleted">Đã xóa APK đã vá thành công</string>
+    <string name="settings_system_patched_apks_delete_all_title">Xóa tất cả các APK đã vá?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK gốc</string>
     <string name="settings_system_original_apks_description">Lưu để vá lại sau này. Mỗi ứng dụng chỉ lưu một phiên bản</string>
@@ -716,11 +725,13 @@ Kích thước hình ảnh yêu cầu:
     <string name="settings_system_original_apks_deleted">Đã xóa APK gốc thành công</string>
     <string name="settings_system_original_apks_delete_title">Xóa APK gốc?</string>
     <string name="settings_system_original_apks_delete_confirm">Bạn có muốn xóa tệp APK gốc của %s? Nếu không có APK mới, bạn sẽ không thể vá lại đâu</string>
+    <string name="settings_system_original_apks_delete_all_title">Xóa tất cả các APK gốc?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Bản vá đã chọn</string>
     <string name="settings_system_patch_selections_description">Lưu các bản vá đã chọn khi vá, kể cả sau khi gỡ cài đặt</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Đặt lại toàn bộ bản vá đã chọn?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Đặt lại gói đã chọn?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Đặt lại các gói đã chọn?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Đặt lại nguồn đã chọn?</string>
     <string name="settings_system_patch_selection_no_saved">Không có bản vá đã chọn được lưu</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s đến %2$s</string>
@@ -788,10 +799,15 @@ Kích thước hình ảnh yêu cầu:
     <string name="skip">Thôi</string>
     <string name="clear">Dọn dẹp</string>
     <string name="delete">Xoá</string>
+    <string name="delete_all">Xóa tất cả</string>
     <string name="remove">Xóa</string>
     <string name="disable">Tắt</string>
     <string name="enable">Không sợ</string>
     <string name="loading">Đang tải…</string>
+    <string name="loading_older_releases">Đang tải các bản phát hành cũ…</string>
+    <string name="creating">Đang tạo…</string>
+    <string name="processing_apk">Đang xử lý APK…</string>
+    <string name="exporting_apks">Đang xuất APK…</string>
     <string name="not_installed">Chưa cài đặt</string>
     <string name="view">Xem</string>
     <string name="search">Tìm kiếm</string>

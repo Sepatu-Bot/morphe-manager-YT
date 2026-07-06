@@ -703,6 +703,12 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Fișiere și stocare</string>
     <string name="settings_system_apks_size">Dimensiune totală: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Aceasta va șterge definitiv fișierele APK salvate afișate aici</string>
+    <string name="settings_system_apks_delete_selected_title">Ștergi APK-urile selectate?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Aceasta va șterge definitiv fișierele APK selectate</string>
+    <string name="settings_system_apks_deleted_all">APK-urile au fost șterse cu succes</string>
+    <string name="settings_system_apks_export_zip_success">APK-uri selectate exportate</string>
+    <string name="settings_system_apks_export_zip_failed">Exportarea APK-urilor selectate a eșuat</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK-uri patch-uite</string>
     <string name="settings_system_patched_apks_description">Administrează fișierele patch-uite salvate ale aplicațiilor</string>
@@ -710,6 +716,7 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="settings_system_patched_apks_delete_title">Ștergi APK-ul patch-uit?</string>
     <string name="settings_system_patched_apks_delete_confirm">Dorești să ștergi APK-ul patch-uit salvat pentru %s?</string>
     <string name="settings_system_patched_apks_deleted">APK-ul patch-uit a fost șters cu succes</string>
+    <string name="settings_system_patched_apks_delete_all_title">Ștergi toate APK-urile modificate?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK-uri originale</string>
     <string name="settings_system_original_apks_description">Salvate pentru patch-uire ulterioară. Este păstrată o singură versiune per aplicație</string>
@@ -717,11 +724,13 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="settings_system_original_apks_deleted">APK original șters cu succes</string>
     <string name="settings_system_original_apks_delete_title">Ștergi APK-ul original?</string>
     <string name="settings_system_original_apks_delete_confirm">Ștergeți fișierul APK original pentru %s? Fără un nou fișier APK nu veți putea repăta aplicația</string>
+    <string name="settings_system_original_apks_delete_all_title">Ștergi toate APK-urile originale?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Gestiune selectii de modificări</string>
     <string name="settings_system_patch_selections_description">Salvează selecțiile de patch-uri, păstrate după dezinstalare</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Resetați toate selectiile?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Resetați selectiile pachetului?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Resetezi pachetele selectate?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Resetați selectia sursei?</string>
     <string name="settings_system_patch_selection_no_saved">Nicio selectie salvată</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s peste %2$s</string>
@@ -789,10 +798,15 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="skip">Omitere</string>
     <string name="clear">Golește</string>
     <string name="delete">Șterge</string>
+    <string name="delete_all">Șterge tot</string>
     <string name="remove">Elimină</string>
     <string name="disable">Dezactivează</string>
     <string name="enable">Activează</string>
     <string name="loading">Se încarcă…</string>
+    <string name="loading_older_releases">Se încarcă versiuni mai vechi…</string>
+    <string name="creating">Se creează…</string>
+    <string name="processing_apk">Se procesează APK…</string>
+    <string name="exporting_apks">Se exportă APK-uri…</string>
     <string name="not_installed">Neinstalată</string>
     <string name="view">Vizualizează</string>
     <string name="search">Caută</string>

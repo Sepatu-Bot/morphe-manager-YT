@@ -699,6 +699,12 @@ Kuvien mittojen on oltava seuraavat:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Tiedostot &amp; tallennustila</string>
     <string name="settings_system_apks_size">Koko yhteensä: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Tämä poistaa pysyvästi tässä näkyvät tallennetut APK-tiedostot</string>
+    <string name="settings_system_apks_delete_selected_title">Poistetaanko valitut APK-tiedostot?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Tämä poistaa pysyvästi valitut APK-tiedostot</string>
+    <string name="settings_system_apks_deleted_all">APK-tiedostot poistettiin onnistuneesti</string>
+    <string name="settings_system_apks_export_zip_success">Valitut APK-tiedostot viety</string>
+    <string name="settings_system_apks_export_zip_failed">Valittujen APK-tiedostojen vienti epäonnistui</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Muokatut APK:t</string>
     <string name="settings_system_patched_apks_description">Hallitse tallennettuja muokattuja sovellustiedostoja</string>
@@ -706,6 +712,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="settings_system_patched_apks_delete_title">Poista muokattu APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Haluatko varmasti poistaa sovelluksen %s tallennettun muokatun APK:n?</string>
     <string name="settings_system_patched_apks_deleted">Muokattu APK on poistettu</string>
+    <string name="settings_system_patched_apks_delete_all_title">Poistetaanko kaikki muutetut APK-tiedostot?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Alkuperäiset APK:t</string>
     <string name="settings_system_original_apks_description">Tallennettu muokattavaksi uudelleen. Kustakin sovelluksesta säilytetään yksi versio</string>
@@ -713,11 +720,13 @@ Kuvien mittojen on oltava seuraavat:
     <string name="settings_system_original_apks_deleted">Alkuperäinen APK on poistettu</string>
     <string name="settings_system_original_apks_delete_title">Poista alkuperäinen APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Poistaa sovelluksen %s alkuperäisen APK:n? Et voi muokata tätä uudelleen ilman uuden APK:n lisäämistä</string>
+    <string name="settings_system_original_apks_delete_all_title">Poistetaanko kaikki alkuperäiset APK-tiedostot?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Lisäosavalinnat</string>
     <string name="settings_system_patch_selections_description">Tallennetut lisäosavalinnat. Säilytetään, vaikka sovelluksen asennus poistetaan</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Nollataanko kaikki valinnat?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Nollataanko paketin valinnat?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Nollataanko valitut paketit?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Nollataanko lähteen valinnat?</string>
     <string name="settings_system_patch_selection_no_saved">Ei tallennettuja lisäosavalintoja</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s: %2$s</string>
@@ -785,10 +794,15 @@ Kuvien mittojen on oltava seuraavat:
     <string name="skip">Ohita</string>
     <string name="clear">Tyhjennä</string>
     <string name="delete">Poista</string>
+    <string name="delete_all">Poista kaikki</string>
     <string name="remove">Poista</string>
     <string name="disable">Poista käytöstä</string>
     <string name="enable">Ota käyttöön</string>
     <string name="loading">Ladataan…</string>
+    <string name="loading_older_releases">Ladataan vanhempia julkaisuja…</string>
+    <string name="creating">Luodaan…</string>
+    <string name="processing_apk">Käsitellään APK-tiedostoa…</string>
+    <string name="exporting_apks">Viedään APK-tiedostoja…</string>
     <string name="not_installed">Ei asennettu</string>
     <string name="view">Näytä</string>
     <string name="search">Haku</string>

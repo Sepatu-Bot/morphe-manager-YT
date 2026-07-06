@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Файлы и хранилище</string>
     <string name="settings_system_apks_size">Общий размер: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Это навсегда удалит сохраненные APK-файлы, отображаемые здесь</string>
+    <string name="settings_system_apks_delete_selected_title">Удалить выбранные APK-файлы?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Это навсегда удалит выбранные APK-файлы</string>
+    <string name="settings_system_apks_deleted_all">APK-файлы удалены успешно</string>
+    <string name="settings_system_apks_export_zip_success">Выгруженные APK</string>
+    <string name="settings_system_apks_export_zip_failed">Не удалось выгрузить выбранные APK</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патченые APK</string>
     <string name="settings_system_patched_apks_description">Управление сохраненными патчеными файлами приложений</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">Удалить патченный APK ?</string>
     <string name="settings_system_patched_apks_delete_confirm">Уверены, что хотите удалить сохраненный патченный APK для %s?</string>
     <string name="settings_system_patched_apks_deleted">Патченый APK удален успешно</string>
+    <string name="settings_system_patched_apks_delete_all_title">Удалить все пропатченные APK?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинальные APK</string>
     <string name="settings_system_original_apks_description">Сохраняется для повторного патчинга. Сохраняется одна версия для каждого приложения</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">Оригинальный APK успешно удален</string>
     <string name="settings_system_original_apks_delete_title">Удалить оригинальный APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Удалить оригинальный APK для %s? Вы не сможете перепатчить приложение без предоставления нового APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Удалить все оригинальные APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Выбор патчей</string>
     <string name="settings_system_patch_selections_description">Сохраняет выбранные патчи, сохраняются после удаления</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Сбросить все выбранные исправления?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Сбросить все выбранные исправления для пакета?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Сбросить выбранные пакеты?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Удалить выбранное исправление?</string>
     <string name="settings_system_patch_selection_no_saved">Нет сохраненных выбранных патчей</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$d по %2$d</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">Пропустить</string>
     <string name="clear">Очистить</string>
     <string name="delete">Удалить</string>
+    <string name="delete_all">Удалить все</string>
     <string name="remove">Удалить</string>
     <string name="disable">Отключить</string>
     <string name="enable">Включить</string>
     <string name="loading">Загрузка…</string>
+    <string name="loading_older_releases">Загрузка более старых версий…</string>
+    <string name="creating">Создается…</string>
+    <string name="processing_apk">Обработка APK…</string>
+    <string name="exporting_apks">Экспорт APK…</string>
     <string name="not_installed">Не установлено</string>
     <string name="view">Просмотр</string>
     <string name="search">Поиск</string>

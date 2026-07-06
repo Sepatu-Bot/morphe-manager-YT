@@ -687,6 +687,12 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Datoteke i skladište</string>
     <string name="settings_system_apks_size">Ukupna veličina: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Ovo će trajno izbrisati sačuvane APK fajlove prikazane ovde</string>
+    <string name="settings_system_apks_delete_selected_title">Izbrisati izabrane APK-ove?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Ovo će trajno izbrisati izabrane APK fajlove</string>
+    <string name="settings_system_apks_deleted_all">APK-ovi su uspešno izbrisani</string>
+    <string name="settings_system_apks_export_zip_success">Izvezeni APK-ovi</string>
+    <string name="settings_system_apks_export_zip_failed">Nije uspeo izvoz selektovanih APK-ova</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Patcheirani APK(s)</string>
     <string name="settings_system_patched_apks_description">Upravlja sačuvanim patchovanim datotekama aplikacija</string>
@@ -694,6 +700,7 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="settings_system_patched_apks_delete_title">Da li zaista želite da obrišete ovaj patcheirani APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Da li zaista želite da obrišete patcheirani APK za %s?</string>
     <string name="settings_system_patched_apks_deleted">Patcheirani APK obrisan</string>
+    <string name="settings_system_patched_apks_delete_all_title">Brisati sve popravljene APK-ove?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Originalni APK(s)</string>
     <string name="settings_system_original_apks_description">Sačuvano za ponovno patchovanje. Čuva se jedna verzija po aplikaciji</string>
@@ -701,11 +708,13 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="settings_system_original_apks_deleted">Da li zaista želite da obrišete ovaj originalni APK?</string>
     <string name="settings_system_original_apks_delete_title">Da li zaista želite da obrišete originalni APK za %s? Nećete moći repatchirati bez pružnog novog APK fajla.</string>
     <string name="settings_system_original_apks_delete_confirm">Izbrišite originalni fajl APK za %s? Bez novog fajla APK nećete moći ponovo patchirati</string>
+    <string name="settings_system_original_apks_delete_all_title">Brisati sve originalne APK-ove?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Upravljanje sačuvanim patch-ovima i opcijama. Ovo ostaje nakon deinstalacije aplikacije</string>
     <string name="settings_system_patch_selections_description">Čuva odabrane patchove, zadržane nakon deinstalacije</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Poništiti sve odabire?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Poništiti odabire paketa?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Resetovati selektovane pakete?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Poništiti odabir izvora?</string>
     <string name="settings_system_patch_selection_no_saved">Nema sačuvanih odabira patch-a</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s po %2$s</string>
@@ -773,10 +782,15 @@ Opciono, putanja sadrži ikonu obaveštenja u jednom od sledećih formata:
     <string name="skip">Preskoči</string>
     <string name="clear">Obriši</string>
     <string name="delete">Izbriši</string>
+    <string name="delete_all">Obriši sve</string>
     <string name="remove">Ukloni</string>
     <string name="disable">Onemogući</string>
     <string name="enable">Omogući</string>
     <string name="loading">Učitavanje…</string>
+    <string name="loading_older_releases">Učitavanje starijih verzija…</string>
+    <string name="creating">Kreiranje…</string>
+    <string name="processing_apk">Obrada APK-a…</string>
+    <string name="exporting_apks">Izvoz APK-ova…</string>
     <string name="not_installed">Nije instalirano</string>
     <string name="view">Pogledaj</string>
     <string name="search">Pretraži</string>

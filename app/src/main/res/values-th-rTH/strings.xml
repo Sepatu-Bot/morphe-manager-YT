@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">ไฟล์และการจัดเก็บข้อมูล</string>
     <string name="settings_system_apks_size">จัดการแอปที่ถูกนำพัท์</string>
+    <string name="settings_system_apks_delete_all_confirm">การดำเนินการนี้จะลบไฟล์ APK ที่บันทึกไว้ที่แสดงไว้ที่นี่อย่างถาวร</string>
+    <string name="settings_system_apks_delete_selected_title">ลบไฟล์ APK ที่เลือกหรือไม่</string>
+    <string name="settings_system_apks_delete_selected_confirm">การดำเนินการนี้จะลบไฟล์ APK ที่เลือกไว้อย่างถาวร</string>
+    <string name="settings_system_apks_deleted_all">ลบไฟล์ APK สำเร็จแล้ว</string>
+    <string name="settings_system_apks_export_zip_success">ส่งออก APK ที่เลือกแล้ว</string>
+    <string name="settings_system_apks_export_zip_failed">ส่งออก APK ที่เลือกไม่สำเร็จ</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">คุณแน่ใจหรือไม่ว่าต้องการลบแอปที่ถูกนำพัท์ %s?</string>
     <string name="settings_system_patched_apks_description">จัดการไฟล์แอปพลิเคชันที่แพตช์แล้วที่บันทึกไว้</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">แอปต้นฉบับ</string>
     <string name="settings_system_patched_apks_delete_confirm">แอปต้นฉบับมีอยู่เพื่อนำพัท์ใหม่</string>
     <string name="settings_system_patched_apks_deleted">ไม่มีแอปต้นฉบับที่บันทึกไว้</string>
+    <string name="settings_system_patched_apks_delete_all_title">ลบ APK ที่ปรับแก้ทั้งหมดหรือไม่</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">ลบแอปต้นฉบับ %s? คุณไม่สามารถนำพัท์แอปใหม่ได้</string>
     <string name="settings_system_original_apks_description">บันทึกไว้สำหรับการแพตช์ซ้ำ เก็บเวอร์ชันละหนึ่งรายการต่อแอป</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">แชะเว็บไซต์อย่างเป็นทางการ</string>
     <string name="settings_system_original_apks_delete_title">Morphe เป็นโครงการโอเพ่นซอร์สที่เน้นรากและพึ่งพบค่ำชันการพัฒยายและการปรับรอง</string>
     <string name="settings_system_original_apks_delete_confirm">ลบไฟล์ APK รุ่นต้นฉบับสำหรับ %s? คุณจะไม่สามารถแก้ไขใหม่อีกได้ถ้าไม่มีไฟล์ APK ใหม่</string>
+    <string name="settings_system_original_apks_delete_all_title">ลบ APK ต้นฉบับทั้งหมดหรือไม่</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">การเลือกการแก้ไข</string>
     <string name="settings_system_patch_selections_description">บันทึกการเลือกแพตช์ที่เก็บไว้หลังการถอนการติดตั้ง</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">รีเซ็ตการเลือกทั้งหมด?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">รีเซ็ตการเลือกแพ็กเกจ?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">รีเซ็ตแพ็กเกจที่เลือกหรือไม่</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">รีเซ็ตการเลือกแหล่งที่มา?</string>
     <string name="settings_system_patch_selection_no_saved">ไม่มีการบันทึกการเลือกแพตช์</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s ถึง %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">ข้าม</string>
     <string name="clear">ล้าง</string>
     <string name="delete">ลบ</string>
+    <string name="delete_all">ลบทั้งหมด</string>
     <string name="remove">นำออก</string>
     <string name="disable">ปิดการใช้งาน</string>
     <string name="enable">อนุญาต</string>
     <string name="loading">กำลังโหลด…</string>
+    <string name="loading_older_releases">กำลังโหลดเวอร์ชันก่อนหน้า…</string>
+    <string name="creating">กำลังสร้าง…</string>
+    <string name="processing_apk">กำลังประมวลผล APK…</string>
+    <string name="exporting_apks">กำลังส่งออก APK…</string>
     <string name="not_installed">ไม่ได้ติดตั้ง</string>
     <string name="view">ดู</string>
     <string name="search">ค้นหา</string>

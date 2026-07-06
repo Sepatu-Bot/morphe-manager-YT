@@ -663,7 +663,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_memory_limit_subtitle">Mémoire disponible pour le patchage</string>
     <string name="settings_system_memory_limit_warning">Une limite de mémoire faible peut entraîner des échecs lors du patchage des applications plus volumineuses</string>
     <string name="settings_system_process_runtime_enabled_description">Limite de %s Mo</string>
-    <string name="settings_system_process_runtime_disabled_description">Cliquez pour configurer</string>
+    <string name="settings_system_process_runtime_disabled_description">Appuyez pour configurer</string>
     <string name="settings_system_process_runtime_description_not_available">Cette fonctionnalité nécessite Android 11 ou une version ultérieure</string>
     <!-- Settings - System Tab - Import and Export Section -->
     <string name="settings_system_import_export">Importer &amp; exporter</string>
@@ -704,6 +704,12 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Fichiers &amp; stockage</string>
     <string name="settings_system_apks_size">Taille totale : %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Cela supprimera définitivement les fichiers APK enregistrés affichés ici</string>
+    <string name="settings_system_apks_delete_selected_title">Supprimer les APK sélectionnés ?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Cela supprimera définitivement les fichiers APK sélectionnés</string>
+    <string name="settings_system_apks_deleted_all">Les APK ont été supprimés avec succès</string>
+    <string name="settings_system_apks_export_zip_success">Les APK sélectionnés ont été exportés</string>
+    <string name="settings_system_apks_export_zip_failed">Échec de l\'exportation des APK sélectionnés</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APK patchés</string>
     <string name="settings_system_patched_apks_description">Gère les fichiers d\'applications patchées enregistrés</string>
@@ -711,6 +717,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_patched_apks_delete_title">Supprimer l\'APK patché ?</string>
     <string name="settings_system_patched_apks_delete_confirm">Êtes-vous sûr de vouloir supprimer l\'APK patché enregistré pour %s ?</string>
     <string name="settings_system_patched_apks_deleted">L\'APK patché supprimé avec succès</string>
+    <string name="settings_system_patched_apks_delete_all_title">Supprimer tous les APK patchés ?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">APK d\'origine</string>
     <string name="settings_system_original_apks_description">Enregistrées pour le repatchage. Une version par application est conservée</string>
@@ -718,11 +725,13 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="settings_system_original_apks_deleted">L\'APK d\'origine supprimé avec succès</string>
     <string name="settings_system_original_apks_delete_title">Supprimer l\'APK d\'origine ?</string>
     <string name="settings_system_original_apks_delete_confirm">Supprimer l\'APK d\'origine pour %s ? Vous ne pourrez pas repatcher sans fournir un nouvel APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Supprimer tous les APK d\'origine ?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Sélections de patchs</string>
     <string name="settings_system_patch_selections_description">Sélections de patchs enregistrées, conservées après la désinstallation</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Réinitialiser toutes les sélections ?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Réinitialiser les sélections des paquets ?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Réinitialiser les paquets sélectionnés ?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Réinitialiser la sélection de source ?</string>
     <string name="settings_system_patch_selection_no_saved">Aucune sélection de patch enregistrée</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s à %2$s</string>
@@ -790,10 +799,15 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="skip">Passer</string>
     <string name="clear">Effacer</string>
     <string name="delete">Supprimer</string>
+    <string name="delete_all">Tout supprimer</string>
     <string name="remove">Supprimer</string>
     <string name="disable">Désactiver</string>
     <string name="enable">Activer</string>
     <string name="loading">Chargement…</string>
+    <string name="loading_older_releases">Chargement des anciennes sorties…</string>
+    <string name="creating">Création…</string>
+    <string name="processing_apk">Traitement de l’APK…</string>
+    <string name="exporting_apks">Exportation des APK…</string>
     <string name="not_installed">Non installé</string>
     <string name="view">Voir</string>
     <string name="search">Rechercher</string>

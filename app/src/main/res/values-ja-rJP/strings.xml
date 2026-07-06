@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">ファイルとストレージ</string>
     <string name="settings_system_apks_size">合計サイズ: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">保存された APK ファイルをここで完全に削除します</string>
+    <string name="settings_system_apks_delete_selected_title">選択した APK を削除しますか？</string>
+    <string name="settings_system_apks_delete_selected_confirm">選択した APK ファイルを完全に削除します</string>
+    <string name="settings_system_apks_deleted_all">APK を正常に削除しました</string>
+    <string name="settings_system_apks_export_zip_success">選択された APK をエクスポートしました</string>
+    <string name="settings_system_apks_export_zip_failed">選択された APK のエクスポートに失敗しました</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">パッチ適用済み APK</string>
     <string name="settings_system_patched_apks_description">保存されたパッチ適用済みのアプリファイルを管理します</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">パッチ適用済み APK を削除しますか？</string>
     <string name="settings_system_patched_apks_delete_confirm">保存されている %s のパッチ適用済み APK を削除してもよろしいですか？</string>
     <string name="settings_system_patched_apks_deleted">パッチ適用済み APK を削除しました</string>
+    <string name="settings_system_patched_apks_delete_all_title">パッチ適用済み APK をすべて削除しますか？</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">オリジナルの APK</string>
     <string name="settings_system_original_apks_description">再パッチ用に保存されます。アプリごとに1つのバージョンのみ保持されます</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">オリジナルの APK を削除しました</string>
     <string name="settings_system_original_apks_delete_title">オリジナルの APK を削除しますか？</string>
     <string name="settings_system_original_apks_delete_confirm">%s のオリジナルの APK を削除しますか？再パッチには新しい APK が必要になります</string>
+    <string name="settings_system_original_apks_delete_all_title">オリジナルの APK をすべて削除しますか？</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">パッチ セレクション</string>
     <string name="settings_system_patch_selections_description">保存されたパッチ セレクションを管理します。これらはアンインストール後も保持されます</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">すべてのセレクションをリセットしますか？</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">パッケージ セレクションをリセットしますか？</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">選択されたパッケージをリセットしますか？</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">ソース セレクションをリセットしますか？</string>
     <string name="settings_system_patch_selection_no_saved">保存済みパッチ セレクションなし</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s ～ %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">スキップ</string>
     <string name="clear">クリア</string>
     <string name="delete">削除</string>
+    <string name="delete_all">すべて削除</string>
     <string name="remove">削除</string>
     <string name="disable">無効</string>
     <string name="enable">有効にする</string>
     <string name="loading">読み込み中…</string>
+    <string name="loading_older_releases">古いリリースを読み込んでいます…</string>
+    <string name="creating">作成中…</string>
+    <string name="processing_apk">APK を処理中…</string>
+    <string name="exporting_apks">APK をエクスポート中…</string>
     <string name="not_installed">インストールされていません</string>
     <string name="view">表示</string>
     <string name="search">検索</string>

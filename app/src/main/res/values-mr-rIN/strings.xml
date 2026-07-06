@@ -702,6 +702,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">फाईल्स आणि स्टोरेज</string>
     <string name="settings_system_apks_size">एकूण आकार: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">हे येथे दर्शविलेले जतन केलेले APK फाइल कायमचे हटवेल</string>
+    <string name="settings_system_apks_delete_selected_title">निवडलेले APKs हटवायचे?</string>
+    <string name="settings_system_apks_delete_selected_confirm">हे निवडलेल्या APK फाइल कायमचे हटवेल</string>
+    <string name="settings_system_apks_deleted_all">APKs यशस्वीरित्या हटवले</string>
+    <string name="settings_system_apks_export_zip_success">निवडलेले APK निर्यात केले</string>
+    <string name="settings_system_apks_export_zip_failed">निवडलेले APK निर्यात करण्यात अयशस्वी</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">पॅच केलेले APK</string>
     <string name="settings_system_patched_apks_description">जतन केलेल्या पॅच केलेल्या ॲप्लिकेशन फाइल्स व्यवस्थापित करते</string>
@@ -709,6 +715,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">पॅच केलेले APK डिलीट करायचे?</string>
     <string name="settings_system_patched_apks_delete_confirm">तुम्ही %s साठी जतन केलेले पॅच केलेले APK डिलीट करू इच्छिता आहात का?</string>
     <string name="settings_system_patched_apks_deleted">पॅच केलेले APK यशस्वीरित्या डिलीट केले</string>
+    <string name="settings_system_patched_apks_delete_all_title">सर्व पॅच केलेले APKs हटवायचे?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">मूळ APK</string>
     <string name="settings_system_original_apks_description">रिपॅचिंगसाठी जतन केलेले. प्रति ॲप एक आवृत्ती ठेवली जाते</string>
@@ -716,11 +723,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">मूळ APK यशस्वीरित्या डिलीट केले</string>
     <string name="settings_system_original_apks_delete_title">मूळ APK डिलीट करायचे?</string>
     <string name="settings_system_original_apks_delete_confirm">%s साठी मूळ APK हटवा? तुमच्याकडे नवीन APK प्रदान केल्याशिवाय तुम्ही पुन्हा पॅच करू शकणार नाही</string>
+    <string name="settings_system_original_apks_delete_all_title">सर्व मूळ APKs हटवायचे?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">पॅच निवड</string>
     <string name="settings_system_patch_selections_description">अनइंस्टॉल केल्यानंतरही जतन केलेले पॅच निवड</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">सर्व निवड रीसेट करायची?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">पॅकेज निवड रीसेट करायची?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">निवडलेले पॅकेजेस रीसेट करायचे?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">स्रोत निवड रीसेट करायची?</string>
     <string name="settings_system_patch_selection_no_saved">सेव्ह केलेल्या पॅच निवड नाहीत</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s पैकी %2$s</string>
@@ -788,10 +797,15 @@ morphe_header_custom_dark.png
     <string name="skip">वगळा</string>
     <string name="clear">क्लिअर करा</string>
     <string name="delete">डिलीट करा</string>
+    <string name="delete_all">सर्व हटवा</string>
     <string name="remove">काढून टाका</string>
     <string name="disable">डिसेबल करा</string>
     <string name="enable">इनेबल करा</string>
     <string name="loading">लोड होत आहे…</string>
+    <string name="loading_older_releases">जुने रीलिझ लोड करत आहे…</string>
+    <string name="creating">तयार करत आहे…</string>
+    <string name="processing_apk">APK प्रक्रिया करत आहे…</string>
+    <string name="exporting_apks">APKs निर्यात करत आहे…</string>
     <string name="not_installed">इंस्टॉल केलेले नाही</string>
     <string name="view">पहा</string>
     <string name="search">शोध</string>

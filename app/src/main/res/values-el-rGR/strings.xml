@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Αρχεία &amp; αποθηκευτικός χώρος</string>
     <string name="settings_system_apks_size">Συνολικό μέγεθος: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Αυτό θα διαγράψει οριστικά τα αποθηκευμένα αρχεία APK που εμφανίζονται εδώ</string>
+    <string name="settings_system_apks_delete_selected_title">Διαγραφή επιλεγμένων APK;</string>
+    <string name="settings_system_apks_delete_selected_confirm">Αυτό θα διαγράψει οριστικά τα επιλεγμένα αρχεία APK</string>
+    <string name="settings_system_apks_deleted_all">APK διαγράφηκαν με επιτυχία</string>
+    <string name="settings_system_apks_export_zip_success">Εξαγωγή επιλεγμένων APK</string>
+    <string name="settings_system_apks_export_zip_failed">Αποτυχία εξαγωγής επιλεγμένων APK</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Τροποποιημένα αρχεία APK</string>
     <string name="settings_system_patched_apks_description">Διαχείριση αποθηκευμένων αρχείων τροποποιημένων εφαρμογών</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">Διαγραφή τροποποιημένης APK;</string>
     <string name="settings_system_patched_apks_delete_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε την αποθηκευμένη τροποποιημένη APK για %s;</string>
     <string name="settings_system_patched_apks_deleted">Επιτυχής διαγραφή</string>
+    <string name="settings_system_patched_apks_delete_all_title">Διαγραφή όλων των τροποποιημένων APK;</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Αρχικά αρχεία APK</string>
     <string name="settings_system_original_apks_description">Αποθηκευμένα για επανατροποποίηση. Διατηρείται μία έκδοση ανά εφαρμογή</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">Η πρωτότυπη APK διαγράφτηκε επιτυχώς</string>
     <string name="settings_system_original_apks_delete_title">Διαγραφή αρχικού APK;</string>
     <string name="settings_system_original_apks_delete_confirm">Διαγραφή πρωτότυπης APK για %s; Δε θα μπορείτε να τροποποιήσετε ξανά χωρίς δοθεί νέο APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Διαγραφή όλων των αρχικών APK;</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Επιλεγμένες τροποποιήσεις</string>
     <string name="settings_system_patch_selections_description">Αποθηκευμένες επιλογές τροποποιήσεων, διατηρούνται μετά την απεγκατάσταση</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Επαναφορά όλων των επιλογών;</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Επαναφορά επιλογών πακέτου;</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Επαναφορά επιλεγμένων πακέτων;</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Επαναφορά επιλογής πηγής;</string>
     <string name="settings_system_patch_selection_no_saved">Δεν υπάρχουν αποθηκευμένες επιλογές τροποποιήσεων</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s από %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">Παράλειψη</string>
     <string name="clear">Εκκαθάριση</string>
     <string name="delete">Διαγραφή</string>
+    <string name="delete_all">Διαγραφή όλων</string>
     <string name="remove">Αφαίρεση</string>
     <string name="disable">Απενεργοποίηση</string>
     <string name="enable">Ενεργοποίηση</string>
     <string name="loading">Φόρτωση…</string>
+    <string name="loading_older_releases">Φόρτωση παλαιότερων εκδόσεων…</string>
+    <string name="creating">Δημιουργία…</string>
+    <string name="processing_apk">Επεξεργασία APK…</string>
+    <string name="exporting_apks">Εξαγωγή APK…</string>
     <string name="not_installed">Δεν είναι εγκατεστημένο</string>
     <string name="view">Προβολή</string>
     <string name="search">Αναζήτηση</string>

@@ -703,6 +703,12 @@ morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Фајлови и складиштење</string>
     <string name="settings_system_apks_size">Укупна величина: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Ово ће трајно избрисати сачуване APK фајлове приказане овде</string>
+    <string name="settings_system_apks_delete_selected_title">Избрисати изабране APK фајлове?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Ово ће трајно избрисати изабране APK фајлове</string>
+    <string name="settings_system_apks_deleted_all">APK фајлови успешно избрисани</string>
+    <string name="settings_system_apks_export_zip_success">Извезени изабрани APK-ови</string>
+    <string name="settings_system_apks_export_zip_failed">Извоз изабраних APK-ова није успео</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Патчеви</string>
     <string name="settings_system_patched_apks_description">Управља сачуваним закрпљеним датотекама апликација</string>
@@ -710,6 +716,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">Да ли сте сигурни да желите да обришете сачувани патчеви?</string>
     <string name="settings_system_patched_apks_delete_confirm">Али сте сигурни да желите да обришете сачувани патчеви за %s?</string>
     <string name="settings_system_patched_apks_deleted">Сачувани патчеви успешно обришани</string>
+    <string name="settings_system_patched_apks_delete_all_title">Обрисати све подешене APK-ове?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Оригинални APK(и)</string>
     <string name="settings_system_original_apks_description">Сачувано за поновно закрпљивање. Чува се једна верзија по апликацији</string>
@@ -717,11 +724,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">Оригинални APK успешно обришани</string>
     <string name="settings_system_original_apks_delete_title">Да ли сте сигурни да желите да обришете оригинални APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Обрисати оригинални APK за %s? Нећете моћи да репатујете без пружања новог APK</string>
+    <string name="settings_system_original_apks_delete_all_title">Обрисати све оригиналне APK-ове?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Патч селекције</string>
     <string name="settings_system_patch_selections_description">Сачуване селекције закрпе, задржане након деинсталирања</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Да ли сте сигурни да желите да обришете све изборе?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Да ли сте сигурни да желите да обришете избор пакета?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Ресетовати изабране пакете?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Да ли сте сигурни да желите да обришете избор извора?</string>
     <string name="settings_system_patch_selection_no_saved">Нema сачуваних избора пакета</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s преко %2$s</string>
@@ -789,10 +798,15 @@ morphe_header_custom_dark.png
     <string name="skip">Прескочи</string>
     <string name="clear">Очисти</string>
     <string name="delete">Избриши</string>
+    <string name="delete_all">Обрисати све</string>
     <string name="remove">Ukloni</string>
     <string name="disable">Онемогући</string>
     <string name="enable">Укључи</string>
     <string name="loading">Учитавање…</string>
+    <string name="loading_older_releases">Учитавање старијих верзија…</string>
+    <string name="creating">Креирање…</string>
+    <string name="processing_apk">Обрада APK-а…</string>
+    <string name="exporting_apks">Извоз APK-ова…</string>
     <string name="not_installed">Није инсталирано</string>
     <string name="view">Погледај</string>
     <string name="search">Претрага</string>

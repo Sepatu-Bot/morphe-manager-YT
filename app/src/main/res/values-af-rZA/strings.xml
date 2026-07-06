@@ -703,6 +703,12 @@ Die beeld afmetings moet soos volg wees:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Lêers &amp; berging</string>
     <string name="settings_system_apks_size">Totale grootte: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Dit sal die gestoorde APK-lêers wat hier gewys word permanent uitvee.</string>
+    <string name="settings_system_apks_delete_selected_title">Geselekteerde APK\'s uitvee?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Dit sal die geselekteerde APK-lêers permanent uitvee.</string>
+    <string name="settings_system_apks_deleted_all">APK\'s suksesvol uitgevee</string>
+    <string name="settings_system_apks_export_zip_success">Geselekteerde APK\'s uitgevoer</string>
+    <string name="settings_system_apks_export_zip_failed">Kon nie die geselekteerde APK\'s uitvoer nie</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Gepatched APK\'s</string>
     <string name="settings_system_patched_apks_description">Bestuur gestoorde gepatchte toepassingslêers</string>
@@ -710,6 +716,7 @@ Die beeld afmetings moet soos volg wees:
     <string name="settings_system_patched_apks_delete_title">Verwyder gepatched APK?</string>
     <string name="settings_system_patched_apks_delete_confirm">Is jy seker dat jy die gestoorde gepatched APK vir %s wil verwyder?</string>
     <string name="settings_system_patched_apks_deleted">Gepatched APK suksesvol verwyder</string>
+    <string name="settings_system_patched_apks_delete_all_title">Alle patched APK\'s verwyder?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Original APK\'s</string>
     <string name="settings_system_original_apks_description">Gestoor vir herpatching. Een weergawe per app word gehou</string>
@@ -717,11 +724,13 @@ Die beeld afmetings moet soos volg wees:
     <string name="settings_system_original_apks_deleted">Original APK suksesvol verwyder</string>
     <string name="settings_system_original_apks_delete_title">Verwyder original APK?</string>
     <string name="settings_system_original_apks_delete_confirm">Verwyder original APK vir %s? Jy sal nie in staat wees om te herpatch sonder om \'n nuwe APK te verskaf nie</string>
+    <string name="settings_system_original_apks_delete_all_title">Alle oorspronklike APK\'s verwyder?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Patch seleksies</string>
     <string name="settings_system_patch_selections_description">Spaar gestoor patch seleksies, behou na verwydering</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Herstel alles?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Herstel pakket seleksies?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Geselekteerde pakkette terugstel?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Herstel bron seleksie?</string>
     <string name="settings_system_patch_selection_no_saved">Geen gestoorde patch seleksies nie</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s oor %2$s</string>
@@ -789,10 +798,15 @@ Die beeld afmetings moet soos volg wees:
     <string name="skip">Sla oordee</string>
     <string name="clear">Maak skoon</string>
     <string name="delete">Verwyder</string>
+    <string name="delete_all">Alles verwyder</string>
     <string name="remove">Verwyder</string>
     <string name="disable">Deaktiveer</string>
     <string name="enable">Aktiveer</string>
     <string name="loading">Laai…</string>
+    <string name="loading_older_releases">Ouder releases word gelaai…</string>
+    <string name="creating">Word geskep…</string>
+    <string name="processing_apk">APK word verwerk…</string>
+    <string name="exporting_apks">APK\'s word uitgevoer…</string>
     <string name="not_installed">Nie geïnstalleer nie</string>
     <string name="view">Beskou</string>
     <string name="search">Soek</string>
