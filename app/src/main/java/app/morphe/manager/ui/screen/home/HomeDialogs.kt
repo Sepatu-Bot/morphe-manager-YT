@@ -388,28 +388,30 @@ fun HomeDialogs(
             totalSelectedCount = homeViewModel.expertModeTotalSelectedCount,
             totalPatchesCount = homeViewModel.expertModeTotalPatchesCount,
             hasMultipleBundles = homeViewModel.expertModeHasMultipleBundles,
-            onPatchToggle = { bundleUid, patchName ->
-                homeViewModel.togglePatchInExpertMode(bundleUid, patchName)
-            },
-            onSelectAll = { bundleUid, patches ->
-                homeViewModel.expertModeSelectAll(bundleUid, patches)
-            },
-            onDeselectAll = { bundleUid, patches ->
-                homeViewModel.expertModeDeselectAll(bundleUid, patches)
-            },
-            onResetToDefault = { bundleUid, allPatches ->
-                homeViewModel.expertModeResetToDefault(bundleUid, allPatches)
-            },
-            onRestoreSaved = { bundleUid ->
-                homeViewModel.expertModeRestoreSaved(bundleUid)
-            },
+            patchActions = ExpertPatchActions(
+                onPatchToggle = { bundleUid, patchName ->
+                    homeViewModel.togglePatchInExpertMode(bundleUid, patchName)
+                },
+                onSelectAll = { bundleUid, patches ->
+                    homeViewModel.expertModeSelectAll(bundleUid, patches)
+                },
+                onDeselectAll = { bundleUid, patches ->
+                    homeViewModel.expertModeDeselectAll(bundleUid, patches)
+                },
+                onResetToDefault = { bundleUid, allPatches ->
+                    homeViewModel.expertModeResetToDefault(bundleUid, allPatches)
+                },
+                onRestoreSaved = { bundleUid ->
+                    homeViewModel.expertModeRestoreSaved(bundleUid)
+                },
+                onOptionChange = { bundleUid, patchName, optionKey, value ->
+                    homeViewModel.updateOptionInExpertMode(bundleUid, patchName, optionKey, value)
+                },
+                onResetOptions = { bundleUid, patchName ->
+                    homeViewModel.resetOptionsInExpertMode(bundleUid, patchName)
+                }
+            ),
             savedPatches = homeViewModel.expertModeInitialPatches,
-            onOptionChange = { bundleUid, patchName, optionKey, value ->
-                homeViewModel.updateOptionInExpertMode(bundleUid, patchName, optionKey, value)
-            },
-            onResetOptions = { bundleUid, patchName ->
-                homeViewModel.resetOptionsInExpertMode(bundleUid, patchName)
-            },
             onDismiss = {
                 homeViewModel.cleanupExpertModeData()
             },

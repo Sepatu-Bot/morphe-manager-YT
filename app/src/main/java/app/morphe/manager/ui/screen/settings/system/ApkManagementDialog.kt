@@ -95,6 +95,31 @@ private data class OriginalApkEntry(
     val apk: OriginalApk
 )
 
+/** Static metadata for the APK list header and empty state. */
+@Immutable
+data class ApkListMeta(
+    val title: String,
+    val icon: ImageVector,
+    val count: Int,
+    val totalSize: Long,
+    val isLoading: Boolean,
+    val isEmpty: Boolean,
+    val emptyMessage: String,
+    val deleteAllTitle: String?,
+    val zipExportFileName: String
+)
+
+/** Callbacks for per-item and bulk APK operations. */
+@Stable
+class ApkListActions(
+    val onShare: ((ApkItemData) -> Unit)?,
+    val onExport: ((ApkItemData) -> Unit)?,
+    val onInstall: ((ApkItemData) -> Unit)?,
+    val onDelete: (ApkItemData) -> Unit,
+    val onDeleteSelectedConfirm: (List<ApkItemData>) -> Unit,
+    val onDeleteAllConfirm: (() -> Unit)?
+)
+
 /**
  * Universal dialog for managing APK files (patched or original).
  */
@@ -192,79 +217,83 @@ private fun PatchedApksContent(
     }
 
     ApkManagementDialogContent(
-        title = stringResource(R.string.settings_system_patched_apks_title),
-        icon = Icons.Outlined.Apps,
-        count = displayItems.size,
-        totalSize = totalSize,
-        isLoading = isLoading,
-        isEmpty = displayItems.isEmpty() && !isLoading,
-        emptyMessage = stringResource(R.string.settings_system_patched_apks_empty),
-        onDismissRequest = onDismissRequest,
-        items = displayItems,
-        zipExportFileName = stringResource(R.string.settings_system_patched_apks_export_zip_name),
-        onShare = { item ->
-            item.file?.let { file ->
-                scope.launch {
-                    val uri = withContext(Dispatchers.IO) {
-                        InstallerFileProvider.getUriForFile(context, file)
-                    }
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = APK_MIMETYPE
-                        putExtra(Intent.EXTRA_STREAM, uri)
-                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    }
-                    try {
-                        context.startActivity(Intent.createChooser(intent, null))
-                    } catch (_: android.content.ActivityNotFoundException) { }
-                }
-            }
-        },
-        onExport = { item ->
-            itemToExport = item
-            exportLauncher.launch("${item.displayName.replace(" ", "_")}.apk")
-        },
-        onInstall = { item ->
-            if (item.installType == InstallType.MOUNT) {
-                installViewModel.mount(
-                    packageName = item.packageName,
-                    version = item.version
-                )
-            } else {
+        meta = ApkListMeta(
+            title = stringResource(R.string.settings_system_patched_apks_title),
+            icon = Icons.Outlined.Apps,
+            count = displayItems.size,
+            totalSize = totalSize,
+            isLoading = isLoading,
+            isEmpty = displayItems.isEmpty() && !isLoading,
+            emptyMessage = stringResource(R.string.settings_system_patched_apks_empty),
+            deleteAllTitle = stringResource(R.string.settings_system_patched_apks_delete_all_title),
+            zipExportFileName = stringResource(R.string.settings_system_patched_apks_export_zip_name)
+        ),
+        actions = ApkListActions(
+            onShare = { item ->
                 item.file?.let { file ->
                     scope.launch {
                         val uri = withContext(Dispatchers.IO) {
                             InstallerFileProvider.getUriForFile(context, file)
                         }
-                        val intent = Intent(Intent.ACTION_VIEW).apply {
-                            setDataAndType(uri, APK_MIMETYPE)
+                        val intent = Intent(Intent.ACTION_SEND).apply {
+                            type = APK_MIMETYPE
+                            putExtra(Intent.EXTRA_STREAM, uri)
                             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         }
                         try {
-                            context.startActivity(intent)
+                            context.startActivity(Intent.createChooser(intent, null))
                         } catch (_: android.content.ActivityNotFoundException) { }
                     }
                 }
+            },
+            onExport = { item ->
+                itemToExport = item
+                exportLauncher.launch("${item.displayName.replace(" ", "_")}.apk")
+            },
+            onInstall = { item ->
+                if (item.installType == InstallType.MOUNT) {
+                    installViewModel.mount(
+                        packageName = item.packageName,
+                        version = item.version
+                    )
+                } else {
+                    item.file?.let { file ->
+                        scope.launch {
+                            val uri = withContext(Dispatchers.IO) {
+                                InstallerFileProvider.getUriForFile(context, file)
+                            }
+                            val intent = Intent(Intent.ACTION_VIEW).apply {
+                                setDataAndType(uri, APK_MIMETYPE)
+                                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            }
+                            try {
+                                context.startActivity(intent)
+                            } catch (_: android.content.ActivityNotFoundException) { }
+                        }
+                    }
+                }
+            },
+            onDelete = { item ->
+                appByKey[item.selectionKey]?.let { itemToDelete.value = it }
+            },
+            onDeleteSelectedConfirm = { selectedItems ->
+                val appsToDelete = selectedItems.mapNotNull { appByKey[it.selectionKey] }
+                scope.launch {
+                    appsToDelete.forEach { repository.delete(it) }
+                    context.toast(apksDeletedAllText)
+                }
+            },
+            onDeleteAllConfirm = {
+                val appsToDelete = apkItems.map { it.installedApp }
+                scope.launch {
+                    appsToDelete.forEach { repository.delete(it) }
+                    context.toast(apksDeletedAllText)
+                }
             }
-        },
-        onDelete = { item ->
-            itemToDelete.value = appByKey[item.selectionKey] ?: return@ApkManagementDialogContent
-        },
-        onDeleteSelectedConfirm = { selectedItems ->
-            val appsToDelete = selectedItems.mapNotNull { appByKey[it.selectionKey] }
-            scope.launch {
-                appsToDelete.forEach { repository.delete(it) }
-                context.toast(apksDeletedAllText)
-            }
-        },
-        deleteAllTitle = stringResource(R.string.settings_system_patched_apks_delete_all_title),
-        onDeleteAllConfirm = {
-            val appsToDelete = apkItems.map { it.installedApp }
-            scope.launch {
-                appsToDelete.forEach { repository.delete(it) }
-                context.toast(apksDeletedAllText)
-            }
-        }
+        ),
+        items = displayItems,
+        onDismissRequest = onDismissRequest
     )
 
     if (itemToDelete.value != null) {
@@ -357,56 +386,60 @@ private fun OriginalApksContent(
     }
 
     ApkManagementDialogContent(
-        title = stringResource(R.string.settings_system_original_apks_title),
-        icon = Icons.Outlined.Storage,
-        count = apkItems.size,
-        totalSize = totalSize,
-        isLoading = isLoading,
-        isEmpty = apkItems.isEmpty() && !isLoading,
-        emptyMessage = stringResource(R.string.settings_system_original_apks_empty),
-        onDismissRequest = onDismissRequest,
-        items = apkItems,
-        zipExportFileName = stringResource(R.string.settings_system_original_apks_export_zip_name),
-        onShare = { item ->
-            item.file?.let { file ->
+        meta = ApkListMeta(
+            title = stringResource(R.string.settings_system_original_apks_title),
+            icon = Icons.Outlined.Storage,
+            count = apkItems.size,
+            totalSize = totalSize,
+            isLoading = isLoading,
+            isEmpty = apkItems.isEmpty() && !isLoading,
+            emptyMessage = stringResource(R.string.settings_system_original_apks_empty),
+            deleteAllTitle = stringResource(R.string.settings_system_original_apks_delete_all_title),
+            zipExportFileName = stringResource(R.string.settings_system_original_apks_export_zip_name)
+        ),
+        actions = ApkListActions(
+            onShare = { item ->
+                item.file?.let { file ->
+                    scope.launch {
+                        val uri = withContext(Dispatchers.IO) {
+                            InstallerFileProvider.getUriForFile(context, file)
+                        }
+                        val intent = Intent(Intent.ACTION_SEND).apply {
+                            type = APK_MIMETYPE
+                            putExtra(Intent.EXTRA_STREAM, uri)
+                            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                        }
+                        try {
+                            context.startActivity(Intent.createChooser(intent, null))
+                        } catch (_: android.content.ActivityNotFoundException) { }
+                    }
+                }
+            },
+            onExport = { item ->
+                itemToExport = item
+                exportLauncher.launch("${item.displayName.replace(" ", "_")}.apk")
+            },
+            onInstall = null,
+            onDelete = { item ->
+                apkByKey[item.selectionKey]?.let { itemToDelete.value = it }
+            },
+            onDeleteSelectedConfirm = { selectedItems ->
+                val apksToDelete = selectedItems.mapNotNull { apkByKey[it.selectionKey] }
                 scope.launch {
-                    val uri = withContext(Dispatchers.IO) {
-                        InstallerFileProvider.getUriForFile(context, file)
-                    }
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = APK_MIMETYPE
-                        putExtra(Intent.EXTRA_STREAM, uri)
-                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    }
-                    try {
-                        context.startActivity(Intent.createChooser(intent, null))
-                    } catch (_: android.content.ActivityNotFoundException) { }
+                    apksToDelete.forEach { repository.delete(it) }
+                    context.toast(apksDeletedAllText)
+                }
+            },
+            onDeleteAllConfirm = {
+                val apksToDelete = entries.map { it.apk }
+                scope.launch {
+                    apksToDelete.forEach { repository.delete(it) }
+                    context.toast(apksDeletedAllText)
                 }
             }
-        },
-        onExport = { item ->
-            itemToExport = item
-            exportLauncher.launch("${item.displayName.replace(" ", "_")}.apk")
-        },
-        onInstall = null,
-        onDelete = { item ->
-            itemToDelete.value = apkByKey[item.selectionKey] ?: return@ApkManagementDialogContent
-        },
-        onDeleteSelectedConfirm = { selectedItems ->
-            val apksToDelete = selectedItems.mapNotNull { apkByKey[it.selectionKey] }
-            scope.launch {
-                apksToDelete.forEach { repository.delete(it) }
-                context.toast(apksDeletedAllText)
-            }
-        },
-        deleteAllTitle = stringResource(R.string.settings_system_original_apks_delete_all_title),
-        onDeleteAllConfirm = {
-            val apksToDelete = entries.map { it.apk }
-            scope.launch {
-                apksToDelete.forEach { repository.delete(it) }
-                context.toast(apksDeletedAllText)
-            }
-        }
+        ),
+        items = apkItems,
+        onDismissRequest = onDismissRequest
     )
 
     if (itemToDelete.value != null) {
@@ -430,23 +463,10 @@ private fun OriginalApksContent(
 
 @Composable
 private fun ApkManagementDialogContent(
-    title: String,
-    icon: ImageVector,
-    count: Int,
-    totalSize: Long,
-    isLoading: Boolean,
-    isEmpty: Boolean,
-    emptyMessage: String,
-    onDismissRequest: () -> Unit,
+    meta: ApkListMeta,
+    actions: ApkListActions,
     items: List<ApkItemData>,
-    zipExportFileName: String,
-    onShare: ((ApkItemData) -> Unit)?,
-    onExport: ((ApkItemData) -> Unit)?,
-    onInstall: ((ApkItemData) -> Unit)?,
-    onDelete: (ApkItemData) -> Unit,
-    onDeleteSelectedConfirm: (List<ApkItemData>) -> Unit,
-    deleteAllTitle: String?,
-    onDeleteAllConfirm: (() -> Unit)?
+    onDismissRequest: () -> Unit
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -491,8 +511,8 @@ private fun ApkManagementDialogContent(
             if (isExporting) return@MorpheDialog
             if (selection.isNotEmpty) selection.clear() else onDismissRequest()
         },
-        title = title,
-        titleTrailingContent = if (selectedItems.isEmpty() && items.isNotEmpty() && onDeleteAllConfirm != null) {
+        title = meta.title,
+        titleTrailingContent = if (selectedItems.isEmpty() && items.isNotEmpty() && actions.onDeleteAllConfirm != null) {
             {
                 DialogTitleAction(
                     icon = Icons.Outlined.DeleteForever,
@@ -535,7 +555,7 @@ private fun ApkManagementDialogContent(
                             ActionPillButton(
                                 onClick = {
                                     zipExportItems = selectedItems
-                                    zipExportLauncher.launch(FilenameUtils.timestamped(zipExportFileName))
+                                    zipExportLauncher.launch(FilenameUtils.timestamped(meta.zipExportFileName))
                                 },
                                 icon = Icons.Outlined.Upload,
                                 contentDescription = exportLabel,
@@ -580,15 +600,15 @@ private fun ApkManagementDialogContent(
                     InfoBox(
                         title = pluralStringResource(
                             R.plurals.settings_system_apks_count,
-                            count,
-                            count
+                            meta.count,
+                            meta.count
                         ),
                         containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
                         titleColor = MaterialTheme.colorScheme.primary,
-                        icon = icon
+                        icon = meta.icon
                     ) {
                         Text(
-                            text = stringResource(R.string.settings_system_apks_size, formatBytes(totalSize)),
+                            text = stringResource(R.string.settings_system_apks_size, formatBytes(meta.totalSize)),
                             style = MaterialTheme.typography.bodyMedium,
                             color = LocalDialogSecondaryTextColor.current
                         )
@@ -598,8 +618,8 @@ private fun ApkManagementDialogContent(
                 // List of APKs or loading state
                 when {
                     // Show shimmer while loading
-                    isLoading -> items(3) { ShimmerApkItem() }
-                    isEmpty -> item { EmptyState(message = emptyMessage) }
+                    meta.isLoading -> items(3) { ShimmerApkItem() }
+                    meta.isEmpty -> item { EmptyState(message = meta.emptyMessage) }
                     else -> items(items = items, key = { it.selectionKey }) { item ->
                         val selected = selection.contains(item.selectionKey)
                         ApkItemCard(
@@ -607,10 +627,10 @@ private fun ApkManagementDialogContent(
                             selected = selected,
                             selectionMode = selectedItems.isNotEmpty(),
                             onToggleSelection = { selection.toggle(item.selectionKey) },
-                            onShare = if (item.file != null) { { onShare?.invoke(item) } } else null,
-                            onExport = if (item.file != null) { { onExport?.invoke(item) } } else null,
-                            onInstall = if (item.file != null && onInstall != null) { { onInstall(item) } } else null,
-                            onDelete = { onDelete(item) }
+                            onShare = if (item.file != null) { { actions.onShare?.invoke(item) } } else null,
+                            onExport = if (item.file != null) { { actions.onExport?.invoke(item) } } else null,
+                            onInstall = if (item.file != null && actions.onInstall != null) { { actions.onInstall.invoke(item) } } else null,
+                            onDelete = { actions.onDelete(item) }
                         )
                     }
                 }
@@ -624,16 +644,16 @@ private fun ApkManagementDialogContent(
         PulsingLogoWithCaption(caption = stringResource(R.string.exporting_apks))
     }
 
-    if (showDeleteAllConfirmation && deleteAllTitle != null && onDeleteAllConfirm != null) {
+    if (showDeleteAllConfirmation && meta.deleteAllTitle != null && actions.onDeleteAllConfirm != null) {
         DeleteAllConfirmationDialog(
-            title = deleteAllTitle,
+            title = meta.deleteAllTitle,
             message = stringResource(R.string.settings_system_apks_delete_all_confirm),
             primaryText = stringResource(R.string.delete_all),
-            count = count,
-            totalSize = totalSize,
+            count = meta.count,
+            totalSize = meta.totalSize,
             onDismiss = { showDeleteAllConfirmation = false },
             onConfirm = {
-                onDeleteAllConfirm()
+                actions.onDeleteAllConfirm.invoke()
                 showDeleteAllConfirmation = false
             }
         )
@@ -648,7 +668,7 @@ private fun ApkManagementDialogContent(
             totalSize = selectedTotalSize,
             onDismiss = { showDeleteSelectedConfirmation = false },
             onConfirm = {
-                onDeleteSelectedConfirm(selectedItems)
+                actions.onDeleteSelectedConfirm(selectedItems)
                 selection.clear()
                 showDeleteSelectedConfirmation = false
             }

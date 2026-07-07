@@ -82,6 +82,65 @@ private data class SwipeActionConfig(
     val contentColor: Color
 )
 
+/** Notifications strip state and its action. */
+@Immutable
+data class HomeNotificationsUi(
+    val hasManagerUpdate: Boolean,
+    val showBundleUpdateSnackbar: Boolean,
+    val snackbarStatus: BundleUpdateStatus,
+    val bundleUpdateProgress: PatchBundleRepository.BundleUpdateProgress?,
+    val onShowUpdateDetails: () -> Unit
+)
+
+/** Visible and hidden app lists with their loading state. */
+@Immutable
+data class HomeAppListUi(
+    val visible: List<HomeAppItem>,
+    val hidden: List<HomeAppItem>,
+    val installedAppsLoading: Boolean,
+    val showGestureHint: Boolean
+)
+
+/** Callbacks fired from an app card. */
+@Stable
+class HomeAppActions(
+    val onAppClick: (HomeAppItem) -> Unit,
+    val onHideApp: (String) -> Unit,
+    val onHideMultiple: (Set<String>) -> Unit,
+    val onUnhideApp: (String) -> Unit,
+    val onShowPatches: (HomeAppItem) -> Unit,
+    val onGestureHintShown: () -> Unit,
+    val onSaveOrder: (List<String>) -> Unit,
+    val onResetOrder: () -> Unit
+)
+
+/** Callbacks for surrounding chrome elements. */
+@Stable
+class HomeChromeActions(
+    val onOtherAppsClick: () -> Unit,
+    val onBundlesClick: () -> Unit,
+    val onSettingsClick: () -> Unit,
+    val onRefreshGreeting: (() -> Unit)?
+)
+
+/** Flags that control which chrome elements are shown. */
+@Immutable
+data class HomeChromeFlags(
+    val showSearchButton: Boolean,
+    val showOtherAppsButton: Boolean,
+    val isExpertModeEnabled: Boolean
+)
+
+/** Search bar visibility, query and mutation callbacks. */
+@Stable
+class HomeSearchState(
+    val visible: Boolean,
+    val query: String,
+    val onQueryChange: (String) -> Unit,
+    val onToggle: () -> Unit,
+    val onClose: () -> Unit
+)
+
 /**
  * Home screen layout with dynamic app buttons:
  * 1. Notifications section
@@ -92,51 +151,13 @@ private data class SwipeActionConfig(
  */
 @Composable
 fun SectionsLayout(
-    // Notifications section
-    showBundleUpdateSnackbar: Boolean,
-    snackbarStatus: BundleUpdateStatus,
-    bundleUpdateProgress: PatchBundleRepository.BundleUpdateProgress?,
-    hasManagerUpdate: Boolean,
-    onShowUpdateDetails: () -> Unit,
-
-    // Greeting section
+    notifications: HomeNotificationsUi,
+    apps: HomeAppListUi,
+    appActions: HomeAppActions,
+    chromeActions: HomeChromeActions,
+    chromeFlags: HomeChromeFlags,
     greetingMessage: String?,
-
-    // Dynamic app items
-    homeAppItems: List<HomeAppItem>,
-    onAppClick: (HomeAppItem) -> Unit,
-    onHideApp: (String) -> Unit,
-    onHideMultiple: (Set<String>) -> Unit = {},
-    onUnhideApp: (String) -> Unit,
-    onShowPatches: (HomeAppItem) -> Unit,
-    showGestureHint: Boolean,
-    onGestureHintShown: () -> Unit,
-    hiddenAppItems: List<HomeAppItem> = emptyList(),
-    installedAppsLoading: Boolean = false,
-
-    // Search
-    showSearchButton: Boolean = false,
-
-    // Other apps button
-    onOtherAppsClick: () -> Unit,
-    showOtherAppsButton: Boolean = true,
-
-    // Bottom action bar
-    onBundlesClick: () -> Unit,
-    onSettingsClick: () -> Unit,
-
-    // Expert mode
-    isExpertModeEnabled: Boolean = false,
-
-    // Onboarding
-    onboardingState: OnboardingState? = null,
-
-    // Reorder
-    onSaveOrder: (List<String>) -> Unit = {},
-    onResetOrder: () -> Unit = {},
-
-    // Accessibility
-    onRefreshGreeting: (() -> Unit)? = null
+    onboardingState: OnboardingState? = null
 ) {
     val windowSize = rememberWindowSize()
 
@@ -145,10 +166,20 @@ fun SectionsLayout(
     val searchQuery = remember { mutableStateOf("") }
     LaunchedEffect(searchVisible.value) { if (!searchVisible.value) searchQuery.value = "" }
     // Auto-close search if the button disappears
-    LaunchedEffect(showSearchButton) { if (!showSearchButton) searchVisible.value = false }
+    LaunchedEffect(chromeFlags.showSearchButton) {
+        if (!chromeFlags.showSearchButton) searchVisible.value = false
+    }
 
     // Back gesture closes search (registered before multiselect BackHandler so multiselect takes priority)
     BackHandler(enabled = searchVisible.value) { searchVisible.value = false }
+
+    val searchState = HomeSearchState(
+        visible = searchVisible.value,
+        query = searchQuery.value,
+        onQueryChange = { searchQuery.value = it },
+        onToggle = { searchVisible.value = !searchVisible.value },
+        onClose = { searchVisible.value = false }
+    )
 
     Box(modifier = Modifier.fillMaxSize()) {
         // Main layout structure
@@ -166,43 +197,24 @@ fun SectionsLayout(
                 AdaptiveContent(
                     windowSize = windowSize,
                     greetingMessage = greetingMessage,
-                    homeAppItems = homeAppItems,
-                    onAppClick = onAppClick,
-                    onHideApp = onHideApp,
-                    onHideMultiple = onHideMultiple,
-                    onUnhideApp = onUnhideApp,
-                    onShowPatches = onShowPatches,
-                    showGestureHint = showGestureHint,
-                    onGestureHintShown = onGestureHintShown,
-                    hiddenAppItems = hiddenAppItems,
-                    installedAppsLoading = installedAppsLoading,
-                    showSearchButton = showSearchButton,
-                    searchVisible = searchVisible.value,
-                    searchQuery = searchQuery.value,
-                    onSearchQueryChange = { searchQuery.value = it },
-                    onSearchToggle = { searchVisible.value = !searchVisible.value },
-                    onCloseSearch = { searchVisible.value = false },
-                    onOtherAppsClick = onOtherAppsClick,
-                    showOtherAppsButton = showOtherAppsButton,
-                    onBundlesClick = onBundlesClick,
-                    onSettingsClick = onSettingsClick,
-                    isExpertModeEnabled = isExpertModeEnabled,
-                    onboardingState = onboardingState,
-                    onSaveOrder = onSaveOrder,
-                    onResetOrder = onResetOrder,
-                    onRefreshGreeting = onRefreshGreeting
+                    apps = apps,
+                    appActions = appActions,
+                    searchState = searchState,
+                    chromeActions = chromeActions,
+                    chromeFlags = chromeFlags,
+                    onboardingState = onboardingState
                 )
             }
 
             // Section 5: Bottom action bar - тільки для одноколонкового (portrait) режиму
             if (!isLandscape()) {
                 HomeBottomActionBar(
-                    onBundlesClick = onBundlesClick,
-                    onSettingsClick = onSettingsClick,
-                    isExpertModeEnabled = isExpertModeEnabled,
-                    showSearchButton = showSearchButton,
-                    searchActive = searchVisible.value,
-                    onSearchClick = { searchVisible.value = !searchVisible.value },
+                    onBundlesClick = chromeActions.onBundlesClick,
+                    onSettingsClick = chromeActions.onSettingsClick,
+                    isExpertModeEnabled = chromeFlags.isExpertModeEnabled,
+                    showSearchButton = chromeFlags.showSearchButton,
+                    searchActive = searchState.visible,
+                    onSearchClick = searchState.onToggle,
                     onSourcesPositioned = onboardingState?.let { s -> { b -> s.sourcesButtonBounds = b } },
                     onSettingsPositioned = onboardingState?.let { s -> { b -> s.settingsButtonBounds = b } }
                 )
@@ -212,11 +224,11 @@ fun SectionsLayout(
         // Section 1: Notifications overlay - matches maxCardWidth in AdaptiveContent
         val maxCardWidth = if (isLandscape()) 700.dp else 560.dp
         NotificationsOverlay(
-            hasManagerUpdate = hasManagerUpdate,
-            onShowUpdateDetails = onShowUpdateDetails,
-            showBundleUpdateSnackbar = showBundleUpdateSnackbar,
-            snackbarStatus = snackbarStatus,
-            bundleUpdateProgress = bundleUpdateProgress,
+            hasManagerUpdate = notifications.hasManagerUpdate,
+            onShowUpdateDetails = notifications.onShowUpdateDetails,
+            showBundleUpdateSnackbar = notifications.showBundleUpdateSnackbar,
+            snackbarStatus = notifications.snackbarStatus,
+            bundleUpdateProgress = notifications.bundleUpdateProgress,
             modifier = Modifier
                 .widthIn(max = maxCardWidth)
                 .align(Alignment.TopCenter)
@@ -232,31 +244,12 @@ fun SectionsLayout(
 private fun AdaptiveContent(
     windowSize: WindowSize,
     greetingMessage: String?,
-    homeAppItems: List<HomeAppItem>,
-    onAppClick: (HomeAppItem) -> Unit,
-    onHideApp: (String) -> Unit,
-    onHideMultiple: (Set<String>) -> Unit = {},
-    onUnhideApp: (String) -> Unit,
-    onShowPatches: (HomeAppItem) -> Unit,
-    showGestureHint: Boolean,
-    onGestureHintShown: () -> Unit,
-    hiddenAppItems: List<HomeAppItem> = emptyList(),
-    installedAppsLoading: Boolean,
-    showSearchButton: Boolean = false,
-    searchVisible: Boolean = false,
-    searchQuery: String = "",
-    onSearchQueryChange: (String) -> Unit = {},
-    onSearchToggle: () -> Unit = {},
-    onCloseSearch: () -> Unit = {},
-    onOtherAppsClick: () -> Unit,
-    showOtherAppsButton: Boolean = true,
-    onBundlesClick: () -> Unit = {},
-    onSettingsClick: () -> Unit = {},
-    isExpertModeEnabled: Boolean = false,
-    onboardingState: OnboardingState? = null,
-    onSaveOrder: (List<String>) -> Unit = {},
-    onResetOrder: () -> Unit = {},
-    onRefreshGreeting: (() -> Unit)? = null
+    apps: HomeAppListUi,
+    appActions: HomeAppActions,
+    searchState: HomeSearchState,
+    chromeActions: HomeChromeActions,
+    chromeFlags: HomeChromeFlags,
+    onboardingState: OnboardingState? = null
 ) {
     val contentPadding = windowSize.contentPadding
     val itemSpacing = windowSize.itemSpacing
@@ -264,8 +257,8 @@ private fun AdaptiveContent(
     val maxCardWidth = if (useTwoColumns) 700.dp else 560.dp
 
     // True empty state: loaded and no items from any bundle: all disabled or no sources
-    val isAppsEmpty by remember(homeAppItems, installedAppsLoading) {
-        derivedStateOf { !installedAppsLoading && homeAppItems.isEmpty() }
+    val isAppsEmpty by remember(apps.visible, apps.installedAppsLoading) {
+        derivedStateOf { !apps.installedAppsLoading && apps.visible.isEmpty() }
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -279,12 +272,12 @@ private fun AdaptiveContent(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 HomeSidebarPanel(
-                    showSearchButton = showSearchButton && !isAppsEmpty,
-                    searchActive = searchVisible,
-                    isExpertModeEnabled = isExpertModeEnabled,
-                    onSearchClick = onSearchToggle,
-                    onBundlesClick = onBundlesClick,
-                    onSettingsClick = onSettingsClick,
+                    showSearchButton = chromeFlags.showSearchButton && !isAppsEmpty,
+                    searchActive = searchState.visible,
+                    isExpertModeEnabled = chromeFlags.isExpertModeEnabled,
+                    onSearchClick = searchState.onToggle,
+                    onBundlesClick = chromeActions.onBundlesClick,
+                    onSettingsClick = chromeActions.onSettingsClick,
                     onSourcesPositioned = onboardingState?.let { s -> { b -> s.sourcesButtonBounds = b } },
                     onSettingsPositioned = onboardingState?.let { s -> { b -> s.settingsButtonBounds = b } }
                 )
@@ -301,45 +294,32 @@ private fun AdaptiveContent(
                         GreetingSection(
                             message = greetingMessage,
                             modifier = Modifier.widthIn(max = maxCardWidth).fillMaxWidth(),
-                            onRefresh = onRefreshGreeting
+                            onRefresh = chromeActions.onRefreshGreeting
                         )
                         Spacer(modifier = Modifier.height(itemSpacing))
                     }
                     Box(modifier = Modifier.weight(1f, fill = false)) {
                         MainAppsSection(
-                            homeAppItems = homeAppItems,
+                            apps = apps,
+                            appActions = appActions,
+                            searchState = searchState,
+                            onBundlesClick = chromeActions.onBundlesClick,
                             itemSpacing = itemSpacing,
                             maxCardWidth = maxCardWidth,
-                            onAppClick = onAppClick,
-                            onHideApp = onHideApp,
-                            onHideMultiple = onHideMultiple,
-                            onUnhideApp = onUnhideApp,
-                            onShowPatches = onShowPatches,
-                            showGestureHint = showGestureHint,
-                            onGestureHintShown = onGestureHintShown,
-                            hiddenAppItems = hiddenAppItems,
-                            installedAppsLoading = installedAppsLoading,
-                            searchVisible = searchVisible,
-                            searchQuery = searchQuery,
-                            onSearchQueryChange = onSearchQueryChange,
-                            onCloseSearch = onCloseSearch,
-                            onBundlesClick = onBundlesClick,
                             onboardingState = onboardingState,
                             showFadeOverlay = false,
-                            onSaveOrder = onSaveOrder,
-                            onResetOrder = onResetOrder,
                             modifier = Modifier.fillMaxWidth()
                         )
                     }
                     AnimatedVisibility(
-                        visible = !isAppsEmpty && showOtherAppsButton,
+                        visible = !isAppsEmpty && chromeFlags.showOtherAppsButton,
                         enter = MorpheAnimations.expandFadeEnter,
                         exit = MorpheAnimations.shrinkFadeExit
                     ) {
                         Column {
                             Spacer(modifier = Modifier.height(itemSpacing))
                             OtherAppsSection(
-                                onClick = onOtherAppsClick,
+                                onClick = chromeActions.onOtherAppsClick,
                                 modifier = Modifier.widthIn(max = maxCardWidth).fillMaxWidth()
                             )
                         }
@@ -358,7 +338,7 @@ private fun AdaptiveContent(
                     GreetingSection(
                         message = greetingMessage,
                         modifier = Modifier.padding(horizontal = contentPadding),
-                        onRefresh = onRefreshGreeting
+                        onRefresh = chromeActions.onRefreshGreeting
                     )
                     Spacer(modifier = Modifier.height(itemSpacing))
                 } else {
@@ -368,34 +348,21 @@ private fun AdaptiveContent(
                 // Section 3: Scrollable app buttons
                 Box(modifier = Modifier.weight(1f, fill = false)) {
                     MainAppsSection(
-                        homeAppItems = homeAppItems,
+                        apps = apps,
+                        appActions = appActions,
+                        searchState = searchState,
+                        onBundlesClick = chromeActions.onBundlesClick,
                         itemSpacing = itemSpacing,
                         horizontalPadding = contentPadding,
                         maxCardWidth = maxCardWidth,
-                        onAppClick = onAppClick,
-                        onHideApp = onHideApp,
-                        onHideMultiple = onHideMultiple,
-                        onUnhideApp = onUnhideApp,
-                        onShowPatches = onShowPatches,
-                        showGestureHint = showGestureHint,
-                        onGestureHintShown = onGestureHintShown,
-                        hiddenAppItems = hiddenAppItems,
-                        installedAppsLoading = installedAppsLoading,
-                        searchVisible = searchVisible,
-                        searchQuery = searchQuery,
-                        onSearchQueryChange = onSearchQueryChange,
-                        onCloseSearch = onCloseSearch,
-                        onBundlesClick = onBundlesClick,
                         onboardingState = onboardingState,
-                        onSaveOrder = onSaveOrder,
-                        onResetOrder = onResetOrder,
                         modifier = Modifier.fillMaxWidth()
                     )
                 }
 
                 // Section 4: Other apps - hidden when no apps available or bundles loading
                 AnimatedVisibility(
-                    visible = !isAppsEmpty && showOtherAppsButton,
+                    visible = !isAppsEmpty && chromeFlags.showOtherAppsButton,
                     enter = MorpheAnimations.expandFadeEnter,
                     exit = MorpheAnimations.shrinkFadeExit
                 ) {
@@ -408,7 +375,7 @@ private fun AdaptiveContent(
                             contentAlignment = Alignment.Center
                         ) {
                             OtherAppsSection(
-                                onClick = onOtherAppsClick,
+                                onClick = chromeActions.onOtherAppsClick,
                                 modifier = Modifier
                                     .widthIn(max = maxCardWidth - contentPadding * 2)
                                     .fillMaxWidth()
@@ -813,30 +780,22 @@ fun GreetingSection(
 @SuppressLint("FrequentlyChangingValue")
 @Composable
 fun MainAppsSection(
+    apps: HomeAppListUi,
+    appActions: HomeAppActions,
+    searchState: HomeSearchState,
+    onBundlesClick: () -> Unit,
     modifier: Modifier = Modifier,
-    homeAppItems: List<HomeAppItem>,
     itemSpacing: Dp = 16.dp,
     horizontalPadding: Dp = 0.dp,
     maxCardWidth: Dp = 500.dp,
-    onAppClick: (HomeAppItem) -> Unit,
-    onHideApp: (String) -> Unit,
-    onHideMultiple: (Set<String>) -> Unit = {},
-    onUnhideApp: (String) -> Unit,
-    onShowPatches: (HomeAppItem) -> Unit,
-    showGestureHint: Boolean,
-    onGestureHintShown: () -> Unit,
-    hiddenAppItems: List<HomeAppItem> = emptyList(),
-    installedAppsLoading: Boolean = false,
-    searchVisible: Boolean = false,
-    searchQuery: String = "",
-    onSearchQueryChange: (String) -> Unit = {},
-    onCloseSearch: () -> Unit = {},
-    onBundlesClick: () -> Unit = {},
     onboardingState: OnboardingState? = null,
-    showFadeOverlay: Boolean = true,
-    onSaveOrder: (List<String>) -> Unit = {},
-    onResetOrder: () -> Unit = {}
+    showFadeOverlay: Boolean = true
 ) {
+    // Aliases for values used many times in the body
+    val homeAppItems = apps.visible
+    val hiddenAppItems = apps.hidden
+    val searchQuery = searchState.query
+
     // Multi-select state - set of packageNames chosen for bulk hide
     val isMultiSelectMode = remember { mutableStateOf(false) }
     val selectedPackages = rememberSelectionState<String>()
@@ -891,11 +850,11 @@ fun MainAppsSection(
     // and never goes back to true (we don't want shimmer on every recomposition).
     val stableLoadingState = remember { mutableStateOf(!hasEverLoaded.value) }
 
-    LaunchedEffect(installedAppsLoading, homeAppItems.size, hiddenAppItems.size) {
+    LaunchedEffect(apps.installedAppsLoading, homeAppItems.size, hiddenAppItems.size) {
         val hasItems = homeAppItems.isNotEmpty() || hiddenAppItems.isNotEmpty()
         if (hasItems) hasEverLoaded.value = true
 
-        val shouldShowShimmer = !hasEverLoaded.value && installedAppsLoading
+        val shouldShowShimmer = !hasEverLoaded.value && apps.installedAppsLoading
         if (shouldShowShimmer) {
             stableLoadingState.value = true
         } else {
@@ -915,11 +874,11 @@ fun MainAppsSection(
     if (showHiddenAppsDialog.value) {
         HiddenAppsDialog(
             hiddenAppItems = hiddenAppItems,
-            onUnhide = onUnhideApp,
+            onUnhide = appActions.onUnhideApp,
             onUnhideMultiple = { packages ->
-                packages.forEach { onUnhideApp(it) }
+                packages.forEach { appActions.onUnhideApp(it) }
             },
-            onShowPatches = onShowPatches,
+            onShowPatches = appActions.onShowPatches,
             onDismiss = { showHiddenAppsDialog.value = false }
         )
     }
@@ -1026,14 +985,14 @@ fun MainAppsSection(
                     Column(modifier = Modifier.fillMaxWidth()) {
                         // Search bar
                         AnimatedVisibility(
-                            visible = searchVisible,
+                            visible = searchState.visible,
                             enter = MorpheAnimations.expandFadeEnter,
                             exit = MorpheAnimations.shrinkFadeExit
                         ) {
                             HomeSearchTextField(
                                 value = searchQuery,
-                                onValueChange = onSearchQueryChange,
-                                requestFocus = searchVisible,
+                                onValueChange = searchState.onQueryChange,
+                                requestFocus = searchState.visible,
                                 modifier = Modifier
                                     .padding(horizontal = horizontalPadding)
                                     .padding(bottom = 8.dp)
@@ -1110,14 +1069,14 @@ fun MainAppsSection(
                                                     // In multi-select mode taps toggle selection
                                                     selectedPackages.toggle(item.packageName)
                                                 } else {
-                                                    onAppClick(item)
+                                                    appActions.onAppClick(item)
                                                 }
                                             },
-                                            onHide = { onHideApp(item.packageName) },
-                                            onShowPatches = { onShowPatches(item) },
+                                            onHide = { appActions.onHideApp(item.packageName) },
+                                            onShowPatches = { appActions.onShowPatches(item) },
                                             // Hint plays only on the first card
-                                            showGestureHint = index == 0 && showGestureHint,
-                                            onGestureHintShown = onGestureHintShown,
+                                            showGestureHint = index == 0 && apps.showGestureHint,
+                                            onGestureHintShown = appActions.onGestureHintShown,
                                             isSelected = isSelected,
                                             isMultiSelectMode = isMultiSelectMode.value,
                                             onLongPress = {
@@ -1133,7 +1092,7 @@ fun MainAppsSection(
                                                         val moved = current.removeAt(from)
                                                         current.add(from - 1, moved)
                                                         localOrder = current
-                                                        onSaveOrder(current)
+                                                        appActions.onSaveOrder(current)
                                                         haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                                         moveAnnouncement = moveAnnouncementFormat
                                                             .format(item.displayName, from, current.size)
@@ -1148,7 +1107,7 @@ fun MainAppsSection(
                                                         val moved = current.removeAt(from)
                                                         current.add(from + 1, moved)
                                                         localOrder = current
-                                                        onSaveOrder(current)
+                                                        appActions.onSaveOrder(current)
                                                         haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                                         moveAnnouncement = moveAnnouncementFormat
                                                             .format(item.displayName, from + 2, current.size)
@@ -1186,9 +1145,9 @@ fun MainAppsSection(
                                         ) { _, item ->
                                             HiddenSearchAppCard(
                                                 item = item,
-                                                onUnhide = { onUnhideApp(item.packageName) },
-                                                onAppClick = { onAppClick(item) },
-                                                onShowPatches = { onShowPatches(item) },
+                                                onUnhide = { appActions.onUnhideApp(item.packageName) },
+                                                onAppClick = { appActions.onAppClick(item) },
+                                                onShowPatches = { appActions.onShowPatches(item) },
                                                 modifier = Modifier.animateItem()
                                             )
                                         }
@@ -1310,7 +1269,7 @@ fun MainAppsSection(
                         },
                         onDeselectAll = { selectedPackages.clear() },
                         onAction = {
-                            onHideMultiple(selectedPackages.keys.toSet())
+                            appActions.onHideMultiple(selectedPackages.keys.toSet())
                             isMultiSelectMode.value = false
                             selectedPackages.clear()
                         },
@@ -1325,15 +1284,15 @@ fun MainAppsSection(
                             reorderFocusPackages.value = selectedPackages.keys.toSet()
                             isMultiSelectMode.value = false
                             selectedPackages.clear()
-                            onCloseSearch()
+                            searchState.onClose()
                             isReorderMode.value = true
                         },
                         onSaveOrder = {
-                            onSaveOrder(localOrder)
+                            appActions.onSaveOrder(localOrder)
                             isReorderMode.value = false
                         },
                         onResetOrder = {
-                            onResetOrder()
+                            appActions.onResetOrder()
                             localOrder = homeAppItems.map { it.packageName }
                             isReorderMode.value = false
                         },

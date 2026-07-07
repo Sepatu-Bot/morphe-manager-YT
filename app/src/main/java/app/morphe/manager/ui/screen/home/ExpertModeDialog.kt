@@ -53,6 +53,18 @@ import app.morphe.manager.ui.screen.shared.*
 import app.morphe.manager.util.*
 import kotlinx.coroutines.launch
 
+/** Callbacks the expert-mode dialog invokes on the underlying patch selection. */
+@Stable
+class ExpertPatchActions(
+    val onPatchToggle: (bundleUid: Int, patchName: String) -> Unit,
+    val onSelectAll: (bundleUid: Int, patches: List<Pair<PatchInfo, Boolean>>) -> Unit,
+    val onDeselectAll: (bundleUid: Int, patches: List<Pair<PatchInfo, Boolean>>) -> Unit,
+    val onResetToDefault: (bundleUid: Int, allPatches: List<Pair<PatchInfo, Boolean>>) -> Unit,
+    val onRestoreSaved: (bundleUid: Int) -> Unit,
+    val onOptionChange: (bundleUid: Int, patchName: String, optionKey: String, value: Any?) -> Unit,
+    val onResetOptions: (bundleUid: Int, patchName: String) -> Unit
+)
+
 /**
  * Advanced patch selection and configuration dialog.
  * Shown before patching when expert mode is enabled.
@@ -65,14 +77,8 @@ fun ExpertModeDialog(
     totalSelectedCount: Int,
     totalPatchesCount: Int,
     hasMultipleBundles: Boolean,
-    onPatchToggle: (bundleUid: Int, patchName: String) -> Unit,
-    onSelectAll: (bundleUid: Int, patches: List<Pair<PatchInfo, Boolean>>) -> Unit,
-    onDeselectAll: (bundleUid: Int, patches: List<Pair<PatchInfo, Boolean>>) -> Unit,
-    onResetToDefault: (bundleUid: Int, allPatches: List<Pair<PatchInfo, Boolean>>) -> Unit,
-    onRestoreSaved: (bundleUid: Int) -> Unit = {},
+    patchActions: ExpertPatchActions,
     savedPatches: PatchSelection = emptyMap(),
-    onOptionChange: (bundleUid: Int, patchName: String, optionKey: String, value: Any?) -> Unit,
-    onResetOptions: (bundleUid: Int, patchName: String) -> Unit,
     onDismiss: () -> Unit,
     onProceed: () -> Unit
 ) {
@@ -248,10 +254,10 @@ fun ExpertModeDialog(
                 BundlePatchControls(
                     enabledCount = enabledCount,
                     totalCount = totalCount,
-                    onSelectAll = { onSelectAll(bundle.uid, displayPatches) },
-                    onDeselectAll = { onDeselectAll(bundle.uid, displayPatches) },
-                    onResetToDefault = { onResetToDefault(bundle.uid, allPatches) },
-                    onRestoreSaved = { onRestoreSaved(bundle.uid) },
+                    onSelectAll = { patchActions.onSelectAll(bundle.uid, displayPatches) },
+                    onDeselectAll = { patchActions.onDeselectAll(bundle.uid, displayPatches) },
+                    onResetToDefault = { patchActions.onResetToDefault(bundle.uid, allPatches) },
+                    onRestoreSaved = { patchActions.onRestoreSaved(bundle.uid) },
                     hasSavedSelection = savedPatches[bundle.uid]?.isNotEmpty() == true
                 )
 
@@ -279,7 +285,7 @@ fun ExpertModeDialog(
                                 patches = filteredPatches,
                                 newPatchNames = newPatches[bundle.uid] ?: emptySet(),
                                 missingRequiredOptions = patchesWithMissingRequired,
-                                onToggle = { onPatchToggle(bundle.uid, it) },
+                                onToggle = { patchActions.onPatchToggle(bundle.uid, it) },
                                 onConfigureOptions = {
                                     if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
                                 }
@@ -362,10 +368,10 @@ fun ExpertModeDialog(
                         BundlePatchControls(
                             enabledCount = currentFiltered.count { it.second },
                             totalCount = currentFiltered.size,
-                            onSelectAll = { onSelectAll(currentBundle.uid, currentFiltered) },
-                            onDeselectAll = { onDeselectAll(currentBundle.uid, currentFiltered) },
-                            onResetToDefault = { onResetToDefault(currentBundle.uid, currentAllPatches) },
-                            onRestoreSaved = { onRestoreSaved(currentBundle.uid) },
+                            onSelectAll = { patchActions.onSelectAll(currentBundle.uid, currentFiltered) },
+                            onDeselectAll = { patchActions.onDeselectAll(currentBundle.uid, currentFiltered) },
+                            onResetToDefault = { patchActions.onResetToDefault(currentBundle.uid, currentAllPatches) },
+                            onRestoreSaved = { patchActions.onRestoreSaved(currentBundle.uid) },
                             hasSavedSelection = savedPatches[currentBundle.uid]?.isNotEmpty() == true,
                             modifier = Modifier.padding(vertical = 8.dp)
                         )
@@ -404,7 +410,7 @@ fun ExpertModeDialog(
                                         patches = patches,
                                         newPatchNames = newPatches[bundle.uid] ?: emptySet(),
                                         missingRequiredOptions = patchesWithMissingRequired,
-                                        onToggle = { onPatchToggle(bundle.uid, it) },
+                                        onToggle = { patchActions.onPatchToggle(bundle.uid, it) },
                                         onConfigureOptions = {
                                             if (!it.options.isNullOrEmpty()) selectedPatchForOptions.value = bundle.uid to it
                                         }
@@ -456,10 +462,10 @@ fun ExpertModeDialog(
             isDefaultBundle = bundleUid == 0,
             values = options[bundleUid]?.get(patch.name),
             onValueChange = { key, value ->
-                onOptionChange(bundleUid, patch.name, key, value)
+                patchActions.onOptionChange(bundleUid, patch.name, key, value)
             },
             onReset = {
-                onResetOptions(bundleUid, patch.name)
+                patchActions.onResetOptions(bundleUid, patch.name)
             },
             onDismiss = {
                 // Show a toast if the patch still has unfilled required options

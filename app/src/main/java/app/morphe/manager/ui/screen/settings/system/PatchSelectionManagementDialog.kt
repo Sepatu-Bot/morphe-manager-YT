@@ -44,6 +44,23 @@ import app.morphe.manager.util.TEXT_MIMETYPE
 import app.morphe.manager.util.rememberAdaptiveFilePicker
 import kotlinx.coroutines.launch
 
+/** Snapshot of package/bundle selection counts. */
+@Immutable
+data class PatchSelectionData(
+    val selections: Map<String, Map<Int, Int>>,
+    val totalSelections: Int,
+    val bundleNames: Map<Int, String>
+)
+
+/** Multi-select state and its mutation callbacks. */
+@Stable
+class PatchSelectionMultiSelect(
+    val selectedPackages: SelectionState<String>,
+    val isSelectionMode: Boolean,
+    val onEnterSelection: (String) -> Unit,
+    val onToggleSelection: (String) -> Unit
+)
+
 /**
  * Dialog for managing patch selections.
  */
@@ -82,9 +99,20 @@ fun PatchSelectionManagementDialog(
     }
 
     PatchSelectionManagementDialogContent(
-        selections = selections,
-        totalSelections = totalSelections,
-        bundleNames = bundleNames,
+        data = PatchSelectionData(
+            selections = selections,
+            totalSelections = totalSelections,
+            bundleNames = bundleNames
+        ),
+        multiSelect = PatchSelectionMultiSelect(
+            selectedPackages = selectedPackages,
+            isSelectionMode = isSelectionMode.value,
+            onEnterSelection = { pkg ->
+                isSelectionMode.value = true
+                selectedPackages.toggle(pkg)
+            },
+            onToggleSelection = { pkg -> selectedPackages.toggle(pkg) }
+        ),
         settingsViewModel = settingsViewModel,
         importExportViewModel = importExportViewModel,
         onDismiss = onDismiss,
@@ -92,13 +120,6 @@ fun PatchSelectionManagementDialog(
         onSetResetTarget = { resetTarget.value = it },
         onShowPatchDetails = { showPatchDetailsTarget.value = it },
         onImportUriPicked = { pendingImportUri = it },
-        selectedPackages = selectedPackages,
-        isSelectionMode = isSelectionMode.value,
-        onEnterSelection = { pkg ->
-            isSelectionMode.value = true
-            selectedPackages.toggle(pkg)
-        },
-        onToggleSelection = { pkg -> selectedPackages.toggle(pkg) },
         onExitSelection = exitSelection,
         onSelectAll = { selectedPackages.setAll(selections.keys) },
         onShowResetSelectedConfirmation = { showResetSelectedConfirmation.value = true }
@@ -216,9 +237,8 @@ fun PatchSelectionManagementDialog(
  */
 @Composable
 private fun PatchSelectionManagementDialogContent(
-    selections: Map<String, Map<Int, Int>>,
-    totalSelections: Int,
-    bundleNames: Map<Int, String>,
+    data: PatchSelectionData,
+    multiSelect: PatchSelectionMultiSelect,
     settingsViewModel: SettingsViewModel,
     importExportViewModel: ImportExportViewModel,
     onDismiss: () -> Unit,
@@ -226,14 +246,11 @@ private fun PatchSelectionManagementDialogContent(
     onSetResetTarget: (ResetTarget) -> Unit,
     onShowPatchDetails: (PatchDetailsTarget) -> Unit,
     onImportUriPicked: (Uri) -> Unit,
-    selectedPackages: SelectionState<String>,
-    isSelectionMode: Boolean,
-    onEnterSelection: (String) -> Unit,
-    onToggleSelection: (String) -> Unit,
     onExitSelection: () -> Unit,
     onSelectAll: () -> Unit,
     onShowResetSelectedConfirmation: () -> Unit
 ) {
+    val selections = data.selections
     val openImportAllSelectionsPicker = rememberAdaptiveFilePicker(
         mimeTypes = arrayOf(JSON_MIMETYPE, TEXT_MIMETYPE),
         customPickerMimeTypes = arrayOf(JSON_MIMETYPE),
@@ -248,10 +265,10 @@ private fun PatchSelectionManagementDialogContent(
 
     MorpheDialog(
         onDismissRequest = {
-            if (isSelectionMode) onExitSelection() else onDismiss()
+            if (multiSelect.isSelectionMode) onExitSelection() else onDismiss()
         },
         title = stringResource(R.string.settings_system_patch_selections_title),
-        titleTrailingContent = if (!isSelectionMode && selections.isNotEmpty()) {
+        titleTrailingContent = if (!multiSelect.isSelectionMode && selections.isNotEmpty()) {
             {
                 DialogTitleAction(
                     icon = Icons.Outlined.Restore,
@@ -264,11 +281,11 @@ private fun PatchSelectionManagementDialogContent(
             null
         },
         footer = {
-            if (isSelectionMode) {
+            if (multiSelect.isSelectionMode) {
                 MultiSelectShell(visible = true) {
                     SelectionActionBar(
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
-                        selectedCount = selectedPackages.size,
+                        selectedCount = multiSelect.selectedPackages.size,
                         totalCount = selections.size,
                         onSelectAll = onSelectAll,
                         onCancel = onExitSelection
@@ -279,7 +296,7 @@ private fun PatchSelectionManagementDialogContent(
                             icon = Icons.Outlined.Delete,
                             contentDescription = resetLabel,
                             tooltip = resetLabel,
-                            enabled = selectedPackages.isNotEmpty,
+                            enabled = multiSelect.selectedPackages.isNotEmpty,
                             colors = IconButtonDefaults.filledTonalIconButtonColors(
                                 containerColor = MaterialTheme.colorScheme.errorContainer,
                                 contentColor = MaterialTheme.colorScheme.onErrorContainer
@@ -327,17 +344,12 @@ private fun PatchSelectionManagementDialogContent(
             EmptyState(message = stringResource(R.string.settings_system_no_patches_or_options))
         } else {
             SelectionList(
-                selections = selections,
-                totalSelections = totalSelections,
-                bundleNames = bundleNames,
+                data = data,
+                multiSelect = multiSelect,
                 settingsViewModel = settingsViewModel,
                 importExportViewModel = importExportViewModel,
                 onSetResetTarget = onSetResetTarget,
-                onShowPatchDetails = onShowPatchDetails,
-                selectedPackages = selectedPackages,
-                isSelectionMode = isSelectionMode,
-                onEnterSelection = onEnterSelection,
-                onToggleSelection = onToggleSelection
+                onShowPatchDetails = onShowPatchDetails
             )
         }
     }
@@ -348,18 +360,14 @@ private fun PatchSelectionManagementDialogContent(
  */
 @Composable
 private fun SelectionList(
-    selections: Map<String, Map<Int, Int>>,
-    totalSelections: Int,
-    bundleNames: Map<Int, String>,
+    data: PatchSelectionData,
+    multiSelect: PatchSelectionMultiSelect,
     settingsViewModel: SettingsViewModel,
     importExportViewModel: ImportExportViewModel,
     onSetResetTarget: (ResetTarget) -> Unit,
-    onShowPatchDetails: (PatchDetailsTarget) -> Unit,
-    selectedPackages: SelectionState<String>,
-    isSelectionMode: Boolean,
-    onEnterSelection: (String) -> Unit,
-    onToggleSelection: (String) -> Unit
+    onShowPatchDetails: (PatchDetailsTarget) -> Unit
 ) {
+    val selections = data.selections
     val listState = rememberLazyListState()
     val expandedPackages = remember { mutableStateOf<Set<String>>(emptySet()) }
     Box(modifier = Modifier.fillMaxWidth()) {
@@ -383,8 +391,8 @@ private fun SelectionList(
                     Text(
                         text = pluralStringResource(
                             R.plurals.patch_selection_total_patches,
-                            totalSelections,
-                            totalSelections
+                            data.totalSelections,
+                            data.totalSelections
                         ),
                         style = MaterialTheme.typography.bodyMedium,
                         color = LocalDialogSecondaryTextColor.current
@@ -400,7 +408,7 @@ private fun SelectionList(
                 PackageSelectionItem(
                     packageName = packageName,
                     bundleMap = bundleMap,
-                    bundleNames = bundleNames,
+                    bundleNames = data.bundleNames,
                     settingsViewModel = settingsViewModel,
                     importExportViewModel = importExportViewModel,
                     onResetPackage = {
@@ -410,10 +418,10 @@ private fun SelectionList(
                         onSetResetTarget(ResetTarget.PackageBundle(packageName, bundleUid))
                     },
                     onShowPatchDetails = onShowPatchDetails,
-                    isSelected = selectedPackages.contains(packageName),
-                    isSelectionMode = isSelectionMode,
-                    onEnterSelection = { onEnterSelection(packageName) },
-                    onToggleSelection = { onToggleSelection(packageName) },
+                    isSelected = multiSelect.selectedPackages.contains(packageName),
+                    isSelectionMode = multiSelect.isSelectionMode,
+                    onEnterSelection = { multiSelect.onEnterSelection(packageName) },
+                    onToggleSelection = { multiSelect.onToggleSelection(packageName) },
                     expanded = packageName in expandedPackages.value,
                     onToggleExpanded = {
                         expandedPackages.value = if (packageName in expandedPackages.value) {
