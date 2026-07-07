@@ -278,7 +278,7 @@
     <string name="home_app_info_delete_item_database">Запис бази даних</string>
     <string name="home_app_info_delete_item_patched_apk">Патчені APK файли</string>
     <string name="home_app_info_delete_item_original_apk">Оригінальні APK файли</string>
-    <string name="home_app_info_delete_preservation_note">Вибрані вами патчі та параметри будуть збережені для майбутнього патчінгу</string>
+    <string name="home_app_info_delete_preservation_note">Ваш вибір патчів та параметри будуть збережені для майбутнього патчінгу</string>
     <string name="home_app_info_patches_name_default">Патчі</string>
     <string name="home_app_info_patches_name_fallback">Без назви</string>
     <string name="home_app_info_patches_replace_fail">Не вдалося імпортувати патчі: %s</string>
@@ -688,7 +688,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_import_manager_settings_mode_title">Імпорт налаштувань Morphe</string>
     <string name="settings_system_import_manager_settings_mode_description">Оберіть, як імпортовані налаштування та джерела мають бути застосовані</string>
     <string name="settings_system_import_selections_mode_title">Імпортувати вибір патчів</string>
-    <string name="settings_system_import_selections_mode_description">Оберіть, як імпортовані вибори та параметри патчів мають бути застосовані</string>
+    <string name="settings_system_import_selections_mode_description">Оберіть, як імпортований вибір та параметри патчів мають бути застосовані</string>
     <string name="import_mode_replace_title">Замінити наявні</string>
     <string name="import_mode_replace_description">Точно відповідати резервній копії. Елементи, відсутні в резервній копії, будуть видалені</string>
     <string name="import_mode_merge_title">Об\'єднати з наявними</string>
@@ -726,20 +726,20 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_delete_confirm">Видалити оригінальний APK файл для %s? Ви не зможете перепатчити застосунок без надання нового APK файлу</string>
     <string name="settings_system_original_apks_delete_all_title">Видалити всі оригінальні APK?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
-    <string name="settings_system_patch_selections_title">Вибрані патчі</string>
-    <string name="settings_system_patch_selections_description">Збережені вибори патчів, зберігаються після видалення застосунку</string>
-    <string name="settings_system_patch_selection_reset_all_confirm_title">Скинути всі вибрані патчі?</string>
-    <string name="settings_system_patch_selection_reset_package_confirm_title">Скинути вибрані пакети?</string>
+    <string name="settings_system_patch_selections_title">Вибір патчів</string>
+    <string name="settings_system_patch_selections_description">Збережений вибір патчів, що зберігається після видалення</string>
+    <string name="settings_system_patch_selection_reset_all_confirm_title">Скинути весь вибір?</string>
+    <string name="settings_system_patch_selection_reset_package_confirm_title">Скинути вибір пакетів?</string>
     <string name="settings_system_patch_selection_reset_selected_confirm_title">Скинути вибрані пакети?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Скинути вибір джерела?</string>
-    <string name="settings_system_patch_selection_no_saved">Немає збережених вибраних патчів</string>
+    <string name="settings_system_patch_selection_no_saved">Немає збереженого вибору патчів</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s поміж %2$s</string>
     <string name="settings_system_patch_selection_patches_in_sources_format">%1$s у %2$s</string>
     <string name="settings_system_patch_selection_source_format">Джерело #%s</string>
     <string name="settings_system_patch_selection_will_delete">Це видалить:</string>
-    <string name="settings_system_patch_selection_reset_all_warning">Це назавжди видалить усі збережені вибрані патчі для всіх пакетів та джерел</string>
-    <string name="settings_system_patch_selection_reset_package_warning">Це назавжди видалить усі збережені вибрані патчі для %s з усіх джерел</string>
-    <string name="settings_system_patch_selection_reset_source_warning">Це назавжди видалить збережені вибрані патчі для %1$s у джерелі #%2$s</string>
+    <string name="settings_system_patch_selection_reset_all_warning">Це назавжди видалить весь збережений вибір патчів для всіх пакетів та джерел</string>
+    <string name="settings_system_patch_selection_reset_package_warning">Це назавжди видалить весь збережений вибір патчів для %s у всіх джерелах</string>
+    <string name="settings_system_patch_selection_reset_source_warning">Це назавжди видалить збережений вибір патчів для %1$s у джерелі #%2$s</string>
     <string name="settings_system_export_source_data_fail">Не вдалося експортувати дані джерела</string>
     <string name="settings_system_export_source_data_success">Дані джерела експортовано успішно</string>
     <string name="settings_system_import_source_data_fail">Не вдалося імпортувати дані джерела</string>
@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">Перемістити вгору</string>
     <string name="accessibility_move_down">Перемістити вниз</string>
     <string name="accessibility_app_moved_announcement">%1$s переміщено на позицію %2$d з %3$d</string>
+    <string name="accessibility_scroll_to_top">Прокрутити до початку списку</string>
     <string name="rename">Перейменувати</string>
     <string name="import_">Імпорт</string>
     <string name="export">Експорт</string>

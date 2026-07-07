@@ -829,6 +829,7 @@ Le dimensioni delle immagini devono essere le seguenti:
     <string name="accessibility_move_up">Sposta in alto</string>
     <string name="accessibility_move_down">Sposta in basso</string>
     <string name="accessibility_app_moved_announcement">%1$s spostato nella posizione %2$d di %3$d</string>
+    <string name="accessibility_scroll_to_top">Vai in cima alla lista</string>
     <string name="rename">Rinomina</string>
     <string name="import_">Importa</string>
     <string name="export">Esporta</string>

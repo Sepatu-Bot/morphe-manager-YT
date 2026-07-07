@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">Преместване нагоре</string>
     <string name="accessibility_move_down">Преместване надолу</string>
     <string name="accessibility_app_moved_announcement">%1$s беше преместен на позиция %2$d от %3$d</string>
+    <string name="accessibility_scroll_to_top">Превъртете до началото на списъка</string>
     <string name="rename">Преименуване</string>
     <string name="import_">Импортиране</string>
     <string name="export">Изтриване на запазена копия</string>

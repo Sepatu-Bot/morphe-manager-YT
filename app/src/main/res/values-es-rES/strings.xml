@@ -706,8 +706,8 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="settings_system_apks_delete_all_confirm">Esto eliminará permanentemente los archivos APK guardados que se muestran aquí</string>
     <string name="settings_system_apks_delete_selected_title">¿Eliminar los APK seleccionados?</string>
     <string name="settings_system_apks_delete_selected_confirm">Esto eliminará permanentemente los archivos APK seleccionados</string>
-    <string name="settings_system_apks_deleted_all">APK eliminados correctamente</string>
-    <string name="settings_system_apks_export_zip_success">APKs seleccionadas exportadas</string>
+    <string name="settings_system_apks_deleted_all">APKs eliminados correctamente</string>
+    <string name="settings_system_apks_export_zip_success">APKs seleccionados exportados</string>
     <string name="settings_system_apks_export_zip_failed">Error al exportar los APKs seleccionados</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">APKs parcheados</string>
@@ -829,6 +829,7 @@ Las dimensiones de la imagen deben ser las siguientes:
     <string name="accessibility_move_up">Mover hacia arriba</string>
     <string name="accessibility_move_down">Mover hacia abajo</string>
     <string name="accessibility_app_moved_announcement">%1$s se ha movido a la posición %2$d de %3$d</string>
+    <string name="accessibility_scroll_to_top">Desplazarse a la parte superior de la lista</string>
     <string name="rename">Renombrar</string>
     <string name="import_">Importar</string>
     <string name="export">Exportar</string>

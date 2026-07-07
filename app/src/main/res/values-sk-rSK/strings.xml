@@ -829,6 +829,7 @@ Rozmery obrázka musia byť nasledovné:
     <string name="accessibility_move_up">Presunúť hore</string>
     <string name="accessibility_move_down">Presunúť dole</string>
     <string name="accessibility_app_moved_announcement">%1$s presunutý na pozíciu %2$d z %3$d</string>
+    <string name="accessibility_scroll_to_top">Prejdite na začiatok zoznamu</string>
     <string name="rename">Premenovať</string>
     <string name="import_">Importovať</string>
     <string name="export">Exportovať</string>

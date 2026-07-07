@@ -289,7 +289,7 @@
     <string name="home_app_info_install_type_custom_installer">カスタムインストーラー</string>
     <string name="home_app_info_install_type_system_installer">システムのインストーラー</string>
     <string name="home_app_info_install_type_play_store">Play ストアからインストール</string>
-    <string name="home_app_info_install_type_root_play_store">Root化されたPlay ストアからインストール</string>
+    <string name="home_app_info_install_type_root_play_store">Root 権限で Play ストアからインストール</string>
     <string name="home_app_info_install_type_shizuku_play_store">Shizuku を使用した Play ストアからインストール</string>
     <string name="home_app_info_patch_update_available">パッチの更新が利用可能です</string>
     <string name="home_app_info_patch_update_available_description">新しいバージョンのパッチが利用可能です。最新の変更を反映するには、アプリを再パッチしてください</string>
@@ -616,7 +616,7 @@ morphe_header_custom_dark.png
     <string name="installer_title">インストーラーを選択</string>
     <string name="installer_internal_description">Android パッケージインストーラーを使用します</string>
     <string name="installer_play_store_description">システムインストーラーを使用し、Google Play ストアをインストールソースに設定します</string>
-    <string name="installer_root_play_store_description">ルート権限でサイレントインストールを実行し、Google Playストアをインストール元に設定します</string>
+    <string name="installer_root_play_store_description">Root 権限でサイレントインストールを実行し、Google Play ストアをインストール元に設定します</string>
     <string name="installer_auto_saved_name">root 権限マウント式インストーラー</string>
     <string name="installer_auto_saved_description">パッチ適用済み APK をインストール済みアプリの上にマウントします</string>
     <string name="installer_shizuku_description">Shizuku または Sui を使用して自動インストールします</string>
@@ -642,8 +642,8 @@ morphe_header_custom_dark.png
     <string name="installer_unavailable_shizuku_hint">Shizuku が起動中であること、およびこのアプリに権限が付与されていることを確認してください</string>
     <string name="installer_use_standard">標準を使用</string>
     <string name="installer_play_store_warning_title">Playストアとしてインストールしますか？</string>
-    <string name="installer_play_store_warning_message">パッチを適用したアプリは、Google Playストアからインストールされたものとして記録されます。これにより、Android AutoなどのサービスがPlayストアアプリとして認識できるようになります</string>
-    <string name="installer_play_store_warning_risk">Playストアは、パッチを適用したアプリのアップデートを提供する場合があります。そのアップデートをインストールすると、パッチが適用されたAPKが元のバージョンで上書きされ、パッチが削除されます。アップデートを促された場合は、アプリのPlayストアページで3点メニューをタップし、「アップデートをオフにする」を選択してください</string>
+    <string name="installer_play_store_warning_message">パッチ適用済みアプリは、Google Play ストアからインストールされたものとして記録されます。これにより、Android Auto などのサービスが、パッチ適用済みアプリを Play ストアのアプリとして認識できるようになります</string>
+    <string name="installer_play_store_warning_risk">Play ストアでパッチ適用済みアプリのアップデートが提供される場合があります。アップデートをインストールすると、パッチ適用済みの APK が元のバージョンで上書きされ、パッチが削除されます。アップデートを促された場合は、アプリの Play ストアページで 3 点メニューをタップして、「自動更新の有効化」をオフにしてください</string>
     <string name="installer_play_store_warning_continue">了解しました。続行します</string>
     <string name="settings_prompt_installer_on_install">インストーラー選択ダイアログ</string>
     <string name="settings_prompt_installer_on_install_description">パッチ適用済みアプリをインストールする際に、毎回インストーラー選択ダイアログを表示します</string>
@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">上に移動</string>
     <string name="accessibility_move_down">下に移動</string>
     <string name="accessibility_app_moved_announcement">%1$s を %2$d 番目の位置 (%3$d 個中) に移動しました</string>
+    <string name="accessibility_scroll_to_top">リストの一番上にスクロール</string>
     <string name="rename">名前を変更する</string>
     <string name="import_">インポート</string>
     <string name="export">エクスポート</string>

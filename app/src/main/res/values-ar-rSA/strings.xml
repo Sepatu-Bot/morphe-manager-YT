@@ -705,7 +705,7 @@ morphe_adaptive_monochrome_custom.xml
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">الملفات &amp; مساحة التخزين</string>
     <string name="settings_system_apks_size">إجمالي الحجم: %s</string>
-    <string name="settings_system_apks_delete_all_confirm">سيؤدي هذا إلى حذف ملفات APK المحفوظة الموضحة هنا بشكل دائم</string>
+    <string name="settings_system_apks_delete_all_confirm">سيؤدي هذا إلى حذف ملفات APK المحفوظة الظاهرة هنا بشكل دائم</string>
     <string name="settings_system_apks_delete_selected_title">حذف ملفات APK المحددة؟</string>
     <string name="settings_system_apks_delete_selected_confirm">سيؤدي هذا إلى حذف ملفات APK المحددة بشكل دائم</string>
     <string name="settings_system_apks_deleted_all">تم حذف ملفات APK بنجاح</string>
@@ -831,6 +831,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="accessibility_move_up">حرّك لأعلى</string>
     <string name="accessibility_move_down">حرّك لأسفل</string>
     <string name="accessibility_app_moved_announcement">%1$s حُرِّك إلى الموضع %2$d من %3$d</string>
+    <string name="accessibility_scroll_to_top">التمرير إلى أعلى القائمة</string>
     <string name="rename">إعادة تسمية</string>
     <string name="import_">استيراد</string>
     <string name="export">تصدير</string>

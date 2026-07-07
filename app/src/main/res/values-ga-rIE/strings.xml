@@ -827,6 +827,7 @@ Ní mór toisí na híomhá a bheith mar seo a leanas:
     <string name="accessibility_move_up">Bog suas</string>
     <string name="accessibility_move_down">Bog síos</string>
     <string name="accessibility_app_moved_announcement">%1$s bogtha go suíomh %2$d de %3$d</string>
+    <string name="accessibility_scroll_to_top">Scroladh go dtí barr an liosta</string>
     <string name="rename">Athainmnigh</string>
     <string name="import_">Iompórtáil</string>
     <string name="export">Easpórtáil</string>

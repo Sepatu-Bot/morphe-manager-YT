@@ -828,6 +828,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">वर सरकवा</string>
     <string name="accessibility_move_down">खाली सरकवा</string>
     <string name="accessibility_app_moved_announcement">%1$s ला %3$d पैकी %2$d व्या स्थानावर हलवले</string>
+    <string name="accessibility_scroll_to_top">यादीच्या शीर्षस्थानी स्क्रोल करा</string>
     <string name="rename">पुनर्नामकरण करा</string>
     <string name="import_">आयात</string>
     <string name="export">एक्सपोर्ट करा</string>

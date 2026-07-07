@@ -703,10 +703,10 @@ Wymagane są następujące wymiary obrazów:
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Pliki i pamięć</string>
     <string name="settings_system_apks_size">Całkowity rozmiar: %s</string>
-    <string name="settings_system_apks_delete_all_confirm">Spowoduje to trwałe usunięcie zapisanych plików APK.</string>
+    <string name="settings_system_apks_delete_all_confirm">Spowoduje to trwałe usunięcie zapisanych plików APK</string>
     <string name="settings_system_apks_delete_selected_title">Usunąć wybrane pliki APK?</string>
-    <string name="settings_system_apks_delete_selected_confirm">Spowoduje to trwałe usunięcie wybranych plików APK.</string>
-    <string name="settings_system_apks_deleted_all">Pliki APK zostały pomyślnie usunięte.</string>
+    <string name="settings_system_apks_delete_selected_confirm">Spowoduje to trwałe usunięcie wybranych plików APK</string>
+    <string name="settings_system_apks_deleted_all">Usunięto pliki APK</string>
     <string name="settings_system_apks_export_zip_success">Wyeksportowano wybrane pliki APK</string>
     <string name="settings_system_apks_export_zip_failed">Nie udało się wyeksportować wybranych plików APK</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
@@ -803,7 +803,7 @@ Wymagane są następujące wymiary obrazów:
     <string name="disable">Wyłącz</string>
     <string name="enable">Włącz</string>
     <string name="loading">Wczytywanie…</string>
-    <string name="loading_older_releases">Ładowanie starszych wersji…</string>
+    <string name="loading_older_releases">Wczytywanie starszych wersji…</string>
     <string name="creating">Tworzenie…</string>
     <string name="processing_apk">Przetwarzanie pliku APK…</string>
     <string name="exporting_apks">Eksportowanie plików APK…</string>
@@ -829,6 +829,7 @@ Wymagane są następujące wymiary obrazów:
     <string name="accessibility_move_up">Przenieś w górę</string>
     <string name="accessibility_move_down">Przenieś w dół</string>
     <string name="accessibility_app_moved_announcement">Przeniesiono %1$s na pozycję %2$d z %3$d</string>
+    <string name="accessibility_scroll_to_top">Przewiń do góry listy</string>
     <string name="rename">Zmień nazwę</string>
     <string name="import_">Importuj</string>
     <string name="export">Eksportuj</string>

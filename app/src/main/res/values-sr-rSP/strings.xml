@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">Помери нагоре</string>
     <string name="accessibility_move_down">Помери надоле</string>
     <string name="accessibility_app_moved_announcement">%1$s померен на позицију %2$d од %3$d</string>
+    <string name="accessibility_scroll_to_top">Скролуј до врха листе</string>
     <string name="rename">Преименуј</string>
     <string name="import_">Увоз</string>
     <string name="export">Извези</string>

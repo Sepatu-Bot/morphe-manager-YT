@@ -830,6 +830,7 @@ Forrás: #%2$s</string>
     <string name="accessibility_move_up">Feljebb mozog</string>
     <string name="accessibility_move_down">Lejjebb mozog</string>
     <string name="accessibility_app_moved_announcement">A(z) %1$s a(z) %3$d közül a(z) %2$d. pozícióra került</string>
+    <string name="accessibility_scroll_to_top">Görgés a lista tetejére</string>
     <string name="rename">Átnevezés</string>
     <string name="import_">Importálás</string>
     <string name="export">Exportálás</string>

@@ -825,6 +825,7 @@ Kuvien mittojen on oltava seuraavat:
     <string name="accessibility_move_up">Siirrä ylös</string>
     <string name="accessibility_move_down">Siirrä alas</string>
     <string name="accessibility_app_moved_announcement">%1$s siirrettiin kohtaan %2$d / %3$d</string>
+    <string name="accessibility_scroll_to_top">Siirry listan alkuun</string>
     <string name="rename">Nimeä uudelleen</string>
     <string name="import_">Tuo</string>
     <string name="export">Vie</string>

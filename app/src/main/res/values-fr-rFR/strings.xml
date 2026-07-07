@@ -830,6 +830,7 @@ Les dimensions des images doivent respecter les valeurs suivantes :
     <string name="accessibility_move_up">Déplacer vers le haut</string>
     <string name="accessibility_move_down">Déplacer vers le bas</string>
     <string name="accessibility_app_moved_announcement">%1$s a été déplacé à la position %2$d sur %3$d</string>
+    <string name="accessibility_scroll_to_top">Faire défiler jusqu\'en haut de la liste</string>
     <string name="rename">Renommer</string>
     <string name="import_">Importer</string>
     <string name="export">Exporter</string>

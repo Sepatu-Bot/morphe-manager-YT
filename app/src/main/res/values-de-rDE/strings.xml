@@ -829,6 +829,7 @@ Die Bildgrößen müssen wie folgt sein:
     <string name="accessibility_move_up">Nach oben verschieben</string>
     <string name="accessibility_move_down">Nach unten verschieben</string>
     <string name="accessibility_app_moved_announcement">%1$s wurde auf Position %2$d von %3$d verschoben</string>
+    <string name="accessibility_scroll_to_top">Zum Anfang der Liste scrollen</string>
     <string name="rename">Umbenennen</string>
     <string name="import_">Importieren</string>
     <string name="export">Exportieren</string>

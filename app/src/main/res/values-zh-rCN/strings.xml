@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">上移</string>
     <string name="accessibility_move_down">下移</string>
     <string name="accessibility_app_moved_announcement">%1$s 移动到 %3$d 中的第 %2$d 个位置</string>
+    <string name="accessibility_scroll_to_top">滚动到列表顶部</string>
     <string name="rename">重命名</string>
     <string name="import_">导入</string>
     <string name="export">导出</string>

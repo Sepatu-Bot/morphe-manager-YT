@@ -239,7 +239,7 @@ Davam etmək istədiyinizə əminsiniz?"</string>
     <string name="adaptive_icon_select_image">Şəkil seçin</string>
     <string name="adaptive_icon_change_image">Şəkli dəyişdir</string>
     <string name="adaptive_icon_background_color">Fon rəngi</string>
-    <string name="adaptive_icon_reset_transform">Mövqeyi və miqyası qaytar</string>
+    <string name="adaptive_icon_reset_transform">Mövqeyi və miqyası standarta qaytar</string>
     <string name="adaptive_icon_safe_zone_inner">Etibarlı yer (həmişə görünən)</string>
     <string name="adaptive_icon_safe_zone_outer">Örtük yeri (kəsilmiş ola bilər)</string>
     <string name="adaptive_icon_no_transparency_warning">Şəklin pikselləri şəffaf deyil. Nəticə səhv görünə bilər</string>
@@ -702,6 +702,12 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <!-- Settings - System Tab - Files & Storage Section -->
     <string name="settings_system_files">Fayllar &amp; saxlanc</string>
     <string name="settings_system_apks_size">Tam həcm: %s</string>
+    <string name="settings_system_apks_delete_all_confirm">Bu, burada görünən saxlanılmış APK fayllarını həmişəlik siləcək</string>
+    <string name="settings_system_apks_delete_selected_title">Seçilmiş APK-lar silinsin?</string>
+    <string name="settings_system_apks_delete_selected_confirm">Bu, seçilmiş APK fayllarını həmişəlik siləcək</string>
+    <string name="settings_system_apks_deleted_all">APK-lar uğurla silindi</string>
+    <string name="settings_system_apks_export_zip_success">Seçilmiş APK-lar köçürüldü</string>
+    <string name="settings_system_apks_export_zip_failed">Seçilmiş APK-ları köçürmək olmadı</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">Yamaqlanan APK-lar</string>
     <string name="settings_system_patched_apks_description">Yamaqlanıb saxlanılan tətbiq fayllarını idarə edir</string>
@@ -709,6 +715,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">Yamaqlanan APK silinsin?</string>
     <string name="settings_system_patched_apks_delete_confirm">%s üçün saxlanılan, yamaqlanmış APK-nı silmək istədiyinizə əminsiniz?</string>
     <string name="settings_system_patched_apks_deleted">Yamaqlanan APK uğurla silindi</string>
+    <string name="settings_system_patched_apks_delete_all_title">Bütün yamaqlanmış APK-lar silinsin?</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">Əsil APK-lar</string>
     <string name="settings_system_original_apks_description">Təkrar yamaqlama üçün saxlanılıb. Hər tətbiqə bir versiya saxlanılır</string>
@@ -716,11 +723,13 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">Əsil APK uğurla silindi</string>
     <string name="settings_system_original_apks_delete_title">Əsil APK silinsin?</string>
     <string name="settings_system_original_apks_delete_confirm">%s üçün əsil APK silinsin? Yeni APK təmin etmədən təkrar yamaqlaya bilməyəcəksiniz.</string>
+    <string name="settings_system_original_apks_delete_all_title">Bütün orijinal APK-lar silinsin?</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">Yamaq seçimləri</string>
     <string name="settings_system_patch_selections_description">Saxlanılan yamaq seçimləri, quraşdırma ləğvi sonrası saxlanılır</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Bütün seçimlər sıfırlansın?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Paket seçimləri sıfırlansın?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Seçilmiş paketlər ilkin vəziyyətinə qaytarılsın?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Mənbə seçimi sıfırlansın?</string>
     <string name="settings_system_patch_selection_no_saved">Saxlanılan yamaq seçimləri yoxdur</string>
     <string name="settings_system_patch_selection_total_summary_format">%2$s üzrə %1$s</string>
@@ -788,10 +797,15 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="skip">Ötür</string>
     <string name="clear">Təmizlə</string>
     <string name="delete">Sil</string>
+    <string name="delete_all">Hamısını sil</string>
     <string name="remove">Sil</string>
     <string name="disable">Qapadın</string>
     <string name="enable">Aktivləşdir</string>
     <string name="loading">Yüklənilir…</string>
+    <string name="loading_older_releases">Daha köhnə buraxılışlar yüklənilir…</string>
+    <string name="creating">Yaradılır…</string>
+    <string name="processing_apk">APK emal olunur…</string>
+    <string name="exporting_apks">APK-lar ixrac olunur…</string>
     <string name="not_installed">Quraşdırılmayıb</string>
     <string name="view">Baxın</string>
     <string name="search">Axtarış</string>
@@ -814,6 +828,7 @@ morphe_header_custom_light.png morphe_header_custom_dark.png
     <string name="accessibility_move_up">Yuxarı köçür</string>
     <string name="accessibility_move_down">Aşağı köçür</string>
     <string name="accessibility_app_moved_announcement">%1$s %3$d-dən %2$d mövqeyinə köçürüldü</string>
+    <string name="accessibility_scroll_to_top">Siyahının ən yuxarısına sürüşdür</string>
     <string name="rename">Təkrar adlandır</string>
     <string name="import_">İdxal et</string>
     <string name="export">Köçür</string>

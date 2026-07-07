@@ -829,6 +829,7 @@ De afbeelddimensionen moeten als volgt zijn:
     <string name="accessibility_move_up">Omhoog verplaatsen</string>
     <string name="accessibility_move_down">Omlaag verplaatsen</string>
     <string name="accessibility_app_moved_announcement">%1$s verplaatst naar positie %2$d van %3$d</string>
+    <string name="accessibility_scroll_to_top">Scroll naar de top van de lijst</string>
     <string name="rename">Hernoemen</string>
     <string name="import_">Importeren</string>
     <string name="export">Exporteren</string>

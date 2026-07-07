@@ -731,7 +731,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="settings_system_patch_selections_description">Menyimpan pilihan tambalan, dipertahankan setelah mencopot aplikasinya</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">Atur ulang semua pemilihan?</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">Atur ulang pemilihan paket?</string>
-    <string name="settings_system_patch_selection_reset_selected_confirm_title">Reset paket yang dipilih?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">Atur ulang paket yang dipilih?</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">Atur ulang pemilihan sumber?</string>
     <string name="settings_system_patch_selection_no_saved">Tidak ada pemilihan tambalan yang disimpan</string>
     <string name="settings_system_patch_selection_total_summary_format">%1$s diantara %2$s</string>
@@ -830,6 +830,7 @@ Dimensi gambar harus sebagai berikut:
     <string name="accessibility_move_up">Pindah ke atas</string>
     <string name="accessibility_move_down">Pindah ke bawah</string>
     <string name="accessibility_app_moved_announcement">%1$s dipindahkan ke posisi %2$d dari %3$d</string>
+    <string name="accessibility_scroll_to_top">Gulir ke atas daftar</string>
     <string name="rename">Ganti nama</string>
     <string name="import_">Impor</string>
     <string name="export">Ekspor</string>

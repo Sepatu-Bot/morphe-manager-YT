@@ -813,6 +813,7 @@ morphe_adaptive_monochrome_custom.xml
     <string name="accessibility_move_up">עלה</string>
     <string name="accessibility_move_down">רד</string>
     <string name="accessibility_app_moved_announcement">%1$s עבר למיקום %2$d מתוך %3$d</string>
+    <string name="accessibility_scroll_to_top">גלול אל ראש הרשימה</string>
     <string name="rename">שנה שם</string>
     <string name="import_">ייבוא</string>
     <string name="export">יְצוּא</string>

@@ -706,10 +706,10 @@ morphe_header_custom_dark.png
     <string name="settings_system_apks_size">전체 용량: %s</string>
     <string name="settings_system_apks_delete_all_confirm">저장된 APK 파일을 영구적으로 삭제합니다.</string>
     <string name="settings_system_apks_delete_selected_title">선택된 APK를 삭제하시겠습니까?</string>
-    <string name="settings_system_apks_delete_selected_confirm">선택된 APK 파일을 영구적으로 삭제합니다.</string>
-    <string name="settings_system_apks_deleted_all">APK 삭제 완료</string>
-    <string name="settings_system_apks_export_zip_success">선택한 APK 내보내기 완료</string>
-    <string name="settings_system_apks_export_zip_failed">선택한 APK 내보내기 실패</string>
+    <string name="settings_system_apks_delete_selected_confirm">선택된 APK 파일을 영구적으로 삭제합니다</string>
+    <string name="settings_system_apks_deleted_all">APK를 성공적으로 삭제하였습니다</string>
+    <string name="settings_system_apks_export_zip_success">선택된 APK를 내보냈습니다</string>
+    <string name="settings_system_apks_export_zip_failed">선택된 APK를 내보낼 수 없습니다</string>
     <!-- Settings - System Tab - Storage Management - Patched APKs Management -->
     <string name="settings_system_patched_apks_title">패치된 APK</string>
     <string name="settings_system_patched_apks_description">저장된 패치된 앱 파일을 관리합니다</string>
@@ -717,7 +717,7 @@ morphe_header_custom_dark.png
     <string name="settings_system_patched_apks_delete_title">패치된 APK 삭제</string>
     <string name="settings_system_patched_apks_delete_confirm">\'%s\'에 대한 저장된 패치된 APK를 삭제하시겠습니까?</string>
     <string name="settings_system_patched_apks_deleted">패치된 APK를 성공적으로 삭제하였습니다</string>
-    <string name="settings_system_patched_apks_delete_all_title">패치된 APK 모두 삭제하시겠습니까?</string>
+    <string name="settings_system_patched_apks_delete_all_title">패치된 APK 모두 삭제</string>
     <!-- Settings - System Tab - Storage Management - Original APKs Management -->
     <string name="settings_system_original_apks_title">원본 APK</string>
     <string name="settings_system_original_apks_description">나중에 다시 패치할 경우를 위해 저장됩니다. 앱별로 한 개의 버전만 보관됩니다</string>
@@ -725,13 +725,13 @@ morphe_header_custom_dark.png
     <string name="settings_system_original_apks_deleted">원본 APK를 성공적으로 삭제하였습니다</string>
     <string name="settings_system_original_apks_delete_title">원본 APK 삭제</string>
     <string name="settings_system_original_apks_delete_confirm">\'%s\'에 대한 원본 APK를 삭제하시겠습니까? 다시 패치할 경우에 새 APK를 사용해야 합니다</string>
-    <string name="settings_system_original_apks_delete_all_title">원본 APK 모두 삭제하시겠습니까?</string>
+    <string name="settings_system_original_apks_delete_all_title">원본 APK 모두 삭제</string>
     <!-- Settings - System Tab - Storage Management - Patch Selection Management -->
     <string name="settings_system_patch_selections_title">패치 선택 목록</string>
     <string name="settings_system_patch_selections_description">저장된 패치 선택 목록은 앱을 제거한 후에도 유지됩니다</string>
     <string name="settings_system_patch_selection_reset_all_confirm_title">모든 선택 목록 초기화</string>
     <string name="settings_system_patch_selection_reset_package_confirm_title">패키지 선택 목록 초기화</string>
-    <string name="settings_system_patch_selection_reset_selected_confirm_title">선택된 패키지 초기화하시겠습니까?</string>
+    <string name="settings_system_patch_selection_reset_selected_confirm_title">선택된 패키지 초기화</string>
     <string name="settings_system_patch_selection_reset_source_confirm_title">스소 선택 목록 초기화</string>
     <string name="settings_system_patch_selection_no_saved">저장된 패치 선택 목록이 없습니다</string>
     <string name="settings_system_patch_selection_total_summary_format">%2$s의 %1$s</string>
@@ -804,10 +804,10 @@ morphe_header_custom_dark.png
     <string name="disable">비활성화</string>
     <string name="enable">활성화</string>
     <string name="loading">불러오는 중…</string>
-    <string name="loading_older_releases">이전 릴리스 로드 중…</string>
-    <string name="creating">생성 중…</string>
-    <string name="processing_apk">APK 처리 중…</string>
-    <string name="exporting_apks">APK 내보내기 중…</string>
+    <string name="loading_older_releases">이전 릴리스를 불러오는 중…</string>
+    <string name="creating">생성하는 중…</string>
+    <string name="processing_apk">APK를 처리하는 중…</string>
+    <string name="exporting_apks">APK를 내보내는 중…</string>
     <string name="not_installed">설치되지 않음</string>
     <string name="view">보기</string>
     <string name="search">검색</string>
@@ -830,6 +830,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">위로 이동</string>
     <string name="accessibility_move_down">아래로 이동</string>
     <string name="accessibility_app_moved_announcement">\'%1$s\'가 %3$d 개 중 %2$d 번째 위치로 이동하였습니다</string>
+    <string name="accessibility_scroll_to_top">목록 맨 위로 스크롤</string>
     <string name="rename">이름 변경</string>
     <string name="import_">가져오기</string>
     <string name="export">내보내기</string>

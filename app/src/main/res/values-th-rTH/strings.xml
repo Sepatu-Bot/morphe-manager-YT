@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">ย้ายขึ้น</string>
     <string name="accessibility_move_down">ย้ายลง</string>
     <string name="accessibility_app_moved_announcement">%1$s ย้ายไปยังตำแหน่งที่ %2$d จากทั้งหมด %3$d</string>
+    <string name="accessibility_scroll_to_top">เลื่อนไปยังด้านบนของรายการ</string>
     <string name="rename">เปลี่ยนชื่อ</string>
     <string name="import_">นำเข้า</string>
     <string name="export">ส่งออก</string>

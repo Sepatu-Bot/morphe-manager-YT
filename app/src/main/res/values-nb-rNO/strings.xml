@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">Flytt opp</string>
     <string name="accessibility_move_down">Flytt ned</string>
     <string name="accessibility_app_moved_announcement">%1$s flyttet til posisjon %2$d av %3$d</string>
+    <string name="accessibility_scroll_to_top">Rull til toppen av listen</string>
     <string name="rename">Gi nytt navn</string>
     <string name="import_">Importer</string>
     <string name="export">Eksporter</string>

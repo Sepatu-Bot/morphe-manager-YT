@@ -829,6 +829,7 @@ Dimensiunile imaginilor trebuie să fie următoarele:
     <string name="accessibility_move_up">Mută în sus</string>
     <string name="accessibility_move_down">Mută în jos</string>
     <string name="accessibility_app_moved_announcement">%1$s a fost mutat în poziția %2$d din %3$d</string>
+    <string name="accessibility_scroll_to_top">Derulează până în partea de sus a listei</string>
     <string name="rename">Redenumește</string>
     <string name="import_">Importă</string>
     <string name="export">Exportă</string>

@@ -829,6 +829,7 @@ Die beeld afmetings moet soos volg wees:
     <string name="accessibility_move_up">Beweeg op</string>
     <string name="accessibility_move_down">Beweeg af</string>
     <string name="accessibility_app_moved_announcement">%1$s is na posisie %2$d van %3$d geskuif</string>
+    <string name="accessibility_scroll_to_top">Rol na bo van lys</string>
     <string name="rename">Hernoem</string>
     <string name="import_">Importeer</string>
     <string name="export">Uitvoer</string>

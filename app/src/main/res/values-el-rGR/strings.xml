@@ -829,6 +829,7 @@ morphe_header_custom_dark.png
     <string name="accessibility_move_up">Μετακίνηση προς τα πάνω</string>
     <string name="accessibility_move_down">Μετακίνηση προς τα κάτω</string>
     <string name="accessibility_app_moved_announcement">Το %1$s μετακινήθηκε στη θέση %2$d από %3$d</string>
+    <string name="accessibility_scroll_to_top">Μετακίνηση στην κορυφή της λίστας</string>
     <string name="rename">Μετονομασία</string>
     <string name="import_">Εισαγωγή</string>
     <string name="export">Εξαγωγή</string>

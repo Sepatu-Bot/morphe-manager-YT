@@ -825,6 +825,7 @@ Dapat ang mga sumusunod na sukat ng larawan ay:
     <string name="accessibility_move_up">Ilipat paitaas</string>
     <string name="accessibility_move_down">Ilipat pababa</string>
     <string name="accessibility_app_moved_announcement">Inilipat ang %1$s sa posisyon %2$d ng %3$d</string>
+    <string name="accessibility_scroll_to_top">Mag-scroll sa tuktok ng listahan</string>
     <string name="rename">Palitan</string>
     <string name="import_">I-import</string>
     <string name="export">I-export</string>
