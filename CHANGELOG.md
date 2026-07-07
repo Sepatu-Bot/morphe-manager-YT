@@ -1,3 +1,16 @@
+# [1.23.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.7...v1.23.0-dev.8) (2026-07-07)
+
+
+### Bug Fixes
+
+* Group Compose parameters to reduce prop drilling ([cccc661](https://github.com/MorpheApp/morphe-manager/commit/cccc661761e16eab6139bf3e0d229cc382dcd297))
+* Keep selection in view when entering reorder from search ([a75720e](https://github.com/MorpheApp/morphe-manager/commit/a75720e9ac1fa2bd626640978a1f0a5afcecfb53))
+
+
+### Features
+
+* Floating scroll-to-top button for app and patch lists ([599dc0e](https://github.com/MorpheApp/morphe-manager/commit/599dc0ec6c66b63b6cb7a21a70e2f0a529bf89e5))
+
 # [1.23.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-07-06)
 
 

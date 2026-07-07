@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-06T06:22:06",
-  "description": "# [1.23.0-dev.7](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-07-06)\n\n\n### Bug Fixes\n\n* Match changelog scopes via bundle Compatibility name ([086f15e](https://github.com/MorpheApp/morphe-manager/commit/086f15e50093edd5395859ca5ac579988745d505))\n\n\n### Features\n\n* Multi-select bulk actions for saved APKs and patch selections ([#689](https://github.com/MorpheApp/morphe-manager/issues/689)) ([4a16278](https://github.com/MorpheApp/morphe-manager/commit/4a16278206d128b09197245f75963d0db5b5e4ff))",
-  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.7/morphe-manager-1.23.0-dev.7.apk",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.7/morphe-manager-1.23.0-dev.7.apk.asc",
-  "version": "1.23.0-dev.7"
+  "created_at": "2026-07-07T13:42:28",
+  "description": "# [1.23.0-dev.8](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.7...v1.23.0-dev.8) (2026-07-07)\n\n\n### Bug Fixes\n\n* Group Compose parameters to reduce prop drilling ([cccc661](https://github.com/MorpheApp/morphe-manager/commit/cccc661761e16eab6139bf3e0d229cc382dcd297))\n* Keep selection in view when entering reorder from search ([a75720e](https://github.com/MorpheApp/morphe-manager/commit/a75720e9ac1fa2bd626640978a1f0a5afcecfb53))\n\n\n### Features\n\n* Floating scroll-to-top button for app and patch lists ([599dc0e](https://github.com/MorpheApp/morphe-manager/commit/599dc0ec6c66b63b6cb7a21a70e2f0a529bf89e5))",
+  "download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.8/morphe-manager-1.23.0-dev.8.apk",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-manager/releases/download/v1.23.0-dev.8/morphe-manager-1.23.0-dev.8.apk.asc",
+  "version": "1.23.0-dev.8"
 }
