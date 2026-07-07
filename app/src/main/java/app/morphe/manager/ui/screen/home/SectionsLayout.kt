@@ -181,6 +181,7 @@ fun SectionsLayout(
                     searchQuery = searchQuery.value,
                     onSearchQueryChange = { searchQuery.value = it },
                     onSearchToggle = { searchVisible.value = !searchVisible.value },
+                    onCloseSearch = { searchVisible.value = false },
                     onOtherAppsClick = onOtherAppsClick,
                     showOtherAppsButton = showOtherAppsButton,
                     onBundlesClick = onBundlesClick,
@@ -246,6 +247,7 @@ private fun AdaptiveContent(
     searchQuery: String = "",
     onSearchQueryChange: (String) -> Unit = {},
     onSearchToggle: () -> Unit = {},
+    onCloseSearch: () -> Unit = {},
     onOtherAppsClick: () -> Unit,
     showOtherAppsButton: Boolean = true,
     onBundlesClick: () -> Unit = {},
@@ -320,6 +322,7 @@ private fun AdaptiveContent(
                             searchVisible = searchVisible,
                             searchQuery = searchQuery,
                             onSearchQueryChange = onSearchQueryChange,
+                            onCloseSearch = onCloseSearch,
                             onBundlesClick = onBundlesClick,
                             onboardingState = onboardingState,
                             showFadeOverlay = false,
@@ -381,6 +384,7 @@ private fun AdaptiveContent(
                         searchVisible = searchVisible,
                         searchQuery = searchQuery,
                         onSearchQueryChange = onSearchQueryChange,
+                        onCloseSearch = onCloseSearch,
                         onBundlesClick = onBundlesClick,
                         onboardingState = onboardingState,
                         onSaveOrder = onSaveOrder,
@@ -826,6 +830,7 @@ fun MainAppsSection(
     searchVisible: Boolean = false,
     searchQuery: String = "",
     onSearchQueryChange: (String) -> Unit = {},
+    onCloseSearch: () -> Unit = {},
     onBundlesClick: () -> Unit = {},
     onboardingState: OnboardingState? = null,
     showFadeOverlay: Boolean = true,
@@ -839,6 +844,9 @@ fun MainAppsSection(
     // Reorder state
     val isReorderMode = remember { mutableStateOf(false) }
     var localOrder by remember { mutableStateOf(homeAppItems.map { it.packageName }) }
+    // Packages that were selected when entering reorder mode; used to scroll
+    // the reordered list back to the card the user long-pressed (e.g. from search)
+    val reorderFocusPackages = remember { mutableStateOf<Set<String>>(emptySet()) }
     val haptic = LocalHapticFeedback.current
 
     // True when the multibar (select or reorder action bar) is visible
@@ -944,6 +952,18 @@ fun MainAppsSection(
     val orderedItems = remember(localOrder, homeAppItems) {
         val byPackage = homeAppItems.associateBy { it.packageName }
         localOrder.mapNotNull { byPackage[it] }
+    }
+
+    // Keep the previously long-pressed card in view when switching to reorder mode
+    LaunchedEffect(isReorderMode.value) {
+        if (isReorderMode.value) {
+            val targets = reorderFocusPackages.value
+            if (targets.isNotEmpty()) {
+                val topIndex = orderedItems.indexOfFirst { it.packageName in targets }
+                if (topIndex >= 0) listState.scrollToItem(topIndex)
+            }
+            reorderFocusPackages.value = emptySet()
+        }
     }
 
     // Polite TalkBack announcement after a screen-reader-triggered Move action.
@@ -1302,8 +1322,10 @@ fun MainAppsSection(
                             selectedPackages.clear()
                         },
                         onEnterReorder = {
+                            reorderFocusPackages.value = selectedPackages.keys.toSet()
                             isMultiSelectMode.value = false
                             selectedPackages.clear()
+                            onCloseSearch()
                             isReorderMode.value = true
                         },
                         onSaveOrder = {
