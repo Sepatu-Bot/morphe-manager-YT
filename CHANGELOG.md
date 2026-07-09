@@ -1,3 +1,11 @@
+# [1.23.0-dev.10](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.9...v1.23.0-dev.10) (2026-07-09)
+
+
+### Features
+
+* Add app and source sort options ([#703](https://github.com/MorpheApp/morphe-manager/issues/703)) ([60771c3](https://github.com/MorpheApp/morphe-manager/commit/60771c35dd09925836cbbec47843ec507094c168))
+* Add toggle for hidden files in custom file picker ([205956f](https://github.com/MorpheApp/morphe-manager/commit/205956fa9c9bdf6b4ab13cc2d1880077936bc436))
+
 # [1.23.0-dev.9](https://github.com/MorpheApp/morphe-manager/compare/v1.23.0-dev.8...v1.23.0-dev.9) (2026-07-09)
 
 
