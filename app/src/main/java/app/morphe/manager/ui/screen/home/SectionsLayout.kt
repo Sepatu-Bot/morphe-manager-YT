@@ -58,6 +58,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import app.morphe.manager.R
 import app.morphe.manager.data.room.apps.installed.InstalledApp
@@ -3106,8 +3107,9 @@ private fun AppCardLayout(
                 val w  = size.width
                 val h  = size.height
                 val cr = CornerRadius(24.dp.toPx())
+                val rtl = layoutDirection == LayoutDirection.Rtl
 
-                // Layer 1: radial base - color blooms from bottom-left
+                // Layer 1: radial base - color blooms from bottom-start
                 drawRoundRect(
                     brush = Brush.radialGradient(
                         colors = listOf(
@@ -3115,13 +3117,13 @@ private fun AppCardLayout(
                             midColor.copy(alpha = 0.60f * glassAlpha),
                             endColor.copy(alpha = 0.40f * glassAlpha)
                         ),
-                        center = Offset(w * 0.15f, h * 0.85f),
+                        center = Offset(if (rtl) w * 0.85f else w * 0.15f, h * 0.85f),
                         radius = w * 1.1f
                     ),
                     cornerRadius = cr
                 )
 
-                // Layer 2: secondary radial bloom from top-right (accent)
+                // Layer 2: secondary radial bloom from top-end (accent)
                 drawRoundRect(
                     brush = Brush.radialGradient(
                         colors = listOf(
@@ -3129,7 +3131,7 @@ private fun AppCardLayout(
                             midColor.copy(alpha = 0.25f * glassAlpha),
                             Color.Transparent
                         ),
-                        center = Offset(w * 0.88f, h * 0.12f),
+                        center = Offset(if (rtl) w * 0.12f else w * 0.88f, h * 0.12f),
                         radius = w * 0.75f
                     ),
                     cornerRadius = cr
@@ -3149,7 +3151,7 @@ private fun AppCardLayout(
                     cornerRadius = cr
                 )
 
-                // Layer 4: diagonal sweep highlight (top-left → mid) - thin specular only
+                // Layer 4: diagonal sweep highlight (top-start → mid) - thin specular only
                 drawRoundRect(
                     brush = Brush.linearGradient(
                         colors = listOf(
@@ -3157,7 +3159,7 @@ private fun AppCardLayout(
                             Color.White.copy(alpha = 0.02f * glassAlpha),
                             Color.Transparent
                         ),
-                        start = Offset(0f, 0f),
+                        start = Offset(if (rtl) w else 0f, 0f),
                         end   = Offset(w * 0.5f, h)
                     ),
                     cornerRadius = cr
@@ -3178,7 +3180,7 @@ private fun AppCardLayout(
 
                 drawContent()
 
-                // Border: bright top-left → faded bottom-right
+                // Border: bright top-start → faded bottom-end
                 drawRoundRect(
                     brush = Brush.linearGradient(
                         colors = listOf(
@@ -3187,8 +3189,8 @@ private fun AppCardLayout(
                             endColor.copy(alpha = 0.15f * borderAlpha),
                             Color.White.copy(alpha = 0.20f * borderAlpha)
                         ),
-                        start = Offset(0f, 0f),
-                        end   = Offset(w, h)
+                        start = Offset(if (rtl) w else 0f, 0f),
+                        end   = Offset(if (rtl) 0f else w, h)
                     ),
                     cornerRadius = cr,
                     style = Stroke(width = 1.5.dp.toPx())
@@ -3255,6 +3257,7 @@ fun AppLoadingCard(
     )
 
     val shape = RoundedCornerShape(24.dp)
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
 
     Box(
         modifier = modifier
@@ -3269,8 +3272,8 @@ fun AppLoadingCard(
                 .background(
                     brush = Brush.linearGradient(
                         colors = gradientColors.map { it.copy(alpha = pulseAlpha) },
-                        start = Offset(0f, 0f),
-                        end = Offset(1000f, 0f)
+                        start = Offset(if (rtl) 1000f else 0f, 0f),
+                        end = Offset(if (rtl) 0f else 1000f, 0f)
                     )
                 )
         )
